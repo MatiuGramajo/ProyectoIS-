@@ -15,7 +15,7 @@ namespace DAL
         //public abstract void Baja(T obj);
         //public abstract void Modificar(T obj);
         //public abstract List<T> Listar();
-        public abstract bool Verficar (T obj);
+        public abstract bool Verificar (T obj);
 
     }
 }

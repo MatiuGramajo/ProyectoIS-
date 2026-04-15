@@ -22,7 +22,7 @@ namespace DAL
             
         }
 
-        public override bool Verficar(USUARIO usuario)
+        public override bool Verificar(USUARIO usuario)
         {
             acceso.Abrir();
             bool ok = false;
