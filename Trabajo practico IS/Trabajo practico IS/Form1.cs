@@ -23,22 +23,7 @@ namespace Trabajo_practico_IS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //using (FrmLogIn frmLogin = new FrmLogIn())
-            //{
-            //    
-            //    if (frmLogin.ShowDialog() == DialogResult.OK)
-            //    {
-            //        sesion = SESION.ObtenerSesion;
-            //        //Usuario = frmLogin.Usuario;
-            //        string user = sesion.Usuario.Usuario;
-            //        MessageBox.Show("USUARIO: " + user);
-            //        
-            //    }
-            //    else
-            //    {
-            //        Application.Exit();
-            //    }
-            //}
+
         }
 
         private void BtnCerrarSesion_Click(object sender, EventArgs e)
