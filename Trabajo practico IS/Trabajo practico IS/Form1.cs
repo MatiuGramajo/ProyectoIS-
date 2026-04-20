@@ -16,6 +16,7 @@ namespace Trabajo_practico_IS
         SESION sesion;
         BE.USUARIO Usuario= new BE.USUARIO();
         BLL.USUARIO GestorUsuario = new BLL.USUARIO();
+ 
         public Form1()
         {
             InitializeComponent();
@@ -34,7 +35,7 @@ namespace Trabajo_practico_IS
             if (result == DialogResult.Yes)
             {
                 // 2. Ejecutar LogOut de tu capa de servicios
-                Servicios.SESION.LogOut();
+                sesion.CerrarSesion();
 
                 // 3. Cerrar este formulario
                 this.Close();

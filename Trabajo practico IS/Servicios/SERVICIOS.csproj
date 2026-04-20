@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ENCRIPTADOR.cs" />
     <Compile Include="SESION.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

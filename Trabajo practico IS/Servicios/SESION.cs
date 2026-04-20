@@ -9,57 +9,93 @@ namespace Servicios
 {
     public class SESION
     {
-        private static object _Lock = new object();
         private static SESION Sesion;
-
-        public USUARIO Usuario {  get; set; }
-        public DateTime Fecha { get; set; }
-
         public static bool EstaLogeado => Sesion != null;
-        private SESION()
-        {
+        private static SESION _instancia;
+        public USUARIO usuactual { get; set; }
+        private static object _lock = new object();
+        private SESION() { }
 
-        }
-        public static SESION ObtenerSesion
+        public static SESION GetInstancia()
         {
-            get
+            if (_instancia == null)
             {
-                if (Sesion == null) throw new Exception("Sesion no iniciada");
-                return Sesion;
-            }
-        }
+                lock (_lock)
+                {
+                    if (_instancia == null)
+                    {
+                        _instancia = new SESION();
+                    }
 
-        public static void LogIn(USUARIO usuario)
-        {
-            lock (_Lock)
-            {
-                if (Sesion == null)
-                {
-                    Sesion = new SESION();
-                    Sesion.Usuario = usuario;
-                    Sesion.Fecha = DateTime.Now;
-                }
-                else
-                {
-                    throw new Exception("Sesion ya iniciada");
                 }
             }
+            return _instancia;
         }
 
-        public static void LogOut()
+        public void IniciarSesion(USUARIO usuario)
         {
-            lock (_Lock)
+            if (usuactual != null)
             {
-                if (Sesion != null)
-                {
-                    Sesion = null;
-                }
-                else
-                {
-                    throw new Exception("Sesion no iniciada");
-                }
+                throw new Exception("Ya hay una sesion activa.");
             }
+            usuactual = usuario;
         }
+        public void CerrarSesion()
+        {
+            usuactual = null;
+        }
+        //private static object _Lock = new object();
+        //private static SESION Sesion;
+
+        //public USUARIO Usuario { get; set; }
+        //public DateTime Fecha { get; set; }
+
+        //public static bool EstaLogeado => Sesion != null;
+        //private SESION()
+        //{
+
+        //}
+        //public static SESION ObtenerSesion
+        //{
+        //    get
+        //    {
+        //        if (Sesion == null) throw new Exception("Sesion no iniciada");
+        //        return Sesion;
+        //    }
+        //}
+
+        //public static void LogIn(USUARIO usuario)
+        //{
+        //    lock (_Lock)
+        //    {
+        //        if (Sesion == null)
+        //        {
+        //            Sesion = new SESION();
+        //            Sesion.Usuario = usuario;
+        //            Sesion.Fecha = DateTime.Now;
+        //        }
+        //        else
+        //        {
+        //            throw new Exception("Sesion ya iniciada");
+        //        }
+        //    }
+        //}
+
+        //public static void LogOut()
+        //{
+        //    lock (_Lock)
+        //    {
+        //        if (Sesion != null)
+        //        {
+        //            Sesion = null;
+        //        }
+        //        else
+        //        {
+        //            throw new Exception("Sesion no iniciada");
+        //        }
+        //    }
+        //}
+
 
 
     }

@@ -86,7 +86,6 @@ namespace DAL
             SqlDataAdapter adapter = new SqlDataAdapter();
             adapter.SelectCommand = CrearComando(query,parametros);
             adapter.Fill(tabla);
-            
             return tabla;
         }
 

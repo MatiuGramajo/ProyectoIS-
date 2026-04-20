@@ -30,12 +30,19 @@ namespace BE
 			set { password = value; }
 		}
 
-		private bool estado;
+		private bool estadoBloqueado;
 
-		public bool Estado
+		public bool EstadoBloqueado
 		{
-			get { return estado; }
-			set { estado = value; }
+			get { return estadoBloqueado; }
+			set { estadoBloqueado = value; }
+		}
+		private int intentosFallidos;
+
+		public int IntentosFallidos
+		{
+			get { return intentosFallidos; }
+			set { intentosFallidos = value; }
 		}
 
 

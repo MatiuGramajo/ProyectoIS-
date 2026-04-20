@@ -1,4 +1,5 @@
 ﻿using DAL;
+using Servicios;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,24 +17,40 @@ namespace BLL
             mapper.Alta(usuario);
         }
 
-        public void LogIn(BE.USUARIO usuario)
+        public void LogIn(string nombreUsuario, string contraseñaIngresada)
         {
-            // 1. Validaciones básicas de entrada
-            if (string.IsNullOrWhiteSpace(usuario.Usuario) || string.IsNullOrWhiteSpace(usuario.Password))
-                throw new Exception("Por favor, complete todos los campos.");
+            string hashingresado = ENCRIPTADOR.Hashear(contraseñaIngresada);
+            BE.USUARIO usuariovalido = mapper.ObtenerUsuario(nombreUsuario);
 
-            // 2. Llamada al Mapper
-            BE.USUARIO usuarioValido = mapper.ObtenerUsuario(usuario.Usuario, usuario.Password);
+            if (usuariovalido == null)
+            {
+                throw new Exception("Usuario o contraseña incorrectos.");
+            }
+            if (usuariovalido.EstadoBloqueado)
+            {
+                throw new Exception("El usuario se encuentra bloqueado. Contacte al administrador.");
+            }
 
-            // 3. Verificación de resultado e inicio de sesión
-            if (usuarioValido != null)
+            if (usuariovalido.Password != hashingresado)
             {
-                Servicios.SESION.LogIn(usuarioValido);
+                usuariovalido.IntentosFallidos++;
+                if (usuariovalido.IntentosFallidos >= 3)
+                {
+                    usuariovalido.EstadoBloqueado = true;
+                    mapper.ActualizarUsuario(usuariovalido);
+                    throw new Exception("Usuario bloqueado por superar el límite de 3 intentos fallidos.");
+                }
+                else
+                {
+                    mapper.ActualizarUsuario(usuariovalido);
+                    throw new Exception($"Contraseña incorrecta. Intentos restantes: {3 - usuariovalido.IntentosFallidos}");
+
+                }
+
             }
-            else
-            {
-                throw new Exception("Nombre de usuario o contraseña incorrectos.");
-            }
+            usuariovalido.IntentosFallidos = 0;
+            mapper.ActualizarUsuario(usuariovalido);  
+            SESION.GetInstancia().IniciarSesion(usuariovalido);
         }
     }
 }

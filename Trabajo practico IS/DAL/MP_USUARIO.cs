@@ -28,7 +28,7 @@ namespace DAL
             bool ok = false;
             List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(acceso.CrearParametro("@usu", usuario.Usuario));
-            parametros.Add(acceso.CrearParametro("@con", usuario.Password));
+            parametros.Add(acceso.CrearParametro("@pass", usuario.Password));
             SqlDataReader reader = acceso.Read("VERIFICAR_USUARIO", parametros);
             ok = reader.HasRows;
             reader.Close();
@@ -36,15 +36,15 @@ namespace DAL
             return ok;
         }
 
-        public BE.USUARIO ObtenerUsuario(string username, string password)
+        public BE.USUARIO ObtenerUsuario(string username)
         {
             acceso.Abrir();
             List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(acceso.CrearParametro("@usu", username));
-            parametros.Add(acceso.CrearParametro("@pass", password));
 
-            // Usamos el método Leer que ya tenés en ACCESO para obtener un DataTable
-            DataTable dt = acceso.Leer("VERIFICAR_USUARIO", parametros);
+            // Importante: Tu Stored Procedure ahora solo debe hacer: 
+            // SELECT * FROM Usuarios WHERE Usuario = @usu
+            DataTable dt = acceso.Leer("OBTENER_USUARIO_POR_NOMBRE", parametros);
             acceso.Cerrar();
 
             if (dt.Rows.Count > 0)
@@ -52,15 +52,26 @@ namespace DAL
                 DataRow row = dt.Rows[0];
                 BE.USUARIO usuarioEncontrado = new BE.USUARIO();
 
-                // Mapeo manual de las columnas a la entidad
+                // Mapeo manual COMPLETO. La BLL necesita todos estos datos para trabajar.
                 usuarioEncontrado.Id = Convert.ToInt32(row["Id"]);
                 usuarioEncontrado.Usuario = row["Usuario"].ToString();
-                // No mapeamos la password por seguridad, o la dejamos si es necesario
+                usuarioEncontrado.Password = row["Password"].ToString(); // ¡Necesario para el if de la BLL!
+                usuarioEncontrado.IntentosFallidos = Convert.ToInt32(row["IntentosFallidos"]);
+                usuarioEncontrado.EstadoBloqueado = Convert.ToBoolean(row["EstadoBloqueado"]);
 
                 return usuarioEncontrado;
             }
 
-            return null; // Si no hay filas, las credenciales son incorrectas
+            return null; 
+        }
+        public void ActualizarUsuario(BE.USUARIO usuario)
+        {
+            acceso.Abrir();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(acceso.CrearParametro("@usu", usuario.Usuario));
+            parametros.Add(acceso.CrearParametro("@intentos",usuario.IntentosFallidos));
+            acceso.Escribir("ACTUALIZAR_INTENTOS_FALLIDOS", parametros);
+            acceso.Cerrar();
         }
     }
 }
