@@ -41,9 +41,6 @@ namespace DAL
             acceso.Abrir();
             List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(acceso.CrearParametro("@usu", username));
-
-            // Importante: Tu Stored Procedure ahora solo debe hacer: 
-            // SELECT * FROM Usuarios WHERE Usuario = @usu
             DataTable dt = acceso.Leer("OBTENER_USUARIO_POR_NOMBRE", parametros);
             acceso.Cerrar();
 
@@ -52,10 +49,9 @@ namespace DAL
                 DataRow row = dt.Rows[0];
                 BE.USUARIO usuarioEncontrado = new BE.USUARIO();
 
-                // Mapeo manual COMPLETO. La BLL necesita todos estos datos para trabajar.
                 usuarioEncontrado.Id = Convert.ToInt32(row["Id"]);
                 usuarioEncontrado.Usuario = row["Usuario"].ToString();
-                usuarioEncontrado.Password = row["Password"].ToString(); // ¡Necesario para el if de la BLL!
+                usuarioEncontrado.Password = row["Password"].ToString(); 
                 usuarioEncontrado.IntentosFallidos = Convert.ToInt32(row["IntentosFallidos"]);
                 usuarioEncontrado.EstadoBloqueado = Convert.ToBoolean(row["EstadoBloqueado"]);
 

@@ -50,6 +50,16 @@ namespace DAL
             return param;
 
         }
+        public SqlParameter CrearParametro(string nombre, DateTime valor)
+        {
+            SqlParameter param = new SqlParameter();
+            param.DbType = System.Data.DbType.DateTime;
+            param.Value = valor;
+            param.ParameterName = nombre;
+
+            return param;
+
+        }
 
         public SqlParameter CrearParametro(string nombre, int valor)
         {

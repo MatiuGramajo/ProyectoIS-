@@ -16,6 +16,7 @@ namespace DAL
         //public abstract void Modificar(T obj);
         //public abstract List<T> Listar();
         public abstract bool Verificar (T obj);
+        
 
     }
 }
