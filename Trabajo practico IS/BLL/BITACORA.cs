@@ -1,12 +1,38 @@
-﻿using System;
+﻿using DAL;
+using Servicios;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal class BITACORA
+    public class BITACORA
     {
+        MP_BITACORA mapper = new MP_BITACORA();
+        public void RegistrarEvento(string modulo, string operacion, int criticidad)
+        {
+            BE.BITACORA log = new BE.BITACORA();
+            log.Fecha = DateTime.Now;
+            log.Modulo = modulo;
+            //log.Usuario = usuario;
+            log.Operacion = operacion;
+            log.Criticidad = criticidad;
+            if(SESION.EstaLogeado)
+            {
+                log.Usuario = SESION.GetInstancia().usuactual.Usuario;
+            }
+            else
+            {
+                log.Usuario = "Sistema / No autenticado.";
+            }
+            mapper.Alta(log);
+        }
+        public List<BE.BITACORA> ObtenerHistorial()
+        {
+            return mapper.ListarBitacora();
+        }
     }
 }

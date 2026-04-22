@@ -11,6 +11,8 @@ namespace BLL
     public class USUARIO
     {
         MP_USUARIO mapper = new MP_USUARIO();
+        MP_BITACORA mapperbitacora = new MP_BITACORA();
+        BLL.BITACORA gestorBitacora= new BLL.BITACORA();
 
         public void Insertar(BE.USUARIO usuario)
         {
@@ -24,10 +26,13 @@ namespace BLL
 
             if (usuariovalido == null)
             {
+                gestorBitacora.RegistrarEvento("Seguridad", $"Intento de acceso con usuario inexistente: {nombreUsuario}", 2);
                 throw new Exception("Usuario o contraseña incorrectos.");
+
             }
             if (usuariovalido.EstadoBloqueado)
             {
+                gestorBitacora.RegistrarEvento("Seguridad", $"Intento de acceso de cuenta bloqueada: {nombreUsuario}", 2);
                 throw new Exception("El usuario se encuentra bloqueado. Contacte al administrador.");
             }
 
@@ -37,20 +42,24 @@ namespace BLL
                 if (usuariovalido.IntentosFallidos >= 3)
                 {
                     usuariovalido.EstadoBloqueado = true;
-                    mapper.ActualizarUsuario(usuariovalido);
+                    mapper.ActualizarIntentosFallidos(usuariovalido);
+                    mapper.ActualizarEstadoBloqueado(usuariovalido);
+                    gestorBitacora.RegistrarEvento("Seguridad", $"Usuario bloqueado por múltiples intentos fallidos: {nombreUsuario}", 3);
                     throw new Exception("Usuario bloqueado por superar el límite de 3 intentos fallidos.");
                 }
                 else
                 {
-                    mapper.ActualizarUsuario(usuariovalido);
+                    //usuariovalido.IntentosFallidos++;
+                    mapper.ActualizarIntentosFallidos(usuariovalido);
                     throw new Exception($"Contraseña incorrecta. Intentos restantes: {3 - usuariovalido.IntentosFallidos}");
 
                 }
 
             }
             usuariovalido.IntentosFallidos = 0;
-            mapper.ActualizarUsuario(usuariovalido);  
+            mapper.ActualizarIntentosFallidos(usuariovalido);  
             SESION.GetInstancia().IniciarSesion(usuariovalido);
+            gestorBitacora.RegistrarEvento("Seguridad", "Inicio de sesión exitoso", 1);
         }
     }
 }

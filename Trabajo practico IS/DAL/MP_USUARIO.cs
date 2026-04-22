@@ -35,7 +35,6 @@ namespace DAL
             acceso.Cerrar();
             return ok;
         }
-
         public BE.USUARIO ObtenerUsuario(string username)
         {
             acceso.Abrir();
@@ -48,19 +47,19 @@ namespace DAL
             {
                 DataRow row = dt.Rows[0];
                 BE.USUARIO usuarioEncontrado = new BE.USUARIO();
-
                 usuarioEncontrado.Id = Convert.ToInt32(row["Id"]);
                 usuarioEncontrado.Usuario = row["Usuario"].ToString();
-                usuarioEncontrado.Password = row["Password"].ToString(); 
+                usuarioEncontrado.Password = row["Password"].ToString();
                 usuarioEncontrado.IntentosFallidos = Convert.ToInt32(row["IntentosFallidos"]);
                 usuarioEncontrado.EstadoBloqueado = Convert.ToBoolean(row["EstadoBloqueado"]);
+
 
                 return usuarioEncontrado;
             }
 
             return null; 
         }
-        public void ActualizarUsuario(BE.USUARIO usuario)
+        public void ActualizarIntentosFallidos(BE.USUARIO usuario)
         {
             acceso.Abrir();
             List<SqlParameter> parametros = new List<SqlParameter>();
@@ -68,6 +67,16 @@ namespace DAL
             parametros.Add(acceso.CrearParametro("@intentos",usuario.IntentosFallidos));
             acceso.Escribir("ACTUALIZAR_INTENTOS_FALLIDOS", parametros);
             acceso.Cerrar();
+        }
+        public void ActualizarEstadoBloqueado(BE.USUARIO usuario)
+        {
+            acceso.Abrir();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(acceso.CrearParametro("@usu", usuario.Usuario));
+            parametros.Add(acceso.CrearParametro("@estadobloqueado", usuario.EstadoBloqueado));
+            acceso.Escribir("ACTUALIZAR_ESTADOBLOQUEADO", parametros);
+            acceso.Cerrar();
+
         }
     }
 }

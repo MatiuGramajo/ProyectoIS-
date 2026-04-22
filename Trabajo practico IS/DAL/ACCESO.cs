@@ -60,6 +60,16 @@ namespace DAL
             return param;
 
         }
+        public SqlParameter CrearParametro(string nombre, bool valor)
+        {
+            SqlParameter param = new SqlParameter();
+            param.DbType = System.Data.DbType.Boolean;
+            param.Value = valor;
+            param.ParameterName = nombre;
+
+            return param;
+
+        }
 
         public SqlParameter CrearParametro(string nombre, int valor)
         {
@@ -80,7 +90,7 @@ namespace DAL
             {
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception ex)
+                catch (Exception ex)
             {
                 filas = -1;
             }

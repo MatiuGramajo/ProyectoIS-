@@ -16,7 +16,8 @@ namespace Trabajo_practico_IS
         SESION sesion;
         BE.USUARIO Usuario= new BE.USUARIO();
         BLL.USUARIO GestorUsuario = new BLL.USUARIO();
- 
+        BLL.BITACORA GestorBitacora= new BLL.BITACORA();
+
         public Form1()
         {
             InitializeComponent();
@@ -26,7 +27,13 @@ namespace Trabajo_practico_IS
         {
 
         }
-
+        public void EnlazarBitacora()
+        {
+            DGV_BITACORA.DataSource = null;
+            DGV_BITACORA.DataSource = GestorBitacora.ObtenerHistorial();
+            DGV_BITACORA.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+        
         private void BtnCerrarSesion_Click(object sender, EventArgs e)
         {
             var result = MessageBox.Show("¿Está seguro que desea cerrar sesión?", "Atención",
@@ -40,6 +47,28 @@ namespace Trabajo_practico_IS
                 // 3. Cerrar este formulario
                 this.Close();
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BTN_CargarBitacora_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                EnlazarBitacora();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar la bitácora: " + ex.Message);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
