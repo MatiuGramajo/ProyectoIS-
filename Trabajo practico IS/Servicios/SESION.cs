@@ -10,7 +10,6 @@ namespace Servicios
     public class SESION
     {
         private static SESION Sesion;
-        public static bool EstaLogeado => Sesion != null;
         private static SESION _instancia;
         public USUARIO usuactual { get; set; }
         private static object _lock = new object();

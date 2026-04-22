@@ -11,6 +11,7 @@ namespace BLL
 {
     public class BITACORA
     {
+        //SESION sesion;
         MP_BITACORA mapper = new MP_BITACORA();
         public void RegistrarEvento(string modulo, string operacion, int criticidad)
         {
@@ -20,14 +21,7 @@ namespace BLL
             //log.Usuario = usuario;
             log.Operacion = operacion;
             log.Criticidad = criticidad;
-            if(SESION.EstaLogeado)
-            {
-                log.Usuario = SESION.GetInstancia().usuactual.Usuario;
-            }
-            else
-            {
-                log.Usuario = "Sistema / No autenticado.";
-            }
+            log.Usuario = SESION.GetInstancia().usuactual.Usuario;
             mapper.Alta(log);
         }
         public List<BE.BITACORA> ObtenerHistorial()

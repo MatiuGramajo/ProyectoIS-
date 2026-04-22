@@ -13,7 +13,7 @@ namespace Trabajo_practico_IS
 {
     public partial class Form1 : Form
     {
-        SESION sesion;
+
         BE.USUARIO Usuario= new BE.USUARIO();
         BLL.USUARIO GestorUsuario = new BLL.USUARIO();
         BLL.BITACORA GestorBitacora= new BLL.BITACORA();
@@ -37,14 +37,17 @@ namespace Trabajo_practico_IS
         private void BtnCerrarSesion_Click(object sender, EventArgs e)
         {
             var result = MessageBox.Show("¿Está seguro que desea cerrar sesión?", "Atención",
-                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                       MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
             {
-                // 2. Ejecutar LogOut de tu capa de servicios
-                sesion.CerrarSesion();
 
-                // 3. Cerrar este formulario
+                GestorBitacora.RegistrarEvento("Seguridad", "Cierre de sesión manual", 1);
+
+
+                SESION.GetInstancia().CerrarSesion();
+
+
                 this.Close();
             }
         }
@@ -69,6 +72,13 @@ namespace Trabajo_practico_IS
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            GestorBitacora.RegistrarEvento("Seguridad", "Cierre de sesión automatico", 1);
+
+            SESION.GetInstancia().CerrarSesion();
         }
     }
 }

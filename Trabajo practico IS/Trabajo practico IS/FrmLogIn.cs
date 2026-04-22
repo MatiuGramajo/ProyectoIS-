@@ -27,14 +27,11 @@ namespace Trabajo_practico_IS
                 usuarioIntent.Password = TxtBoxPassword.Text;
 
                 GestorUsuario.LogIn(usuarioIntent.Usuario, usuarioIntent.Password);
-
-                // Si llegó hasta acá sin lanzar excepción, el login fue exitoso
-                //MessageBox.Show($"Bienvenido {Servicios.SESION.ObtenerSesion.Usuario.Usuario}");
-                MessageBox.Show($"Bienvenido{usuarioIntent.Usuario}");
+                MessageBox.Show($"Bienvenido {usuarioIntent.Usuario}");
 
 
 
-                this.DialogResult = DialogResult.OK; // Para cerrar el login y abrir el main
+                this.DialogResult = DialogResult.OK; 
                 this.Close();
             }
             catch (Exception ex)
