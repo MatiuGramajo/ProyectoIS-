@@ -76,9 +76,12 @@ namespace Trabajo_practico_IS
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            GestorBitacora.RegistrarEvento("Seguridad", "Cierre de sesión automatico", 1);
+            if (SESION.GetInstancia().usuactual != null)
+            {
+                GestorBitacora.RegistrarEvento("Seguridad", "Cierre de sesión automatico", 1);
+                SESION.GetInstancia().CerrarSesion();
+            }
 
-            SESION.GetInstancia().CerrarSesion();
         }
     }
 }

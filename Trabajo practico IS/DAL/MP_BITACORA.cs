@@ -15,7 +15,6 @@ namespace DAL
         {
             acceso.Abrir();
             List<SqlParameter>parametros= new List<SqlParameter>();
-            //parametros.Add(acceso.CrearParametro("@id_bitacora", obj.Id));
             parametros.Add(acceso.CrearParametro("@fecha", obj.Fecha));
             parametros.Add(acceso.CrearParametro("@usuario", obj.Usuario));
             parametros.Add(acceso.CrearParametro("@modulo", obj.Modulo));

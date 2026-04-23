@@ -11,7 +11,6 @@ namespace BLL
     public class USUARIO
     {
         MP_USUARIO mapper = new MP_USUARIO();
-        MP_BITACORA mapperbitacora = new MP_BITACORA();
         BLL.BITACORA gestorBitacora= new BLL.BITACORA();
 
         public void Insertar(BE.USUARIO usuario)
