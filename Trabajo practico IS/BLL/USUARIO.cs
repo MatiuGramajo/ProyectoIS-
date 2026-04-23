@@ -25,15 +25,16 @@ namespace BLL
 
             if (usuariovalido == null)
             {
-                gestorBitacora.RegistrarEvento("Seguridad", $"Intento de acceso con usuario inexistente: {nombreUsuario}", 2);
+                gestorBitacora.RegistrarEvento("Seguridad", "Intento de acceso con usuario inexistente:", 2) ;
                 throw new Exception("Usuario o contraseña incorrectos.");
 
             }
             if (usuariovalido.EstadoBloqueado)
             {
-                gestorBitacora.RegistrarEvento("Seguridad", $"Intento de acceso de cuenta bloqueada: {nombreUsuario}", 2);
+                gestorBitacora.RegistrarEvento("Seguridad", "Intento de acceso de cuenta bloqueada: ", 2, nombreUsuario);
                 throw new Exception("El usuario se encuentra bloqueado. Contacte al administrador.");
             }
+
 
             if (usuariovalido.Password != hashingresado)
             {
@@ -43,7 +44,7 @@ namespace BLL
                     usuariovalido.EstadoBloqueado = true;
                     mapper.ActualizarIntentosFallidos(usuariovalido);
                     mapper.ActualizarEstadoBloqueado(usuariovalido);
-                    gestorBitacora.RegistrarEvento("Seguridad", $"Usuario bloqueado por múltiples intentos fallidos: {nombreUsuario}", 3);
+                    gestorBitacora.RegistrarEvento("Seguridad", "Usuario bloqueado por múltiples intentos fallidos: ", 3, nombreUsuario);
                     throw new Exception("Usuario bloqueado por superar el límite de 3 intentos fallidos.");
                 }
                 else

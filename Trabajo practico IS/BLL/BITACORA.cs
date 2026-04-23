@@ -12,14 +12,18 @@ namespace BLL
     public class BITACORA
     {
         MP_BITACORA mapper = new MP_BITACORA();
-        public void RegistrarEvento(string modulo, string operacion, int criticidad)
+        public void RegistrarEvento(string modulo, string operacion, int criticidad, string usuarioIntento=null)
         {
             BE.BITACORA log = new BE.BITACORA();
             log.Fecha = DateTime.Now;
             log.Modulo = modulo;
             log.Operacion = operacion;
             log.Criticidad = criticidad;
-            if(SESION.GetInstancia().usuactual!=null)
+            if(!string.IsNullOrEmpty(usuarioIntento) )
+            {
+                log.Usuario= usuarioIntento;
+            }
+           else  if (SESION.GetInstancia().usuactual != null)
             {
                 log.Usuario = SESION.GetInstancia().usuactual.Usuario;
             }
