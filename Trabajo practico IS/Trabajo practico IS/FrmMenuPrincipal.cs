@@ -1,4 +1,5 @@
-﻿using Servicios;
+﻿using BE;
+using Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,29 +12,22 @@ using System.Windows.Forms;
 
 namespace Trabajo_practico_IS
 {
-    public partial class Form1 : Form
+    public partial class FrmMenuPrincipal : Form
     {
 
-        BE.USUARIO Usuario= new BE.USUARIO();
+        BE.USUARIO UsuarioActual = SESION.GetInstancia().usuactual;
         BLL.USUARIO GestorUsuario = new BLL.USUARIO();
         BLL.BITACORA GestorBitacora= new BLL.BITACORA();
 
-        public Form1()
+        public FrmMenuPrincipal()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            label1.Text = $"Bienvenido: {UsuarioActual.Usuario}";
         }
-        public void EnlazarBitacora()
-        {
-            DGV_BITACORA.DataSource = null;
-            DGV_BITACORA.DataSource = GestorBitacora.ObtenerHistorial();
-            DGV_BITACORA.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        }
-        
         private void BtnCerrarSesion_Click(object sender, EventArgs e)
         {
             var result = MessageBox.Show("¿Está seguro que desea cerrar sesión?", "Atención",
@@ -57,18 +51,6 @@ namespace Trabajo_practico_IS
 
         }
 
-        private void BTN_CargarBitacora_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                EnlazarBitacora();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar la bitácora: " + ex.Message);
-            }
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -82,6 +64,16 @@ namespace Trabajo_practico_IS
                 SESION.GetInstancia().CerrarSesion();
             }
 
+        }
+
+        private void BitacoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FrmBitacora frmBitacora = new FrmBitacora();
+            frmBitacora.ShowDialog();
+
+            this.Show();
         }
     }
 }

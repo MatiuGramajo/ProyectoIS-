@@ -9,7 +9,6 @@ namespace Servicios
 {
     public class SESION
     {
-        private static SESION Sesion;
         private static SESION _instancia;
         public USUARIO usuactual { get; set; }
         private static object _lock = new object();
@@ -21,11 +20,7 @@ namespace Servicios
             {
                 lock (_lock)
                 {
-                    if (_instancia == null)
-                    {
-                        _instancia = new SESION();
-                    }
-
+                    _instancia = new SESION();
                 }
             }
             return _instancia;
@@ -33,10 +28,6 @@ namespace Servicios
 
         public void IniciarSesion(USUARIO usuario)
         {
-            if (usuactual != null)
-            {
-                throw new Exception("Ya hay una sesion activa.");
-            }
             usuactual = usuario;
         }
         public void CerrarSesion()

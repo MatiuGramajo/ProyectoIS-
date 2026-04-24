@@ -49,10 +49,8 @@ namespace BLL
                 }
                 else
                 {
-                    //usuariovalido.IntentosFallidos++;
                     mapper.ActualizarIntentosFallidos(usuariovalido);
                     throw new Exception($"Contraseña incorrecta. Intentos restantes: {3 - usuariovalido.IntentosFallidos}");
-
                 }
 
             }

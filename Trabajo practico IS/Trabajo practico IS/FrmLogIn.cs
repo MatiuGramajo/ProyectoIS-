@@ -18,8 +18,10 @@ namespace Trabajo_practico_IS
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+
+        private void BTN_IniciarSesion_Click_1(object sender, EventArgs e)
         {
+
             try
             {
                 BE.USUARIO usuarioIntent = new BE.USUARIO();
@@ -27,12 +29,15 @@ namespace Trabajo_practico_IS
                 usuarioIntent.Password = TxtBoxPassword.Text;
 
                 GestorUsuario.LogIn(usuarioIntent.Usuario, usuarioIntent.Password);
-                MessageBox.Show($"Bienvenido {usuarioIntent.Usuario}");
 
+                this.DialogResult = DialogResult.OK;
+                //this.Close();
+                this.Hide();
 
+                FrmMenuPrincipal frmMenu = new FrmMenuPrincipal();
+                frmMenu.ShowDialog();
 
-                this.DialogResult = DialogResult.OK; 
-                this.Close();
+                this.Show();
             }
             catch (Exception ex)
             {
