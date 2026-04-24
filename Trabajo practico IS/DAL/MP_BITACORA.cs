@@ -49,5 +49,20 @@ namespace DAL
             }    
             return listalog; 
         }
+
+        public override void Baja(BITACORA obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Modificar(BITACORA obj)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override List<BITACORA> Listar()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

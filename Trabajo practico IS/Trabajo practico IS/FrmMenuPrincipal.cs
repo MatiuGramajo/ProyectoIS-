@@ -65,19 +65,33 @@ namespace Trabajo_practico_IS
 
         }
 
-        private void BitacoraToolStripMenuItem_Click(object sender, EventArgs e)
+        public void AbrirForm<T>() where T : Form, new()
         {
             this.Hide();
 
-            FrmBitacora frmBitacora = new FrmBitacora();
-            frmBitacora.ShowDialog();
+            using (T frm = new T())
+            {
+                frm.ShowDialog();
+            }
 
             this.Show();
         }
 
+        private void BitacoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirForm<FrmBitacora>();
+        }
+
         private void controlDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            AbrirForm<FrmCTRLUsuario>();
 
+            //this.Hide();
+
+            //FrmCTRLUsuario FrmCtrlUsuario = new FrmCTRLUsuario();
+            //FrmCtrlUsuario.ShowDialog();
+
+            //this.Show();
         }
     }
 }

@@ -37,7 +37,7 @@
             // 
             // BTN_CargarBitacora
             // 
-            this.BTN_CargarBitacora.Location = new System.Drawing.Point(33, 278);
+            this.BTN_CargarBitacora.Location = new System.Drawing.Point(33, 321);
             this.BTN_CargarBitacora.Name = "BTN_CargarBitacora";
             this.BTN_CargarBitacora.Size = new System.Drawing.Size(111, 35);
             this.BTN_CargarBitacora.TabIndex = 5;
@@ -50,7 +50,7 @@
             this.GB_Bitacora.Controls.Add(this.DGV_BITACORA);
             this.GB_Bitacora.Location = new System.Drawing.Point(12, 21);
             this.GB_Bitacora.Name = "GB_Bitacora";
-            this.GB_Bitacora.Size = new System.Drawing.Size(602, 234);
+            this.GB_Bitacora.Size = new System.Drawing.Size(699, 282);
             this.GB_Bitacora.TabIndex = 4;
             this.GB_Bitacora.TabStop = false;
             this.GB_Bitacora.Text = "Bitacora";
@@ -60,14 +60,14 @@
             this.DGV_BITACORA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_BITACORA.Location = new System.Drawing.Point(21, 33);
             this.DGV_BITACORA.Name = "DGV_BITACORA";
-            this.DGV_BITACORA.Size = new System.Drawing.Size(523, 150);
+            this.DGV_BITACORA.Size = new System.Drawing.Size(658, 223);
             this.DGV_BITACORA.TabIndex = 1;
             // 
             // FrmBitacora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 473);
             this.Controls.Add(this.BTN_CargarBitacora);
             this.Controls.Add(this.GB_Bitacora);
             this.Name = "FrmBitacora";

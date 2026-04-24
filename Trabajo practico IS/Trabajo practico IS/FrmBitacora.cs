@@ -16,6 +16,7 @@ namespace Trabajo_practico_IS
         public FrmBitacora()
         {
             InitializeComponent();
+            EnlazarBitacora();
         }
         public void EnlazarBitacora()
         {

@@ -111,7 +111,7 @@ namespace DAL
         public override List<USUARIO> Listar()
         {
             acceso.Abrir();
-            DataTable tabla = acceso.Leer("OBTENER_USUARIOS");
+            DataTable tabla = acceso.Leer("LISTAR_USUARIOS");
             acceso.Cerrar();
             List<BE.USUARIO> usuarios = new List<USUARIO>();
             foreach(DataRow registro in tabla.Rows)

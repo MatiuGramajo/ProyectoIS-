@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.TXT_CtrlUsuUsuario = new System.Windows.Forms.TextBox();
+            this.TXT_CtrlUsuContraseña = new System.Windows.Forms.TextBox();
+            this.TXT_CtrlUsuDNI = new System.Windows.Forms.TextBox();
+            this.TXT_CtrlUsuEmail = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,45 +41,45 @@
             this.BTNCtrlUsuBaja = new System.Windows.Forms.Button();
             this.BTNCtrlUsuModificar = new System.Windows.Forms.Button();
             this.BTNCtrlUsuVolverMenu = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.DGV_CtrlUsuUsuarios = new System.Windows.Forms.DataGridView();
+            this.CBX_CtrlUsuRol = new System.Windows.Forms.ComboBox();
             this.BTNCtrlUsuDesbloquear = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_CtrlUsuUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // TXT_CtrlUsuUsuario
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 242);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 20);
-            this.textBox1.TabIndex = 0;
+            this.TXT_CtrlUsuUsuario.Location = new System.Drawing.Point(92, 242);
+            this.TXT_CtrlUsuUsuario.Name = "TXT_CtrlUsuUsuario";
+            this.TXT_CtrlUsuUsuario.Size = new System.Drawing.Size(165, 20);
+            this.TXT_CtrlUsuUsuario.TabIndex = 0;
             // 
-            // textBox2
+            // TXT_CtrlUsuContraseña
             // 
-            this.textBox2.Location = new System.Drawing.Point(92, 286);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(165, 20);
-            this.textBox2.TabIndex = 1;
+            this.TXT_CtrlUsuContraseña.Location = new System.Drawing.Point(92, 284);
+            this.TXT_CtrlUsuContraseña.Name = "TXT_CtrlUsuContraseña";
+            this.TXT_CtrlUsuContraseña.Size = new System.Drawing.Size(165, 20);
+            this.TXT_CtrlUsuContraseña.TabIndex = 1;
             // 
-            // textBox3
+            // TXT_CtrlUsuDNI
             // 
-            this.textBox3.Location = new System.Drawing.Point(92, 328);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(165, 20);
-            this.textBox3.TabIndex = 2;
+            this.TXT_CtrlUsuDNI.Location = new System.Drawing.Point(92, 326);
+            this.TXT_CtrlUsuDNI.Name = "TXT_CtrlUsuDNI";
+            this.TXT_CtrlUsuDNI.Size = new System.Drawing.Size(165, 20);
+            this.TXT_CtrlUsuDNI.TabIndex = 2;
             // 
-            // textBox4
+            // TXT_CtrlUsuEmail
             // 
-            this.textBox4.Location = new System.Drawing.Point(92, 369);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(165, 20);
-            this.textBox4.TabIndex = 3;
+            this.TXT_CtrlUsuEmail.Location = new System.Drawing.Point(92, 368);
+            this.TXT_CtrlUsuEmail.Name = "TXT_CtrlUsuEmail";
+            this.TXT_CtrlUsuEmail.Size = new System.Drawing.Size(165, 20);
+            this.TXT_CtrlUsuEmail.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 242);
+            this.label1.Location = new System.Drawing.Point(43, 246);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 5;
@@ -88,7 +88,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 286);
+            this.label2.Location = new System.Drawing.Point(25, 288);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 6;
@@ -97,7 +97,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(60, 331);
+            this.label3.Location = new System.Drawing.Point(60, 330);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(26, 13);
             this.label3.TabIndex = 7;
@@ -115,7 +115,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(63, 416);
+            this.label5.Location = new System.Drawing.Point(63, 414);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(23, 13);
             this.label5.TabIndex = 9;
@@ -129,6 +129,7 @@
             this.BTNCtrlUsuAlta.TabIndex = 10;
             this.BTNCtrlUsuAlta.Text = "Alta";
             this.BTNCtrlUsuAlta.UseVisualStyleBackColor = true;
+            this.BTNCtrlUsuAlta.Click += new System.EventHandler(this.BTNCtrlUsuAlta_Click);
             // 
             // BTNCtrlUsuBaja
             // 
@@ -138,6 +139,7 @@
             this.BTNCtrlUsuBaja.TabIndex = 11;
             this.BTNCtrlUsuBaja.Text = "Baja";
             this.BTNCtrlUsuBaja.UseVisualStyleBackColor = true;
+            this.BTNCtrlUsuBaja.Click += new System.EventHandler(this.BTNCtrlUsuBaja_Click);
             // 
             // BTNCtrlUsuModificar
             // 
@@ -147,6 +149,7 @@
             this.BTNCtrlUsuModificar.TabIndex = 12;
             this.BTNCtrlUsuModificar.Text = "Modificar";
             this.BTNCtrlUsuModificar.UseVisualStyleBackColor = true;
+            this.BTNCtrlUsuModificar.Click += new System.EventHandler(this.BTNCtrlUsuModificar_Click);
             // 
             // BTNCtrlUsuVolverMenu
             // 
@@ -157,21 +160,24 @@
             this.BTNCtrlUsuVolverMenu.Text = "Volver al Menu";
             this.BTNCtrlUsuVolverMenu.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // DGV_CtrlUsuUsuarios
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(787, 200);
-            this.dataGridView1.TabIndex = 14;
+            this.DGV_CtrlUsuUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGV_CtrlUsuUsuarios.Location = new System.Drawing.Point(34, 21);
+            this.DGV_CtrlUsuUsuarios.Name = "DGV_CtrlUsuUsuarios";
+            this.DGV_CtrlUsuUsuarios.Size = new System.Drawing.Size(787, 200);
+            this.DGV_CtrlUsuUsuarios.TabIndex = 14;
             // 
-            // comboBox1
+            // CBX_CtrlUsuRol
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(92, 413);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(165, 21);
-            this.comboBox1.TabIndex = 15;
+            this.CBX_CtrlUsuRol.FormattingEnabled = true;
+            this.CBX_CtrlUsuRol.Items.AddRange(new object[] {
+            "Administrador",
+            "Basico"});
+            this.CBX_CtrlUsuRol.Location = new System.Drawing.Point(92, 410);
+            this.CBX_CtrlUsuRol.Name = "CBX_CtrlUsuRol";
+            this.CBX_CtrlUsuRol.Size = new System.Drawing.Size(165, 21);
+            this.CBX_CtrlUsuRol.TabIndex = 15;
             // 
             // BTNCtrlUsuDesbloquear
             // 
@@ -181,6 +187,7 @@
             this.BTNCtrlUsuDesbloquear.TabIndex = 17;
             this.BTNCtrlUsuDesbloquear.Text = "Desbloquear";
             this.BTNCtrlUsuDesbloquear.UseVisualStyleBackColor = true;
+            this.BTNCtrlUsuDesbloquear.Click += new System.EventHandler(this.BTNCtrlUsuDesbloquear_Click);
             // 
             // checkBox1
             // 
@@ -200,8 +207,8 @@
             this.ClientSize = new System.Drawing.Size(876, 517);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.BTNCtrlUsuDesbloquear);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.CBX_CtrlUsuRol);
+            this.Controls.Add(this.DGV_CtrlUsuUsuarios);
             this.Controls.Add(this.BTNCtrlUsuVolverMenu);
             this.Controls.Add(this.BTNCtrlUsuModificar);
             this.Controls.Add(this.BTNCtrlUsuBaja);
@@ -211,14 +218,14 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TXT_CtrlUsuEmail);
+            this.Controls.Add(this.TXT_CtrlUsuDNI);
+            this.Controls.Add(this.TXT_CtrlUsuContraseña);
+            this.Controls.Add(this.TXT_CtrlUsuUsuario);
             this.Name = "FrmCTRLUsuario";
             this.Text = "FrmCTRLUsuario";
             this.Load += new System.EventHandler(this.FrmCTRLUsuario_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGV_CtrlUsuUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,10 +233,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox TXT_CtrlUsuUsuario;
+        private System.Windows.Forms.TextBox TXT_CtrlUsuContraseña;
+        private System.Windows.Forms.TextBox TXT_CtrlUsuDNI;
+        private System.Windows.Forms.TextBox TXT_CtrlUsuEmail;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -239,8 +246,8 @@
         private System.Windows.Forms.Button BTNCtrlUsuBaja;
         private System.Windows.Forms.Button BTNCtrlUsuModificar;
         private System.Windows.Forms.Button BTNCtrlUsuVolverMenu;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView DGV_CtrlUsuUsuarios;
+        private System.Windows.Forms.ComboBox CBX_CtrlUsuRol;
         private System.Windows.Forms.Button BTNCtrlUsuDesbloquear;
         private System.Windows.Forms.CheckBox checkBox1;
     }

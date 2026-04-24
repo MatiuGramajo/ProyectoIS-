@@ -32,7 +32,6 @@ namespace Trabajo_practico_IS
                 GestorUsuario.LogIn(usuarioIntent.Usuario, usuarioIntent.Contraseña);
 
                 this.DialogResult = DialogResult.OK;
-                //this.Close();
                 this.Hide();
 
                 FrmMenuPrincipal frmMenu = new FrmMenuPrincipal();

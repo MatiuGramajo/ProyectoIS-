@@ -18,6 +18,21 @@ namespace BLL
             mapper.Alta(usuario);
         }
 
+        public void Borrar(BE.USUARIO usuario)
+        {
+            mapper.Baja(usuario);
+        }
+
+        public void Modificar(BE.USUARIO usuario)
+        {
+            mapper.Modificar(usuario);
+        }
+
+        public List<BE.USUARIO> Listar()
+        {
+            return mapper.Listar();
+        }
+
         public void LogIn(string nombreUsuario, string contraseñaIngresada)
         {
             string hashingresado = ENCRIPTADOR.Hashear(contraseñaIngresada);
