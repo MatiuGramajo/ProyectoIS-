@@ -35,14 +35,13 @@ namespace Trabajo_practico_IS
 
             if (result == DialogResult.Yes)
             {
-
                 GestorBitacora.RegistrarEvento("Seguridad", "Cierre de sesión manual", 1);
 
-
                 SESION.GetInstancia().CerrarSesion();
-
-
+                
+                UsuarioActual = null;
                 this.Close();
+               
             }
         }
 
@@ -58,7 +57,7 @@ namespace Trabajo_practico_IS
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (SESION.GetInstancia().usuactual != null)
+            if (UsuarioActual != null)
             {
                 GestorBitacora.RegistrarEvento("Seguridad", "Cierre de sesión automatico", 1);
                 SESION.GetInstancia().CerrarSesion();
@@ -74,6 +73,11 @@ namespace Trabajo_practico_IS
             frmBitacora.ShowDialog();
 
             this.Show();
+        }
+
+        private void controlDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

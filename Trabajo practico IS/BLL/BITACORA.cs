@@ -19,11 +19,11 @@ namespace BLL
             log.Modulo = modulo;
             log.Operacion = operacion;
             log.Criticidad = criticidad;
-            if(!string.IsNullOrEmpty(usuarioIntento) )
+            if(!string.IsNullOrEmpty(usuarioIntento))
             {
                 log.Usuario= usuarioIntento;
             }
-           else  if (SESION.GetInstancia().usuactual != null)
+            else  if (SESION.GetInstancia().usuactual != null)
             {
                 log.Usuario = SESION.GetInstancia().usuactual.Usuario;
             }

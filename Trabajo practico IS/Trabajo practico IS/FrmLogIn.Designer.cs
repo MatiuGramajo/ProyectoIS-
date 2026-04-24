@@ -37,21 +37,21 @@
             // 
             // TxtBoxUsuario
             // 
-            this.TxtBoxUsuario.Location = new System.Drawing.Point(101, 73);
+            this.TxtBoxUsuario.Location = new System.Drawing.Point(110, 73);
             this.TxtBoxUsuario.Name = "TxtBoxUsuario";
             this.TxtBoxUsuario.Size = new System.Drawing.Size(100, 20);
             this.TxtBoxUsuario.TabIndex = 0;
             // 
             // TxtBoxPassword
             // 
-            this.TxtBoxPassword.Location = new System.Drawing.Point(101, 143);
+            this.TxtBoxPassword.Location = new System.Drawing.Point(110, 143);
             this.TxtBoxPassword.Name = "TxtBoxPassword";
             this.TxtBoxPassword.Size = new System.Drawing.Size(100, 20);
             this.TxtBoxPassword.TabIndex = 1;
             // 
             // BTN_IniciarSesion
             // 
-            this.BTN_IniciarSesion.Location = new System.Drawing.Point(101, 204);
+            this.BTN_IniciarSesion.Location = new System.Drawing.Point(115, 199);
             this.BTN_IniciarSesion.Name = "BTN_IniciarSesion";
             this.BTN_IniciarSesion.Size = new System.Drawing.Size(90, 23);
             this.BTN_IniciarSesion.TabIndex = 2;
@@ -62,7 +62,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(130, 43);
+            this.label1.Location = new System.Drawing.Point(139, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 4;
@@ -71,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(125, 118);
+            this.label2.Location = new System.Drawing.Point(134, 118);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 5;
@@ -89,6 +89,7 @@
             this.Controls.Add(this.TxtBoxPassword);
             this.Controls.Add(this.TxtBoxUsuario);
             this.Name = "FrmLogIn";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesion";
             this.ResumeLayout(false);
             this.PerformLayout();

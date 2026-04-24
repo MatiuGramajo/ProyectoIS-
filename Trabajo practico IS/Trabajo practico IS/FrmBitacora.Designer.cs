@@ -37,7 +37,7 @@
             // 
             // BTN_CargarBitacora
             // 
-            this.BTN_CargarBitacora.Location = new System.Drawing.Point(203, 346);
+            this.BTN_CargarBitacora.Location = new System.Drawing.Point(33, 278);
             this.BTN_CargarBitacora.Name = "BTN_CargarBitacora";
             this.BTN_CargarBitacora.Size = new System.Drawing.Size(111, 35);
             this.BTN_CargarBitacora.TabIndex = 5;
@@ -48,7 +48,7 @@
             // GB_Bitacora
             // 
             this.GB_Bitacora.Controls.Add(this.DGV_BITACORA);
-            this.GB_Bitacora.Location = new System.Drawing.Point(24, 73);
+            this.GB_Bitacora.Location = new System.Drawing.Point(12, 21);
             this.GB_Bitacora.Name = "GB_Bitacora";
             this.GB_Bitacora.Size = new System.Drawing.Size(602, 234);
             this.GB_Bitacora.TabIndex = 4;
@@ -71,6 +71,7 @@
             this.Controls.Add(this.BTN_CargarBitacora);
             this.Controls.Add(this.GB_Bitacora);
             this.Name = "FrmBitacora";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBitacora";
             this.Load += new System.EventHandler(this.FrmBitacora_Load);
             this.GB_Bitacora.ResumeLayout(false);

@@ -31,16 +31,17 @@
             this.components = new System.ComponentModel.Container();
             this.BtnCerrarSesion = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.gestionarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AdministracionMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.controlDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnCerrarSesion
             // 
-            this.BtnCerrarSesion.Location = new System.Drawing.Point(170, 318);
+            this.BtnCerrarSesion.Location = new System.Drawing.Point(12, 415);
             this.BtnCerrarSesion.Name = "BtnCerrarSesion";
             this.BtnCerrarSesion.Size = new System.Drawing.Size(80, 23);
             this.BtnCerrarSesion.TabIndex = 0;
@@ -51,7 +52,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.gestionarUsuariosToolStripMenuItem,
+            this.AdministracionMenuItem,
             this.BitacoraToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -59,11 +60,13 @@
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // gestionarUsuariosToolStripMenuItem
+            // AdministracionMenuItem
             // 
-            this.gestionarUsuariosToolStripMenuItem.Name = "gestionarUsuariosToolStripMenuItem";
-            this.gestionarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(117, 20);
-            this.gestionarUsuariosToolStripMenuItem.Text = "Gestionar Usuarios";
+            this.AdministracionMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.controlDeUsuariosToolStripMenuItem});
+            this.AdministracionMenuItem.Name = "AdministracionMenuItem";
+            this.AdministracionMenuItem.Size = new System.Drawing.Size(100, 20);
+            this.AdministracionMenuItem.Text = "Administración";
             // 
             // BitacoraToolStripMenuItem
             // 
@@ -81,11 +84,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(33, 95);
+            this.label1.Location = new System.Drawing.Point(6, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 31);
             this.label1.TabIndex = 9;
             this.label1.Text = "label1";
+            // 
+            // controlDeUsuariosToolStripMenuItem
+            // 
+            this.controlDeUsuariosToolStripMenuItem.Name = "controlDeUsuariosToolStripMenuItem";
+            this.controlDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.controlDeUsuariosToolStripMenuItem.Text = "Control de usuarios";
+            this.controlDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.controlDeUsuariosToolStripMenuItem_Click);
             // 
             // FrmMenuPrincipal
             // 
@@ -97,6 +107,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -111,10 +122,11 @@
 
         private System.Windows.Forms.Button BtnCerrarSesion;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem gestionarUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AdministracionMenuItem;
         private System.Windows.Forms.ToolStripMenuItem BitacoraToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem controlDeUsuariosToolStripMenuItem;
     }
 }
 

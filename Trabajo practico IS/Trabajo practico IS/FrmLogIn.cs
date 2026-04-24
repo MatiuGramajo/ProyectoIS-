@@ -24,6 +24,7 @@ namespace Trabajo_practico_IS
 
             try
             {
+                if (string.IsNullOrWhiteSpace(TxtBoxUsuario.Text) || string.IsNullOrWhiteSpace(TxtBoxPassword.Text)) throw new Exception("Debe completar todos los campos");
                 BE.USUARIO usuarioIntent = new BE.USUARIO();
                 usuarioIntent.Usuario = TxtBoxUsuario.Text;
                 usuarioIntent.Password = TxtBoxPassword.Text;
