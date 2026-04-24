@@ -12,9 +12,9 @@ namespace DAL
         public ACCESO acceso = new ACCESO();
 
         public abstract void Alta(T obj);
-        //public abstract void Baja(T obj);
-        //public abstract void Modificar(T obj);
-        //public abstract List<T> Listar();
+        public abstract void Baja(T obj);
+        public abstract void Modificar(T obj);
+        public abstract List<T> Listar();
         public abstract bool Verificar (T obj);
         
 

@@ -22,12 +22,12 @@ namespace BE
 			get { return usuario; }
 			set { usuario = value; }
 		}
-		private string password;
+		private string contraseña;
 
-		public string Password
+		public string Contraseña
 		{
-			get { return password; }
-			set { password = value; }
+			get { return contraseña; }
+			set { contraseña = value; }
 		}
 
 		private bool estadoBloqueado;
@@ -43,6 +43,28 @@ namespace BE
 		{
 			get { return intentosFallidos; }
 			set { intentosFallidos = value; }
+		}
+
+		private int dni;
+
+		public int Dni
+		{
+			get { return dni; }
+			set { dni = value; }
+		}
+		private string email;
+
+		public string Email
+		{
+			get { return email; }
+			set { email = value; }
+		}
+		private string rol;
+
+		public string Rol
+		{
+			get { return rol; }
+			set { rol = value; }
 		}
 
 

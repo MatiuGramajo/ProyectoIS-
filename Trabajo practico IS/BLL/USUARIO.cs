@@ -36,7 +36,7 @@ namespace BLL
             }
 
 
-            if (usuariovalido.Password != hashingresado)
+            if (usuariovalido.Contraseña != hashingresado)
             {
                 usuariovalido.IntentosFallidos++;
                 if (usuariovalido.IntentosFallidos >= 3)
