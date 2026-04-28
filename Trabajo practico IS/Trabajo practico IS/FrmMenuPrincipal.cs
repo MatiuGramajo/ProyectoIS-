@@ -85,13 +85,6 @@ namespace Trabajo_practico_IS
         private void controlDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirForm<FrmCTRLUsuario>();
-
-            //this.Hide();
-
-            //FrmCTRLUsuario FrmCtrlUsuario = new FrmCTRLUsuario();
-            //FrmCtrlUsuario.ShowDialog();
-
-            //this.Show();
         }
     }
 }

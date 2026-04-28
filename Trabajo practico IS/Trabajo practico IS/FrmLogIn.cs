@@ -43,6 +43,8 @@ namespace Trabajo_practico_IS
             {
                 MessageBox.Show(ex.Message);
             }
+            TxtBoxUsuario.Text = "";
+            TxtBoxPassword.Text = "";
         }
     }
 }

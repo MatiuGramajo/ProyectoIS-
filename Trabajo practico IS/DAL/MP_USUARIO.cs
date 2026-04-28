@@ -80,6 +80,7 @@ namespace DAL
             List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(acceso.CrearParametro("@usu", usuario.Usuario));
             parametros.Add(acceso.CrearParametro("@estadobloqueado", usuario.EstadoBloqueado));
+            parametros.Add(acceso.CrearParametro("@intentos", usuario.IntentosFallidos));
             acceso.Escribir("ACTUALIZAR_ESTADOBLOQUEADO", parametros);
             acceso.Cerrar();
 

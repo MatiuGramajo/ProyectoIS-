@@ -32,6 +32,10 @@ namespace BLL
         {
             return mapper.Listar();
         }
+        public void DesbloquearUsuario(BE.USUARIO usuario)
+        {
+            mapper.ActualizarEstadoBloqueado(usuario);
+        }
 
         public void LogIn(string nombreUsuario, string contraseñaIngresada)
         {
@@ -40,13 +44,13 @@ namespace BLL
 
             if (usuariovalido == null)
             {
-                gestorBitacora.RegistrarEvento("Seguridad", "Intento de acceso con usuario inexistente:", 2) ;
+                gestorBitacora.RegistrarEvento("Seguridad", "Intento de acceso con usuario inexistente:", 3) ;
                 throw new Exception("Usuario o contraseña incorrectos.");
 
             }
             if (usuariovalido.EstadoBloqueado)
             {
-                gestorBitacora.RegistrarEvento("Seguridad", "Intento de acceso de cuenta bloqueada: ", 2, nombreUsuario);
+                gestorBitacora.RegistrarEvento("Seguridad", "Intento de acceso de cuenta bloqueada: ", 4, nombreUsuario);
                 throw new Exception("El usuario se encuentra bloqueado. Contacte al administrador.");
             }
 
@@ -59,7 +63,7 @@ namespace BLL
                     usuariovalido.EstadoBloqueado = true;
                     mapper.ActualizarIntentosFallidos(usuariovalido);
                     mapper.ActualizarEstadoBloqueado(usuariovalido);
-                    gestorBitacora.RegistrarEvento("Seguridad", "Usuario bloqueado por múltiples intentos fallidos: ", 3, nombreUsuario);
+                    gestorBitacora.RegistrarEvento("Seguridad", "Usuario bloqueado por múltiples intentos fallidos: ", 4, nombreUsuario);
                     throw new Exception("Usuario bloqueado por superar el límite de 3 intentos fallidos.");
                 }
                 else

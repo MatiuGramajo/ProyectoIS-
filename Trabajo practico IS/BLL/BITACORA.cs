@@ -33,9 +33,26 @@ namespace BLL
             }
             mapper.Alta(log);
         }
-        public List<BE.BITACORA> ObtenerHistorial()
+        public List<BE.BITACORA> ObtenerHistorial(DateTime desde, DateTime hasta)
         {
-            return mapper.ListarBitacora();
+            return mapper.ListarBitacora(desde, hasta);
         }
+        public List<BE.BITACORA>ObtenerUsuarios()
+        {
+            return mapper.ObtenerUsuariosBitacora();
+        }
+        public List<BE.BITACORA> ObtenerModulo()
+        {
+            return mapper.ObtenerModuloBitacora();
+        }
+        public List<BE.BITACORA> ObtenerCriticidad()
+        {
+            return mapper.ObtenerCriticidadBitacora();
+        }
+        public List<BE.BITACORA> ObtenerHistorialCompleto()
+        {
+            return mapper.ListarBitacoraCompleta();
+        }
+
     }
 }

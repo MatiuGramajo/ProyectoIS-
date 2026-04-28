@@ -159,6 +159,7 @@
             this.BTNCtrlUsuVolverMenu.TabIndex = 13;
             this.BTNCtrlUsuVolverMenu.Text = "Volver al Menu";
             this.BTNCtrlUsuVolverMenu.UseVisualStyleBackColor = true;
+            this.BTNCtrlUsuVolverMenu.Click += new System.EventHandler(this.BTNCtrlUsuVolverMenu_Click);
             // 
             // DGV_CtrlUsuUsuarios
             // 
@@ -167,6 +168,7 @@
             this.DGV_CtrlUsuUsuarios.Name = "DGV_CtrlUsuUsuarios";
             this.DGV_CtrlUsuUsuarios.Size = new System.Drawing.Size(787, 200);
             this.DGV_CtrlUsuUsuarios.TabIndex = 14;
+            this.DGV_CtrlUsuUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CtrlUsuUsuarios_CellClick);
             // 
             // CBX_CtrlUsuRol
             // 
@@ -198,6 +200,7 @@
             this.checkBox1.TabIndex = 18;
             this.checkBox1.Text = "Mostrar Bloqueados";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // FrmCTRLUsuario
             // 
