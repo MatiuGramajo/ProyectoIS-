@@ -42,7 +42,7 @@ namespace BLL
             string hashingresado = ENCRIPTADOR.Hashear(contraseñaIngresada);
             BE.USUARIO usuariovalido = mapper.ObtenerUsuario(nombreUsuario);
 
-            if (usuariovalido == null)
+            if (usuariovalido == null)  
             {
                 gestorBitacora.RegistrarEvento("Seguridad", "Intento de acceso con usuario inexistente:", 3) ;
                 throw new Exception("Usuario o contraseña incorrectos.");

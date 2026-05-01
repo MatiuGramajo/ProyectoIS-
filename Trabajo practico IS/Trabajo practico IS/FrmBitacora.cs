@@ -44,8 +44,8 @@ namespace Trabajo_practico_IS
         }
         public void EnlazarBitacora()
         {
-            DateTime desde = DTPBitacoraDesde.Value;
-            DateTime hasta = DTPBitacoraHasta.Value;
+            DateTime desde = DTPBitacoraDesde.Value.Date;
+            DateTime hasta = DTPBitacoraHasta.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59);
             List<BE.BITACORA> ListaFiltrada = GestorBitacora.ObtenerHistorial(desde, hasta);
             if(CBXBitacoraUsuario.SelectedIndex !=-1)
             {

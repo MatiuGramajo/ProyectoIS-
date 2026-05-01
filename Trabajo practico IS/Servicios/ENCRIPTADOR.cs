@@ -16,7 +16,7 @@ namespace Servicios
                 byte[] bytes = Encoding.UTF8.GetBytes(textoPlano);
                 byte[] hashbytes = sha256.ComputeHash(bytes);
                 StringBuilder constructorString = new StringBuilder();
-                for (int i = 0; i < hashbytes.Length; i++)
+                for (int i = 0; i < hashbytes.Length;i++)
                 {
                     constructorString.Append(hashbytes[i].ToString("x2"));
                 }
