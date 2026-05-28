@@ -37,7 +37,7 @@ namespace Trabajo_practico_IS
             {
                 GestorBitacora.RegistrarEvento("Seguridad", "Cierre de sesión manual", 1);
 
-                SESION.GetInstancia().CerrarSesion();
+                SESION.GetInstancia().Desasignar();
                 
                 UsuarioActual = null;
                 this.Close();
@@ -60,7 +60,7 @@ namespace Trabajo_practico_IS
             if (UsuarioActual != null)
             {
                 GestorBitacora.RegistrarEvento("Seguridad", "Cierre de sesión automatico", 1);
-                SESION.GetInstancia().CerrarSesion();
+                SESION.GetInstancia().Desasignar();
             }
 
         }
@@ -79,12 +79,22 @@ namespace Trabajo_practico_IS
 
         private void BitacoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirForm<FrmBitacora>();
+            this.Hide();
+
+            FrmBitacora FrmBitacora = new FrmBitacora();
+            FrmBitacora.ShowDialog();
+
+            this.Show();
         }
 
         private void controlDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AbrirForm<FrmCTRLUsuario>();
+            this.Hide();
+
+            FrmCTRLUsuario FrmAdminCtrlUsuario = new FrmCTRLUsuario();
+            FrmAdminCtrlUsuario.ShowDialog();
+
+            this.Show();
         }
     }
 }

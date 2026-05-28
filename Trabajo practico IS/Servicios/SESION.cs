@@ -26,13 +26,13 @@ namespace Servicios
             return _instancia;
         }
 
-        public void IniciarSesion(USUARIO usuario)
+        public void AsignarUsuario(USUARIO usuario)
         {
             usuactual = usuario;
         }
-        public void CerrarSesion()
+        public void Desasignar()
         {
-            usuactual = null;
+            _instancia = null;
         }
         
     }

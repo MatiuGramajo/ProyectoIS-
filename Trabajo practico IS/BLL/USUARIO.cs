@@ -75,7 +75,7 @@ namespace BLL
             }
             usuariovalido.IntentosFallidos = 0;
             mapper.ActualizarIntentosFallidos(usuariovalido);  
-            SESION.GetInstancia().IniciarSesion(usuariovalido);
+            SESION.GetInstancia().AsignarUsuario(usuariovalido);
             gestorBitacora.RegistrarEvento("Seguridad", "Inicio de sesión exitoso", 1);
         }
     }
