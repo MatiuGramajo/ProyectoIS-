@@ -33,14 +33,14 @@ namespace BLL
             {
                 // Buscamos si este nodo (sea el que sea) tiene hijos en la base de datos
                 var filasHijos = from DataRow fila in tablaRelaciones.Rows
-                                 where int.Parse(fila["IdPadre"].ToString()) == nodo.Id
+                                 where int.Parse(fila["Id_Padre"].ToString()) == nodo.Id
                                  select fila;
 
                 // Si es un Permiso Simple, 'filasHijos' estará vacío y este foreach ni se ejecuta.
                 // Si es un Permiso Compuesto, entrará al foreach y agregará a sus hijos.
                 foreach (DataRow fila in filasHijos)
                 {
-                    int idHijo = int.Parse(fila["IdHijo"].ToString());
+                    int idHijo = int.Parse(fila["Id_Hijo"].ToString());
 
                     BE.COMPONENTE hijoEncontrado = (from p in todosLosPermisos
                                                     where p.Id == idHijo
@@ -60,7 +60,7 @@ namespace BLL
             foreach (var p in todosLosPermisos)
             {
                 bool esHijoDeAlguien = (from DataRow fila in tablaRelaciones.Rows
-                                        where int.Parse(fila["IdHijo"].ToString()) == p.Id
+                                        where int.Parse(fila["Id_Hijo"].ToString()) == p.Id
                                         select fila).Any();
 
                 // Si no es hijo de nadie, es una raíz (no nos importa si es simple o compuesto)

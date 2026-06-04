@@ -29,6 +29,7 @@ namespace BE
         public abstract void AgregarHijo(COMPONENTE c);
         public abstract void VaciarHijos();
         public abstract void BorrarHijo(COMPONENTE c);
+        public abstract COMPONENTE GetHijo(int index);
         public override string ToString()
         {
             return Nombre;

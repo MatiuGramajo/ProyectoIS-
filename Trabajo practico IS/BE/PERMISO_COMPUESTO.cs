@@ -38,7 +38,10 @@ namespace BE
             _hijos.Remove(c);
         
         }
-
+        public override COMPONENTE GetHijo(int index)
+        {
+            return _hijos[index];
+        }
 
     }
 }

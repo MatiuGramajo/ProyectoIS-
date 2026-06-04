@@ -27,14 +27,14 @@ namespace BE
             throw new NotImplementedException();
         }
 
-        //public override void GetHijos(int index)
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public override COMPONENTE GetHijo(int index)
+        {
+            throw new NotImplementedException("Los permisos simples no tienen hijos.");
+        }
 
         public override void VaciarHijos()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

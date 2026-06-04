@@ -52,6 +52,12 @@
     <Compile Include="FrmBitacora.Designer.cs">
       <DependentUpon>FrmBitacora.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCTRLPermiso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCTRLPermiso.Designer.cs">
+      <DependentUpon>FrmCTRLPermiso.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCTRLUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmBitacora.resx">
       <DependentUpon>FrmBitacora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCTRLPermiso.resx">
+      <DependentUpon>FrmCTRLPermiso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCTRLUsuario.resx">
       <DependentUpon>FrmCTRLUsuario.cs</DependentUpon>

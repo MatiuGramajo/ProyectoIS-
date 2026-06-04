@@ -36,6 +36,7 @@
             this.BitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.controlDePermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,7 +64,8 @@
             // AdministracionMenuItem
             // 
             this.AdministracionMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.controlDeUsuariosToolStripMenuItem});
+            this.controlDeUsuariosToolStripMenuItem,
+            this.controlDePermisosToolStripMenuItem});
             this.AdministracionMenuItem.Name = "AdministracionMenuItem";
             this.AdministracionMenuItem.Size = new System.Drawing.Size(100, 20);
             this.AdministracionMenuItem.Text = "Administración";
@@ -71,7 +73,7 @@
             // controlDeUsuariosToolStripMenuItem
             // 
             this.controlDeUsuariosToolStripMenuItem.Name = "controlDeUsuariosToolStripMenuItem";
-            this.controlDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.controlDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
             this.controlDeUsuariosToolStripMenuItem.Text = "Control de usuarios";
             this.controlDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.controlDeUsuariosToolStripMenuItem_Click);
             // 
@@ -96,6 +98,13 @@
             this.label1.Size = new System.Drawing.Size(86, 31);
             this.label1.TabIndex = 9;
             this.label1.Text = "label1";
+            // 
+            // controlDePermisosToolStripMenuItem
+            // 
+            this.controlDePermisosToolStripMenuItem.Name = "controlDePermisosToolStripMenuItem";
+            this.controlDePermisosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.controlDePermisosToolStripMenuItem.Text = "Control de permisos";
+            this.controlDePermisosToolStripMenuItem.Click += new System.EventHandler(this.controlDePermisosToolStripMenuItem_Click);
             // 
             // FrmMenuPrincipal
             // 
@@ -128,6 +137,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem controlDeUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem controlDePermisosToolStripMenuItem;
     }
 }
 

@@ -96,5 +96,15 @@ namespace Trabajo_practico_IS
 
             this.Show();
         }
+
+        private void controlDePermisosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            FrmCTRLPermiso FrmAdminCtrPermiso = new FrmCTRLPermiso();
+            FrmAdminCtrPermiso.ShowDialog();
+
+            this.Show();
+        }
     }
 }
