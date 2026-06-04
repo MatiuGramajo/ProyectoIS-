@@ -30,6 +30,7 @@ namespace BE
         public abstract void VaciarHijos();
         public abstract void BorrarHijo(COMPONENTE c);
         public abstract COMPONENTE GetHijo(int index);
+        public abstract bool TienePermiso(string nombrePermiso);
         public override string ToString()
         {
             return Nombre;

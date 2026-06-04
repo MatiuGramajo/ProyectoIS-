@@ -14,12 +14,11 @@ namespace BE
             {
                 return new List<COMPONENTE>();
             }
-
         }
 
         public override void AgregarHijo(COMPONENTE c)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException("Los permisos simples no tienen hijos.");
         }
 
         public override void BorrarHijo(COMPONENTE c)
@@ -30,6 +29,11 @@ namespace BE
         public override COMPONENTE GetHijo(int index)
         {
             throw new NotImplementedException("Los permisos simples no tienen hijos.");
+        }
+
+        public override bool TienePermiso(string nombrePermiso)
+        {
+            return this.Nombre.Equals(nombrePermiso, StringComparison.OrdinalIgnoreCase);
         }
 
         public override void VaciarHijos()

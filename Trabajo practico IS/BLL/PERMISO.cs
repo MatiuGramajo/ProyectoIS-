@@ -17,7 +17,50 @@ namespace BLL
         }
         public void GuardarRelacion(BE.COMPONENTE padre, BE.COMPONENTE hijo)
         {
-            mapperPermiso.GuardarRelacion(padre.Id, hijo.Id);
+            try
+            {
+                if (padre.Id == hijo.Id)
+                {
+                    throw new Exception("Un componente no puede ser hijo de sí mismo.");
+                }
+                if (padre.TienePermiso(hijo.Nombre))
+                {
+                    throw new Exception("Este componente ya existe dentro del rol");
+                }
+
+                padre.AgregarHijo(hijo);
+                
+                mapperPermiso.GuardarRelacion(padre.Id, hijo.Id);
+
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
+            
+        }
+
+        public void BorrarRelacion(BE.COMPONENTE padre, BE.COMPONENTE hijo)
+        {
+            try
+            {
+                // Opcional, pero buena práctica: Lo removemos en memoria usando el método que armamos antes
+                padre.BorrarHijo(hijo);
+
+                // Lo borramos de la base de datos
+                mapperPermiso.BorrarRelacion(padre.Id, hijo.Id);
+
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+        
+
+        public List<BE.COMPONENTE> Listar()
+        {
+            return mapperPermiso.Listar();
         }
 
         public List<BE.COMPONENTE> ObtenerArbolCompleto()

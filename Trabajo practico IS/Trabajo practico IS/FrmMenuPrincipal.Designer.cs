@@ -33,10 +33,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.AdministracionMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlDePermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.controlDePermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,13 @@
             this.controlDeUsuariosToolStripMenuItem.Text = "Control de usuarios";
             this.controlDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.controlDeUsuariosToolStripMenuItem_Click);
             // 
+            // controlDePermisosToolStripMenuItem
+            // 
+            this.controlDePermisosToolStripMenuItem.Name = "controlDePermisosToolStripMenuItem";
+            this.controlDePermisosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.controlDePermisosToolStripMenuItem.Text = "Control de permisos";
+            this.controlDePermisosToolStripMenuItem.Click += new System.EventHandler(this.controlDePermisosToolStripMenuItem_Click);
+            // 
             // BitacoraToolStripMenuItem
             // 
             this.BitacoraToolStripMenuItem.Name = "BitacoraToolStripMenuItem";
@@ -93,18 +100,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(55, 61);
+            this.label1.Location = new System.Drawing.Point(12, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 31);
             this.label1.TabIndex = 9;
             this.label1.Text = "label1";
-            // 
-            // controlDePermisosToolStripMenuItem
-            // 
-            this.controlDePermisosToolStripMenuItem.Name = "controlDePermisosToolStripMenuItem";
-            this.controlDePermisosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.controlDePermisosToolStripMenuItem.Text = "Control de permisos";
-            this.controlDePermisosToolStripMenuItem.Click += new System.EventHandler(this.controlDePermisosToolStripMenuItem_Click);
             // 
             // FrmMenuPrincipal
             // 

@@ -31,6 +31,16 @@ namespace DAL
             acceso.Escribir("INSERTAR_PERMISO_PERMISO", parametros);
             acceso.Cerrar();
         }
+        public void BorrarRelacion(int idPadre, int idHijo)
+        {
+            acceso.Abrir();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(acceso.CrearParametro("@idPadre", idPadre));
+            parametros.Add(acceso.CrearParametro("@idHijo", idHijo));
+            acceso.Escribir("BORRAR_PERMISO_PERMISO", parametros);
+            acceso.Cerrar();
+        }
+
 
         public override void Baja(COMPONENTE obj)
         {

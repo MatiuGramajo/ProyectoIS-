@@ -13,7 +13,7 @@ namespace Trabajo_practico_IS
 {
     public partial class FrmCTRLPermiso : Form
     {
-        BLL.PERMISO GestorPermiso = new BLL.PERMISO();
+        BLL.PERMISO GestorPermisos = new BLL.PERMISO();
 
         public FrmCTRLPermiso()
         {
@@ -23,15 +23,15 @@ namespace Trabajo_practico_IS
         private void FrmCTRLPermiso_Load(object sender, EventArgs e)
         {
             CargarTreeView();
+            CargarListBox();
         }
 
         private void CargarTreeView()
         {
-            BLL.PERMISO gestorPermisos = new BLL.PERMISO();
             treeView1.Nodes.Clear();
 
             // Pedimos las raíces a la BLL
-            List<BE.COMPONENTE> raices = gestorPermisos.ObtenerArbolCompleto();
+            List<BE.COMPONENTE> raices = GestorPermisos.ObtenerArbolCompleto();
 
             foreach (var componente in raices)
     {
@@ -57,6 +57,116 @@ namespace Trabajo_practico_IS
 
                 // Volvemos a llamarnos a nosotros mismos por si el hijo tiene más hijos
                 AgregarNodosRecursivos(nodoHijo, hijo);
+            }
+        }
+
+        private void CargarListBox()
+        {
+            listBox1.Items.Clear();
+            var permisos = GestorPermisos.Listar();
+            listBox1.Items.AddRange(permisos.ToArray());
+
+        }
+
+        private void BTNCtrlPermisoCrearRol_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TXTCtrlPermisoNombre.Text))
+            {
+                MessageBox.Show("Por favor, ingrese un nombre para el Rol.");
+                return;
+            }
+
+            BE.PERMISO_COMPUESTO nuevoRol = new BE.PERMISO_COMPUESTO();
+            nuevoRol.Nombre = TXTCtrlPermisoNombre.Text;
+
+            GestorPermisos.GuardarComponente(nuevoRol);
+
+            MessageBox.Show("Rol compuesto creado con éxito.");
+
+            TXTCtrlPermisoNombre.Text = "";
+            CargarTreeView();
+            CargarListBox();
+        }
+
+        private void BTNCtrlPermisoCrearPermiso_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TXTCtrlPermisoNombre.Text))
+            {
+                MessageBox.Show("Por favor, ingrese un nombre para el Permiso.");
+                return;
+            }
+
+            BE.PERMISO_SIMPLE nuevoPermiso = new BE.PERMISO_SIMPLE();
+            nuevoPermiso.Nombre = TXTCtrlPermisoNombre.Text;
+
+            GestorPermisos.GuardarComponente(nuevoPermiso);
+
+            MessageBox.Show("Permiso simple creado con éxito.");
+
+            TXTCtrlPermisoNombre.Text = "";
+            CargarTreeView();
+            CargarListBox();
+        }
+
+        private void BTNCtrlPermisoAsignar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (listBox1.SelectedItem == null)
+                {
+                    throw new Exception("Por favor, seleccionar un ROL o PERMISO del listbox.");
+                }
+                if (treeView1.SelectedNode == null)
+                {
+                    throw new Exception("Por favor, seleccione un ROL del treeview.");
+                }
+
+                var Padre = treeView1.SelectedNode.Tag as BE.COMPONENTE;
+                var Hijo = listBox1.SelectedItem as BE.COMPONENTE;
+
+                GestorPermisos.GuardarRelacion(Padre, Hijo);
+
+                CargarTreeView();
+                CargarListBox();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void BTNCtrlPermisoDesasignar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (treeView1.SelectedNode == null)
+                {
+                    throw new Exception("Por favor, seleccione un ROL del treeview.");
+                }
+                if (treeView1.SelectedNode.Parent == null)
+                {
+                    MessageBox.Show("No puede desasignar un Rol principal (Raíz).", "Operación Inválida", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
+                }
+
+                var Padre = treeView1.SelectedNode.Parent.Tag as BE.COMPONENTE;
+                var Hijo = treeView1.SelectedNode.Tag as BE.COMPONENTE;
+
+                DialogResult respuesta = MessageBox.Show($"¿Está seguro que desea quitar '{Hijo.Nombre}' del rol '{Padre.Nombre}'?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    GestorPermisos.BorrarRelacion(Padre, Hijo);
+                }
+
+                CargarTreeView();
+                CargarListBox();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
