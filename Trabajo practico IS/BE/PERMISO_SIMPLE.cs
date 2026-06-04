@@ -22,10 +22,15 @@ namespace BE
             throw new NotImplementedException();
         }
 
-        public override void GetHijos(int index)
+        public override void BorrarHijo(COMPONENTE c)
         {
             throw new NotImplementedException();
         }
+
+        //public override void GetHijos(int index)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public override void VaciarHijos()
         {

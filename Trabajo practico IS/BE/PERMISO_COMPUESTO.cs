@@ -32,10 +32,13 @@ namespace BE
         {
             _hijos.Add(c);
         }
-        public override void GetHijos(int index)
+
+        public override void BorrarHijo(COMPONENTE c)
         {
-            throw new NotImplementedException();
+            _hijos.Remove(c);
+        
         }
+
 
     }
 }

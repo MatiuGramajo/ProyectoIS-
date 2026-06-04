@@ -28,9 +28,7 @@ namespace BE
         public abstract List<COMPONENTE> Hijos { get; }
         public abstract void AgregarHijo(COMPONENTE c);
         public abstract void VaciarHijos();
-
-        public abstract void GetHijos(int index);
-
+        public abstract void BorrarHijo(COMPONENTE c);
         public override string ToString()
         {
             return Nombre;
