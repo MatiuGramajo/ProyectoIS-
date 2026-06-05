@@ -21,8 +21,22 @@ namespace DAL
             parametros.Add(acceso.CrearParametro("@contra", usuario.Contraseña));
             parametros.Add(acceso.CrearParametro("@dni", usuario.Dni));
             parametros.Add(acceso.CrearParametro("@email", usuario.Email));
-            parametros.Add(acceso.CrearParametro("@rol", usuario.Rol));
-            int res = acceso.Escribir("INSERTAR_USUARIO",parametros);
+            
+            DataTable dt = acceso.Leer("INSERTAR_USUARIO",parametros);
+            int idNuevoUsuario = Convert.ToInt32(dt.Rows[0][0]);
+
+            // Le asignamos el ID real al objeto en memoria
+            usuario.Id = idNuevoUsuario;
+
+            // 2. Guardamos sus permisos/roles en la tabla puente
+            foreach (var permiso in usuario.Permisos)
+            {
+                List<SqlParameter> paramPermiso = new List<SqlParameter>();
+                paramPermiso.Add(acceso.CrearParametro("@idUsuario", usuario.Id));
+                paramPermiso.Add(acceso.CrearParametro("@idPermiso", permiso.Id));
+
+                acceso.Escribir("INSERTAR_USUARIO_PERMISO", paramPermiso);
+            }
             acceso.Cerrar();
             
         }
@@ -105,7 +119,6 @@ namespace DAL
             parametros.Add(acceso.CrearParametro("@contra", usuario.Contraseña));
             parametros.Add(acceso.CrearParametro("@dni", usuario.Dni));
             parametros.Add(acceso.CrearParametro("@email", usuario.Email));
-            parametros.Add(acceso.CrearParametro("@rol", usuario.Rol));
             int res = acceso.Escribir("MODIFICAR_USUARIO", parametros);
             acceso.Cerrar();
         }
@@ -125,7 +138,6 @@ namespace DAL
                 usu.IntentosFallidos = int.Parse(registro["INTENTOSFALLIDOS"].ToString());
                 usu.Dni = int.Parse(registro["DNI"].ToString());
                 usu.Email= registro["EMAIL"].ToString();
-                usu.Rol = registro["ROL"].ToString();
                 usuarios.Add(usu);
             }
             return usuarios;

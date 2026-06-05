@@ -39,7 +39,7 @@
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(12, 12);
+            this.treeView1.Location = new System.Drawing.Point(254, 12);
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(183, 251);
             this.treeView1.TabIndex = 0;
@@ -47,14 +47,14 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(274, 12);
+            this.listBox1.Location = new System.Drawing.Point(12, 12);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(199, 251);
             this.listBox1.TabIndex = 1;
             // 
             // BTNCtrlPermisoCrearRol
             // 
-            this.BTNCtrlPermisoCrearRol.Location = new System.Drawing.Point(17, 335);
+            this.BTNCtrlPermisoCrearRol.Location = new System.Drawing.Point(259, 335);
             this.BTNCtrlPermisoCrearRol.Name = "BTNCtrlPermisoCrearRol";
             this.BTNCtrlPermisoCrearRol.Size = new System.Drawing.Size(87, 23);
             this.BTNCtrlPermisoCrearRol.TabIndex = 2;
@@ -64,7 +64,7 @@
             // 
             // TXTCtrlPermisoNombre
             // 
-            this.TXTCtrlPermisoNombre.Location = new System.Drawing.Point(17, 297);
+            this.TXTCtrlPermisoNombre.Location = new System.Drawing.Point(259, 297);
             this.TXTCtrlPermisoNombre.Name = "TXTCtrlPermisoNombre";
             this.TXTCtrlPermisoNombre.Size = new System.Drawing.Size(100, 20);
             this.TXTCtrlPermisoNombre.TabIndex = 4;
@@ -72,7 +72,7 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(17, 278);
+            this.Label1.Location = new System.Drawing.Point(259, 278);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(44, 13);
             this.Label1.TabIndex = 5;
@@ -80,7 +80,7 @@
             // 
             // BTNCtrlPermisoAsignar
             // 
-            this.BTNCtrlPermisoAsignar.Location = new System.Drawing.Point(274, 270);
+            this.BTNCtrlPermisoAsignar.Location = new System.Drawing.Point(12, 270);
             this.BTNCtrlPermisoAsignar.Name = "BTNCtrlPermisoAsignar";
             this.BTNCtrlPermisoAsignar.Size = new System.Drawing.Size(75, 23);
             this.BTNCtrlPermisoAsignar.TabIndex = 6;
@@ -90,7 +90,7 @@
             // 
             // BTNCtrlPermisoDesasignar
             // 
-            this.BTNCtrlPermisoDesasignar.Location = new System.Drawing.Point(274, 299);
+            this.BTNCtrlPermisoDesasignar.Location = new System.Drawing.Point(12, 299);
             this.BTNCtrlPermisoDesasignar.Name = "BTNCtrlPermisoDesasignar";
             this.BTNCtrlPermisoDesasignar.Size = new System.Drawing.Size(75, 23);
             this.BTNCtrlPermisoDesasignar.TabIndex = 7;
@@ -102,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(643, 396);
             this.Controls.Add(this.BTNCtrlPermisoDesasignar);
             this.Controls.Add(this.BTNCtrlPermisoAsignar);
             this.Controls.Add(this.Label1);

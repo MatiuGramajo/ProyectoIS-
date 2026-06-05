@@ -12,6 +12,7 @@ namespace BLL
     {
         MP_USUARIO mapper = new MP_USUARIO();
         BLL.BITACORA gestorBitacora= new BLL.BITACORA();
+        BLL.PERMISO gestorPermisos = new BLL.PERMISO();
 
         public void Insertar(BE.USUARIO usuario)
         {
@@ -74,9 +75,12 @@ namespace BLL
 
             }
             usuariovalido.IntentosFallidos = 0;
-            mapper.ActualizarIntentosFallidos(usuariovalido);  
+            mapper.ActualizarIntentosFallidos(usuariovalido);
+            usuariovalido.Permisos = gestorPermisos.ObtenerPermisosUsuario(usuariovalido.Id);
             SESION.GetInstancia().AsignarUsuario(usuariovalido);
             gestorBitacora.RegistrarEvento("Seguridad", "Inicio de sesión exitoso", 1);
         }
+
+
     }
 }

@@ -17,6 +17,7 @@ namespace Trabajo_practico_IS
 
         BLL.USUARIO GestorUsuarios = new BLL.USUARIO();
         BLL.BITACORA GestorBitacora = new BLL.BITACORA();
+        BLL.PERMISO GestorPermisos = new BLL.PERMISO();
         BE.USUARIO usuario;
 
         public FrmCTRLUsuario()
@@ -27,6 +28,7 @@ namespace Trabajo_practico_IS
         private void FrmCTRLUsuario_Load(object sender, EventArgs e)
         {
             EnlazarUsuarios();
+            CargarComboBoxRoles();
         }
 
         public void EnlazarUsuarios()
@@ -55,7 +57,7 @@ namespace Trabajo_practico_IS
 
         private void BTNCtrlUsuAlta_Click(object sender, EventArgs e)
         {
-            if (!(string.IsNullOrEmpty(TXT_CtrlUsuUsuario.Text) || string.IsNullOrEmpty(TXT_CtrlUsuContraseña.Text) || string.IsNullOrEmpty(TXT_CtrlUsuDNI.Text) || string.IsNullOrEmpty(TXT_CtrlUsuEmail.Text) || string.IsNullOrEmpty(CBX_CtrlUsuRol.Text)))
+            if (!(string.IsNullOrEmpty(TXT_CtrlUsuUsuario.Text) || string.IsNullOrEmpty(TXT_CtrlUsuContraseña.Text) || string.IsNullOrEmpty(TXT_CtrlUsuDNI.Text) || string.IsNullOrEmpty(TXT_CtrlUsuEmail.Text)))
             {
                 BE.USUARIO usuario = new BE.USUARIO();
 
@@ -63,7 +65,6 @@ namespace Trabajo_practico_IS
                 usuario.Contraseña = ENCRIPTADOR.Hashear(TXT_CtrlUsuContraseña.Text);
                 usuario.Dni = int.Parse(TXT_CtrlUsuDNI.Text);
                 usuario.Email = TXT_CtrlUsuEmail.Text;
-                usuario.Rol = CBX_CtrlUsuRol.Text;
 
                 GestorUsuarios.Insertar(usuario);
                 GestorBitacora.RegistrarEvento("Administracion", $"Se dio de alta al usuario {usuario.Usuario}", 2);
@@ -82,7 +83,6 @@ namespace Trabajo_practico_IS
             TXT_CtrlUsuContraseña.Text = "";
             TXT_CtrlUsuDNI.Text = "";
             TXT_CtrlUsuEmail.Text = "";
-            CBX_CtrlUsuRol.SelectedIndex = -1;
         }
         private void BTNCtrlUsuBaja_Click(object sender, EventArgs e)
         {
@@ -107,7 +107,7 @@ namespace Trabajo_practico_IS
 
         private void BTNCtrlUsuModificar_Click(object sender, EventArgs e)
         {
-            if (usuario != null && !(string.IsNullOrEmpty(TXT_CtrlUsuUsuario.Text) || string.IsNullOrEmpty(TXT_CtrlUsuDNI.Text) || string.IsNullOrEmpty(TXT_CtrlUsuEmail.Text) || string.IsNullOrEmpty(CBX_CtrlUsuRol.Text)))
+            if (usuario != null && !(string.IsNullOrEmpty(TXT_CtrlUsuUsuario.Text) || string.IsNullOrEmpty(TXT_CtrlUsuDNI.Text) || string.IsNullOrEmpty(TXT_CtrlUsuEmail.Text)))
             {
                 usuario.Usuario = TXT_CtrlUsuUsuario.Text;
                 if(!string.IsNullOrEmpty(TXT_CtrlUsuContraseña.Text))
@@ -117,7 +117,6 @@ namespace Trabajo_practico_IS
                 }
                 usuario.Dni = int.Parse(TXT_CtrlUsuDNI.Text);
                 usuario.Email = TXT_CtrlUsuEmail.Text;
-                usuario.Rol = CBX_CtrlUsuRol.SelectedItem.ToString();
                 GestorUsuarios.Modificar(usuario);
                 EnlazarUsuarios();
                 GestorBitacora.RegistrarEvento("Administracion", $"Se modificó al usuario: {usuario.Usuario}", 3);
@@ -174,7 +173,6 @@ namespace Trabajo_practico_IS
                 TXT_CtrlUsuContraseña.Text = "";
                 TXT_CtrlUsuDNI.Text = usuario.Dni.ToString();
                 TXT_CtrlUsuEmail.Text = usuario.Email;
-                CBX_CtrlUsuRol.SelectedItem = usuario.Rol;
             }
         }
 
@@ -183,6 +181,19 @@ namespace Trabajo_practico_IS
             EnlazarUsuarios();
             LimpiarControles();
             usuario = null;
+        }
+
+        private void CargarComboBoxRoles()
+        {
+            // 1. Traemos TODOS los permisos de la base de datos
+            List<BE.COMPONENTE> todosLosPermisos = GestorPermisos.Listar();
+
+            // 2. Filtramos con LINQ para quedarnos SOLAMENTE con los roles (compuestos)
+            List<BE.COMPONENTE> soloRoles = todosLosPermisos.Where(p => p is BE.PERMISO_COMPUESTO).ToList();
+
+            // 3. Enlazamos la lista al ComboBox
+            Cb_CTRLUsuarioRol.DataSource = soloRoles;
+            Cb_CTRLUsuarioRol.DisplayMember = "Nombre"; // Propiedad que lee el usuario
         }
     }
 }

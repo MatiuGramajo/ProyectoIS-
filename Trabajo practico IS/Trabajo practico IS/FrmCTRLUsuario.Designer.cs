@@ -36,15 +36,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.BTNCtrlUsuAlta = new System.Windows.Forms.Button();
             this.BTNCtrlUsuBaja = new System.Windows.Forms.Button();
             this.BTNCtrlUsuModificar = new System.Windows.Forms.Button();
             this.BTNCtrlUsuVolverMenu = new System.Windows.Forms.Button();
             this.DGV_CtrlUsuUsuarios = new System.Windows.Forms.DataGridView();
-            this.CBX_CtrlUsuRol = new System.Windows.Forms.ComboBox();
             this.BTNCtrlUsuDesbloquear = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Cb_CTRLUsuarioRol = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_CtrlUsuUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,15 +112,6 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Email";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(63, 414);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Rol";
-            // 
             // BTNCtrlUsuAlta
             // 
             this.BTNCtrlUsuAlta.Location = new System.Drawing.Point(468, 242);
@@ -170,17 +161,6 @@
             this.DGV_CtrlUsuUsuarios.TabIndex = 14;
             this.DGV_CtrlUsuUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CtrlUsuUsuarios_CellClick);
             // 
-            // CBX_CtrlUsuRol
-            // 
-            this.CBX_CtrlUsuRol.FormattingEnabled = true;
-            this.CBX_CtrlUsuRol.Items.AddRange(new object[] {
-            "Administrador",
-            "Basico"});
-            this.CBX_CtrlUsuRol.Location = new System.Drawing.Point(92, 410);
-            this.CBX_CtrlUsuRol.Name = "CBX_CtrlUsuRol";
-            this.CBX_CtrlUsuRol.Size = new System.Drawing.Size(165, 21);
-            this.CBX_CtrlUsuRol.TabIndex = 15;
-            // 
             // BTNCtrlUsuDesbloquear
             // 
             this.BTNCtrlUsuDesbloquear.Location = new System.Drawing.Point(468, 314);
@@ -202,21 +182,38 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(57, 407);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 13);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Rol";
+            // 
+            // Cb_CTRLUsuarioRol
+            // 
+            this.Cb_CTRLUsuarioRol.FormattingEnabled = true;
+            this.Cb_CTRLUsuarioRol.Location = new System.Drawing.Point(92, 407);
+            this.Cb_CTRLUsuarioRol.Name = "Cb_CTRLUsuarioRol";
+            this.Cb_CTRLUsuarioRol.Size = new System.Drawing.Size(165, 21);
+            this.Cb_CTRLUsuarioRol.TabIndex = 20;
+            // 
             // FrmCTRLUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(876, 517);
+            this.Controls.Add(this.Cb_CTRLUsuarioRol);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.BTNCtrlUsuDesbloquear);
-            this.Controls.Add(this.CBX_CtrlUsuRol);
             this.Controls.Add(this.DGV_CtrlUsuUsuarios);
             this.Controls.Add(this.BTNCtrlUsuVolverMenu);
             this.Controls.Add(this.BTNCtrlUsuModificar);
             this.Controls.Add(this.BTNCtrlUsuBaja);
             this.Controls.Add(this.BTNCtrlUsuAlta);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -226,6 +223,7 @@
             this.Controls.Add(this.TXT_CtrlUsuContraseña);
             this.Controls.Add(this.TXT_CtrlUsuUsuario);
             this.Name = "FrmCTRLUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCTRLUsuario";
             this.Load += new System.EventHandler(this.FrmCTRLUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_CtrlUsuUsuarios)).EndInit();
@@ -244,14 +242,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button BTNCtrlUsuAlta;
         private System.Windows.Forms.Button BTNCtrlUsuBaja;
         private System.Windows.Forms.Button BTNCtrlUsuModificar;
         private System.Windows.Forms.Button BTNCtrlUsuVolverMenu;
         private System.Windows.Forms.DataGridView DGV_CtrlUsuUsuarios;
-        private System.Windows.Forms.ComboBox CBX_CtrlUsuRol;
         private System.Windows.Forms.Button BTNCtrlUsuDesbloquear;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox Cb_CTRLUsuarioRol;
     }
 }
