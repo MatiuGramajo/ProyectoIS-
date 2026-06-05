@@ -23,20 +23,20 @@ namespace DAL
             parametros.Add(acceso.CrearParametro("@email", usuario.Email));
             
             DataTable dt = acceso.Leer("INSERTAR_USUARIO",parametros);
-            int idNuevoUsuario = Convert.ToInt32(dt.Rows[0][0]);
+            //int idNuevoUsuario = Convert.ToInt32(dt.Rows[0][0]);
 
-            // Le asignamos el ID real al objeto en memoria
-            usuario.Id = idNuevoUsuario;
+            //// Le asignamos el ID real al objeto en memoria
+            //usuario.Id = idNuevoUsuario;
 
-            // 2. Guardamos sus permisos/roles en la tabla puente
-            foreach (var permiso in usuario.Permisos)
-            {
-                List<SqlParameter> paramPermiso = new List<SqlParameter>();
-                paramPermiso.Add(acceso.CrearParametro("@idUsuario", usuario.Id));
-                paramPermiso.Add(acceso.CrearParametro("@idPermiso", permiso.Id));
+            //// 2. Guardamos sus permisos/roles en la tabla puente
+            //foreach (var permiso in usuario.Permisos)
+            //{
+            //    List<SqlParameter> paramPermiso = new List<SqlParameter>();
+            //    paramPermiso.Add(acceso.CrearParametro("@idUsuario", usuario.Id));
+            //    paramPermiso.Add(acceso.CrearParametro("@idPermiso", permiso.Id));
 
-                acceso.Escribir("INSERTAR_USUARIO_PERMISO", paramPermiso);
-            }
+            //    acceso.Escribir("INSERTAR_USUARIO_PERMISO", paramPermiso);
+            //}
             acceso.Cerrar();
             
         }
