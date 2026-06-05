@@ -31,7 +31,6 @@
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.BTNCtrlPermisoCrearRol = new System.Windows.Forms.Button();
-            this.BTNCtrlPermisoCrearPermiso = new System.Windows.Forms.Button();
             this.TXTCtrlPermisoNombre = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
             this.BTNCtrlPermisoAsignar = new System.Windows.Forms.Button();
@@ -62,16 +61,6 @@
             this.BTNCtrlPermisoCrearRol.Text = "Crear Rol";
             this.BTNCtrlPermisoCrearRol.UseVisualStyleBackColor = true;
             this.BTNCtrlPermisoCrearRol.Click += new System.EventHandler(this.BTNCtrlPermisoCrearRol_Click);
-            // 
-            // BTNCtrlPermisoCrearPermiso
-            // 
-            this.BTNCtrlPermisoCrearPermiso.Location = new System.Drawing.Point(17, 365);
-            this.BTNCtrlPermisoCrearPermiso.Name = "BTNCtrlPermisoCrearPermiso";
-            this.BTNCtrlPermisoCrearPermiso.Size = new System.Drawing.Size(87, 23);
-            this.BTNCtrlPermisoCrearPermiso.TabIndex = 3;
-            this.BTNCtrlPermisoCrearPermiso.Text = "Crear Permiso";
-            this.BTNCtrlPermisoCrearPermiso.UseVisualStyleBackColor = true;
-            this.BTNCtrlPermisoCrearPermiso.Click += new System.EventHandler(this.BTNCtrlPermisoCrearPermiso_Click);
             // 
             // TXTCtrlPermisoNombre
             // 
@@ -118,7 +107,6 @@
             this.Controls.Add(this.BTNCtrlPermisoAsignar);
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.TXTCtrlPermisoNombre);
-            this.Controls.Add(this.BTNCtrlPermisoCrearPermiso);
             this.Controls.Add(this.BTNCtrlPermisoCrearRol);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.treeView1);
@@ -136,7 +124,6 @@
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button BTNCtrlPermisoCrearRol;
-        private System.Windows.Forms.Button BTNCtrlPermisoCrearPermiso;
         private System.Windows.Forms.TextBox TXTCtrlPermisoNombre;
         private System.Windows.Forms.Label Label1;
         private System.Windows.Forms.Button BTNCtrlPermisoAsignar;

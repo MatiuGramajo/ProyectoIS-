@@ -90,5 +90,22 @@ namespace DAL
             acceso.Cerrar();
             return dt;
         }
+
+        public List<int> ObtenerIdsPermisosUsuario(int idUsuario)
+        {
+            acceso.Abrir();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(acceso.CrearParametro("@idUsuario", idUsuario));
+
+            DataTable tabla = acceso.Leer("OBTENER_PERMISOS_DE_USUARIO", parametros);
+            acceso.Cerrar();
+
+            List<int> ids = new List<int>();
+            foreach (DataRow fila in tabla.Rows)
+            {
+                ids.Add(int.Parse(fila["Id_Permiso"].ToString()));
+            }
+            return ids;
+        }
     }
 }

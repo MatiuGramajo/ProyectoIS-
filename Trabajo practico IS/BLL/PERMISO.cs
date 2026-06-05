@@ -27,7 +27,10 @@ namespace BLL
                 {
                     throw new Exception("Este componente ya existe dentro del rol");
                 }
-
+                if (ExisteReferenciaCircular(padre.Id, hijo.Id))
+                {
+                    throw new Exception("Acción denegada: Asignar este rol generaría una referencia circular infinita.");
+                }
                 padre.AgregarHijo(hijo);
                 
                 mapperPermiso.GuardarRelacion(padre.Id, hijo.Id);
@@ -38,6 +41,41 @@ namespace BLL
                 throw;
             }
             
+        }
+
+        private bool ExisteReferenciaCircular(int idPadreDestino, int idHijoAAgregar)
+        {
+            // Obtenemos la tabla cruda de relaciones de la BD
+            DataTable tablaRelaciones = mapperPermiso.ObtenerTablaRelacionesAuxiliar();
+
+            // Iniciamos la búsqueda recursiva: ¿Está el Padre metido en algún lugar adentro del Hijo?
+            return BuscarCicloRecursivo(idHijoAAgregar, idPadreDestino, tablaRelaciones);
+        }
+
+        // Método recursivo privado que navega la tabla de relaciones
+        private bool BuscarCicloRecursivo(int idActual, int idBuscado, DataTable relaciones)
+        {
+            // Filtramos los hijos directos del nodo actual (Fijate de usar el nombre exacto de tu columna, ej: "Id_Padre")
+            var hijos = from DataRow fila in relaciones.Rows
+                        where int.Parse(fila["Id_Padre"].ToString()) == idActual
+                        select int.Parse(fila["Id_Hijo"].ToString());
+
+            foreach (int idHijo in hijos)
+            {
+                // Si el hijo es exactamente el padre que queremos asignar... ¡Encontramos un bucle!
+                if (idHijo == idBuscado)
+                {
+                    return true;
+                }
+
+                // Si no es, seguimos bajando un nivel más en el árbol
+                if (BuscarCicloRecursivo(idHijo, idBuscado, relaciones))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         public void BorrarRelacion(BE.COMPONENTE padre, BE.COMPONENTE hijo)
@@ -57,6 +95,7 @@ namespace BLL
             }
         }
         
+
 
         public List<BE.COMPONENTE> Listar()
         {

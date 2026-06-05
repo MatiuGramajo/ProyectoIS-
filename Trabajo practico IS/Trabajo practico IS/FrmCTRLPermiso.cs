@@ -48,15 +48,25 @@ namespace Trabajo_practico_IS
 
         private void AgregarNodosRecursivos(TreeNode nodoPadre, BE.COMPONENTE componentePadre)
         {
-            foreach (var hijo in componentePadre.Hijos)
+            // Le preguntamos al componente cuántos hijos tiene (sin saber si es rama u hoja)
+            int cantidad = componentePadre.GetCantidadHijos();
+
+            // Iteramos de forma clásica
+            for (int i = 0; i < cantidad; i++)
             {
-                TreeNode nodoHijo = new TreeNode(hijo.Nombre);
-                nodoHijo.Tag = hijo;
+                // Obtenemos el hijo por su índice
+                BE.COMPONENTE hijo = componentePadre.GetHijo(i);
 
-                nodoPadre.Nodes.Add(nodoHijo);
+                if (hijo != null)
+                {
+                    TreeNode nodoHijo = new TreeNode(hijo.Nombre);
+                    nodoHijo.Tag = hijo;
 
-                // Volvemos a llamarnos a nosotros mismos por si el hijo tiene más hijos
-                AgregarNodosRecursivos(nodoHijo, hijo);
+                    nodoPadre.Nodes.Add(nodoHijo);
+
+                    // Recursividad
+                    AgregarNodosRecursivos(nodoHijo, hijo);
+                }
             }
         }
 
@@ -82,26 +92,6 @@ namespace Trabajo_practico_IS
             GestorPermisos.GuardarComponente(nuevoRol);
 
             MessageBox.Show("Rol compuesto creado con éxito.");
-
-            TXTCtrlPermisoNombre.Text = "";
-            CargarTreeView();
-            CargarListBox();
-        }
-
-        private void BTNCtrlPermisoCrearPermiso_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(TXTCtrlPermisoNombre.Text))
-            {
-                MessageBox.Show("Por favor, ingrese un nombre para el Permiso.");
-                return;
-            }
-
-            BE.PERMISO_SIMPLE nuevoPermiso = new BE.PERMISO_SIMPLE();
-            nuevoPermiso.Nombre = TXTCtrlPermisoNombre.Text;
-
-            GestorPermisos.GuardarComponente(nuevoPermiso);
-
-            MessageBox.Show("Permiso simple creado con éxito.");
 
             TXTCtrlPermisoNombre.Text = "";
             CargarTreeView();

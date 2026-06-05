@@ -15,14 +15,6 @@ namespace BE
             _hijos = new List<COMPONENTE>();
         }
 
-        public override List<COMPONENTE> Hijos
-        {
-            get
-            {
-                return _hijos;
-            }
-        }
-
         public override void VaciarHijos()
         {
             _hijos = new List<COMPONENTE>();
@@ -39,7 +31,15 @@ namespace BE
         }
         public override COMPONENTE GetHijo(int index)
         {
+            if (index < 0 || index >= _hijos.Count)
+                return null;
+
             return _hijos[index];
+        }
+
+        public override int GetCantidadHijos()
+        {
+            return _hijos.Count;
         }
 
         public override bool TienePermiso(string nombrePermiso)

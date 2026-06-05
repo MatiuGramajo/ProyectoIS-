@@ -25,11 +25,11 @@ namespace BE
             set { nombre = value; }
         }
 
-        public abstract List<COMPONENTE> Hijos { get; }
         public abstract void AgregarHijo(COMPONENTE c);
         public abstract void VaciarHijos();
         public abstract void BorrarHijo(COMPONENTE c);
         public abstract COMPONENTE GetHijo(int index);
+        public abstract int GetCantidadHijos();
         public abstract bool TienePermiso(string nombrePermiso);
         public override string ToString()
         {
