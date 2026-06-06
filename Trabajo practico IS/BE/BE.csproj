@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="BITACORA.cs" />
     <Compile Include="COMPONENTE.cs" />
+    <Compile Include="IDIOMA.cs" />
     <Compile Include="IObservable.cs" />
     <Compile Include="IObserver.cs" />
     <Compile Include="PERMISO_COMPUESTO.cs" />

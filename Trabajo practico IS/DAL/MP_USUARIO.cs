@@ -72,6 +72,7 @@ namespace DAL
                 usuarioEncontrado.Contraseña = row["Contraseña"].ToString();
                 usuarioEncontrado.IntentosFallidos = Convert.ToInt32(row["IntentosFallidos"]);
                 usuarioEncontrado.EstadoBloqueado = Convert.ToBoolean(row["EstadoBloqueado"]);
+                usuarioEncontrado.IdIdioma = row["id_idioma"] != DBNull.Value ? Convert.ToInt32(row["id_idioma"]) : 1;
 
 
                 return usuarioEncontrado;
@@ -141,6 +142,15 @@ namespace DAL
                 usuarios.Add(usu);
             }
             return usuarios;
+        }
+        public void ActualizarIdiomaUsuario(int idUsuario, int idIdioma)
+        {
+            acceso.Abrir();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(acceso.CrearParametro("@id_usuario", idUsuario));
+            parametros.Add(acceso.CrearParametro("@id_idioma", idIdioma));
+            acceso.Escribir("ACTUALIZAR_IDIOMA_USUARIO", parametros);
+            acceso.Cerrar();
         }
     }
 }

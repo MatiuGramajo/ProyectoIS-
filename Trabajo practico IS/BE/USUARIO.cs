@@ -83,6 +83,15 @@ namespace BE
             return false;
         }
 
-    }
+		private int idIdioma;
+
+		public int IdIdioma
+		{
+			get { return idIdioma; }
+			set { idIdioma = value; }
+		}
+
+
+	}
 
 }
