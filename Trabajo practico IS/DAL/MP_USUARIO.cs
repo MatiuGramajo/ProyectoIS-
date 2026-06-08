@@ -21,22 +21,24 @@ namespace DAL
             parametros.Add(acceso.CrearParametro("@contra", usuario.Contraseña));
             parametros.Add(acceso.CrearParametro("@dni", usuario.Dni));
             parametros.Add(acceso.CrearParametro("@email", usuario.Email));
-            
-            DataTable dt = acceso.Leer("INSERTAR_USUARIO",parametros);
-            //int idNuevoUsuario = Convert.ToInt32(dt.Rows[0][0]);
 
-            //// Le asignamos el ID real al objeto en memoria
-            //usuario.Id = idNuevoUsuario;
+            //int res = acceso.Escribir("INSERTAR_USUARIO", parametros);
+            //DataTable dt = acceso.Leer("INSERTAR_USUARIO",parametros);
 
-            //// 2. Guardamos sus permisos/roles en la tabla puente
-            //foreach (var permiso in usuario.Permisos)
-            //{
-            //    List<SqlParameter> paramPermiso = new List<SqlParameter>();
-            //    paramPermiso.Add(acceso.CrearParametro("@idUsuario", usuario.Id));
-            //    paramPermiso.Add(acceso.CrearParametro("@idPermiso", permiso.Id));
+            usuario.Id = acceso.LeerEscalar("INSERTAR_USUARIO", parametros);
 
-            //    acceso.Escribir("INSERTAR_USUARIO_PERMISO", paramPermiso);
-            //}
+            if (usuario.Permisos != null && usuario.Permisos.Count > 0)
+            {
+                foreach (var permiso in usuario.Permisos)
+                {
+                    List<SqlParameter> paramPermiso = new List<SqlParameter>();
+                    paramPermiso.Add(acceso.CrearParametro("@idUsuario", usuario.Id));
+                    paramPermiso.Add(acceso.CrearParametro("@idPermiso", permiso.Id));
+
+                    // Aquí SÍ usamos 'Escribir' porque solo necesitamos que se inserte (ExecuteNonQuery)
+                    acceso.Escribir("INSERTAR_USUARIO_PERMISO", paramPermiso);
+                }
+            }
             acceso.Cerrar();
             
         }
@@ -121,6 +123,21 @@ namespace DAL
             parametros.Add(acceso.CrearParametro("@dni", usuario.Dni));
             parametros.Add(acceso.CrearParametro("@email", usuario.Email));
             int res = acceso.Escribir("MODIFICAR_USUARIO", parametros);
+
+            // 2. ACTUALIZACIÓN DE PERMISOS (Borrar y Volver a Insertar)
+            // Borramos todas las relaciones viejas
+            List<SqlParameter> paramBorrar = new List<SqlParameter>();
+            paramBorrar.Add(acceso.CrearParametro("@idUsuario", usuario.Id));
+            acceso.Escribir("BORRAR_PERMISOS_USUARIO", paramBorrar); // Necesitas crear este SP simple
+
+            // Insertamos las nuevas relaciones
+            foreach (var permiso in usuario.Permisos)
+            {
+                List<SqlParameter> paramInsert = new List<SqlParameter>();
+                paramInsert.Add(acceso.CrearParametro("@idUsuario", usuario.Id));
+                paramInsert.Add(acceso.CrearParametro("@idPermiso", permiso.Id));
+                acceso.Escribir("INSERTAR_USUARIO_PERMISO", paramInsert);
+            }
             acceso.Cerrar();
         }
         public override List<USUARIO> Listar()

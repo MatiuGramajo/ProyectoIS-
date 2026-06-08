@@ -42,9 +42,13 @@ namespace DAL
         }
 
 
-        public override void Baja(COMPONENTE obj)
+        public override void Baja(COMPONENTE permiso)
         {
-            throw new NotImplementedException();
+            acceso.Abrir();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(acceso.CrearParametro("@idRol", permiso.Id));
+            acceso.Escribir("BORRAR_ROL_COMPLETO", parametros);
+            acceso.Cerrar();
         }
 
         public override List<COMPONENTE> Listar()
@@ -74,9 +78,14 @@ namespace DAL
             return listaPermisos;
         }
 
-        public override void Modificar(COMPONENTE obj)
+        public override void Modificar(COMPONENTE permiso)
         {
-            throw new NotImplementedException();
+            acceso.Abrir();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(acceso.CrearParametro("@id", permiso.Id));
+            parametros.Add(acceso.CrearParametro("@nombre", permiso.Nombre));
+            int res = acceso.Escribir("MODIFICAR_PERMISO", parametros);
+            acceso.Cerrar();
         }
 
         public override bool Verificar(COMPONENTE obj)
@@ -106,6 +115,19 @@ namespace DAL
                 ids.Add(int.Parse(fila["Id_Permiso"].ToString()));
             }
             return ids;
+        }
+
+        public bool ValidarRolEnUso(int idPer)
+        {
+            acceso.Abrir();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(acceso.CrearParametro("@idPer", idPer));
+
+            // Hacemos un count rápido directo a la tabla puente de usuarios
+            int cantidad = acceso.LeerEscalar("VALIDAR_USO_ROL", parametros);
+            acceso.Cerrar();
+
+            return cantidad > 0; // Si es mayor a 0, devuelve TRUE (está en uso)
         }
     }
 }

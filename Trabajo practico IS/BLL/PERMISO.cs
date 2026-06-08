@@ -15,6 +15,29 @@ namespace BLL
         {
             mapperPermiso.Alta(componente);
         }
+
+        public void Modificar(BE.COMPONENTE componente)
+        {
+            mapperPermiso.Modificar(componente);
+        }
+
+        public void Baja(BE.COMPONENTE componente)
+        {
+            // 1. REGLA DE NEGOCIO: ¿Es una hoja? (No permitimos borrar permisos base)
+            if (!componente.EsCompuesto)
+            {
+                throw new Exception("Por seguridad del sistema, no se pueden eliminar las acciones base, solo los roles.");
+            }
+
+            // 2. REGLA DE NEGOCIO: ¿El rol está siendo usado por algún usuario?
+            if (mapperPermiso.ValidarRolEnUso(componente.Id))
+            {
+                // ¡El control lo hace el programa! Lanzamos la excepción en C#
+                throw new Exception("Acción denegada: Hay usuarios que tienen este rol asignado. Desvincule a los usuarios primero.");
+            }
+
+            mapperPermiso.Baja(componente);
+        }
         public void GuardarRelacion(BE.COMPONENTE padre, BE.COMPONENTE hijo)
         {
             try

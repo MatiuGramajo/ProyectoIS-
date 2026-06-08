@@ -74,6 +74,7 @@
             // 
             this.controlDeUsuariosToolStripMenuItem.Name = "controlDeUsuariosToolStripMenuItem";
             this.controlDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.controlDeUsuariosToolStripMenuItem.Tag = "ABM_USUARIO";
             this.controlDeUsuariosToolStripMenuItem.Text = "Control de usuarios";
             this.controlDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.controlDeUsuariosToolStripMenuItem_Click);
             // 
@@ -81,6 +82,7 @@
             // 
             this.controlDePermisosToolStripMenuItem.Name = "controlDePermisosToolStripMenuItem";
             this.controlDePermisosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.controlDePermisosToolStripMenuItem.Tag = "ABM_PERMISOS";
             this.controlDePermisosToolStripMenuItem.Text = "Control de permisos";
             this.controlDePermisosToolStripMenuItem.Click += new System.EventHandler(this.controlDePermisosToolStripMenuItem_Click);
             // 
@@ -88,6 +90,7 @@
             // 
             this.BitacoraToolStripMenuItem.Name = "BitacoraToolStripMenuItem";
             this.BitacoraToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.BitacoraToolStripMenuItem.Tag = "BITACORA";
             this.BitacoraToolStripMenuItem.Text = "Bitacora";
             this.BitacoraToolStripMenuItem.Click += new System.EventHandler(this.BitacoraToolStripMenuItem_Click);
             // 

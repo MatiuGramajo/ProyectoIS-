@@ -31,6 +31,7 @@ namespace BE
         public abstract COMPONENTE GetHijo(int index);
         public abstract int GetCantidadHijos();
         public abstract bool TienePermiso(string nombrePermiso);
+        public abstract bool EsCompuesto { get; }
         public override string ToString()
         {
             return Nombre;

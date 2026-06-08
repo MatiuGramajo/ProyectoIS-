@@ -91,7 +91,7 @@
             // LBLidiomas
             // 
             this.LBLidiomas.AutoSize = true;
-            this.LBLidiomas.Location = new System.Drawing.Point(328, 20);
+            this.LBLidiomas.Location = new System.Drawing.Point(318, 16);
             this.LBLidiomas.Name = "LBLidiomas";
             this.LBLidiomas.Size = new System.Drawing.Size(38, 13);
             this.LBLidiomas.TabIndex = 7;

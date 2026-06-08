@@ -31,7 +31,10 @@ namespace Trabajo_practico_IS
             ActualizarIdioma();
             EnlazarUsuarios();
             CargarComboBoxRoles();
+            Cb_CTRLUsuarioRol.SelectedIndex = -1;
         }
+
+        //public void
 
         public void EnlazarUsuarios()
         {
@@ -39,9 +42,9 @@ namespace Trabajo_practico_IS
             List<BE.USUARIO> ListaDesbloqueados;
             if (CKXmostrarbloqueados.Checked==false)
             {
-            ListaDesbloqueados=(from d in ListaCompleta
-                                where d.EstadoBloqueado==false
-                                select d).ToList();
+                ListaDesbloqueados=(from d in ListaCompleta
+                                    where d.EstadoBloqueado==false
+                                    select d).ToList();
             }
             else
             {
@@ -62,11 +65,13 @@ namespace Trabajo_practico_IS
             if (!(string.IsNullOrEmpty(TXT_CtrlUsuUsuario.Text) || string.IsNullOrEmpty(TXT_CtrlUsuContraseña.Text) || string.IsNullOrEmpty(TXT_CtrlUsuDNI.Text) || string.IsNullOrEmpty(TXT_CtrlUsuEmail.Text)))
             {
                 BE.USUARIO usuario = new BE.USUARIO();
+                BE.COMPONENTE rolSeleccionado = (BE.COMPONENTE)Cb_CTRLUsuarioRol.SelectedItem;
 
                 usuario.Usuario = TXT_CtrlUsuUsuario.Text;
                 usuario.Contraseña = ENCRIPTADOR.Hashear(TXT_CtrlUsuContraseña.Text);
                 usuario.Dni = int.Parse(TXT_CtrlUsuDNI.Text);
                 usuario.Email = TXT_CtrlUsuEmail.Text;
+                usuario.Permisos.Add(rolSeleccionado);
 
                 GestorUsuarios.Insertar(usuario);
                 GestorBitacora.RegistrarEvento("Administracion", $"Se dio de alta al usuario {usuario.Usuario}", 2);
@@ -115,10 +120,18 @@ namespace Trabajo_practico_IS
                 if(!string.IsNullOrEmpty(TXT_CtrlUsuContraseña.Text))
                 {
                     usuario.Contraseña = ENCRIPTADOR.Hashear(TXT_CtrlUsuContraseña.Text);
-
                 }
                 usuario.Dni = int.Parse(TXT_CtrlUsuDNI.Text);
                 usuario.Email = TXT_CtrlUsuEmail.Text;
+
+                usuario.Permisos.Clear();
+
+                if (Cb_CTRLUsuarioRol.SelectedItem != null)
+                {
+                    BE.COMPONENTE rolSeleccionado = (BE.COMPONENTE)Cb_CTRLUsuarioRol.SelectedItem;
+                    usuario.Permisos.Add(rolSeleccionado);
+                }
+
                 GestorUsuarios.Modificar(usuario);
                 EnlazarUsuarios();
                 GestorBitacora.RegistrarEvento("Administracion", $"Se modificó al usuario: {usuario.Usuario}", 3);
@@ -175,6 +188,21 @@ namespace Trabajo_practico_IS
                 TXT_CtrlUsuContraseña.Text = "";
                 TXT_CtrlUsuDNI.Text = usuario.Dni.ToString();
                 TXT_CtrlUsuEmail.Text = usuario.Email;
+
+                usuario.Permisos = GestorPermisos.ObtenerPermisosUsuario(usuario.Id);
+
+                Cb_CTRLUsuarioRol.SelectedIndex = -1;
+
+                // Verificamos si el usuario tiene algún permiso en su lista
+                if (usuario.Permisos != null && usuario.Permisos.Count > 0)
+                {
+                    // Como usas un ComboBox de selección única para el rol primario, 
+                    // extraemos el primer permiso que tiene asignado (índice 0)
+                    BE.COMPONENTE permisoActual = usuario.Permisos[0];
+
+                    // Le decimos al ComboBox que busque y seleccione el ítem que coincida con ese ID
+                    Cb_CTRLUsuarioRol.SelectedValue = permisoActual.Id;
+                }
             }
         }
 
@@ -191,11 +219,12 @@ namespace Trabajo_practico_IS
             List<BE.COMPONENTE> todosLosPermisos = GestorPermisos.Listar();
 
             // 2. Filtramos con LINQ para quedarnos SOLAMENTE con los roles (compuestos)
-            List<BE.COMPONENTE> soloRoles = todosLosPermisos.Where(p => p is BE.PERMISO_COMPUESTO).ToList();
+            List<BE.COMPONENTE> soloRoles = todosLosPermisos.Where(p => p.EsCompuesto).ToList();
 
             // 3. Enlazamos la lista al ComboBox
             Cb_CTRLUsuarioRol.DataSource = soloRoles;
             Cb_CTRLUsuarioRol.DisplayMember = "Nombre"; // Propiedad que lee el usuario
+            Cb_CTRLUsuarioRol.ValueMember = "Id";
         }
 
         public void ActualizarIdioma()

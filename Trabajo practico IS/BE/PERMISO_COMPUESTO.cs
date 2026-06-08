@@ -10,6 +10,11 @@ namespace BE
     {
         private List<COMPONENTE> _hijos;
 
+        public override bool EsCompuesto
+        {
+            get { return true; }
+        }
+
         public PERMISO_COMPUESTO()
         {
             _hijos = new List<COMPONENTE>();

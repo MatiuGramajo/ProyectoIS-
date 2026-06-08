@@ -1,4 +1,6 @@
 ﻿using BE;
+using BLL;
+using Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,7 +15,10 @@ namespace Trabajo_practico_IS
 {
     public partial class FrmCTRLPermiso : Form, BE.IObserver
     {
+        BE.USUARIO UsuarioActual = SESION.GetInstancia().usuactual;
         BLL.PERMISO GestorPermisos = new BLL.PERMISO();
+        BLL.BITACORA GestorBitacora = new BLL.BITACORA();
+        BE.COMPONENTE componenteSeleccionado;
 
         public FrmCTRLPermiso()
         {
@@ -30,7 +35,7 @@ namespace Trabajo_practico_IS
 
         private void CargarTreeView()
         {
-            treeView1.Nodes.Clear();
+            TV_RolesPermisos.Nodes.Clear();
 
             // Pedimos las raíces a la BLL
             List<BE.COMPONENTE> raices = GestorPermisos.ObtenerArbolCompleto();
@@ -43,9 +48,9 @@ namespace Trabajo_practico_IS
                 // Llamamos a la función recursiva para que busque los hijos, nietos, etc.
                 AgregarNodosRecursivos(nodoRaiz, componente);
 
-                treeView1.Nodes.Add(nodoRaiz);
+                TV_RolesPermisos.Nodes.Add(nodoRaiz);
             }
-            treeView1.ExpandAll(); // Muestra el árbol desplegado
+            TV_RolesPermisos.ExpandAll(); // Muestra el árbol desplegado
         }
 
         private void AgregarNodosRecursivos(TreeNode nodoPadre, BE.COMPONENTE componentePadre)
@@ -96,6 +101,8 @@ namespace Trabajo_practico_IS
             MessageBox.Show("Rol compuesto creado con éxito.");
 
             TXTCtrlPermisoNombre.Text = "";
+
+            GestorBitacora.RegistrarEvento("Administracion", $"Se dio de alta el nuevo rol {nuevoRol}", 2);
             CargarTreeView();
             CargarListBox();
         }
@@ -108,12 +115,12 @@ namespace Trabajo_practico_IS
                 {
                     throw new Exception("Por favor, seleccionar un ROL o PERMISO del listbox.");
                 }
-                if (treeView1.SelectedNode == null)
+                if (TV_RolesPermisos.SelectedNode == null)
                 {
                     throw new Exception("Por favor, seleccione un ROL del treeview.");
                 }
 
-                var Padre = treeView1.SelectedNode.Tag as BE.COMPONENTE;
+                var Padre = TV_RolesPermisos.SelectedNode.Tag as BE.COMPONENTE;
                 var Hijo = listBox1.SelectedItem as BE.COMPONENTE;
 
                 GestorPermisos.GuardarRelacion(Padre, Hijo);
@@ -133,18 +140,18 @@ namespace Trabajo_practico_IS
             try
             {
 
-                if (treeView1.SelectedNode == null)
+                if (TV_RolesPermisos.SelectedNode == null)
                 {
                     throw new Exception("Por favor, seleccione un ROL del treeview.");
                 }
-                if (treeView1.SelectedNode.Parent == null)
+                if (TV_RolesPermisos.SelectedNode.Parent == null)
                 {
                     MessageBox.Show("No puede desasignar un Rol principal (Raíz).", "Operación Inválida", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                     return;
                 }
 
-                var Padre = treeView1.SelectedNode.Parent.Tag as BE.COMPONENTE;
-                var Hijo = treeView1.SelectedNode.Tag as BE.COMPONENTE;
+                var Padre = TV_RolesPermisos.SelectedNode.Parent.Tag as BE.COMPONENTE;
+                var Hijo = TV_RolesPermisos.SelectedNode.Tag as BE.COMPONENTE;
 
                 DialogResult respuesta = MessageBox.Show($"¿Está seguro que desea quitar '{Hijo.Nombre}' del rol '{Padre.Nombre}'?", "Confirmar Acción", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -181,6 +188,55 @@ namespace Trabajo_practico_IS
         private void FrmCTRLPermiso_FormClosed(object sender, FormClosedEventArgs e)
         {
             Servicios.IDIOMAS.GetInstancia().Desuscribir(this);
+        }
+
+        private void TV_RolesPermisos_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            componenteSeleccionado = (BE.COMPONENTE)e.Node.Tag;
+            TXTCtrlPermisoNombre.Text = componenteSeleccionado.Nombre;
+
+            bool esRol = componenteSeleccionado.EsCompuesto;
+
+            BTNCtrlPermisoBorrarRol.Enabled = esRol;
+            BTNCtrlPermisoModifRol.Enabled = esRol;
+        }
+
+        private void BTNCtrlPermisoModifRol_Click(object sender, EventArgs e)
+        {
+            if (componenteSeleccionado != null && !string.IsNullOrWhiteSpace(TXTCtrlPermisoNombre.Text))
+            {
+                componenteSeleccionado.Nombre = TXTCtrlPermisoNombre.Text;
+
+                GestorPermisos.Modificar(componenteSeleccionado);
+
+                CargarTreeView();
+                CargarListBox();
+            }
+        }
+
+        private void BTNCtrlPermisoBorrarRol_Click(object sender, EventArgs e)
+        {
+            if (componenteSeleccionado != null)
+            {
+                DialogResult respuesta = MessageBox.Show($"¿Está seguro de eliminar el rol '{componenteSeleccionado.Nombre}' por completo?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                if (respuesta == DialogResult.Yes)
+                {
+                    try
+                    {
+                        // Llamas a tu BLL
+                        GestorPermisos.Baja(componenteSeleccionado);
+                        MessageBox.Show("Rol eliminado.");
+                        CargarTreeView();
+                        CargarListBox();
+                    }
+                    catch (Exception ex)
+                    {
+                        // Aquí atrapará el RAISERROR de SQL si el rol está en uso por usuarios
+                        MessageBox.Show(ex.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
     }
 }

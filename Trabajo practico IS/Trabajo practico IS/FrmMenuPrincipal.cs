@@ -26,8 +26,10 @@ namespace Trabajo_practico_IS
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             Servicios.IDIOMAS.GetInstancia().Suscribir(this);
             ActualizarIdioma();
+            Utilidades.GES_PERMISOS_GUI.AplicarPermisos(this);
         }
         private void BtnCerrarSesion_Click(object sender, EventArgs e)
         {

@@ -8,7 +8,10 @@ namespace BE
 {
     public class PERMISO_SIMPLE : COMPONENTE
     {
-
+        public override bool EsCompuesto
+        {
+            get { return false; }
+        }
         public override void AgregarHijo(COMPONENTE c)
         {
             throw new NotImplementedException("Los permisos simples no tienen hijos.");
@@ -26,7 +29,6 @@ namespace BE
 
         public override int GetCantidadHijos()
         {
-            // Magia polimórfica: Una hoja siempre dice que tiene 0 hijos
             return 0;
         }
 
