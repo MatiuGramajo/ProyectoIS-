@@ -34,19 +34,19 @@
             this.DTPBitacoraDesde = new System.Windows.Forms.DateTimePicker();
             this.DTPBitacoraHasta = new System.Windows.Forms.DateTimePicker();
             this.CBXBitacoraUsuario = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.GBfiltros = new System.Windows.Forms.GroupBox();
+            this.CKXincluirfechas = new System.Windows.Forms.CheckBox();
+            this.LBLfechafinal = new System.Windows.Forms.Label();
+            this.LBLfechainicial = new System.Windows.Forms.Label();
+            this.LBLcriticidad = new System.Windows.Forms.Label();
+            this.LBLmodulo = new System.Windows.Forms.Label();
+            this.LBLusuario = new System.Windows.Forms.Label();
             this.CBXBitacoraModulo = new System.Windows.Forms.ComboBox();
             this.CBXBitacoraCriticidad = new System.Windows.Forms.ComboBox();
             this.BTN_BitacoraVolverAlMenu = new System.Windows.Forms.Button();
             this.GB_Bitacora.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_BITACORA)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.GBfiltros.SuspendLayout();
             this.SuspendLayout();
             // 
             // BTN_CargarBitacora
@@ -99,82 +99,82 @@
             this.CBXBitacoraUsuario.Size = new System.Drawing.Size(121, 21);
             this.CBXBitacoraUsuario.TabIndex = 8;
             // 
-            // groupBox1
+            // GBfiltros
             // 
-            this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.BTN_CargarBitacora);
-            this.groupBox1.Controls.Add(this.DTPBitacoraDesde);
-            this.groupBox1.Controls.Add(this.DTPBitacoraHasta);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.CBXBitacoraModulo);
-            this.groupBox1.Controls.Add(this.CBXBitacoraCriticidad);
-            this.groupBox1.Controls.Add(this.CBXBitacoraUsuario);
-            this.groupBox1.Location = new System.Drawing.Point(12, 300);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(699, 247);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filtros";
+            this.GBfiltros.Controls.Add(this.CKXincluirfechas);
+            this.GBfiltros.Controls.Add(this.LBLfechafinal);
+            this.GBfiltros.Controls.Add(this.LBLfechainicial);
+            this.GBfiltros.Controls.Add(this.LBLcriticidad);
+            this.GBfiltros.Controls.Add(this.BTN_CargarBitacora);
+            this.GBfiltros.Controls.Add(this.DTPBitacoraDesde);
+            this.GBfiltros.Controls.Add(this.DTPBitacoraHasta);
+            this.GBfiltros.Controls.Add(this.LBLmodulo);
+            this.GBfiltros.Controls.Add(this.LBLusuario);
+            this.GBfiltros.Controls.Add(this.CBXBitacoraModulo);
+            this.GBfiltros.Controls.Add(this.CBXBitacoraCriticidad);
+            this.GBfiltros.Controls.Add(this.CBXBitacoraUsuario);
+            this.GBfiltros.Location = new System.Drawing.Point(12, 300);
+            this.GBfiltros.Name = "GBfiltros";
+            this.GBfiltros.Size = new System.Drawing.Size(699, 247);
+            this.GBfiltros.TabIndex = 9;
+            this.GBfiltros.TabStop = false;
+            this.GBfiltros.Text = "Filtros";
             // 
-            // checkBox1
+            // CKXincluirfechas
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(367, 40);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(92, 17);
-            this.checkBox1.TabIndex = 16;
-            this.checkBox1.Text = "Incluir Fechas";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.CKXincluirfechas.AutoSize = true;
+            this.CKXincluirfechas.Location = new System.Drawing.Point(367, 40);
+            this.CKXincluirfechas.Name = "CKXincluirfechas";
+            this.CKXincluirfechas.Size = new System.Drawing.Size(92, 17);
+            this.CKXincluirfechas.TabIndex = 16;
+            this.CKXincluirfechas.Text = "Incluir Fechas";
+            this.CKXincluirfechas.UseVisualStyleBackColor = true;
+            this.CKXincluirfechas.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // label5
+            // LBLfechafinal
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(461, 66);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Fecha Final";
+            this.LBLfechafinal.AutoSize = true;
+            this.LBLfechafinal.Location = new System.Drawing.Point(461, 66);
+            this.LBLfechafinal.Name = "LBLfechafinal";
+            this.LBLfechafinal.Size = new System.Drawing.Size(62, 13);
+            this.LBLfechafinal.TabIndex = 15;
+            this.LBLfechafinal.Text = "Fecha Final";
             // 
-            // label4
+            // LBLfechainicial
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(229, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 13);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Fecha Inicial";
+            this.LBLfechainicial.AutoSize = true;
+            this.LBLfechainicial.Location = new System.Drawing.Point(229, 66);
+            this.LBLfechainicial.Name = "LBLfechainicial";
+            this.LBLfechainicial.Size = new System.Drawing.Size(67, 13);
+            this.LBLfechainicial.TabIndex = 14;
+            this.LBLfechainicial.Text = "Fecha Inicial";
             // 
-            // label3
+            // LBLcriticidad
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 129);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Criticidad";
+            this.LBLcriticidad.AutoSize = true;
+            this.LBLcriticidad.Location = new System.Drawing.Point(33, 129);
+            this.LBLcriticidad.Name = "LBLcriticidad";
+            this.LBLcriticidad.Size = new System.Drawing.Size(50, 13);
+            this.LBLcriticidad.TabIndex = 13;
+            this.LBLcriticidad.Text = "Criticidad";
             // 
-            // label2
+            // LBLmodulo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 89);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Modulo";
+            this.LBLmodulo.AutoSize = true;
+            this.LBLmodulo.Location = new System.Drawing.Point(33, 89);
+            this.LBLmodulo.Name = "LBLmodulo";
+            this.LBLmodulo.Size = new System.Drawing.Size(42, 13);
+            this.LBLmodulo.TabIndex = 12;
+            this.LBLmodulo.Text = "Modulo";
             // 
-            // label1
+            // LBLusuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Usuario";
+            this.LBLusuario.AutoSize = true;
+            this.LBLusuario.Location = new System.Drawing.Point(33, 44);
+            this.LBLusuario.Name = "LBLusuario";
+            this.LBLusuario.Size = new System.Drawing.Size(43, 13);
+            this.LBLusuario.TabIndex = 11;
+            this.LBLusuario.Text = "Usuario";
             // 
             // CBXBitacoraModulo
             // 
@@ -209,16 +209,17 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(947, 568);
             this.Controls.Add(this.BTN_BitacoraVolverAlMenu);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.GBfiltros);
             this.Controls.Add(this.GB_Bitacora);
             this.Name = "FrmBitacora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBitacora";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmBitacora_FormClosed);
             this.Load += new System.EventHandler(this.FrmBitacora_Load);
             this.GB_Bitacora.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_BITACORA)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.GBfiltros.ResumeLayout(false);
+            this.GBfiltros.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -231,15 +232,15 @@
         private System.Windows.Forms.DateTimePicker DTPBitacoraDesde;
         private System.Windows.Forms.DateTimePicker DTPBitacoraHasta;
         private System.Windows.Forms.ComboBox CBXBitacoraUsuario;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox GBfiltros;
+        private System.Windows.Forms.Label LBLcriticidad;
+        private System.Windows.Forms.Label LBLmodulo;
+        private System.Windows.Forms.Label LBLusuario;
         private System.Windows.Forms.ComboBox CBXBitacoraModulo;
         private System.Windows.Forms.ComboBox CBXBitacoraCriticidad;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label LBLfechafinal;
+        private System.Windows.Forms.Label LBLfechainicial;
+        private System.Windows.Forms.CheckBox CKXincluirfechas;
         private System.Windows.Forms.Button BTN_BitacoraVolverAlMenu;
     }
 }

@@ -43,7 +43,7 @@ namespace DAL
             acceso.Abrir();
             List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(acceso.CrearParametro("@id_idioma", idIdioma));
-            DataTable tabla = acceso.Leer("OBTENER TRADUCCIONES", parametros);
+            DataTable tabla = acceso.Leer("OBTENER_TRADUCCIONES", parametros);
             acceso.Cerrar();
             Dictionary<string, string> diccionario = new Dictionary<string, string>();
             foreach (DataRow fila in tabla.Rows)

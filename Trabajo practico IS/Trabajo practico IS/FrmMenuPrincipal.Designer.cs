@@ -36,7 +36,7 @@
             this.controlDePermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.LBLbienvenida = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,15 +96,15 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // label1
+            // LBLbienvenida
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 31);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "label1";
+            this.LBLbienvenida.AutoSize = true;
+            this.LBLbienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLbienvenida.Location = new System.Drawing.Point(12, 38);
+            this.LBLbienvenida.Name = "LBLbienvenida";
+            this.LBLbienvenida.Size = new System.Drawing.Size(148, 31);
+            this.LBLbienvenida.TabIndex = 9;
+            this.LBLbienvenida.Text = "Bienvenido";
             // 
             // FrmMenuPrincipal
             // 
@@ -112,7 +112,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(653, 431);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LBLbienvenida);
             this.Controls.Add(this.BtnCerrarSesion);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -135,7 +135,7 @@
         private System.Windows.Forms.ToolStripMenuItem AdministracionMenuItem;
         private System.Windows.Forms.ToolStripMenuItem BitacoraToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LBLbienvenida;
         private System.Windows.Forms.ToolStripMenuItem controlDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem controlDePermisosToolStripMenuItem;
     }

@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-    internal class IDIOMA
+    public class IDIOMA
     {
-        public class BLL_IDIOMA
-        {
+      
             private DAL.MP_IDIOMA mapper = new DAL.MP_IDIOMA();
 
             public List<BE.IDIOMA> Listar()
@@ -21,6 +20,6 @@ namespace BLL
             {
                 return mapper.ObtenerTraducciones(idIdioma);
             }
-        }
+        
     }
 }

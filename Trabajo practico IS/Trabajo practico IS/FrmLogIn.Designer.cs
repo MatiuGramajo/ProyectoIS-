@@ -31,8 +31,10 @@
             this.TxtBoxUsuario = new System.Windows.Forms.TextBox();
             this.TxtBoxPassword = new System.Windows.Forms.TextBox();
             this.BTN_IniciarSesion = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.LBLusuario = new System.Windows.Forms.Label();
+            this.LBLpassword = new System.Windows.Forms.Label();
+            this.CBXIdiomas = new System.Windows.Forms.ComboBox();
+            this.LBLidiomas = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TxtBoxUsuario
@@ -59,38 +61,60 @@
             this.BTN_IniciarSesion.UseVisualStyleBackColor = true;
             this.BTN_IniciarSesion.Click += new System.EventHandler(this.BTN_IniciarSesion_Click_1);
             // 
-            // label1
+            // LBLusuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(139, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Usuario";
+            this.LBLusuario.AutoSize = true;
+            this.LBLusuario.Location = new System.Drawing.Point(139, 48);
+            this.LBLusuario.Name = "LBLusuario";
+            this.LBLusuario.Size = new System.Drawing.Size(43, 13);
+            this.LBLusuario.TabIndex = 4;
+            this.LBLusuario.Text = "Usuario";
             // 
-            // label2
+            // LBLpassword
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(134, 118);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Password";
+            this.LBLpassword.AutoSize = true;
+            this.LBLpassword.Location = new System.Drawing.Point(134, 118);
+            this.LBLpassword.Name = "LBLpassword";
+            this.LBLpassword.Size = new System.Drawing.Size(61, 13);
+            this.LBLpassword.TabIndex = 5;
+            this.LBLpassword.Text = "Contraseña";
+            // 
+            // CBXIdiomas
+            // 
+            this.CBXIdiomas.FormattingEnabled = true;
+            this.CBXIdiomas.Location = new System.Drawing.Point(379, 12);
+            this.CBXIdiomas.Name = "CBXIdiomas";
+            this.CBXIdiomas.Size = new System.Drawing.Size(121, 21);
+            this.CBXIdiomas.TabIndex = 6;
+            this.CBXIdiomas.SelectedIndexChanged += new System.EventHandler(this.CBXIdiomas_SelectedIndexChanged);
+            // 
+            // LBLidiomas
+            // 
+            this.LBLidiomas.AutoSize = true;
+            this.LBLidiomas.Location = new System.Drawing.Point(328, 20);
+            this.LBLidiomas.Name = "LBLidiomas";
+            this.LBLidiomas.Size = new System.Drawing.Size(38, 13);
+            this.LBLidiomas.TabIndex = 7;
+            this.LBLidiomas.Text = "Idioma";
             // 
             // FrmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(321, 274);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(512, 274);
+            this.Controls.Add(this.LBLidiomas);
+            this.Controls.Add(this.CBXIdiomas);
+            this.Controls.Add(this.LBLpassword);
+            this.Controls.Add(this.LBLusuario);
             this.Controls.Add(this.BTN_IniciarSesion);
             this.Controls.Add(this.TxtBoxPassword);
             this.Controls.Add(this.TxtBoxUsuario);
             this.Name = "FrmLogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesion";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmLogIn_FormClosed);
+            this.Load += new System.EventHandler(this.FrmLogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -101,7 +125,9 @@
         private System.Windows.Forms.TextBox TxtBoxUsuario;
         private System.Windows.Forms.TextBox TxtBoxPassword;
         private System.Windows.Forms.Button BTN_IniciarSesion;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LBLusuario;
+        private System.Windows.Forms.Label LBLpassword;
+        private System.Windows.Forms.ComboBox CBXIdiomas;
+        private System.Windows.Forms.Label LBLidiomas;
     }
 }

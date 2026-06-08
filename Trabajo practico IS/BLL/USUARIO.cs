@@ -37,6 +37,10 @@ namespace BLL
         {
             mapper.ActualizarEstadoBloqueado(usuario);
         }
+        public void ActualizarIdiomaUsuario(int idUsuario, int idIdioma)
+        {
+            mapper.ActualizarIdiomaUsuario(idUsuario, idIdioma);
+        }
 
         public void LogIn(string nombreUsuario, string contraseñaIngresada)
         {

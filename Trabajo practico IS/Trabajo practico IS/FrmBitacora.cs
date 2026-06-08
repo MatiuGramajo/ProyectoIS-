@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Trabajo_practico_IS
 {
-    public partial class FrmBitacora : Form
+    public partial class FrmBitacora : Form, BE.IObserver
     {
         BLL.BITACORA GestorBitacora= new BLL.BITACORA();
         public FrmBitacora()
@@ -108,13 +108,15 @@ namespace Trabajo_practico_IS
        
         private void FrmBitacora_Load(object sender, EventArgs e)
         {
+            Servicios.IDIOMAS.GetInstancia().Suscribir(this);
+            ActualizarIdioma();
             DTPBitacoraDesde.Value = DateTime.Now.AddDays(-2);
             DTPBitacoraHasta.Value = DateTime.Now;
             EnlazarCriticidad();
             EnlazarModulo();
             EnlazarUsuarios();
             EnlazarBitacora();
-            checkBox1.Checked = false;
+            CKXincluirfechas.Checked = false;
             DTPBitacoraDesde.Enabled = false;
             DTPBitacoraHasta.Enabled = false;  
             
@@ -123,7 +125,7 @@ namespace Trabajo_practico_IS
 
         private void BTN_CargarBitacora_Click(object sender, EventArgs e)
         {
-            if(checkBox1.Checked)
+            if(CKXincluirfechas.Checked)
             { 
                 if (DTPBitacoraHasta.Value < DTPBitacoraDesde.Value)
                 {
@@ -143,8 +145,8 @@ namespace Trabajo_practico_IS
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            DTPBitacoraDesde.Enabled = checkBox1.Checked;
-            DTPBitacoraHasta.Enabled = checkBox1.Checked;
+            DTPBitacoraDesde.Enabled = CKXincluirfechas.Checked;
+            DTPBitacoraHasta.Enabled = CKXincluirfechas.Checked;
         }
 
         private void BTN_BitacoraVolverAlMenu_Click(object sender, EventArgs e)
@@ -157,6 +159,27 @@ namespace Trabajo_practico_IS
                 this.Close();
 
             }
+        }
+
+        public void ActualizarIdioma()
+        {
+            var traducciones = Servicios.IDIOMAS.GetInstancia().Traducciones;
+            TraducirControles(this.Controls, traducciones);
+            if (traducciones.TryGetValue($"{this.Name}_Titulo", out string textoTitulo)) this.Text = textoTitulo;
+        }
+        public void TraducirControles(Control.ControlCollection controles, Dictionary<string, string> traducciones)
+        {
+            foreach (Control control in controles)
+            {
+                string clave = $"{this.Name}_{control.Name}";
+                if (traducciones.TryGetValue(clave, out string textoTraducido)) control.Text = textoTraducido;
+                if (control.HasChildren) TraducirControles(control.Controls, traducciones);
+            }
+        }
+
+        private void FrmBitacora_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Servicios.IDIOMAS.GetInstancia().Desuscribir(this);
         }
     }
 }

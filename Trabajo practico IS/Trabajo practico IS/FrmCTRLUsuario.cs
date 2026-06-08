@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Trabajo_practico_IS
 {
-    public partial class FrmCTRLUsuario : Form
+    public partial class FrmCTRLUsuario : Form,BE.IObserver
     {
 
         BLL.USUARIO GestorUsuarios = new BLL.USUARIO();
@@ -27,6 +27,8 @@ namespace Trabajo_practico_IS
 
         private void FrmCTRLUsuario_Load(object sender, EventArgs e)
         {
+            Servicios.IDIOMAS.GetInstancia().Suscribir(this);
+            ActualizarIdioma();
             EnlazarUsuarios();
             CargarComboBoxRoles();
         }
@@ -35,7 +37,7 @@ namespace Trabajo_practico_IS
         {
             List<BE.USUARIO> ListaCompleta = GestorUsuarios.Listar();
             List<BE.USUARIO> ListaDesbloqueados;
-            if (checkBox1.Checked==false)
+            if (CKXmostrarbloqueados.Checked==false)
             {
             ListaDesbloqueados=(from d in ListaCompleta
                                 where d.EstadoBloqueado==false
@@ -194,6 +196,27 @@ namespace Trabajo_practico_IS
             // 3. Enlazamos la lista al ComboBox
             Cb_CTRLUsuarioRol.DataSource = soloRoles;
             Cb_CTRLUsuarioRol.DisplayMember = "Nombre"; // Propiedad que lee el usuario
+        }
+
+        public void ActualizarIdioma()
+        {
+            var traducciones = Servicios.IDIOMAS.GetInstancia().Traducciones;
+            TraducirControles(this.Controls, traducciones);
+            if (traducciones.TryGetValue($"{this.Name}_Titulo", out string textoTitulo)) this.Text = textoTitulo;
+        }
+        public void TraducirControles(Control.ControlCollection controles, Dictionary<string, string> traducciones)
+        {
+            foreach (Control control in controles)
+            {
+                string clave = $"{this.Name}_{control.Name}";
+                if (traducciones.TryGetValue(clave, out string textoTraducido)) control.Text = textoTraducido;
+                if (control.HasChildren) TraducirControles(control.Controls, traducciones);
+            }
+        }
+
+        private void FrmCTRLUsuario_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Servicios.IDIOMAS.GetInstancia().Desuscribir(this);
         }
     }
 }

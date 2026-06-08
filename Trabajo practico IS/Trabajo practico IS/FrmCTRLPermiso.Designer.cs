@@ -32,7 +32,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.BTNCtrlPermisoCrearRol = new System.Windows.Forms.Button();
             this.TXTCtrlPermisoNombre = new System.Windows.Forms.TextBox();
-            this.Label1 = new System.Windows.Forms.Label();
+            this.LBLnombre = new System.Windows.Forms.Label();
             this.BTNCtrlPermisoAsignar = new System.Windows.Forms.Button();
             this.BTNCtrlPermisoDesasignar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -69,14 +69,14 @@
             this.TXTCtrlPermisoNombre.Size = new System.Drawing.Size(100, 20);
             this.TXTCtrlPermisoNombre.TabIndex = 4;
             // 
-            // Label1
+            // LBLnombre
             // 
-            this.Label1.AutoSize = true;
-            this.Label1.Location = new System.Drawing.Point(259, 278);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(44, 13);
-            this.Label1.TabIndex = 5;
-            this.Label1.Text = "Nombre";
+            this.LBLnombre.AutoSize = true;
+            this.LBLnombre.Location = new System.Drawing.Point(259, 278);
+            this.LBLnombre.Name = "LBLnombre";
+            this.LBLnombre.Size = new System.Drawing.Size(44, 13);
+            this.LBLnombre.TabIndex = 5;
+            this.LBLnombre.Text = "Nombre";
             // 
             // BTNCtrlPermisoAsignar
             // 
@@ -105,7 +105,7 @@
             this.ClientSize = new System.Drawing.Size(643, 396);
             this.Controls.Add(this.BTNCtrlPermisoDesasignar);
             this.Controls.Add(this.BTNCtrlPermisoAsignar);
-            this.Controls.Add(this.Label1);
+            this.Controls.Add(this.LBLnombre);
             this.Controls.Add(this.TXTCtrlPermisoNombre);
             this.Controls.Add(this.BTNCtrlPermisoCrearRol);
             this.Controls.Add(this.listBox1);
@@ -113,6 +113,7 @@
             this.Name = "FrmCTRLPermiso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCTRLPermiso";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmCTRLPermiso_FormClosed);
             this.Load += new System.EventHandler(this.FrmCTRLPermiso_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -125,7 +126,7 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button BTNCtrlPermisoCrearRol;
         private System.Windows.Forms.TextBox TXTCtrlPermisoNombre;
-        private System.Windows.Forms.Label Label1;
+        private System.Windows.Forms.Label LBLnombre;
         private System.Windows.Forms.Button BTNCtrlPermisoAsignar;
         private System.Windows.Forms.Button BTNCtrlPermisoDesasignar;
     }

@@ -32,18 +32,18 @@
             this.TXT_CtrlUsuContraseña = new System.Windows.Forms.TextBox();
             this.TXT_CtrlUsuDNI = new System.Windows.Forms.TextBox();
             this.TXT_CtrlUsuEmail = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.LBLusuario = new System.Windows.Forms.Label();
+            this.LBLcontraseña = new System.Windows.Forms.Label();
+            this.LBLdni = new System.Windows.Forms.Label();
+            this.LBLemail = new System.Windows.Forms.Label();
             this.BTNCtrlUsuAlta = new System.Windows.Forms.Button();
             this.BTNCtrlUsuBaja = new System.Windows.Forms.Button();
             this.BTNCtrlUsuModificar = new System.Windows.Forms.Button();
             this.BTNCtrlUsuVolverMenu = new System.Windows.Forms.Button();
             this.DGV_CtrlUsuUsuarios = new System.Windows.Forms.DataGridView();
             this.BTNCtrlUsuDesbloquear = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.CKXmostrarbloqueados = new System.Windows.Forms.CheckBox();
+            this.LBLrol = new System.Windows.Forms.Label();
             this.Cb_CTRLUsuarioRol = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_CtrlUsuUsuarios)).BeginInit();
             this.SuspendLayout();
@@ -76,41 +76,41 @@
             this.TXT_CtrlUsuEmail.Size = new System.Drawing.Size(165, 20);
             this.TXT_CtrlUsuEmail.TabIndex = 3;
             // 
-            // label1
+            // LBLusuario
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 246);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Usuario";
+            this.LBLusuario.AutoSize = true;
+            this.LBLusuario.Location = new System.Drawing.Point(43, 246);
+            this.LBLusuario.Name = "LBLusuario";
+            this.LBLusuario.Size = new System.Drawing.Size(43, 13);
+            this.LBLusuario.TabIndex = 5;
+            this.LBLusuario.Text = "Usuario";
             // 
-            // label2
+            // LBLcontraseña
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(25, 288);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Contraseña";
+            this.LBLcontraseña.AutoSize = true;
+            this.LBLcontraseña.Location = new System.Drawing.Point(25, 288);
+            this.LBLcontraseña.Name = "LBLcontraseña";
+            this.LBLcontraseña.Size = new System.Drawing.Size(61, 13);
+            this.LBLcontraseña.TabIndex = 6;
+            this.LBLcontraseña.Text = "Contraseña";
             // 
-            // label3
+            // LBLdni
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(60, 330);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "DNI";
+            this.LBLdni.AutoSize = true;
+            this.LBLdni.Location = new System.Drawing.Point(60, 330);
+            this.LBLdni.Name = "LBLdni";
+            this.LBLdni.Size = new System.Drawing.Size(26, 13);
+            this.LBLdni.TabIndex = 7;
+            this.LBLdni.Text = "DNI";
             // 
-            // label4
+            // LBLemail
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(54, 372);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Email";
+            this.LBLemail.AutoSize = true;
+            this.LBLemail.Location = new System.Drawing.Point(54, 372);
+            this.LBLemail.Name = "LBLemail";
+            this.LBLemail.Size = new System.Drawing.Size(32, 13);
+            this.LBLemail.TabIndex = 8;
+            this.LBLemail.Text = "Email";
             // 
             // BTNCtrlUsuAlta
             // 
@@ -171,25 +171,25 @@
             this.BTNCtrlUsuDesbloquear.UseVisualStyleBackColor = true;
             this.BTNCtrlUsuDesbloquear.Click += new System.EventHandler(this.BTNCtrlUsuDesbloquear_Click);
             // 
-            // checkBox1
+            // CKXmostrarbloqueados
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(305, 245);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(120, 17);
-            this.checkBox1.TabIndex = 18;
-            this.checkBox1.Text = "Mostrar Bloqueados";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.CKXmostrarbloqueados.AutoSize = true;
+            this.CKXmostrarbloqueados.Location = new System.Drawing.Point(305, 245);
+            this.CKXmostrarbloqueados.Name = "CKXmostrarbloqueados";
+            this.CKXmostrarbloqueados.Size = new System.Drawing.Size(120, 17);
+            this.CKXmostrarbloqueados.TabIndex = 18;
+            this.CKXmostrarbloqueados.Text = "Mostrar Bloqueados";
+            this.CKXmostrarbloqueados.UseVisualStyleBackColor = true;
+            this.CKXmostrarbloqueados.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // label5
+            // LBLrol
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(57, 407);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 13);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Rol";
+            this.LBLrol.AutoSize = true;
+            this.LBLrol.Location = new System.Drawing.Point(57, 407);
+            this.LBLrol.Name = "LBLrol";
+            this.LBLrol.Size = new System.Drawing.Size(23, 13);
+            this.LBLrol.TabIndex = 19;
+            this.LBLrol.Text = "Rol";
             // 
             // Cb_CTRLUsuarioRol
             // 
@@ -206,18 +206,18 @@
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(876, 517);
             this.Controls.Add(this.Cb_CTRLUsuarioRol);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.LBLrol);
+            this.Controls.Add(this.CKXmostrarbloqueados);
             this.Controls.Add(this.BTNCtrlUsuDesbloquear);
             this.Controls.Add(this.DGV_CtrlUsuUsuarios);
             this.Controls.Add(this.BTNCtrlUsuVolverMenu);
             this.Controls.Add(this.BTNCtrlUsuModificar);
             this.Controls.Add(this.BTNCtrlUsuBaja);
             this.Controls.Add(this.BTNCtrlUsuAlta);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LBLemail);
+            this.Controls.Add(this.LBLdni);
+            this.Controls.Add(this.LBLcontraseña);
+            this.Controls.Add(this.LBLusuario);
             this.Controls.Add(this.TXT_CtrlUsuEmail);
             this.Controls.Add(this.TXT_CtrlUsuDNI);
             this.Controls.Add(this.TXT_CtrlUsuContraseña);
@@ -225,6 +225,7 @@
             this.Name = "FrmCTRLUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCTRLUsuario";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmCTRLUsuario_FormClosed);
             this.Load += new System.EventHandler(this.FrmCTRLUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_CtrlUsuUsuarios)).EndInit();
             this.ResumeLayout(false);
@@ -238,18 +239,18 @@
         private System.Windows.Forms.TextBox TXT_CtrlUsuContraseña;
         private System.Windows.Forms.TextBox TXT_CtrlUsuDNI;
         private System.Windows.Forms.TextBox TXT_CtrlUsuEmail;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LBLusuario;
+        private System.Windows.Forms.Label LBLcontraseña;
+        private System.Windows.Forms.Label LBLdni;
+        private System.Windows.Forms.Label LBLemail;
         private System.Windows.Forms.Button BTNCtrlUsuAlta;
         private System.Windows.Forms.Button BTNCtrlUsuBaja;
         private System.Windows.Forms.Button BTNCtrlUsuModificar;
         private System.Windows.Forms.Button BTNCtrlUsuVolverMenu;
         private System.Windows.Forms.DataGridView DGV_CtrlUsuUsuarios;
         private System.Windows.Forms.Button BTNCtrlUsuDesbloquear;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox CKXmostrarbloqueados;
+        private System.Windows.Forms.Label LBLrol;
         private System.Windows.Forms.ComboBox Cb_CTRLUsuarioRol;
     }
 }

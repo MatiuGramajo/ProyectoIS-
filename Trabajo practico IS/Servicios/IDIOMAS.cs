@@ -14,7 +14,7 @@ namespace Servicios
         private static object _lock = new object();
         private List<BE.IObserver> _observadores = new List<BE.IObserver>();
         public Dictionary<string, string> Traducciones { get; private set; } = new Dictionary<string, string>();
-        public int IdIdiomaActual { get; private set; } = 1; // Por defecto arranca en 1 (Español)
+        public int IdIdiomaActual { get; private set; } = 1; // lo dejo en 1 para que arranque en español por defecto
         private IDIOMAS() { }
 
         public static IDIOMAS GetInstancia()
@@ -28,6 +28,12 @@ namespace Servicios
                 }
             }
             return _instancia;
+        }
+        
+        public void Suscribir(IObserver observer)
+        {
+            if (!_observadores.Contains(observer))
+                _observadores.Add(observer);
         }
 
         public void Desuscribir(IObserver observer)
@@ -45,40 +51,44 @@ namespace Servicios
                 observer.ActualizarIdioma();
             }
         }
-        // SOBRECARGA 1: Cambiar el idioma usando directamente un ID (ideal para cuando se loguea un usuario)
-        public void CambiarIdioma(int idIdioma)
-        {           
+        // Ya no busca en la BD. Recibe el diccionario armadito desde la GUI.
+        public void CambiarIdioma(int idIdioma, Dictionary<string, string> nuevasTraducciones)
+        {
             IdIdiomaActual = idIdioma;
-            BLL.BLL_IDIOMA bllIdioma = new BLL.BLL_IDIOMA();
+            Traducciones = nuevasTraducciones; // Guardamos en memoria RAM
 
-            // Reemplaza el diccionario actual en memoria con las nuevas traducciones de la BD
-            Traducciones = bllIdioma.ObtenerTraducciones(idIdioma);
-
-            // Gatilla el cambio visual inmediato en todos los formularios abiertos
+            // Avisamos a las pantallas que se actualicen
             Notificar();
         }
-        // SOBRECARGA 2: Cambiar idioma de forma activa por el usuario (impacta memoria + Base de Datos)
-        public void CambiarIdioma(int idIdioma, int idUsuarioLogueado)
-        {
-            // 1. Primero cambiamos la memoria local de la app
-            CambiarIdioma(idIdioma);
+        //// SOBRECARGA 1: Cambiar el idioma usando directamente un ID (ideal para cuando se loguea un usuario)
+        //public void CambiarIdioma(int idIdioma)
+        //{           
+        //    IdIdiomaActual = idIdioma;
+        //    BLL.BLL_IDIOMA bllIdioma = new BLL.BLL_IDIOMA();
 
-            // 2. Persistimos la elección del usuario en la base de datos llamando a la DAL/BLL de usuarios
-            DAL.MP_USUARIO mpUsuario = new DAL.MP_USUARIO(); // O usas tu BLL correspondiente
-            mpUsuario.ActualizarIdiomaUsuario(idUsuarioLogueado, idIdioma);
+        //    // Reemplaza el diccionario actual en memoria con las nuevas traducciones de la BD
+        //    Traducciones = bllIdioma.ObtenerTraducciones(idIdioma);
 
-            // 3. Sincronizamos el objeto de la sesión actual en memoria
-            if (SESION.GetInstancia().usuactual != null)
-            {
-                SESION.GetInstancia().usuactual.IdIdioma = idIdioma;
-            }
-        }
+        //    // Gatilla el cambio visual inmediato en todos los formularios abiertos
+        //    Notificar();
+        //}
+        //// SOBRECARGA 2: Cambiar idioma de forma activa por el usuario (impacta memoria + Base de Datos)
+        //public void CambiarIdioma(int idIdioma, int idUsuarioLogueado)
+        //{
+        //    // 1. Primero cambiamos la memoria local de la app
+        //    CambiarIdioma(idIdioma);
 
-        public void Suscribir(IObserver observer)
-        {
-            if (!_observadores.Contains(observer))
-                _observadores.Add(observer);
-        }
+        //    // 2. Persistimos la elección del usuario en la base de datos llamando a la DAL/BLL de usuarios
+        //    DAL.MP_USUARIO mpUsuario = new DAL.MP_USUARIO(); // O usas tu BLL correspondiente
+        //    mpUsuario.ActualizarIdiomaUsuario(idUsuarioLogueado, idIdioma);
+
+        //    // 3. Sincronizamos el objeto de la sesión actual en memoria
+        //    if (SESION.GetInstancia().usuactual != null)
+        //    {
+        //        SESION.GetInstancia().usuactual.IdIdioma = idIdioma;
+        //    }
+        //}
+
 
         //public void CambiarIdioma(int nuevoIdIdioma)
         //{
