@@ -82,13 +82,7 @@ namespace BLL
             mapper.ActualizarIntentosFallidos(usuariovalido);
             usuariovalido.Permisos = gestorPermisos.ObtenerPermisosUsuario(usuariovalido.Id);
             SESION.GetInstancia().AsignarUsuario(usuariovalido);
-            //int idIdiomaActivoEnPantalla = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
-            //if (usuariovalido.IdIdioma != idIdiomaActivoEnPantalla)
-            //{
-            //    // ...le actualizamos su preferencia en la base de datos automáticamente
-            //    ActualizarIdiomaUsuario(usuariovalido.Id, idIdiomaActivoEnPantalla);
-            //    usuariovalido.IdIdioma = idIdiomaActivoEnPantalla; // Sincronizamos el objeto en memoria
-            //}
+
             gestorBitacora.RegistrarEvento("Seguridad", "Inicio de sesión exitoso", 1);
         }
 

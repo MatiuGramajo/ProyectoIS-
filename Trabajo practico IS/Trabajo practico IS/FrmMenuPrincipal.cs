@@ -18,6 +18,7 @@ namespace Trabajo_practico_IS
         BE.USUARIO UsuarioActual = SESION.GetInstancia().usuactual;
         BLL.USUARIO GestorUsuario = new BLL.USUARIO();
         BLL.BITACORA GestorBitacora = new BLL.BITACORA();
+        BLL.IDIOMA GestorIdioma=new BLL.IDIOMA();
 
         public FrmMenuPrincipal()
         {
@@ -28,6 +29,12 @@ namespace Trabajo_practico_IS
         {
 
             Servicios.IDIOMAS.GetInstancia().Suscribir(this);
+            CBXidiomas.SelectedIndexChanged -= CBXidiomas_SelectedIndexChanged;
+            CBXidiomas.DataSource = GestorIdioma.Listar();
+            CBXidiomas.DisplayMember = "Nombre";
+            CBXidiomas.ValueMember = "Id";
+            CBXidiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
+            CBXidiomas.SelectedIndexChanged += CBXidiomas_SelectedIndexChanged;
             ActualizarIdioma();
             Utilidades.GES_PERMISOS_GUI.AplicarPermisos(this);
         }
@@ -129,6 +136,12 @@ namespace Trabajo_practico_IS
             {
                 this.Text = textoTitulo;
             }
+            if (CBXidiomas.Items.Count > 0)
+            {
+                CBXidiomas.SelectedIndexChanged -= CBXidiomas_SelectedIndexChanged;
+                CBXidiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
+                CBXidiomas.SelectedIndexChanged += CBXidiomas_SelectedIndexChanged;
+            }
 
         }
         public void TraducirControles(Control.ControlCollection controles, Dictionary<string, string> traducciones)
@@ -171,5 +184,32 @@ namespace Trabajo_practico_IS
                 }
             }
         }
+
+        private void CBXidiomas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (CBXidiomas.SelectedValue != null && int.TryParse(CBXidiomas.SelectedValue.ToString(), out int idIdiomaSeleccionado))
+                {
+                    // A. Buscamos el paquete de palabras del nuevo idioma en la Base de Datos
+                    BLL.IDIOMA gestorIdioma = new BLL.IDIOMA();
+                    var traducciones = gestorIdioma.ObtenerTraducciones(idIdiomaSeleccionado);
+
+                    // B. Notificamos al Observer global para que traduzca TODAS las pantallas abiertas en RAM ya mismo
+                    Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idIdiomaSeleccionado, traducciones);
+
+                    // C. PERSISTENCIA TOTAL: Guardamos la nueva preferencia directamente en el perfil del usuario en la BD
+                    GestorUsuario.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual.Id, idIdiomaSeleccionado);
+
+                    // D. Sincronizamos el objeto del usuario en la memoria local de la sesión
+                    Servicios.SESION.GetInstancia().usuactual.IdIdioma = idIdiomaSeleccionado;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar la preferencia de idioma: " + ex.Message);    
+            }
+        }
     }
 }
+

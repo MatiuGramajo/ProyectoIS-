@@ -21,5 +21,9 @@ namespace BLL
                 return mapper.ObtenerTraducciones(idIdioma);
             }
         
+        public void CrearIdioma(string nombreIdioma, string sufijo)
+        {
+            mapper.AltaIdioma(nombreIdioma, sufijo);
+        }
     }
 }

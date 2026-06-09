@@ -64,6 +64,12 @@
     <Compile Include="FrmCTRLUsuario.Designer.cs">
       <DependentUpon>FrmCTRLUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmIdioma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIdioma.Designer.cs">
+      <DependentUpon>FrmIdioma.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCTRLUsuario.resx">
       <DependentUpon>FrmCTRLUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIdioma.resx">
+      <DependentUpon>FrmIdioma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMenuPrincipal.resx">
       <DependentUpon>FrmMenuPrincipal.cs</DependentUpon>

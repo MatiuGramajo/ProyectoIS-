@@ -21,6 +21,15 @@ namespace DAL
             throw new NotImplementedException();
         }
 
+        public void AltaIdioma(string nombreIdioma, string sufijo)
+        {
+            acceso.Abrir();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(acceso.CrearParametro("@nombre", nombreIdioma));
+            parametros.Add(acceso.CrearParametro("@sufijo", sufijo));
+            acceso.Escribir("ALTA_IDIOMA_CON_SUFIJO", parametros);
+            acceso.Cerrar();
+        }
         public override List<BE.IDIOMA> Listar()
         {
             acceso.Abrir();
