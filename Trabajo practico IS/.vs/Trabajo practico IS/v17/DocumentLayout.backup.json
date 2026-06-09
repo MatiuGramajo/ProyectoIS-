@@ -1,133 +1,133 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\",
+  "WorkspaceRootPath": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\permiso_simple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\permiso_simple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\permiso_compuesto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\permiso_compuesto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\iobservable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\iobservable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\componente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\componente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\idioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\idioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\bll\\idioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|solutionrelative:bll\\idioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\mp_permiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mp_permiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\bll\\permiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|solutionrelative:bll\\permiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmctrlpermiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmctrlpermiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\bll\\bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|solutionrelative:bll\\bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\mp_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mp_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\mp_idioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mp_idioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmctrlpermiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmctrlpermiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|c:\\users\\usuario\\desktop\\proyectois\\proyectois-\\trabajo practico is\\trabajo practico is\\utilidades\\ges_permisos_gui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\utilidades\\ges_permisos_gui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|c:\\users\\usuario\\desktop\\proyectois\\proyectois-\\trabajo practico is\\trabajo practico is\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\bll\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\bll\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|solutionrelative:bll\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmbitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmbitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\bll\\permiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|solutionrelative:bll\\permiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\mp_bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mp_bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmbitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmbitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmbitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60E06DBC-C563-402D-9C36-F066A6F42B05}|Servicios\\SERVICIOS.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\servicios\\sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmbitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmbitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmctrlpermiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmctrlpermiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmctrlpermiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmctrlpermiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\utilidades\\ges_permisos_gui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\utilidades\\ges_permisos_gui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|c:\\users\\matias\\onedrive\\escritorio\\proyectois\\proyectois-\\trabajo practico is\\be\\permiso_simple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\permiso_simple.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\permiso_compuesto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\permiso_compuesto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\iobservable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\iobservable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\componente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\componente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\idioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\idioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\bll\\idioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|solutionrelative:bll\\idioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\mp_permiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mp_permiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\bll\\bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|solutionrelative:bll\\bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\mp_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mp_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\mp_idioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mp_idioma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\mp_bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mp_bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60E06DBC-C563-402D-9C36-F066A6F42B05}|Servicios\\SERVICIOS.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\servicios\\sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{60E06DBC-C563-402D-9C36-F066A6F42B05}|Servicios\\SERVICIOS.csproj|solutionrelative:servicios\\sesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60E06DBC-C563-402D-9C36-F066A6F42B05}|Servicios\\SERVICIOS.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\servicios\\encriptador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{60E06DBC-C563-402D-9C36-F066A6F42B05}|Servicios\\SERVICIOS.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\servicios\\encriptador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{60E06DBC-C563-402D-9C36-F066A6F42B05}|Servicios\\SERVICIOS.csproj|solutionrelative:servicios\\encriptador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\acceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\acceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\acceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\iobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\iobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\iobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60E06DBC-C563-402D-9C36-F066A6F42B05}|Servicios\\SERVICIOS.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\servicios\\idiomas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{60E06DBC-C563-402D-9C36-F066A6F42B05}|Servicios\\SERVICIOS.csproj|C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\servicios\\idiomas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{60E06DBC-C563-402D-9C36-F066A6F42B05}|Servicios\\SERVICIOS.csproj|solutionrelative:servicios\\idiomas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -138,15 +138,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 28,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 11,
               "Title": "FrmLogIn.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmLogIn.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmLogIn.cs",
               "RelativeDocumentMoniker": "Trabajo practico IS\\FrmLogIn.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmLogIn.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmLogIn.cs [Dise\u00F1o]",
               "RelativeToolTip": "Trabajo practico IS\\FrmLogIn.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-23T22:47:38.181Z",
@@ -155,128 +155,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 0,
               "Title": "FrmLogIn.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmLogIn.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmLogIn.cs",
               "RelativeDocumentMoniker": "Trabajo practico IS\\FrmLogIn.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmLogIn.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmLogIn.cs",
               "RelativeToolTip": "Trabajo practico IS\\FrmLogIn.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAASwEEAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAADoAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-23T22:48:04.161Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "GES_PERMISOS_GUI.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\Utilidades\\GES_PERMISOS_GUI.cs",
-              "RelativeDocumentMoniker": "Trabajo practico IS\\Utilidades\\GES_PERMISOS_GUI.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\Utilidades\\GES_PERMISOS_GUI.cs",
-              "RelativeToolTip": "Trabajo practico IS\\Utilidades\\GES_PERMISOS_GUI.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-08T17:20:21.114Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "FrmMenuPrincipal.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmMenuPrincipal.cs",
-              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmMenuPrincipal.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmMenuPrincipal.cs",
-              "RelativeToolTip": "Trabajo practico IS\\FrmMenuPrincipal.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T22:42:58.348Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "FrmMenuPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmMenuPrincipal.cs",
-              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmMenuPrincipal.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmMenuPrincipal.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Trabajo practico IS\\FrmMenuPrincipal.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T22:43:23.923Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "FrmBitacora.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmBitacora.cs",
-              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmBitacora.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmBitacora.cs",
-              "RelativeToolTip": "Trabajo practico IS\\FrmBitacora.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAcwLYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T22:52:22.389Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "USUARIO.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\USUARIO.cs",
-              "RelativeDocumentMoniker": "BLL\\USUARIO.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\USUARIO.cs",
-              "RelativeToolTip": "BLL\\USUARIO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBwAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T23:28:05.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MP_USUARIO.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_USUARIO.cs",
-              "RelativeDocumentMoniker": "DAL\\MP_USUARIO.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_USUARIO.cs",
-              "RelativeToolTip": "DAL\\MP_USUARIO.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAADwv2sAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T17:36:37.151Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "IDIOMA.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\IDIOMA.cs",
-              "RelativeDocumentMoniker": "BLL\\IDIOMA.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\IDIOMA.cs",
-              "RelativeToolTip": "BLL\\IDIOMA.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-06T03:31:56.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FrmCTRLPermiso.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLPermiso.cs",
-              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmCTRLPermiso.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLPermiso.cs",
-              "RelativeToolTip": "Trabajo practico IS\\FrmCTRLPermiso.cs",
-              "ViewState": "AgIAAMsAAAAAAAAAAAA2wOMAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T06:16:34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "FrmCTRLPermiso.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLPermiso.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLPermiso.cs",
               "RelativeDocumentMoniker": "Trabajo practico IS\\FrmCTRLPermiso.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLPermiso.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLPermiso.cs [Dise\u00F1o]",
               "RelativeToolTip": "Trabajo practico IS\\FrmCTRLPermiso.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-04T06:16:08.276Z",
@@ -284,204 +185,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "FrmCTRLUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLUsuario.cs",
-              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmCTRLUsuario.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLUsuario.cs",
-              "RelativeToolTip": "Trabajo practico IS\\FrmCTRLUsuario.cs",
-              "ViewState": "AgIAAMYAAAAAAAAAAAAgwN0AAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T17:52:41.581Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "FrmBitacora.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmBitacora.cs",
-              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmBitacora.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmBitacora.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Trabajo practico IS\\FrmBitacora.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T22:45:03.835Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "FrmCTRLUsuario.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLUsuario.cs",
-              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmCTRLUsuario.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLUsuario.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Trabajo practico IS\\FrmCTRLUsuario.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T17:48:52.885Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MP_IDIOMA.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_IDIOMA.cs",
-              "RelativeDocumentMoniker": "DAL\\MP_IDIOMA.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_IDIOMA.cs",
-              "RelativeToolTip": "DAL\\MP_IDIOMA.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-06T03:00:18.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BITACORA.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\BITACORA.cs",
-              "RelativeDocumentMoniker": "BLL\\BITACORA.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\BITACORA.cs",
-              "RelativeToolTip": "BLL\\BITACORA.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T04:24:51.036Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "IDIOMAS.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\IDIOMAS.cs",
-              "RelativeDocumentMoniker": "Servicios\\IDIOMAS.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\IDIOMAS.cs",
-              "RelativeToolTip": "Servicios\\IDIOMAS.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T19:36:00.001Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IDIOMA.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IDIOMA.cs",
-              "RelativeDocumentMoniker": "BE\\IDIOMA.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IDIOMA.cs",
-              "RelativeToolTip": "BE\\IDIOMA.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-06T02:59:16.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "SESION.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\SESION.cs",
-              "RelativeDocumentMoniker": "Servicios\\SESION.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\SESION.cs",
-              "RelativeToolTip": "Servicios\\SESION.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T23:07:25.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MP_PERMISO.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_PERMISO.cs",
-              "RelativeDocumentMoniker": "DAL\\MP_PERMISO.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_PERMISO.cs",
-              "RelativeToolTip": "DAL\\MP_PERMISO.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAlwDAAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T02:15:05.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "FrmCTRLPermiso.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLPermiso.cs",
+              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmCTRLPermiso.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLPermiso.cs",
+              "RelativeToolTip": "Trabajo practico IS\\FrmCTRLPermiso.cs",
+              "ViewState": "AgIAAAABAAAAAAAAAAAAwD4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T06:16:34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "USUARIO.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\USUARIO.cs",
-              "RelativeDocumentMoniker": "BE\\USUARIO.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\USUARIO.cs",
-              "RelativeToolTip": "BE\\USUARIO.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAArwD4AAAAIAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\USUARIO.cs",
+              "RelativeDocumentMoniker": "BLL\\USUARIO.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\USUARIO.cs",
+              "RelativeToolTip": "BLL\\USUARIO.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAAFQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T17:35:45.009Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "MP_BITACORA.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_BITACORA.cs",
-              "RelativeDocumentMoniker": "DAL\\MP_BITACORA.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_BITACORA.cs",
-              "RelativeToolTip": "DAL\\MP_BITACORA.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T17:36:58.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "MAPPER.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MAPPER.cs",
-              "RelativeDocumentMoniker": "DAL\\MAPPER.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MAPPER.cs",
-              "RelativeToolTip": "DAL\\MAPPER.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAtwAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T18:10:11.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "ACCESO.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\ACCESO.cs",
-              "RelativeDocumentMoniker": "DAL\\ACCESO.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\ACCESO.cs",
-              "RelativeToolTip": "DAL\\ACCESO.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAArwFwAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T02:22:29.075Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "IObserver.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IObserver.cs",
-              "RelativeDocumentMoniker": "BE\\IObserver.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IObserver.cs",
-              "RelativeToolTip": "BE\\IObserver.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T18:48:15.526Z",
+              "WhenOpened": "2026-04-23T23:28:05.295Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IObservable.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IObservable.cs",
-              "RelativeDocumentMoniker": "BE\\IObservable.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IObservable.cs",
-              "RelativeToolTip": "BE\\IObservable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T19:24:51.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "PERMISO.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\PERMISO.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\PERMISO.cs",
               "RelativeDocumentMoniker": "BLL\\PERMISO.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\PERMISO.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\PERMISO.cs",
               "RelativeToolTip": "BLL\\PERMISO.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAewCYAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -490,68 +224,320 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PERMISO_COMPUESTO.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PERMISO_COMPUESTO.cs",
-              "RelativeDocumentMoniker": "BE\\PERMISO_COMPUESTO.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PERMISO_COMPUESTO.cs",
-              "RelativeToolTip": "BE\\PERMISO_COMPUESTO.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBIAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "FrmBitacora.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmBitacora.cs",
+              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmBitacora.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmBitacora.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Trabajo practico IS\\FrmBitacora.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T18:32:23.124Z",
+              "WhenOpened": "2026-04-23T22:45:03.835Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmBitacora.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmBitacora.cs",
+              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmBitacora.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmBitacora.cs",
+              "RelativeToolTip": "Trabajo practico IS\\FrmBitacora.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAswOEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T22:52:22.389Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
+              "Title": "FrmCTRLUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLUsuario.cs",
+              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmCTRLUsuario.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLUsuario.cs",
+              "RelativeToolTip": "Trabajo practico IS\\FrmCTRLUsuario.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwBUBAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T17:52:41.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FrmCTRLUsuario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLUsuario.cs",
+              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmCTRLUsuario.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLUsuario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Trabajo practico IS\\FrmCTRLUsuario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T17:48:52.885Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FrmMenuPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmMenuPrincipal.cs",
+              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmMenuPrincipal.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmMenuPrincipal.cs",
+              "RelativeToolTip": "Trabajo practico IS\\FrmMenuPrincipal.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAcwKQAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T22:42:58.348Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FrmMenuPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmMenuPrincipal.cs",
+              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmMenuPrincipal.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmMenuPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Trabajo practico IS\\FrmMenuPrincipal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T22:43:23.923Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GES_PERMISOS_GUI.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\Utilidades\\GES_PERMISOS_GUI.cs",
+              "RelativeDocumentMoniker": "Trabajo practico IS\\Utilidades\\GES_PERMISOS_GUI.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\Utilidades\\GES_PERMISOS_GUI.cs",
+              "RelativeToolTip": "Trabajo practico IS\\Utilidades\\GES_PERMISOS_GUI.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAwAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-08T17:20:21.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "PERMISO_SIMPLE.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PERMISO_SIMPLE.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PERMISO_SIMPLE.cs",
               "RelativeDocumentMoniker": "BE\\PERMISO_SIMPLE.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PERMISO_SIMPLE.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PERMISO_SIMPLE.cs",
               "RelativeToolTip": "BE\\PERMISO_SIMPLE.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wB4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-28T18:32:08.841Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 22,
+              "Title": "MP_USUARIO.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_USUARIO.cs",
+              "RelativeDocumentMoniker": "DAL\\MP_USUARIO.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_USUARIO.cs",
+              "RelativeToolTip": "DAL\\MP_USUARIO.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAADwv2sAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T17:36:37.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IDIOMA.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\IDIOMA.cs",
+              "RelativeDocumentMoniker": "BLL\\IDIOMA.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\IDIOMA.cs",
+              "RelativeToolTip": "BLL\\IDIOMA.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T03:31:56.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "MP_IDIOMA.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_IDIOMA.cs",
+              "RelativeDocumentMoniker": "DAL\\MP_IDIOMA.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_IDIOMA.cs",
+              "RelativeToolTip": "DAL\\MP_IDIOMA.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T03:00:18.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "BITACORA.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\BITACORA.cs",
+              "RelativeDocumentMoniker": "BLL\\BITACORA.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\BITACORA.cs",
+              "RelativeToolTip": "BLL\\BITACORA.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T04:24:51.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "IDIOMAS.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\IDIOMAS.cs",
+              "RelativeDocumentMoniker": "Servicios\\IDIOMAS.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\IDIOMAS.cs",
+              "RelativeToolTip": "Servicios\\IDIOMAS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T19:36:00.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IDIOMA.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IDIOMA.cs",
+              "RelativeDocumentMoniker": "BE\\IDIOMA.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IDIOMA.cs",
+              "RelativeToolTip": "BE\\IDIOMA.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T02:59:16.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "SESION.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\SESION.cs",
+              "RelativeDocumentMoniker": "Servicios\\SESION.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\SESION.cs",
+              "RelativeToolTip": "Servicios\\SESION.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T23:07:25.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "MP_PERMISO.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_PERMISO.cs",
+              "RelativeDocumentMoniker": "DAL\\MP_PERMISO.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_PERMISO.cs",
+              "RelativeToolTip": "DAL\\MP_PERMISO.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAlwDAAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T02:15:05.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "USUARIO.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\USUARIO.cs",
+              "RelativeDocumentMoniker": "BE\\USUARIO.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\USUARIO.cs",
+              "RelativeToolTip": "BE\\USUARIO.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAArwD4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T17:35:45.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MP_BITACORA.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_BITACORA.cs",
+              "RelativeDocumentMoniker": "DAL\\MP_BITACORA.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_BITACORA.cs",
+              "RelativeToolTip": "DAL\\MP_BITACORA.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T17:36:58.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MAPPER.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MAPPER.cs",
+              "RelativeDocumentMoniker": "DAL\\MAPPER.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MAPPER.cs",
+              "RelativeToolTip": "DAL\\MAPPER.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAtwAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T18:10:11.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ACCESO.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\ACCESO.cs",
+              "RelativeDocumentMoniker": "DAL\\ACCESO.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\ACCESO.cs",
+              "RelativeToolTip": "DAL\\ACCESO.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAArwFwAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T02:22:29.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IObserver.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IObserver.cs",
+              "RelativeDocumentMoniker": "BE\\IObserver.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IObserver.cs",
+              "RelativeToolTip": "BE\\IObserver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T18:48:15.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IObservable.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IObservable.cs",
+              "RelativeDocumentMoniker": "BE\\IObservable.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IObservable.cs",
+              "RelativeToolTip": "BE\\IObservable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T19:24:51.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PERMISO_COMPUESTO.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PERMISO_COMPUESTO.cs",
+              "RelativeDocumentMoniker": "BE\\PERMISO_COMPUESTO.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PERMISO_COMPUESTO.cs",
+              "RelativeToolTip": "BE\\PERMISO_COMPUESTO.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T18:32:23.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "COMPONENTE.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\COMPONENTE.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\COMPONENTE.cs",
               "RelativeDocumentMoniker": "BE\\COMPONENTE.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\COMPONENTE.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\COMPONENTE.cs",
               "RelativeToolTip": "BE\\COMPONENTE.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBwAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T18:31:38.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-28T18:31:38.652Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
               "Title": "BITACORA.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\BITACORA.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\BITACORA.cs",
               "RelativeDocumentMoniker": "BE\\BITACORA.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\BITACORA.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\BITACORA.cs",
               "RelativeToolTip": "BE\\BITACORA.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T14:26:23.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-01T14:26:23.359Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
               "Title": "ENCRIPTADOR.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\ENCRIPTADOR.cs",
+              "DocumentMoniker": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\ENCRIPTADOR.cs",
               "RelativeDocumentMoniker": "Servicios\\ENCRIPTADOR.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\ENCRIPTADOR.cs",
+              "ToolTip": "C:\\Users\\matias\\OneDrive\\Escritorio\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\ENCRIPTADOR.cs",
               "RelativeToolTip": "Servicios\\ENCRIPTADOR.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T17:36:30.643Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-24T17:36:30.643Z"
             }
           ]
         }

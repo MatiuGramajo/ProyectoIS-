@@ -18,6 +18,7 @@ namespace Trabajo_practico_IS
         BLL.USUARIO GestorUsuarios = new BLL.USUARIO();
         BLL.BITACORA GestorBitacora = new BLL.BITACORA();
         BLL.PERMISO GestorPermisos = new BLL.PERMISO();
+        BLL.IDIOMA GestorIdioma = new BLL.IDIOMA();
         BE.USUARIO usuario;
 
         public FrmCTRLUsuario()
@@ -28,10 +29,43 @@ namespace Trabajo_practico_IS
         private void FrmCTRLUsuario_Load(object sender, EventArgs e)
         {
             Servicios.IDIOMAS.GetInstancia().Suscribir(this);
+            CBXidiomas.SelectedIndexChanged -= CBXidiomas_SelectedIndexChanged;
+            CBXidiomas.DataSource = GestorIdioma.Listar();
+            CBXidiomas.DisplayMember = "Nombre";
+            CBXidiomas.ValueMember = "Id";
+            CBXidiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
+            CBXidiomas.SelectedIndexChanged+= CBXidiomas_SelectedIndexChanged;
             ActualizarIdioma();
             EnlazarUsuarios();
             CargarComboBoxRoles();
             Cb_CTRLUsuarioRol.SelectedIndex = -1;
+        }
+
+        private void CBXidiomas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (CBXidiomas.SelectedValue != null && int.TryParse(CBXidiomas.SelectedValue.ToString(), out int idIdioma))
+                {
+                    BLL.IDIOMA gestorIdioma = new BLL.IDIOMA();
+                    var traducciones = gestorIdioma.ObtenerTraducciones(idIdioma);
+
+                    // Avisa a todos los formularios que cambien
+                    Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idIdioma, traducciones);
+
+                    // Guarda la preferencia en la base de datos para este usuario
+                    if (Servicios.SESION.GetInstancia().usuactual != null)
+                    {
+                        BLL.USUARIO gestorUsu = new BLL.USUARIO();
+                        gestorUsu.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual.Id, idIdioma);
+                        Servicios.SESION.GetInstancia().usuactual.IdIdioma = idIdioma;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         //public void
@@ -232,6 +266,12 @@ namespace Trabajo_practico_IS
             var traducciones = Servicios.IDIOMAS.GetInstancia().Traducciones;
             TraducirControles(this.Controls, traducciones);
             if (traducciones.TryGetValue($"{this.Name}_Titulo", out string textoTitulo)) this.Text = textoTitulo;
+            if (CBXidiomas.Items.Count > 0)
+            {
+                CBXidiomas.SelectedIndexChanged -= CBXidiomas_SelectedIndexChanged;
+                CBXidiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
+                CBXidiomas.SelectedIndexChanged += CBXidiomas_SelectedIndexChanged;
+            }
         }
         public void TraducirControles(Control.ControlCollection controles, Dictionary<string, string> traducciones)
         {

@@ -37,6 +37,8 @@
             this.BitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.LBLbienvenida = new System.Windows.Forms.Label();
+            this.CBXidiomas = new System.Windows.Forms.ComboBox();
+            this.LBLidioma = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -109,12 +111,31 @@
             this.LBLbienvenida.TabIndex = 9;
             this.LBLbienvenida.Text = "Bienvenido";
             // 
+            // CBXidiomas
+            // 
+            this.CBXidiomas.FormattingEnabled = true;
+            this.CBXidiomas.Location = new System.Drawing.Point(520, 48);
+            this.CBXidiomas.Name = "CBXidiomas";
+            this.CBXidiomas.Size = new System.Drawing.Size(121, 21);
+            this.CBXidiomas.TabIndex = 10;
+            // 
+            // LBLidioma
+            // 
+            this.LBLidioma.AutoSize = true;
+            this.LBLidioma.Location = new System.Drawing.Point(460, 56);
+            this.LBLidioma.Name = "LBLidioma";
+            this.LBLidioma.Size = new System.Drawing.Size(43, 13);
+            this.LBLidioma.TabIndex = 11;
+            this.LBLidioma.Text = "Idiomas";
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(653, 431);
+            this.Controls.Add(this.LBLidioma);
+            this.Controls.Add(this.CBXidiomas);
             this.Controls.Add(this.LBLbienvenida);
             this.Controls.Add(this.BtnCerrarSesion);
             this.Controls.Add(this.menuStrip1);
@@ -141,6 +162,8 @@
         private System.Windows.Forms.Label LBLbienvenida;
         private System.Windows.Forms.ToolStripMenuItem controlDeUsuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem controlDePermisosToolStripMenuItem;
+        private System.Windows.Forms.ComboBox CBXidiomas;
+        private System.Windows.Forms.Label LBLidioma;
     }
 }
 

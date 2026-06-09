@@ -14,6 +14,7 @@ namespace Trabajo_practico_IS
     public partial class FrmBitacora : Form, BE.IObserver
     {
         BLL.BITACORA GestorBitacora= new BLL.BITACORA();
+        BLL.IDIOMA GestorIdioma = new BLL.IDIOMA();
         public FrmBitacora()
         {
             InitializeComponent();
@@ -109,6 +110,13 @@ namespace Trabajo_practico_IS
         private void FrmBitacora_Load(object sender, EventArgs e)
         {
             Servicios.IDIOMAS.GetInstancia().Suscribir(this);
+            CBXidiomas.SelectedIndexChanged-= CBXidiomas_SelectedIndexChanged;
+            CBXidiomas.DataSource = GestorIdioma.Listar();
+            CBXidiomas.DisplayMember = "Nombre";
+            CBXidiomas.ValueMember = "Id";
+            CBXidiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
+            CBXidiomas.SelectedIndexChanged += CBXidiomas_SelectedIndexChanged;
+            CBXidiomas.SelectedIndex = -1;
             ActualizarIdioma();
             DTPBitacoraDesde.Value = DateTime.Now.AddDays(-2);
             DTPBitacoraHasta.Value = DateTime.Now;
@@ -121,6 +129,11 @@ namespace Trabajo_practico_IS
             DTPBitacoraHasta.Enabled = false;  
             
 
+        }
+
+        private void CBXidiomas_SelectedIndexChanged1(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void BTN_CargarBitacora_Click(object sender, EventArgs e)
@@ -166,6 +179,12 @@ namespace Trabajo_practico_IS
             var traducciones = Servicios.IDIOMAS.GetInstancia().Traducciones;
             TraducirControles(this.Controls, traducciones);
             if (traducciones.TryGetValue($"{this.Name}_Titulo", out string textoTitulo)) this.Text = textoTitulo;
+            if (CBXidiomas.Items.Count > 0)
+            {
+                CBXidiomas.SelectedIndexChanged -= CBXidiomas_SelectedIndexChanged;
+                CBXidiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
+                CBXidiomas.SelectedIndexChanged += CBXidiomas_SelectedIndexChanged;
+            }
         }
         public void TraducirControles(Control.ControlCollection controles, Dictionary<string, string> traducciones)
         {
@@ -180,6 +199,33 @@ namespace Trabajo_practico_IS
         private void FrmBitacora_FormClosed(object sender, FormClosedEventArgs e)
         {
             Servicios.IDIOMAS.GetInstancia().Desuscribir(this);
+        }
+
+        private void CBXidiomas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (CBXidiomas.SelectedValue != null && int.TryParse(CBXidiomas.SelectedValue.ToString(), out int idIdioma))
+                {
+                    BLL.IDIOMA gestorIdioma = new BLL.IDIOMA();
+                    var traducciones = gestorIdioma.ObtenerTraducciones(idIdioma);
+
+                    // Avisa a todos los formularios que cambien
+                    Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idIdioma, traducciones);
+
+                    // Guarda la preferencia en la base de datos para este usuario
+                    if (Servicios.SESION.GetInstancia().usuactual != null)
+                    {
+                        BLL.USUARIO gestorUsu = new BLL.USUARIO();
+                        gestorUsu.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual.Id, idIdioma);
+                        Servicios.SESION.GetInstancia().usuactual.IdIdioma = idIdioma;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de errores
+            }
         }
     }
 }

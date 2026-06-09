@@ -44,6 +44,8 @@
             this.CBXBitacoraModulo = new System.Windows.Forms.ComboBox();
             this.CBXBitacoraCriticidad = new System.Windows.Forms.ComboBox();
             this.BTN_BitacoraVolverAlMenu = new System.Windows.Forms.Button();
+            this.CBXidiomas = new System.Windows.Forms.ComboBox();
+            this.LBLidiomas = new System.Windows.Forms.Label();
             this.GB_Bitacora.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_BITACORA)).BeginInit();
             this.GBfiltros.SuspendLayout();
@@ -202,12 +204,32 @@
             this.BTN_BitacoraVolverAlMenu.UseVisualStyleBackColor = true;
             this.BTN_BitacoraVolverAlMenu.Click += new System.EventHandler(this.BTN_BitacoraVolverAlMenu_Click);
             // 
+            // CBXidiomas
+            // 
+            this.CBXidiomas.FormattingEnabled = true;
+            this.CBXidiomas.Location = new System.Drawing.Point(945, 12);
+            this.CBXidiomas.Name = "CBXidiomas";
+            this.CBXidiomas.Size = new System.Drawing.Size(121, 21);
+            this.CBXidiomas.TabIndex = 11;
+            this.CBXidiomas.SelectedIndexChanged += new System.EventHandler(this.CBXidiomas_SelectedIndexChanged);
+            // 
+            // LBLidiomas
+            // 
+            this.LBLidiomas.AutoSize = true;
+            this.LBLidiomas.Location = new System.Drawing.Point(892, 20);
+            this.LBLidiomas.Name = "LBLidiomas";
+            this.LBLidiomas.Size = new System.Drawing.Size(43, 13);
+            this.LBLidiomas.TabIndex = 12;
+            this.LBLidiomas.Text = "Idiomas";
+            // 
             // FrmBitacora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(947, 568);
+            this.ClientSize = new System.Drawing.Size(1065, 568);
+            this.Controls.Add(this.LBLidiomas);
+            this.Controls.Add(this.CBXidiomas);
             this.Controls.Add(this.BTN_BitacoraVolverAlMenu);
             this.Controls.Add(this.GBfiltros);
             this.Controls.Add(this.GB_Bitacora);
@@ -221,6 +243,7 @@
             this.GBfiltros.ResumeLayout(false);
             this.GBfiltros.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -242,5 +265,7 @@
         private System.Windows.Forms.Label LBLfechainicial;
         private System.Windows.Forms.CheckBox CKXincluirfechas;
         private System.Windows.Forms.Button BTN_BitacoraVolverAlMenu;
+        private System.Windows.Forms.ComboBox CBXidiomas;
+        private System.Windows.Forms.Label LBLidiomas;
     }
 }

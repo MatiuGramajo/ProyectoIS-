@@ -38,8 +38,10 @@
             this.BG_ListRolesPermisos = new System.Windows.Forms.GroupBox();
             this.GB_TreeViewRoles = new System.Windows.Forms.GroupBox();
             this.GB_NuevoRol = new System.Windows.Forms.GroupBox();
-            this.BTNCtrlPermisoBorrarRol = new System.Windows.Forms.Button();
             this.BTNCtrlPermisoModifRol = new System.Windows.Forms.Button();
+            this.BTNCtrlPermisoBorrarRol = new System.Windows.Forms.Button();
+            this.CBXidiomas = new System.Windows.Forms.ComboBox();
+            this.LBLidiomas = new System.Windows.Forms.Label();
             this.BG_ListRolesPermisos.SuspendLayout();
             this.GB_TreeViewRoles.SuspendLayout();
             this.GB_NuevoRol.SuspendLayout();
@@ -142,16 +144,6 @@
             this.GB_NuevoRol.TabStop = false;
             this.GB_NuevoRol.Text = "Rol";
             // 
-            // BTNCtrlPermisoBorrarRol
-            // 
-            this.BTNCtrlPermisoBorrarRol.Location = new System.Drawing.Point(9, 123);
-            this.BTNCtrlPermisoBorrarRol.Name = "BTNCtrlPermisoBorrarRol";
-            this.BTNCtrlPermisoBorrarRol.Size = new System.Drawing.Size(87, 23);
-            this.BTNCtrlPermisoBorrarRol.TabIndex = 11;
-            this.BTNCtrlPermisoBorrarRol.Text = "Borrar";
-            this.BTNCtrlPermisoBorrarRol.UseVisualStyleBackColor = true;
-            this.BTNCtrlPermisoBorrarRol.Click += new System.EventHandler(this.BTNCtrlPermisoBorrarRol_Click);
-            // 
             // BTNCtrlPermisoModifRol
             // 
             this.BTNCtrlPermisoModifRol.Location = new System.Drawing.Point(9, 94);
@@ -162,12 +154,42 @@
             this.BTNCtrlPermisoModifRol.UseVisualStyleBackColor = true;
             this.BTNCtrlPermisoModifRol.Click += new System.EventHandler(this.BTNCtrlPermisoModifRol_Click);
             // 
+            // BTNCtrlPermisoBorrarRol
+            // 
+            this.BTNCtrlPermisoBorrarRol.Location = new System.Drawing.Point(9, 123);
+            this.BTNCtrlPermisoBorrarRol.Name = "BTNCtrlPermisoBorrarRol";
+            this.BTNCtrlPermisoBorrarRol.Size = new System.Drawing.Size(87, 23);
+            this.BTNCtrlPermisoBorrarRol.TabIndex = 11;
+            this.BTNCtrlPermisoBorrarRol.Text = "Borrar";
+            this.BTNCtrlPermisoBorrarRol.UseVisualStyleBackColor = true;
+            this.BTNCtrlPermisoBorrarRol.Click += new System.EventHandler(this.BTNCtrlPermisoBorrarRol_Click);
+            // 
+            // CBXidiomas
+            // 
+            this.CBXidiomas.FormattingEnabled = true;
+            this.CBXidiomas.Location = new System.Drawing.Point(670, 34);
+            this.CBXidiomas.Name = "CBXidiomas";
+            this.CBXidiomas.Size = new System.Drawing.Size(121, 21);
+            this.CBXidiomas.TabIndex = 11;
+            this.CBXidiomas.SelectedIndexChanged += new System.EventHandler(this.CBXidiomas_SelectedIndexChanged);
+            // 
+            // LBLidiomas
+            // 
+            this.LBLidiomas.AutoSize = true;
+            this.LBLidiomas.Location = new System.Drawing.Point(612, 42);
+            this.LBLidiomas.Name = "LBLidiomas";
+            this.LBLidiomas.Size = new System.Drawing.Size(43, 13);
+            this.LBLidiomas.TabIndex = 12;
+            this.LBLidiomas.Text = "Idiomas";
+            // 
             // FrmCTRLPermiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(569, 473);
+            this.ClientSize = new System.Drawing.Size(819, 473);
+            this.Controls.Add(this.LBLidiomas);
+            this.Controls.Add(this.CBXidiomas);
             this.Controls.Add(this.GB_NuevoRol);
             this.Controls.Add(this.BG_ListRolesPermisos);
             this.Controls.Add(this.BTNCtrlPermisoDesasignar);
@@ -183,6 +205,7 @@
             this.GB_NuevoRol.ResumeLayout(false);
             this.GB_NuevoRol.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -200,5 +223,7 @@
         private System.Windows.Forms.GroupBox GB_NuevoRol;
         private System.Windows.Forms.Button BTNCtrlPermisoModifRol;
         private System.Windows.Forms.Button BTNCtrlPermisoBorrarRol;
+        private System.Windows.Forms.ComboBox CBXidiomas;
+        private System.Windows.Forms.Label LBLidiomas;
     }
 }

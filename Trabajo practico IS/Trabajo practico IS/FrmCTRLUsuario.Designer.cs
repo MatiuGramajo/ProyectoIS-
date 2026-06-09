@@ -45,6 +45,8 @@
             this.CKXmostrarbloqueados = new System.Windows.Forms.CheckBox();
             this.LBLrol = new System.Windows.Forms.Label();
             this.Cb_CTRLUsuarioRol = new System.Windows.Forms.ComboBox();
+            this.CBXidiomas = new System.Windows.Forms.ComboBox();
+            this.LBLidiomas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_CtrlUsuUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -199,12 +201,32 @@
             this.Cb_CTRLUsuarioRol.Size = new System.Drawing.Size(165, 21);
             this.Cb_CTRLUsuarioRol.TabIndex = 20;
             // 
+            // CBXidiomas
+            // 
+            this.CBXidiomas.FormattingEnabled = true;
+            this.CBXidiomas.Location = new System.Drawing.Point(920, 21);
+            this.CBXidiomas.Name = "CBXidiomas";
+            this.CBXidiomas.Size = new System.Drawing.Size(116, 21);
+            this.CBXidiomas.TabIndex = 21;
+            this.CBXidiomas.SelectedIndexChanged += new System.EventHandler(this.CBXidiomas_SelectedIndexChanged);
+            // 
+            // LBLidiomas
+            // 
+            this.LBLidiomas.AutoSize = true;
+            this.LBLidiomas.Location = new System.Drawing.Point(860, 29);
+            this.LBLidiomas.Name = "LBLidiomas";
+            this.LBLidiomas.Size = new System.Drawing.Size(43, 13);
+            this.LBLidiomas.TabIndex = 22;
+            this.LBLidiomas.Text = "Idiomas";
+            // 
             // FrmCTRLUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(876, 517);
+            this.ClientSize = new System.Drawing.Size(1039, 517);
+            this.Controls.Add(this.LBLidiomas);
+            this.Controls.Add(this.CBXidiomas);
             this.Controls.Add(this.Cb_CTRLUsuarioRol);
             this.Controls.Add(this.LBLrol);
             this.Controls.Add(this.CKXmostrarbloqueados);
@@ -252,5 +274,7 @@
         private System.Windows.Forms.CheckBox CKXmostrarbloqueados;
         private System.Windows.Forms.Label LBLrol;
         private System.Windows.Forms.ComboBox Cb_CTRLUsuarioRol;
+        private System.Windows.Forms.ComboBox CBXidiomas;
+        private System.Windows.Forms.Label LBLidiomas;
     }
 }
