@@ -159,12 +159,18 @@ namespace DAL
             }
             return usuarios;
         }
-        public void ActualizarIdiomaUsuario(int idUsuario, int idIdioma)
+        public void ActualizarIdiomaUsuario(BE.USUARIO usuario)
         {
             acceso.Abrir();
             List<SqlParameter> parametros = new List<SqlParameter>();
-            parametros.Add(acceso.CrearParametro("@id_usuario", idUsuario));
-            parametros.Add(acceso.CrearParametro("@id_idioma", idIdioma));
+
+            // 1. Datos para actualizar el idioma
+            parametros.Add(acceso.CrearParametro("@id_usuario", usuario.Id));
+            parametros.Add(acceso.CrearParametro("@id_idioma", usuario.IdIdioma));
+
+            // 2. NUEVO: Enviamos la nueva firma de seguridad recalculada
+            parametros.Add(acceso.CrearParametro("@dvh", usuario.DVH));
+
             acceso.Escribir("ACTUALIZAR_IDIOMA_USUARIO", parametros);
             acceso.Cerrar();
         }
@@ -185,6 +191,17 @@ namespace DAL
                 }
             }
             return listaDvh;
+        }
+
+        public void ActualizarSoloDVH(int idUsuario, string nuevoDvh)
+        {
+            acceso.Abrir();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(acceso.CrearParametro("@id", idUsuario));
+            parametros.Add(acceso.CrearParametro("@dvh", nuevoDvh));
+
+            acceso.Escribir("ACTUALIZAR_DVH_USUARIO", parametros);
+            acceso.Cerrar();
         }
     }
 }

@@ -82,6 +82,12 @@
     <Compile Include="FrmLogIn.Designer.cs">
       <DependentUpon>FrmLogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRestauracionBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRestauracionBase.Designer.cs">
+      <DependentUpon>FrmRestauracionBase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilidades\GES_PERMISOS_GUI.cs" />
@@ -102,6 +108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogIn.resx">
       <DependentUpon>FrmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRestauracionBase.resx">
+      <DependentUpon>FrmRestauracionBase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

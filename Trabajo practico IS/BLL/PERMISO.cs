@@ -52,7 +52,7 @@ namespace BLL
                 }
                 if (ExisteReferenciaCircular(padre.Id, hijo.Id))
                 {
-                    throw new Exception("Acción denegada: Asignar este rol generaría una referencia circular infinita.");
+                    throw new Exception("Asignar este rol generaría una referencia circular infinita.");
                 }
                 padre.AgregarHijo(hijo);
                 
@@ -181,28 +181,17 @@ namespace BLL
 
         public List<BE.COMPONENTE> ObtenerPermisosUsuario(int idUsuario)
         {
-            // 1. Armamos el árbol completo en memoria (usando tu método existente)
-            List<BE.COMPONENTE> rootNodes = ObtenerArbolCompleto();
-
-            // Como ObtenerArbolCompleto solo devuelve raíces, para poder buscar libremente 
-            // nos conviene listar todos los componentes planos primero.
-            List<BE.COMPONENTE> todosLosPermisosPlanos = mapperPermiso.Listar();
-            // Volvemos a armar los enlaces para la lista plana temporal rápida
-            // (O podés modificar tu BLL para tener una lista de "todos" accesible).
-
-            // 2. Traemos los IDs que tiene asignados el usuario
             List<int> idsAsignados = mapperPermiso.ObtenerIdsPermisosUsuario(idUsuario);
 
             List<BE.COMPONENTE> permisosDelUsuario = new List<BE.COMPONENTE>();
 
-            // 3. Buscamos los objetos reales correspondientes a esos IDs
-            // Nota: Es crucial usar la misma instancia de objetos que ya fue enlazada en el árbol
-            // para conservar las referencias en memoria.
-            List<BE.COMPONENTE> arbolHidratadoCompleto = mapperPermiso.Listar();
-            // Para simplificar y asegurar que tengan sus hijos enlazados, podemos re-utilizar la lógica 
-            // de armado sobre la lista completa de la BD:
+            if (idsAsignados.Count == 0) return permisosDelUsuario;
+
+            // 2. Traemos TODOS los permisos (planos) y las relaciones con solo 2 consultas
+            List<BE.COMPONENTE> todosLosPermisos = mapperPermiso.Listar();
             DataTable tablaRelaciones = mapperPermiso.ObtenerTablaRelacionesAuxiliar();
-            foreach (var nodo in arbolHidratadoCompleto)
+
+            foreach (var nodo in todosLosPermisos)
             {
                 var filasHijos = from DataRow fila in tablaRelaciones.Rows
                                  where int.Parse(fila["Id_Padre"].ToString()) == nodo.Id
@@ -210,17 +199,21 @@ namespace BLL
                 foreach (DataRow fila in filasHijos)
                 {
                     int idHijo = int.Parse(fila["Id_Hijo"].ToString());
-                    BE.COMPONENTE hijo = arbolHidratadoCompleto.Find(p => p.Id == idHijo);
-                    if (hijo != null) { try { nodo.AgregarHijo(hijo); } catch { } }
+                    BE.COMPONENTE hijo = todosLosPermisos.Find(p => p.Id == idHijo);
+
+                    if (hijo != null)
+                    {
+                        nodo.AgregarHijo(hijo); // Al agregarlo, C# simplemente guarda la referencia
+                    }
                 }
             }
 
             foreach (int id in idsAsignados)
             {
-                BE.COMPONENTE componenteEncontrado = arbolHidratadoCompleto.Find(p => p.Id == id);
-                if (componenteEncontrado != null)
+                BE.COMPONENTE componenteAsignado = todosLosPermisos.Find(p => p.Id == id);
+                if (componenteAsignado != null)
                 {
-                    permisosDelUsuario.Add(componenteEncontrado);
+                    permisosDelUsuario.Add(componenteAsignado);
                 }
             }
 

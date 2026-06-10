@@ -57,7 +57,7 @@ namespace Trabajo_practico_IS
                     if (Servicios.SESION.GetInstancia().usuactual != null)
                     {
                         BLL.USUARIO gestorUsu = new BLL.USUARIO();
-                        gestorUsu.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual.Id, idIdioma);
+                        gestorUsu.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual, idIdioma);
                         Servicios.SESION.GetInstancia().usuactual.IdIdioma = idIdioma;
                     }
                 }
@@ -68,7 +68,6 @@ namespace Trabajo_practico_IS
             }
         }
 
-        //public void
 
         public void EnlazarUsuarios()
         {
@@ -222,7 +221,6 @@ namespace Trabajo_practico_IS
                 TXT_CtrlUsuContraseña.Text = "";
                 TXT_CtrlUsuDNI.Text = usuario.Dni.ToString();
                 TXT_CtrlUsuEmail.Text = usuario.Email;
-
                 usuario.Permisos = GestorPermisos.ObtenerPermisosUsuario(usuario.Id);
 
                 Cb_CTRLUsuarioRol.SelectedIndex = -1;

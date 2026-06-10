@@ -1,4 +1,5 @@
-﻿using Servicios;
+﻿using BLL;
+using Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace Trabajo_practico_IS
 
         BLL.USUARIO GestorUsuario = new BLL.USUARIO();
         BLL.IDIOMA GestorIdioma = new BLL.IDIOMA();
+        BLL.AUDITORIA Auditoria = new BLL.AUDITORIA();
         private bool idiomaCambiadoManualmente = false;
         public FrmLogIn()
         {
@@ -56,6 +58,8 @@ namespace Trabajo_practico_IS
                 // PASO 2: Validar credenciales en la base de datos (y cargar la Sesión)
                 GestorUsuario.LogIn(usuarioIntent.Usuario, usuarioIntent.Contraseña);
 
+                Auditoria.AuditarSistema();
+
                 // PASO 3: Lógica de prioridad de idioma (Combo vs Base de Datos)
                 int idIdiomaFinalAAplicar;
 
@@ -65,7 +69,7 @@ namespace Trabajo_practico_IS
                     idIdiomaFinalAAplicar = Convert.ToInt32(CBXIdiomas.SelectedValue);
 
                     // Actualizamos su perfil en la BD para recordarlo en el futuro
-                    GestorUsuario.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual.Id, idIdiomaFinalAAplicar);
+                    GestorUsuario.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual, idIdiomaFinalAAplicar);
                     Servicios.SESION.GetInstancia().usuactual.IdIdioma = idIdiomaFinalAAplicar;
                 }
                 else
@@ -103,6 +107,50 @@ namespace Trabajo_practico_IS
                 CBXIdiomas.SelectedIndexChanged += CBXIdiomas_SelectedIndexChanged;
                 // Mostramos el Login de nuevo (limpio y en español)
                 this.Show();
+            }
+            catch (Servicios.Excepciones.IntegridadDatosException ex)
+            {
+                var usuActual = Servicios.SESION.GetInstancia().usuactual;
+                bool puedeRestaurarBD = false;
+
+                // 1. Recorremos el Composite preguntando por la ACCIÓN ESPECÍFICA
+                if (usuActual != null && usuActual.Permisos != null)
+                {
+                    foreach (var permiso in usuActual.Permisos)
+                    {
+                        // Preguntamos por el permiso puntual, no importa en qué rol esté guardado
+                        if (permiso.TienePermiso("RESTAURACION_BASE"))
+                        {
+                            puedeRestaurarBD = true;
+                            break;
+                        }
+                    }
+                }
+
+                // 2. Tomamos la decisión en base a la acción
+                if (puedeRestaurarBD)
+                {
+                    string msjError = $"¡ALERTA CRÍTICA!\n\nTabla: {ex.TablaCorrupta}\nRegistro: {ex.RegistroAfectado}\nDetalle: {ex.DetalleTecnico}";
+                    MessageBox.Show(msjError, "Consola de Emergencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    this.Hide();
+
+                    FrmMenuPrincipal frmMenu = new FrmMenuPrincipal();
+                    frmMenu.ShowDialog();
+                    //FrmRecuperacion frm = new FrmRecuperacion(msjError);
+                    //frm.Show();
+
+
+                    // B. Volvemos a hacer visible el formulario de Login
+                    this.Show();
+
+                }
+                else
+                {
+                    MessageBox.Show("El sistema se encuentra inhabilitado debido a problemas técnicos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    Application.Exit();
+                }
+
             }
             catch (Exception ex)
             {

@@ -18,20 +18,21 @@ namespace BLL
         public void Insertar(BE.USUARIO usuario)
         {
             usuario.DVH = GestorDV.CalcularDVH(usuario);
-
             mapper.Alta(usuario);
-
             ActualizarDvvUsuarios();
         }
 
         public void Borrar(BE.USUARIO usuario)
         {
             mapper.Baja(usuario);
+            ActualizarDvvUsuarios();
         }
 
         public void Modificar(BE.USUARIO usuario)
         {
+            usuario.DVH = GestorDV.CalcularDVH(usuario);
             mapper.Modificar(usuario);
+            ActualizarDvvUsuarios();
         }
 
         public List<BE.USUARIO> Listar()
@@ -40,11 +41,19 @@ namespace BLL
         }
         public void DesbloquearUsuario(BE.USUARIO usuario)
         {
+            usuario.DVH = GestorDV.CalcularDVH(usuario);
+
             mapper.ActualizarEstadoBloqueado(usuario);
+            ActualizarDvvUsuarios();
         }
-        public void ActualizarIdiomaUsuario(int idUsuario, int idIdioma)
+        public void ActualizarIdiomaUsuario(BE.USUARIO usuario, int idIdioma)
         {
-            mapper.ActualizarIdiomaUsuario(idUsuario, idIdioma);
+
+            usuario.IdIdioma = idIdioma;
+            usuario.DVH = GestorDV.CalcularDVH(usuario);
+
+            mapper.ActualizarIdiomaUsuario(usuario); // Asegúrate que tu mapper reciba el BE completo
+            ActualizarDvvUsuarios();
         }
 
         public void LogIn(string nombreUsuario, string contraseñaIngresada)
@@ -71,20 +80,28 @@ namespace BLL
                 if (usuariovalido.IntentosFallidos >= 3)
                 {
                     usuariovalido.EstadoBloqueado = true;
+                    usuariovalido.DVH = GestorDV.CalcularDVH(usuariovalido);
                     mapper.ActualizarIntentosFallidos(usuariovalido);
                     mapper.ActualizarEstadoBloqueado(usuariovalido);
+                    ActualizarDvvUsuarios();
+
                     gestorBitacora.RegistrarEvento("Seguridad", "Usuario bloqueado por múltiples intentos fallidos: ", 4, nombreUsuario);
                     throw new Exception("Usuario bloqueado por superar el límite de 3 intentos fallidos.");
                 }
                 else
                 {
+                    usuariovalido.DVH = GestorDV.CalcularDVH(usuariovalido);
                     mapper.ActualizarIntentosFallidos(usuariovalido);
+                    ActualizarDvvUsuarios();
+
                     throw new Exception($"Contraseña incorrecta. Intentos restantes: {3 - usuariovalido.IntentosFallidos}");
                 }
 
             }
             usuariovalido.IntentosFallidos = 0;
+            usuariovalido.DVH = GestorDV.CalcularDVH(usuariovalido);
             mapper.ActualizarIntentosFallidos(usuariovalido);
+            
             usuariovalido.Permisos = gestorPermisos.ObtenerPermisosUsuario(usuariovalido.Id);
             SESION.GetInstancia().AsignarUsuario(usuariovalido);
 
@@ -98,6 +115,11 @@ namespace BLL
 
             // Delegamos el recálculo
             GestorDV.RecalcularYGuardarDVV("USUARIO", todosDvh);
+        }
+
+        public void ActualizarSoloDVH(int idUsuario, string nuevoDvh)
+        {
+            mapper.ActualizarSoloDVH(idUsuario, nuevoDvh);
         }
     }
 }

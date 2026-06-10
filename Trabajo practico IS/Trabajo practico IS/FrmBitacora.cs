@@ -217,7 +217,7 @@ namespace Trabajo_practico_IS
                     if (Servicios.SESION.GetInstancia().usuactual != null)
                     {
                         BLL.USUARIO gestorUsu = new BLL.USUARIO();
-                        gestorUsu.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual.Id, idIdioma);
+                        gestorUsu.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual, idIdioma);
                         Servicios.SESION.GetInstancia().usuactual.IdIdioma = idIdioma;
                     }
                 }

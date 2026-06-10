@@ -76,18 +76,6 @@ namespace Trabajo_practico_IS
 
         }
 
-        public void AbrirForm<T>() where T : Form, new()
-        {
-            this.Hide();
-
-            using (T frm = new T())
-            {
-                frm.ShowDialog();
-            }
-
-            this.Show();
-        }
-
         private void BitacoraToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -199,7 +187,7 @@ namespace Trabajo_practico_IS
                     Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idIdiomaSeleccionado, traducciones);
 
                     // C. PERSISTENCIA TOTAL: Guardamos la nueva preferencia directamente en el perfil del usuario en la BD
-                    GestorUsuario.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual.Id, idIdiomaSeleccionado);
+                    GestorUsuario.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual, idIdiomaSeleccionado);
 
                     // D. Sincronizamos el objeto del usuario en la memoria local de la sesión
                     Servicios.SESION.GetInstancia().usuactual.IdIdioma = idIdiomaSeleccionado;

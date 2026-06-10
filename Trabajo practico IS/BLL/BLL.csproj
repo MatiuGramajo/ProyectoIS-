@@ -46,6 +46,7 @@
     <Compile Include="DIGITO_VERIFICADOR.cs" />
     <Compile Include="IDIOMA.cs" />
     <Compile Include="PERMISO.cs" />
+    <Compile Include="RESTAURACION.cs" />
     <Compile Include="USUARIO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
