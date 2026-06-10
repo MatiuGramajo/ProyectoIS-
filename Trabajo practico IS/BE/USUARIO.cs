@@ -67,9 +67,25 @@ namespace BE
             set { permisos = value; }
         }
 
-        // --- MÉTODO MÁGICO POLIMÓRFICO ---
-        // Permite preguntarle directamente al usuario si tiene acceso a algo
-        public bool TienePermiso(string nombrePermiso)
+        private int idIdioma;
+
+        public int IdIdioma
+        {
+            get { return idIdioma; }
+            set { idIdioma = value; }
+        }
+
+		private string dvh;
+
+		public string DVH
+		{
+			get { return dvh; }
+			set { dvh = value; }
+		}
+
+		// --- MÉTODO MÁGICO POLIMÓRFICO ---
+		// Permite preguntarle directamente al usuario si tiene acceso a algo
+		public bool TienePermiso(string nombrePermiso)
         {
             foreach (var comp in permisos)
             {
@@ -83,13 +99,7 @@ namespace BE
             return false;
         }
 
-		private int idIdioma;
 
-		public int IdIdioma
-		{
-			get { return idIdioma; }
-			set { idIdioma = value; }
-		}
 
 
 	}

@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AUDITORIA.cs" />
     <Compile Include="BITACORA.cs" />
+    <Compile Include="DIGITO_VERIFICADOR.cs" />
     <Compile Include="IDIOMA.cs" />
     <Compile Include="PERMISO.cs" />
     <Compile Include="USUARIO.cs" />

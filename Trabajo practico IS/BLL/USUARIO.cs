@@ -13,10 +13,15 @@ namespace BLL
         MP_USUARIO mapper = new MP_USUARIO();
         BLL.BITACORA gestorBitacora= new BLL.BITACORA();
         BLL.PERMISO gestorPermisos = new BLL.PERMISO();
+        BLL.DIGITO_VERIFICADOR GestorDV = new BLL.DIGITO_VERIFICADOR();
 
         public void Insertar(BE.USUARIO usuario)
         {
+            usuario.DVH = GestorDV.CalcularDVH(usuario);
+
             mapper.Alta(usuario);
+
+            ActualizarDvvUsuarios();
         }
 
         public void Borrar(BE.USUARIO usuario)
@@ -86,6 +91,13 @@ namespace BLL
             gestorBitacora.RegistrarEvento("Seguridad", "Inicio de sesión exitoso", 1);
         }
 
+        private void ActualizarDvvUsuarios()
+        {
+            // Extraemos la lista de la BD
+            List<string> todosDvh = mapper.ObtenerTodosLosDVH();
 
+            // Delegamos el recálculo
+            GestorDV.RecalcularYGuardarDVV("USUARIO", todosDvh);
+        }
     }
 }

@@ -22,8 +22,7 @@ namespace DAL
             parametros.Add(acceso.CrearParametro("@dni", usuario.Dni));
             parametros.Add(acceso.CrearParametro("@email", usuario.Email));
 
-            //int res = acceso.Escribir("INSERTAR_USUARIO", parametros);
-            //DataTable dt = acceso.Leer("INSERTAR_USUARIO",parametros);
+            parametros.Add(acceso.CrearParametro("@dvh", usuario.DVH));
 
             usuario.Id = acceso.LeerEscalar("INSERTAR_USUARIO", parametros);
 
@@ -168,6 +167,24 @@ namespace DAL
             parametros.Add(acceso.CrearParametro("@id_idioma", idIdioma));
             acceso.Escribir("ACTUALIZAR_IDIOMA_USUARIO", parametros);
             acceso.Cerrar();
+        }
+
+        public List<string> ObtenerTodosLosDVH()
+        {
+            acceso.Abrir();
+            // Ejecuta el SP que creamos antes: SELECT DVH FROM USUARIO ORDER BY ID ASC
+            DataTable dt = acceso.Leer("OBTENER_TODOS_DVH_USUARIO");
+            acceso.Cerrar();
+
+            List<string> listaDvh = new List<string>();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (row["DVH"] != DBNull.Value)
+                {
+                    listaDvh.Add(row["DVH"].ToString());
+                }
+            }
+            return listaDvh;
         }
     }
 }
