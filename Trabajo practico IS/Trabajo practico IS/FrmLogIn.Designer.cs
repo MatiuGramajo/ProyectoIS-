@@ -39,21 +39,21 @@
             // 
             // TxtBoxUsuario
             // 
-            this.TxtBoxUsuario.Location = new System.Drawing.Point(110, 73);
+            this.TxtBoxUsuario.Location = new System.Drawing.Point(59, 73);
             this.TxtBoxUsuario.Name = "TxtBoxUsuario";
             this.TxtBoxUsuario.Size = new System.Drawing.Size(100, 20);
             this.TxtBoxUsuario.TabIndex = 0;
             // 
             // TxtBoxPassword
             // 
-            this.TxtBoxPassword.Location = new System.Drawing.Point(110, 143);
+            this.TxtBoxPassword.Location = new System.Drawing.Point(59, 143);
             this.TxtBoxPassword.Name = "TxtBoxPassword";
             this.TxtBoxPassword.Size = new System.Drawing.Size(100, 20);
             this.TxtBoxPassword.TabIndex = 1;
             // 
             // BTN_IniciarSesion
             // 
-            this.BTN_IniciarSesion.Location = new System.Drawing.Point(115, 199);
+            this.BTN_IniciarSesion.Location = new System.Drawing.Point(64, 199);
             this.BTN_IniciarSesion.Name = "BTN_IniciarSesion";
             this.BTN_IniciarSesion.Size = new System.Drawing.Size(90, 23);
             this.BTN_IniciarSesion.TabIndex = 2;
@@ -64,7 +64,7 @@
             // LBLusuario
             // 
             this.LBLusuario.AutoSize = true;
-            this.LBLusuario.Location = new System.Drawing.Point(139, 48);
+            this.LBLusuario.Location = new System.Drawing.Point(88, 48);
             this.LBLusuario.Name = "LBLusuario";
             this.LBLusuario.Size = new System.Drawing.Size(43, 13);
             this.LBLusuario.TabIndex = 4;
@@ -73,7 +73,7 @@
             // LBLpassword
             // 
             this.LBLpassword.AutoSize = true;
-            this.LBLpassword.Location = new System.Drawing.Point(134, 118);
+            this.LBLpassword.Location = new System.Drawing.Point(83, 118);
             this.LBLpassword.Name = "LBLpassword";
             this.LBLpassword.Size = new System.Drawing.Size(61, 13);
             this.LBLpassword.TabIndex = 5;
@@ -82,7 +82,7 @@
             // CBXIdiomas
             // 
             this.CBXIdiomas.FormattingEnabled = true;
-            this.CBXIdiomas.Location = new System.Drawing.Point(379, 12);
+            this.CBXIdiomas.Location = new System.Drawing.Point(244, 12);
             this.CBXIdiomas.Name = "CBXIdiomas";
             this.CBXIdiomas.Size = new System.Drawing.Size(121, 21);
             this.CBXIdiomas.TabIndex = 6;
@@ -91,7 +91,7 @@
             // LBLidiomas
             // 
             this.LBLidiomas.AutoSize = true;
-            this.LBLidiomas.Location = new System.Drawing.Point(318, 16);
+            this.LBLidiomas.Location = new System.Drawing.Point(183, 16);
             this.LBLidiomas.Name = "LBLidiomas";
             this.LBLidiomas.Size = new System.Drawing.Size(38, 13);
             this.LBLidiomas.TabIndex = 7;
@@ -102,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(512, 274);
+            this.ClientSize = new System.Drawing.Size(388, 274);
             this.Controls.Add(this.LBLidiomas);
             this.Controls.Add(this.CBXIdiomas);
             this.Controls.Add(this.LBLpassword);

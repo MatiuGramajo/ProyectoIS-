@@ -53,7 +53,10 @@ namespace BLL
             usuario.DVH = GestorDV.CalcularDVH(usuario);
 
             mapper.ActualizarIdiomaUsuario(usuario); // Asegúrate que tu mapper reciba el BE completo
-            ActualizarDvvUsuarios();
+
+            List<string> todosLosDvhs = mapper.ObtenerTodosLosDVH();
+
+            GestorDV.RecalcularYGuardarDVV("USUARIO", todosLosDvhs);
         }
 
         public void LogIn(string nombreUsuario, string contraseñaIngresada)

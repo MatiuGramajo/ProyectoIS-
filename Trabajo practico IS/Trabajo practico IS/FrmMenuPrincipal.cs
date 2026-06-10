@@ -211,6 +211,14 @@ namespace Trabajo_practico_IS
             this.Show();
 
         }
+
+        private void restauracionDeBaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmRestauracionBase frmRestauracion = new FrmRestauracionBase();
+            frmRestauracion.ShowDialog();
+            this.Show();
+        }
     }
 }
 

@@ -135,14 +135,14 @@ namespace Trabajo_practico_IS
 
                     this.Hide();
 
-                    FrmMenuPrincipal frmMenu = new FrmMenuPrincipal();
-                    frmMenu.ShowDialog();
-                    //FrmRecuperacion frm = new FrmRecuperacion(msjError);
-                    //frm.Show();
+                    //FrmMenuPrincipal frmMenu = new FrmMenuPrincipal();
+                    //frmMenu.ShowDialog();
+                    FrmRestauracionBase frmEmergencia = new FrmRestauracionBase(msjError);
+                    frmEmergencia.ShowDialog();
 
 
                     // B. Volvemos a hacer visible el formulario de Login
-                    this.Show();
+                    //this.Show();
 
                 }
                 else

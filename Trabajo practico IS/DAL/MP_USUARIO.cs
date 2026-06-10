@@ -73,6 +73,8 @@ namespace DAL
                 usuarioEncontrado.Contraseña = row["Contraseña"].ToString();
                 usuarioEncontrado.IntentosFallidos = Convert.ToInt32(row["IntentosFallidos"]);
                 usuarioEncontrado.EstadoBloqueado = Convert.ToBoolean(row["EstadoBloqueado"]);
+                usuarioEncontrado.Dni = int.Parse(row["DNI"].ToString());
+                usuarioEncontrado.Email = row["EMAIL"].ToString();
                 usuarioEncontrado.IdIdioma = row["id_idioma"] != DBNull.Value ? Convert.ToInt32(row["id_idioma"]) : 1;
 
 
@@ -155,6 +157,8 @@ namespace DAL
                 usu.IntentosFallidos = int.Parse(registro["INTENTOSFALLIDOS"].ToString());
                 usu.Dni = int.Parse(registro["DNI"].ToString());
                 usu.Email= registro["EMAIL"].ToString();
+                usu.IdIdioma = int.Parse(registro["ID_IDIOMA"].ToString());
+                usu.DVH = registro["DVH"].ToString();
                 usuarios.Add(usu);
             }
             return usuarios;

@@ -156,6 +156,7 @@
             this.Controls.Add(this.BTNhabilitar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmIdioma";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmIdioma";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmIdioma_FormClosing);
             this.Load += new System.EventHandler(this.FrmIdioma_Load);

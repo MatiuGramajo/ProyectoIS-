@@ -34,12 +34,13 @@
             this.AdministracionMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.controlDePermisosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.controlDeIdiomasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.LBLbienvenida = new System.Windows.Forms.Label();
             this.CBXidiomas = new System.Windows.Forms.ComboBox();
             this.LBLidioma = new System.Windows.Forms.Label();
-            this.controlDeIdiomasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restauracionDeBaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +70,8 @@
             this.AdministracionMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.controlDeUsuariosToolStripMenuItem,
             this.controlDePermisosToolStripMenuItem,
-            this.controlDeIdiomasToolStripMenuItem});
+            this.controlDeIdiomasToolStripMenuItem,
+            this.restauracionDeBaseToolStripMenuItem});
             this.AdministracionMenuItem.Name = "AdministracionMenuItem";
             this.AdministracionMenuItem.Size = new System.Drawing.Size(100, 20);
             this.AdministracionMenuItem.Text = "Administración";
@@ -77,7 +79,7 @@
             // controlDeUsuariosToolStripMenuItem
             // 
             this.controlDeUsuariosToolStripMenuItem.Name = "controlDeUsuariosToolStripMenuItem";
-            this.controlDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.controlDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.controlDeUsuariosToolStripMenuItem.Tag = "ABM_USUARIO";
             this.controlDeUsuariosToolStripMenuItem.Text = "Control de usuarios";
             this.controlDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.controlDeUsuariosToolStripMenuItem_Click);
@@ -85,10 +87,17 @@
             // controlDePermisosToolStripMenuItem
             // 
             this.controlDePermisosToolStripMenuItem.Name = "controlDePermisosToolStripMenuItem";
-            this.controlDePermisosToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.controlDePermisosToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
             this.controlDePermisosToolStripMenuItem.Tag = "ABM_PERMISOS";
             this.controlDePermisosToolStripMenuItem.Text = "Control de permisos";
             this.controlDePermisosToolStripMenuItem.Click += new System.EventHandler(this.controlDePermisosToolStripMenuItem_Click);
+            // 
+            // controlDeIdiomasToolStripMenuItem
+            // 
+            this.controlDeIdiomasToolStripMenuItem.Name = "controlDeIdiomasToolStripMenuItem";
+            this.controlDeIdiomasToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.controlDeIdiomasToolStripMenuItem.Text = "Control de idiomas";
+            this.controlDeIdiomasToolStripMenuItem.Click += new System.EventHandler(this.controlDeIdiomasToolStripMenuItem_Click);
             // 
             // BitacoraToolStripMenuItem
             // 
@@ -131,12 +140,13 @@
             this.LBLidioma.TabIndex = 11;
             this.LBLidioma.Text = "Idiomas";
             // 
-            // controlDeIdiomasToolStripMenuItem
+            // restauracionDeBaseToolStripMenuItem
             // 
-            this.controlDeIdiomasToolStripMenuItem.Name = "controlDeIdiomasToolStripMenuItem";
-            this.controlDeIdiomasToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
-            this.controlDeIdiomasToolStripMenuItem.Text = "Control de idiomas";
-            this.controlDeIdiomasToolStripMenuItem.Click += new System.EventHandler(this.controlDeIdiomasToolStripMenuItem_Click);
+            this.restauracionDeBaseToolStripMenuItem.Name = "restauracionDeBaseToolStripMenuItem";
+            this.restauracionDeBaseToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.restauracionDeBaseToolStripMenuItem.Tag = "RESTAURACION_BASE";
+            this.restauracionDeBaseToolStripMenuItem.Text = "Restauracion de base";
+            this.restauracionDeBaseToolStripMenuItem.Click += new System.EventHandler(this.restauracionDeBaseToolStripMenuItem_Click);
             // 
             // FrmMenuPrincipal
             // 
@@ -175,6 +185,7 @@
         private System.Windows.Forms.ComboBox CBXidiomas;
         private System.Windows.Forms.Label LBLidioma;
         private System.Windows.Forms.ToolStripMenuItem controlDeIdiomasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem restauracionDeBaseToolStripMenuItem;
     }
 }
 
