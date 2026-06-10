@@ -17,7 +17,6 @@ namespace Trabajo_practico_IS
 
         BLL.USUARIO GestorUsuario = new BLL.USUARIO();
         BLL.IDIOMA GestorIdioma = new BLL.IDIOMA();
-        BLL.AUDITORIA Auditoria = new BLL.AUDITORIA();
         private bool idiomaCambiadoManualmente = false;
         public FrmLogIn()
         {
@@ -51,31 +50,16 @@ namespace Trabajo_practico_IS
                 if (string.IsNullOrWhiteSpace(TxtBoxUsuario.Text) || string.IsNullOrWhiteSpace(TxtBoxPassword.Text))
                     throw new Exception("Debe completar todos los campos");
 
-                BE.USUARIO usuarioIntent = new BE.USUARIO();
-                usuarioIntent.Usuario = TxtBoxUsuario.Text;
-                usuarioIntent.Contraseña = TxtBoxPassword.Text;
-
                 // PASO 2: Validar credenciales en la base de datos (y cargar la Sesión)
-                GestorUsuario.LogIn(usuarioIntent.Usuario, usuarioIntent.Contraseña);
-
-                Auditoria.AuditarSistema();
+                GestorUsuario.LogIn(TxtBoxUsuario.Text, TxtBoxPassword.Text);
 
                 // PASO 3: Lógica de prioridad de idioma (Combo vs Base de Datos)
-                int idIdiomaFinalAAplicar;
+                int idIdiomaFinalAAplicar = idiomaCambiadoManualmente ? Convert.ToInt32(CBXIdiomas.SelectedValue) : Servicios.SESION.GetInstancia().usuactual.IdIdioma;
 
                 if (idiomaCambiadoManualmente)
                 {
-                    // GANA EL COMBOBOX: El usuario movió el combo manualmente.
-                    idIdiomaFinalAAplicar = Convert.ToInt32(CBXIdiomas.SelectedValue);
-
-                    // Actualizamos su perfil en la BD para recordarlo en el futuro
                     GestorUsuario.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual, idIdiomaFinalAAplicar);
                     Servicios.SESION.GetInstancia().usuactual.IdIdioma = idIdiomaFinalAAplicar;
-                }
-                else
-                {
-                    // GANA LA BD: El usuario no tocó el combo. Respetamos su historial.
-                    idIdiomaFinalAAplicar = Servicios.SESION.GetInstancia().usuactual.IdIdioma;
                 }
 
                 // PASO 4: Inyectar el idioma ganador en la memoria RAM
@@ -89,67 +73,11 @@ namespace Trabajo_practico_IS
                 FrmMenuPrincipal frmMenu = new FrmMenuPrincipal();
                 frmMenu.ShowDialog();
 
-                // PASO 6: POST-LOGOUT (Se ejecuta cuando cierran el Menú Principal)
-                try
-                {
-                    idiomaCambiadoManualmente = false; // Reseteamos la bandera para el próximo usuario
-
-                    int idEspañol = 1; // 1 = Español (Idioma por defecto)
-                    var traduccionesEspañol = GestorIdioma.ObtenerTraducciones(idEspañol);
-                    Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idEspañol, traduccionesEspañol);
-                }
-                catch (Exception)
-                {
-                    // Silenciador de seguridad por si falla la BD al salir
-                }
-                CBXIdiomas.SelectedIndexChanged -= CBXIdiomas_SelectedIndexChanged;
-                CBXIdiomas.DataSource = GestorIdioma.Listar();
-                CBXIdiomas.SelectedIndexChanged += CBXIdiomas_SelectedIndexChanged;
-                // Mostramos el Login de nuevo (limpio y en español)
-                this.Show();
+                ProcesarPostLogout();
             }
             catch (Servicios.Excepciones.IntegridadDatosException ex)
             {
-                var usuActual = Servicios.SESION.GetInstancia().usuactual;
-                bool puedeRestaurarBD = false;
-
-                // 1. Recorremos el Composite preguntando por la ACCIÓN ESPECÍFICA
-                if (usuActual != null && usuActual.Permisos != null)
-                {
-                    foreach (var permiso in usuActual.Permisos)
-                    {
-                        // Preguntamos por el permiso puntual, no importa en qué rol esté guardado
-                        if (permiso.TienePermiso("RESTAURACION_BASE"))
-                        {
-                            puedeRestaurarBD = true;
-                            break;
-                        }
-                    }
-                }
-
-                // 2. Tomamos la decisión en base a la acción
-                if (puedeRestaurarBD)
-                {
-                    string msjError = $"¡ALERTA CRÍTICA!\n\nTabla: {ex.TablaCorrupta}\nRegistro: {ex.RegistroAfectado}\nDetalle: {ex.DetalleTecnico}";
-                    MessageBox.Show(msjError, "Consola de Emergencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    this.Hide();
-
-                    //FrmMenuPrincipal frmMenu = new FrmMenuPrincipal();
-                    //frmMenu.ShowDialog();
-                    FrmRestauracionBase frmEmergencia = new FrmRestauracionBase(msjError);
-                    frmEmergencia.ShowDialog();
-
-
-                    // B. Volvemos a hacer visible el formulario de Login
-                    //this.Show();
-
-                }
-                else
-                {
-                    MessageBox.Show("El sistema se encuentra inhabilitado debido a problemas técnicos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                    Application.Exit();
-                }
+                ManejarFallaIntegridad(ex);
 
             }
             catch (Exception ex)
@@ -157,12 +85,89 @@ namespace Trabajo_practico_IS
                 // Mostramos cualquier error (ej. Contraseña incorrecta)
                 MessageBox.Show(ex.Message);
             }
-
-            // PASO 7: Limpiar las cajas de texto de usuario y contraseña
-            TxtBoxUsuario.Text = "";
-            TxtBoxPassword.Text = "";
-
+            finally
+            {
+                TxtBoxUsuario.Text = "";
+                TxtBoxPassword.Text = "";
+            }
         }
+
+        private void ManejarFallaIntegridad(Servicios.Excepciones.IntegridadDatosException ex)
+        {
+            var usuActual = Servicios.SESION.GetInstancia().usuactual;
+            bool puedeRestaurarBD = false;
+
+            // 1. Recorremos el Composite preguntando por la ACCIÓN ESPECÍFICA
+            if (usuActual != null && usuActual.Permisos != null)
+            {
+                foreach (var permiso in usuActual.Permisos)
+                {
+                    // Preguntamos por el permiso puntual, no importa en qué rol esté guardado
+                    if (permiso.TienePermiso("RESTAURACION_BASE"))
+                    {
+                        puedeRestaurarBD = true;
+                        break;
+                    }
+                }
+            }
+
+            string msjError = $"¡ALERTA CRÍTICA DE SEGURIDAD!\n\n" +
+                      $"Tabla Corrupta: {ex.TablaCorrupta}\n" +
+                      $"Registro Afectado: {ex.RegistroAfectado}\n" +
+                      $"Detalle Técnico: {ex.DetalleTecnico}";
+
+            // 2. Tomamos la decisión en base a la acción
+            if (puedeRestaurarBD)
+            {
+                MessageBox.Show(msjError, "Consola de Emergencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                this.Hide();
+
+                FrmRestauracionBase frmEmergencia = new FrmRestauracionBase(msjError);
+                frmEmergencia.ShowDialog();
+
+                // B. Volvemos a hacer visible el formulario de Login
+                //this.Show();
+            }
+            else
+            {
+                MessageBox.Show("El sistema se encuentra inhabilitado temporalmente debido a fallas técnicas graves de consistencia.\n\n" +
+                        "Por favor, comuníquese con el administrador de seguridad para restablecer el servicio.",
+                        "Error Fatal de Sistema",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Stop);
+                Application.Exit();
+            }
+        }
+
+        private void ProcesarPostLogout()
+        {
+            try
+            {
+                // 1. Reseteamos la bandera para el próximo usuario que intente ingresar
+                idiomaCambiadoManualmente = false;
+
+                // 2. Por estandarización de UX, devolvemos el Login a su idioma base (Español = ID 1)
+                int idEspañol = 1;
+                var traduccionesEspañol = GestorIdioma.ObtenerTraducciones(idEspañol);
+
+                // El Observer se encarga de disparar la actualización visual de este formulario
+                Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idEspañol, traduccionesEspañol);
+            }
+            catch (Exception)
+            {
+                // Silenciador de seguridad por si el motor de BD llega a fallar o desconectarse al salir
+            }
+
+            // 3. Desenganchamos y re-enganchamos el evento para refrescar la lista de idiomas de forma limpia
+            CBXIdiomas.SelectedIndexChanged -= CBXIdiomas_SelectedIndexChanged;
+            CBXIdiomas.DataSource = GestorIdioma.Listar();
+            CBXIdiomas.SelectedIndexChanged += CBXIdiomas_SelectedIndexChanged;
+
+            // 4. Volvemos a mostrar la pantalla de Login en el centro del escritorio, reluciente para el próximo ciclo
+            this.Show();
+        }
+
         private void FrmLogIn_Load(object sender, EventArgs e)
         {
             Servicios.IDIOMAS.GetInstancia().Suscribir(this);

@@ -87,8 +87,9 @@ namespace DAL
         {
             acceso.Abrir();
             List<SqlParameter> parametros = new List<SqlParameter>();
-            parametros.Add(acceso.CrearParametro("@usu", usuario.Usuario));
+            parametros.Add(acceso.CrearParametro("@id", usuario.Id));
             parametros.Add(acceso.CrearParametro("@intentos",usuario.IntentosFallidos));
+            parametros.Add(acceso.CrearParametro("@dvh", usuario.DVH));
             acceso.Escribir("ACTUALIZAR_INTENTOS_FALLIDOS", parametros);
             acceso.Cerrar();
         }
@@ -96,9 +97,10 @@ namespace DAL
         {
             acceso.Abrir();
             List<SqlParameter> parametros = new List<SqlParameter>();
-            parametros.Add(acceso.CrearParametro("@usu", usuario.Usuario));
+            parametros.Add(acceso.CrearParametro("@id", usuario.Id));
             parametros.Add(acceso.CrearParametro("@estadobloqueado", usuario.EstadoBloqueado));
             parametros.Add(acceso.CrearParametro("@intentos", usuario.IntentosFallidos));
+            parametros.Add(acceso.CrearParametro("@dvh", usuario.DVH));
             acceso.Escribir("ACTUALIZAR_ESTADOBLOQUEADO", parametros);
             acceso.Cerrar();
 
@@ -123,6 +125,7 @@ namespace DAL
             parametros.Add(acceso.CrearParametro("@contra", usuario.Contraseña));
             parametros.Add(acceso.CrearParametro("@dni", usuario.Dni));
             parametros.Add(acceso.CrearParametro("@email", usuario.Email));
+            parametros.Add(acceso.CrearParametro("DVH", usuario.DVH));
             int res = acceso.Escribir("MODIFICAR_USUARIO", parametros);
 
             // 2. ACTUALIZACIÓN DE PERMISOS (Borrar y Volver a Insertar)

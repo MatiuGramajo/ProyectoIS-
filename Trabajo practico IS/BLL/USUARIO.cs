@@ -14,6 +14,7 @@ namespace BLL
         BLL.BITACORA gestorBitacora= new BLL.BITACORA();
         BLL.PERMISO gestorPermisos = new BLL.PERMISO();
         BLL.DIGITO_VERIFICADOR GestorDV = new BLL.DIGITO_VERIFICADOR();
+        BLL.AUDITORIA Auditoria = new BLL.AUDITORIA();
 
         public void Insertar(BE.USUARIO usuario)
         {
@@ -52,11 +53,12 @@ namespace BLL
             usuario.IdIdioma = idIdioma;
             usuario.DVH = GestorDV.CalcularDVH(usuario);
 
-            mapper.ActualizarIdiomaUsuario(usuario); // Asegúrate que tu mapper reciba el BE completo
+            // 3. Impactamos el idioma y el nuevo DVH en la tabla de la base de datos
+            mapper.ActualizarIdiomaUsuario(usuario);
 
-            List<string> todosLosDvhs = mapper.ObtenerTodosLosDVH();
+            // 4. Sincronizamos el candado global de la tabla para que no tire error de consistencia
+            ActualizarDvvUsuarios();
 
-            GestorDV.RecalcularYGuardarDVV("USUARIO", todosLosDvhs);
         }
 
         public void LogIn(string nombreUsuario, string contraseñaIngresada)
@@ -79,11 +81,15 @@ namespace BLL
 
             if (usuariovalido.Contraseña != hashingresado)
             {
+                Auditoria.AuditarSistema();
+
                 usuariovalido.IntentosFallidos++;
+                
                 if (usuariovalido.IntentosFallidos >= 3)
                 {
                     usuariovalido.EstadoBloqueado = true;
                     usuariovalido.DVH = GestorDV.CalcularDVH(usuariovalido);
+
                     mapper.ActualizarIntentosFallidos(usuariovalido);
                     mapper.ActualizarEstadoBloqueado(usuariovalido);
                     ActualizarDvvUsuarios();
@@ -101,14 +107,22 @@ namespace BLL
                 }
 
             }
-            usuariovalido.IntentosFallidos = 0;
-            usuariovalido.DVH = GestorDV.CalcularDVH(usuariovalido);
-            mapper.ActualizarIntentosFallidos(usuariovalido);
-            
             usuariovalido.Permisos = gestorPermisos.ObtenerPermisosUsuario(usuariovalido.Id);
             SESION.GetInstancia().AsignarUsuario(usuariovalido);
 
+            Auditoria.AuditarSistema();
+
+            if (usuariovalido.IntentosFallidos > 0)
+            {
+                usuariovalido.IntentosFallidos = 0;
+                usuariovalido.DVH = GestorDV.CalcularDVH(usuariovalido);
+
+                mapper.ActualizarIntentosFallidos(usuariovalido);
+                ActualizarDvvUsuarios(); // Sincronizamos el DVV vertical tras limpiar la fila
+            }
+
             gestorBitacora.RegistrarEvento("Seguridad", "Inicio de sesión exitoso", 1);
+
         }
 
         private void ActualizarDvvUsuarios()
