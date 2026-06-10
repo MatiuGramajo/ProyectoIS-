@@ -39,6 +39,7 @@
             this.LBLbienvenida = new System.Windows.Forms.Label();
             this.CBXidiomas = new System.Windows.Forms.ComboBox();
             this.LBLidioma = new System.Windows.Forms.Label();
+            this.controlDeIdiomasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +68,8 @@
             // 
             this.AdministracionMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.controlDeUsuariosToolStripMenuItem,
-            this.controlDePermisosToolStripMenuItem});
+            this.controlDePermisosToolStripMenuItem,
+            this.controlDeIdiomasToolStripMenuItem});
             this.AdministracionMenuItem.Name = "AdministracionMenuItem";
             this.AdministracionMenuItem.Size = new System.Drawing.Size(100, 20);
             this.AdministracionMenuItem.Text = "Administración";
@@ -129,6 +131,13 @@
             this.LBLidioma.TabIndex = 11;
             this.LBLidioma.Text = "Idiomas";
             // 
+            // controlDeIdiomasToolStripMenuItem
+            // 
+            this.controlDeIdiomasToolStripMenuItem.Name = "controlDeIdiomasToolStripMenuItem";
+            this.controlDeIdiomasToolStripMenuItem.Size = new System.Drawing.Size(181, 22);
+            this.controlDeIdiomasToolStripMenuItem.Text = "Control de idiomas";
+            this.controlDeIdiomasToolStripMenuItem.Click += new System.EventHandler(this.controlDeIdiomasToolStripMenuItem_Click);
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,6 +174,7 @@
         private System.Windows.Forms.ToolStripMenuItem controlDePermisosToolStripMenuItem;
         private System.Windows.Forms.ComboBox CBXidiomas;
         private System.Windows.Forms.Label LBLidioma;
+        private System.Windows.Forms.ToolStripMenuItem controlDeIdiomasToolStripMenuItem;
     }
 }
 

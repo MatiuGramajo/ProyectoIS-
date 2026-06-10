@@ -98,7 +98,9 @@ namespace Trabajo_practico_IS
                 {
                     // Silenciador de seguridad por si falla la BD al salir
                 }
-
+                CBXIdiomas.SelectedIndexChanged -= CBXIdiomas_SelectedIndexChanged;
+                CBXIdiomas.DataSource = GestorIdioma.Listar();
+                CBXIdiomas.SelectedIndexChanged += CBXIdiomas_SelectedIndexChanged;
                 // Mostramos el Login de nuevo (limpio y en español)
                 this.Show();
             }

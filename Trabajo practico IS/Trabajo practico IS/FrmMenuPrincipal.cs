@@ -210,6 +210,19 @@ namespace Trabajo_practico_IS
                 MessageBox.Show("Error al guardar la preferencia de idioma: " + ex.Message);    
             }
         }
+
+        private void controlDeIdiomasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmIdioma frmIdioma= new FrmIdioma();
+            frmIdioma.ShowDialog();
+            CBXidiomas.SelectedIndexChanged -= CBXidiomas_SelectedIndexChanged;
+            BLL.IDIOMA gestorIdioma = new BLL.IDIOMA();
+            CBXidiomas.DataSource = gestorIdioma.Listar();
+            CBXidiomas.SelectedIndexChanged += CBXidiomas_SelectedIndexChanged;
+            this.Show();
+
+        }
     }
 }
 

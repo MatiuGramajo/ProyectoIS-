@@ -20,7 +20,23 @@ namespace DAL
         {
             throw new NotImplementedException();
         }
+        public List<BE.IDIOMA>ObtenerIdiomas()
+        {
+            acceso.Abrir();
+            DataTable tabla = acceso.Leer("OBTENER_IDIOMA");
+            acceso.Cerrar();
+            List<BE.IDIOMA> listaidioma = new List<BE.IDIOMA>();
+            foreach(DataRow registro in tabla.Rows)
+            {
+                BE.IDIOMA idioma= new BE.IDIOMA();
+                idioma.Nombre = registro["NOMBRE"].ToString();
+                idioma.Id = int.Parse(registro["ID_IDIOMA"].ToString());
+                idioma.EstaDisponible = bool.Parse(registro["ESTADISPONIBLE"].ToString());
+                listaidioma.Add(idioma);
+            }
+            return listaidioma;
 
+        }
         public void AltaIdioma(string nombreIdioma, string sufijo)
         {
             acceso.Abrir();
