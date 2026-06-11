@@ -55,6 +55,7 @@
             this.CBXIdiomas.Name = "CBXIdiomas";
             this.CBXIdiomas.Size = new System.Drawing.Size(121, 21);
             this.CBXIdiomas.TabIndex = 14;
+            this.CBXIdiomas.SelectedIndexChanged += new System.EventHandler(this.CBXIdiomas_SelectedIndexChanged);
             // 
             // BTNvolveralmenu
             // 
@@ -73,6 +74,7 @@
             this.BTNrestaurar.TabIndex = 12;
             this.BTNrestaurar.Text = "Restaurar";
             this.BTNrestaurar.UseVisualStyleBackColor = true;
+            this.BTNrestaurar.Click += new System.EventHandler(this.BTNrestaurar_Click);
             // 
             // LBLusuario
             // 
@@ -124,6 +126,7 @@
             this.Controls.Add(this.LBLhistorial);
             this.Controls.Add(this.DGVHistorial);
             this.Name = "FrmHistorial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmHistorial";
             this.Load += new System.EventHandler(this.FrmHistorial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGVHistorial)).EndInit();

@@ -9,6 +9,7 @@ namespace BLL
     public class HISTORIAL_USUARIO
     {
         private DAL.MP_HISTORIAL_USUARIO mapperHistorial = new DAL.MP_HISTORIAL_USUARIO();
+        BLL.BITACORA GestorBitacora = new BLL.BITACORA();
 
         public void RegistrarCambio(int idUsuario, string usuarioResponsable, string tipoAccion)
         {
@@ -24,6 +25,10 @@ namespace BLL
         {
             string responsable = Servicios.SESION.GetInstancia().usuactual.Usuario;
             mapperHistorial.RestaurarVersion(idHistorial, responsable);
+            BLL.USUARIO gestorUsuarioLocal = new BLL.USUARIO();
+            gestorUsuarioLocal.ActualizarDvvUsuarios();
+
+            GestorBitacora.RegistrarEvento("Administracion", $"Se restauró un perfil de usuario desde el registro histórico ID: {idHistorial}", 2);
         }
     }
 }

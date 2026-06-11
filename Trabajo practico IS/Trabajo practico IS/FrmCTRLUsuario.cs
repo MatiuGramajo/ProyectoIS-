@@ -95,25 +95,32 @@ namespace Trabajo_practico_IS
 
         private void BTNCtrlUsuAlta_Click(object sender, EventArgs e)
         {
-            if (!(string.IsNullOrEmpty(TXT_CtrlUsuUsuario.Text) || string.IsNullOrEmpty(TXT_CtrlUsuContraseña.Text) || string.IsNullOrEmpty(TXT_CtrlUsuDNI.Text) || string.IsNullOrEmpty(TXT_CtrlUsuEmail.Text)))
+            try
             {
-                BE.USUARIO usuario = new BE.USUARIO();
-                BE.COMPONENTE rolSeleccionado = (BE.COMPONENTE)Cb_CTRLUsuarioRol.SelectedItem;
+                if (!(string.IsNullOrEmpty(TXT_CtrlUsuUsuario.Text) || string.IsNullOrEmpty(TXT_CtrlUsuContraseña.Text) || string.IsNullOrEmpty(TXT_CtrlUsuDNI.Text) || string.IsNullOrEmpty(TXT_CtrlUsuEmail.Text) || Cb_CTRLUsuarioRol.SelectedItem==null))
+                {
+                    BE.USUARIO usuario = new BE.USUARIO();
+                    BE.COMPONENTE rolSeleccionado = (BE.COMPONENTE)Cb_CTRLUsuarioRol.SelectedItem;
 
-                usuario.Usuario = TXT_CtrlUsuUsuario.Text;
-                usuario.Contraseña = ENCRIPTADOR.Hashear(TXT_CtrlUsuContraseña.Text);
-                usuario.Dni = int.Parse(TXT_CtrlUsuDNI.Text);
-                usuario.Email = TXT_CtrlUsuEmail.Text;
-                usuario.Permisos.Add(rolSeleccionado);
+                    usuario.Usuario = TXT_CtrlUsuUsuario.Text;
+                    usuario.Contraseña = ENCRIPTADOR.Hashear(TXT_CtrlUsuContraseña.Text);
+                    usuario.Dni = int.Parse(TXT_CtrlUsuDNI.Text);
+                    usuario.Email = TXT_CtrlUsuEmail.Text;
+                    usuario.Permisos.Add(rolSeleccionado);
 
-                GestorUsuarios.Insertar(usuario);
-                GestorBitacora.RegistrarEvento("Administracion", $"Se dio de alta al usuario {usuario.Usuario}", 2);
-                EnlazarUsuarios();
-                LimpiarControles();
+                    GestorUsuarios.Insertar(usuario);
+                    GestorBitacora.RegistrarEvento("Administracion", $"Se dio de alta al usuario {usuario.Usuario}", 2);
+                    EnlazarUsuarios();
+                    LimpiarControles();
+                }
+                else
+                {
+                    MessageBox.Show("Debe completar todos los datos");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Debe completar todos los datos");
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -284,5 +291,7 @@ namespace Trabajo_practico_IS
         {
             Servicios.IDIOMAS.GetInstancia().Desuscribir(this);
         }
+
+
     }
 }

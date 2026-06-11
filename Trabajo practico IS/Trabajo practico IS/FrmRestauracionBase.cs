@@ -30,6 +30,7 @@ namespace Trabajo_practico_IS
             LBMensajeError.Text = "Estado: Base de datos íntegra. Acceso manual de administración.";
             _esEmergencia = false;
             BTNHacerBackUp.Enabled = true;
+            BTNRecalcularDigito.Visible = false;
         }
         private void FrmRestauracionBase_Load(object sender, EventArgs e)
         {

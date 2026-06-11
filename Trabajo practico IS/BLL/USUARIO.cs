@@ -168,7 +168,7 @@ namespace BLL
 
         }
 
-        private void ActualizarDvvUsuarios()
+        public void ActualizarDvvUsuarios()
         {
             // Extraemos la lista de la BD
             List<string> todosDvh = mapper.ObtenerTodosLosDVH();
