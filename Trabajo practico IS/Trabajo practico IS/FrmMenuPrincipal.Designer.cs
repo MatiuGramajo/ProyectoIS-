@@ -98,6 +98,7 @@
             // 
             this.controlDeIdiomasToolStripMenuItem.Name = "controlDeIdiomasToolStripMenuItem";
             this.controlDeIdiomasToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.controlDeIdiomasToolStripMenuItem.Tag = "ABM_IDIOMAS";
             this.controlDeIdiomasToolStripMenuItem.Text = "Control de idiomas";
             this.controlDeIdiomasToolStripMenuItem.Click += new System.EventHandler(this.controlDeIdiomasToolStripMenuItem_Click);
             // 
@@ -113,6 +114,7 @@
             // 
             this.historialDeCambiosToolStripMenuItem.Name = "historialDeCambiosToolStripMenuItem";
             this.historialDeCambiosToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.historialDeCambiosToolStripMenuItem.Tag = "HISTORIAL_CAMBIOS";
             this.historialDeCambiosToolStripMenuItem.Text = "Historial de cambios";
             this.historialDeCambiosToolStripMenuItem.Click += new System.EventHandler(this.historialDeCambiosToolStripMenuItem_Click);
             // 
@@ -151,7 +153,7 @@
             // LBLidioma
             // 
             this.LBLidioma.AutoSize = true;
-            this.LBLidioma.Location = new System.Drawing.Point(460, 56);
+            this.LBLidioma.Location = new System.Drawing.Point(460, 52);
             this.LBLidioma.Name = "LBLidioma";
             this.LBLidioma.Size = new System.Drawing.Size(43, 13);
             this.LBLidioma.TabIndex = 11;

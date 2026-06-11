@@ -8,11 +8,11 @@ namespace BLL
 {
     public class IDIOMA
     {
-      
-            private DAL.MP_IDIOMA mapper = new DAL.MP_IDIOMA();
 
-            public List<BE.IDIOMA> Listar()
-            {
+        private DAL.MP_IDIOMA mapper = new DAL.MP_IDIOMA();
+
+        public List<BE.IDIOMA> Listar()
+        {
             List<BE.IDIOMA> IdiomasTotales = mapper.Listar();
             List<BE.IDIOMA> idiomasDisponibles = (from i in IdiomasTotales
                                                   where i.EstaDisponible == true
@@ -21,10 +21,10 @@ namespace BLL
             return idiomasDisponibles;
         }
 
-            public Dictionary<string, string> ObtenerTraducciones(int idIdioma)
-            {
-                return mapper.ObtenerTraducciones(idIdioma);
-            }
+        public Dictionary<string, string> ObtenerTraducciones(int idIdioma)
+        {
+            return mapper.ObtenerTraducciones(idIdioma);
+        }
         public List<BE.IDIOMA>ObtenerIdioma()
         {
             return mapper.ObtenerIdiomas();
@@ -69,6 +69,24 @@ namespace BLL
             }
             DAL.MP_USUARIO mapperUsuario = new DAL.MP_USUARIO();
             mapperUsuario.MigrarUsuariosDeIdioma(idIdiomaADeshabilitar, idIdiomaAlternativo);
+
+            List<BE.USUARIO> todosLosUsuarios = mapperUsuario.Listar();
+            BLL.DIGITO_VERIFICADOR gestorDV = new BLL.DIGITO_VERIFICADOR();
+            List<string> listaNuevosDVH = new List<string>();
+
+            foreach (var usu in todosLosUsuarios)
+            {
+                string dvhCalculado = gestorDV.CalcularDVH(usu);
+
+                if (dvhCalculado != usu.DVH)
+                {
+                    mapperUsuario.ActualizarSoloDVH(usu.Id, dvhCalculado);
+                    usu.DVH = dvhCalculado;
+                }
+
+                listaNuevosDVH.Add(usu.DVH);
+            }
+            gestorDV.RecalcularYGuardarDVV("USUARIO", listaNuevosDVH);
         }
     }
 }

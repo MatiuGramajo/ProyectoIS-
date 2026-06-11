@@ -83,14 +83,10 @@ namespace BE
 			set { dvh = value; }
 		}
 
-		// --- MÉTODO MÁGICO POLIMÓRFICO ---
-		// Permite preguntarle directamente al usuario si tiene acceso a algo
 		public bool TienePermiso(string nombrePermiso)
         {
             foreach (var comp in permisos)
             {
-                // El usuario delega la pregunta al Composite. 
-                // No importa si 'comp' es un Rol gigante o una acción simple, se resuelve solo.
                 if (comp.TienePermiso(nombrePermiso))
                 {
                     return true;
