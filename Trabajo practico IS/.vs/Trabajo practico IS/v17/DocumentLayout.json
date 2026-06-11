@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|c:\\users\\usuario\\desktop\\proyectois\\proyectois-\\trabajo practico is\\trabajo practico is\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmmenuprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -87,7 +87,7 @@
       "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mp_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|c:\\users\\usuario\\desktop\\proyectois\\proyectois-\\trabajo practico is\\trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -211,8 +211,7 @@
               "ViewState": "AgIAAH0AAAAAAAAAAAAuwHEAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-11T07:11:35.736Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -225,8 +224,7 @@
               "ViewState": "AgIAABYAAAAAAAAAAAAiwCgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-11T06:50:01.753Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -239,8 +237,7 @@
               "ViewState": "AgIAADwAAAAAAAAAAAAmwFcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-06T03:31:56.109Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -252,8 +249,7 @@
               "RelativeToolTip": "Trabajo practico IS\\FrmIdioma.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-09T18:55:03.672Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -293,8 +289,7 @@
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-08T17:20:21.114Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -310,8 +305,7 @@
               "RelativeToolTip": "BLL\\HISTORIAL_USUARIO.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwAoAAABaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-11T06:49:16.872Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-11T06:49:16.872Z"
             },
             {
               "$type": "Document",
@@ -323,8 +317,7 @@
               "RelativeToolTip": "Trabajo practico IS\\FrmCTRLUsuario.cs",
               "ViewState": "AgIAAKEAAAAAAAAAAAAgwCUBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T17:52:41.581Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-24T17:52:41.581Z"
             },
             {
               "$type": "Document",
@@ -336,8 +329,7 @@
               "RelativeToolTip": "DAL\\MP_USUARIO.cs",
               "ViewState": "AgIAALoAAAAAAAAAAAAqwNUAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T17:36:37.151Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-24T17:36:37.151Z"
             },
             {
               "$type": "Document",
@@ -349,8 +341,7 @@
               "RelativeToolTip": "DAL\\MP_PERMISO.cs",
               "ViewState": "AgIAAFQAAAAAAAAAAAAowCcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T02:15:05.629Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-04T02:15:05.629Z"
             },
             {
               "$type": "Document",
@@ -374,8 +365,7 @@
               "RelativeToolTip": "Trabajo practico IS\\FrmRestauracionBase.cs",
               "ViewState": "AgIAADgAAAAAAAAAAAAIwDQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T08:33:51.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-10T08:33:51.606Z"
             },
             {
               "$type": "Document",
@@ -398,8 +388,7 @@
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLUsuario.cs [Dise\u00F1o]",
               "RelativeToolTip": "Trabajo practico IS\\FrmCTRLUsuario.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T17:48:52.885Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-04-24T17:48:52.885Z"
             },
             {
               "$type": "Document",
@@ -410,8 +399,7 @@
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmRestauracionBase.cs [Dise\u00F1o]",
               "RelativeToolTip": "Trabajo practico IS\\FrmRestauracionBase.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T05:16:54.7Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-06-10T05:16:54.7Z"
             },
             {
               "$type": "Document",
@@ -422,8 +410,7 @@
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmHistorial.cs [Dise\u00F1o]",
               "RelativeToolTip": "Trabajo practico IS\\FrmHistorial.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-11T07:10:39.396Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-06-11T07:10:39.396Z"
             },
             {
               "$type": "Document",
@@ -435,8 +422,7 @@
               "RelativeToolTip": "Trabajo practico IS\\FrmIdioma.cs",
               "ViewState": "AgIAAJUAAAAAAAAAAAAqwK4AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-09T18:56:03.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-09T18:56:03.08Z"
             },
             {
               "$type": "Document",
@@ -471,8 +457,7 @@
               "RelativeToolTip": "BE\\HISTORIAL_USUARIO.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAgwBMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-11T06:48:30.903Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-11T06:48:30.903Z"
             },
             {
               "$type": "Document",
@@ -508,8 +493,7 @@
               "RelativeToolTip": "BE\\PERMISO_SIMPLE.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T18:32:08.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-28T18:32:08.841Z"
             },
             {
               "$type": "Document",
@@ -521,8 +505,7 @@
               "RelativeToolTip": "Trabajo practico IS\\FrmBitacora.cs",
               "ViewState": "AgIAAMkAAAAAAAAAAAAWwNsAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T22:52:22.389Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-23T22:52:22.389Z"
             },
             {
               "$type": "Document",
@@ -558,8 +541,7 @@
               "RelativeToolTip": "Trabajo practico IS\\FrmLogIn.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAnwMMAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T22:48:04.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-23T22:48:04.161Z"
             },
             {
               "$type": "Document",
@@ -607,8 +589,7 @@
               "RelativeToolTip": "BE\\USUARIO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T17:35:45.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-24T17:35:45.009Z"
             },
             {
               "$type": "Document",
@@ -631,8 +612,7 @@
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmLogIn.cs [Dise\u00F1o]",
               "RelativeToolTip": "Trabajo practico IS\\FrmLogIn.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T22:47:38.181Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-04-23T22:47:38.181Z"
             },
             {
               "$type": "Document",
@@ -643,8 +623,7 @@
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmBitacora.cs [Dise\u00F1o]",
               "RelativeToolTip": "Trabajo practico IS\\FrmBitacora.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T22:45:03.835Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-04-23T22:45:03.835Z"
             },
             {
               "$type": "Document",
@@ -656,8 +635,7 @@
               "RelativeToolTip": "DAL\\ACCESO.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAIAwwBMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T02:22:29.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-25T02:22:29.075Z"
             },
             {
               "$type": "Document",
@@ -753,8 +731,7 @@
               "RelativeToolTip": "BE\\PERMISO_COMPUESTO.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAASwBYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T18:32:23.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-28T18:32:23.124Z"
             },
             {
               "$type": "Document",
