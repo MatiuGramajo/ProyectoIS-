@@ -65,6 +65,17 @@ namespace Trabajo_practico_IS
                 DGVHistorial.DataSource = null;
                 DGVHistorial.DataSource = GestorHistorialUsuario.ObtenerHistorial(idUsu);
             }
+            if (DGVHistorial.Columns.Count > 0)
+            {
+                DGVHistorial.Columns["Id"].Visible = false;           
+                DGVHistorial.Columns["IdHistorial"].Visible = false; 
+                DGVHistorial.Columns["Contraseña"].Visible = false;   
+                DGVHistorial.Columns["DVH"].Visible = false;
+                DGVHistorial.Columns["IntentosFallidos"].Visible = false; 
+
+                DGVHistorial.Columns["UsuarioAccion"].HeaderText = "Responsable";
+                DGVHistorial.Columns["TipoAccion"].HeaderText = "Acción Realizada";
+            }
         }
 
         private void BTNrestaurar_Click(object sender, EventArgs e)
@@ -101,11 +112,7 @@ namespace Trabajo_practico_IS
                 {
                     BLL.IDIOMA gestorIdioma = new BLL.IDIOMA();
                     var traducciones = gestorIdioma.ObtenerTraducciones(idIdioma);
-
-                    // Avisa a todos los formularios que cambien
                     Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idIdioma, traducciones);
-
-                    // Guarda la preferencia en la base de datos para este usuario
                     if (Servicios.SESION.GetInstancia().usuactual != null)
                     {
                         BLL.USUARIO gestorUsu = new BLL.USUARIO();
@@ -126,6 +133,16 @@ namespace Trabajo_practico_IS
 
         }
 
+        private void BTNvolveralmenu_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("¿Desea volver al menu principal?", "Atención",
+                       MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+
+            }
+        }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.BTNhabilitar = new System.Windows.Forms.Button();
+            this.BTNcrear = new System.Windows.Forms.Button();
             this.BTNdeshabilitar = new System.Windows.Forms.Button();
             this.BTNvolveralmenu = new System.Windows.Forms.Button();
             this.TXTnombre = new System.Windows.Forms.TextBox();
@@ -39,6 +39,7 @@
             this.LBLnombre = new System.Windows.Forms.Label();
             this.LBLidiomas2 = new System.Windows.Forms.Label();
             this.CBXidiomas = new System.Windows.Forms.ComboBox();
+            this.BTNhabilitar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,24 +51,25 @@
             this.dataGridView1.Size = new System.Drawing.Size(326, 150);
             this.dataGridView1.TabIndex = 0;
             // 
-            // BTNhabilitar
+            // BTNcrear
             // 
-            this.BTNhabilitar.Location = new System.Drawing.Point(109, 334);
-            this.BTNhabilitar.Name = "BTNhabilitar";
-            this.BTNhabilitar.Size = new System.Drawing.Size(155, 33);
-            this.BTNhabilitar.TabIndex = 2;
-            this.BTNhabilitar.Text = "Habilitar";
-            this.BTNhabilitar.UseVisualStyleBackColor = true;
-            this.BTNhabilitar.Click += new System.EventHandler(this.button1_Click);
+            this.BTNcrear.Location = new System.Drawing.Point(109, 334);
+            this.BTNcrear.Name = "BTNcrear";
+            this.BTNcrear.Size = new System.Drawing.Size(155, 33);
+            this.BTNcrear.TabIndex = 2;
+            this.BTNcrear.Text = "Crear";
+            this.BTNcrear.UseVisualStyleBackColor = true;
+            this.BTNcrear.Click += new System.EventHandler(this.button1_Click);
             // 
             // BTNdeshabilitar
             // 
-            this.BTNdeshabilitar.Location = new System.Drawing.Point(109, 388);
+            this.BTNdeshabilitar.Location = new System.Drawing.Point(12, 388);
             this.BTNdeshabilitar.Name = "BTNdeshabilitar";
             this.BTNdeshabilitar.Size = new System.Drawing.Size(155, 33);
             this.BTNdeshabilitar.TabIndex = 4;
             this.BTNdeshabilitar.Text = "Deshabilitar";
             this.BTNdeshabilitar.UseVisualStyleBackColor = true;
+            this.BTNdeshabilitar.Click += new System.EventHandler(this.BTNdeshabilitar_Click);
             // 
             // BTNvolveralmenu
             // 
@@ -138,12 +140,23 @@
             this.CBXidiomas.TabIndex = 13;
             this.CBXidiomas.SelectedIndexChanged += new System.EventHandler(this.CBXidiomas_SelectedIndexChanged);
             // 
+            // BTNhabilitar
+            // 
+            this.BTNhabilitar.Location = new System.Drawing.Point(206, 388);
+            this.BTNhabilitar.Name = "BTNhabilitar";
+            this.BTNhabilitar.Size = new System.Drawing.Size(155, 33);
+            this.BTNhabilitar.TabIndex = 14;
+            this.BTNhabilitar.Text = "Habilitar";
+            this.BTNhabilitar.UseVisualStyleBackColor = true;
+            this.BTNhabilitar.Click += new System.EventHandler(this.BTNhabilitar_Click);
+            // 
             // FrmIdioma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(611, 450);
+            this.Controls.Add(this.BTNhabilitar);
             this.Controls.Add(this.CBXidiomas);
             this.Controls.Add(this.LBLidiomas2);
             this.Controls.Add(this.LBLnombre);
@@ -153,7 +166,7 @@
             this.Controls.Add(this.TXTnombre);
             this.Controls.Add(this.BTNvolveralmenu);
             this.Controls.Add(this.BTNdeshabilitar);
-            this.Controls.Add(this.BTNhabilitar);
+            this.Controls.Add(this.BTNcrear);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FrmIdioma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -169,7 +182,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button BTNhabilitar;
+        private System.Windows.Forms.Button BTNcrear;
         private System.Windows.Forms.Button BTNdeshabilitar;
         private System.Windows.Forms.Button BTNvolveralmenu;
         private System.Windows.Forms.TextBox TXTnombre;
@@ -179,5 +192,6 @@
         private System.Windows.Forms.Label LBLnombre;
         private System.Windows.Forms.Label LBLidiomas2;
         private System.Windows.Forms.ComboBox CBXidiomas;
+        private System.Windows.Forms.Button BTNhabilitar;
     }
 }

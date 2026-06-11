@@ -41,6 +41,11 @@ namespace DAL
                 hist.FechaCambio = Convert.ToDateTime(row["fecha_cambio"]);
                 hist.UsuarioAccion = row["usuario_accion"].ToString();
                 hist.TipoAccion = row["tipo_accion"].ToString();
+                hist.IdIdioma = Convert.ToInt32(row["id_idioma"]);
+                hist.IntentosFallidos = Convert.ToInt32(row["intentosfallidos"]);
+                hist.EstadoBloqueado = Convert.ToBoolean(row["estadobloqueado"]);
+                hist.Contraseña = row["contraseña"].ToString();
+                hist.DVH = row["dvh"].ToString();
                 lista.Add(hist);
             }
             return lista;

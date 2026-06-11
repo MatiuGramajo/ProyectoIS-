@@ -108,11 +108,7 @@ namespace Trabajo_practico_IS
                 {
                     BLL.IDIOMA gestorIdioma = new BLL.IDIOMA();
                     var traducciones = gestorIdioma.ObtenerTraducciones(idIdioma);
-
-                    // Avisa a todos los formularios que cambien
                     Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idIdioma, traducciones);
-
-                    // Guarda la preferencia en la base de datos para este usuario
                     if (Servicios.SESION.GetInstancia().usuactual != null)
                     {
                         BLL.USUARIO gestorUsu = new BLL.USUARIO();
@@ -132,6 +128,73 @@ namespace Trabajo_practico_IS
         {
             Servicios.IDIOMAS.GetInstancia().Desuscribir(this);
 
+        }
+
+        private void BTNhabilitar_Click(object sender, EventArgs e)
+        {
+            try
+            { 
+                if (dataGridView1.CurrentRow == null)
+                    throw new Exception("Debe seleccionar un idioma de la lista para habilitar.");
+
+                BE.IDIOMA idiomaSeleccionado = (BE.IDIOMA)dataGridView1.CurrentRow.DataBoundItem;
+                if (idiomaSeleccionado.EstaDisponible)
+                {
+                    MessageBox.Show("El idioma seleccionado ya se encuentra habilitado y disponible en el sistema.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                GestorIdioma.HabilitarIdioma(idiomaSeleccionado.Id);
+                MessageBox.Show($"El idioma '{idiomaSeleccionado.Nombre}' ha sido habilitado con éxito y ya se encuentra disponible para su selección.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = GestorIdioma.ObtenerIdioma();
+
+                CBXidiomas.SelectedIndexChanged -= CBXidiomas_SelectedIndexChanged;
+                CBXidiomas.DataSource = GestorIdioma.Listar();
+                CBXidiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
+                CBXidiomas.SelectedIndexChanged += CBXidiomas_SelectedIndexChanged;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al intentar habilitar el idioma: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BTNdeshabilitar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.CurrentRow == null)
+                {
+                    throw new Exception("Debe seleccionar un idioma de la lista para deshabilitar.");
+                }
+                BE.IDIOMA idiomaSeleccionado = (BE.IDIOMA)dataGridView1.CurrentRow.DataBoundItem;
+                var confirmacion = MessageBox.Show($"¿Está seguro que desea deshabilitar el idioma '{idiomaSeleccionado.Nombre}'?\nLos usuarios que lo utilicen serán migrados automáticamente al idioma por defecto.", "Confirmar Baja", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (confirmacion == DialogResult.Yes)
+                {
+                    GestorIdioma.DeshabilitarIdioma(idiomaSeleccionado.Id);
+                    MessageBox.Show("Idioma deshabilitado y usuarios migrados con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView1.DataSource = null;
+                    dataGridView1.DataSource = GestorIdioma.ObtenerIdioma();
+                    CBXidiomas.SelectedIndexChanged -= CBXidiomas_SelectedIndexChanged;
+                    CBXidiomas.DataSource = GestorIdioma.Listar();
+                    CBXidiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
+                    CBXidiomas.SelectedIndexChanged += CBXidiomas_SelectedIndexChanged;
+                }
+                if (Servicios.IDIOMAS.GetInstancia().IdIdiomaActual == idiomaSeleccionado.Id)
+                {
+                    var traduccionesEspañol = GestorIdioma.ObtenerTraducciones(1);
+                    Servicios.IDIOMAS.GetInstancia().CambiarIdioma(1, traduccionesEspañol);
+                    if (Servicios.SESION.GetInstancia().usuactual != null)
+                    {
+                        Servicios.SESION.GetInstancia().usuactual.IdIdioma = 1;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Restricción del Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

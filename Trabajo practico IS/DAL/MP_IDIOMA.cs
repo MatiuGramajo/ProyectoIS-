@@ -77,7 +77,6 @@ namespace DAL
                 string control = fila["nombre_control"].ToString();
                 string texto = fila["texto_traducido"].ToString();
 
-                // Armamos la clave combinada tal como charlamos: "NombreFormulario_NombreControl"
                 string clave = $"{form}_{control}";
 
                 if (!diccionario.ContainsKey(clave))

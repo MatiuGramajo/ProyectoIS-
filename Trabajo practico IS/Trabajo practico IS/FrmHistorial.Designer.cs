@@ -44,9 +44,9 @@
             this.LBLidiomas.AutoSize = true;
             this.LBLidiomas.Location = new System.Drawing.Point(727, 22);
             this.LBLidiomas.Name = "LBLidiomas";
-            this.LBLidiomas.Size = new System.Drawing.Size(44, 13);
+            this.LBLidiomas.Size = new System.Drawing.Size(43, 13);
             this.LBLidiomas.TabIndex = 15;
-            this.LBLidiomas.Text = "Historial";
+            this.LBLidiomas.Text = "Idiomas";
             // 
             // CBXIdiomas
             // 
@@ -65,6 +65,7 @@
             this.BTNvolveralmenu.TabIndex = 13;
             this.BTNvolveralmenu.Text = "Volver al menu ";
             this.BTNvolveralmenu.UseVisualStyleBackColor = true;
+            this.BTNvolveralmenu.Click += new System.EventHandler(this.BTNvolveralmenu_Click);
             // 
             // BTNrestaurar
             // 

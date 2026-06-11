@@ -112,12 +112,10 @@ namespace Trabajo_practico_IS
             TraducirControles(this.Controls, traducciones);
             if (traducciones.TryGetValue($"{this.Name}_LBLbienvenida", out string textoBienvenida))
             {
-                // string.Format agarra el texto de la BD ("Welcome: {0}") y reemplaza el {0} por el nombre
                 LBLbienvenida.Text = string.Format(textoBienvenida, UsuarioActual.Usuario);
             }
             else
             {
-                // Si no encuentra la traducción, ponemos un texto por defecto para que no quede en blanco
                 LBLbienvenida.Text = $"Bienvenido: {UsuarioActual.Usuario}";
             }
             if (traducciones.TryGetValue($"{this.Name}_Titulo", out string textoTitulo))
@@ -156,14 +154,13 @@ namespace Trabajo_practico_IS
         }
         private void TraducirItemMenu(ToolStripItem item, Dictionary<string, string> traducciones)
         {
-            // Forma la clave igual que siempre
             string clave = $"{this.Name}_{item.Name}";
             if (traducciones.TryGetValue(clave, out string textoTraducido))
             {
                 item.Text = textoTraducido;
             }
 
-            // Si este ítem tiene "hijitos" (un menú desplegable), entramos recursivamente
+
             if (item is ToolStripMenuItem menuItem && menuItem.DropDownItems.Count > 0)
             {
                 foreach (ToolStripItem subItem in menuItem.DropDownItems)
@@ -179,17 +176,15 @@ namespace Trabajo_practico_IS
             {
                 if (CBXidiomas.SelectedValue != null && int.TryParse(CBXidiomas.SelectedValue.ToString(), out int idIdiomaSeleccionado))
                 {
-                    // A. Buscamos el paquete de palabras del nuevo idioma en la Base de Datos
+                   
                     BLL.IDIOMA gestorIdioma = new BLL.IDIOMA();
                     var traducciones = gestorIdioma.ObtenerTraducciones(idIdiomaSeleccionado);
 
-                    // B. Notificamos al Observer global para que traduzca TODAS las pantallas abiertas en RAM ya mismo
+                   
                     Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idIdiomaSeleccionado, traducciones);
 
-                    // C. PERSISTENCIA TOTAL: Guardamos la nueva preferencia directamente en el perfil del usuario en la BD
                     GestorUsuario.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual, idIdiomaSeleccionado);
 
-                    // D. Sincronizamos el objeto del usuario en la memoria local de la sesión
                     Servicios.SESION.GetInstancia().usuactual.IdIdioma = idIdiomaSeleccionado;
                 }
             }
