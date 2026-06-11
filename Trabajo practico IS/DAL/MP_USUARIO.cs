@@ -210,5 +210,16 @@ namespace DAL
             acceso.Escribir("ACTUALIZAR_DVH_USUARIO", parametros);
             acceso.Cerrar();
         }
+
+        public void MigrarUsuariosDeIdioma(int idIdiomaViejo, int idIdiomaNuevo)
+        {
+            acceso.Abrir();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(acceso.CrearParametro("@viejo", idIdiomaViejo));
+            parametros.Add(acceso.CrearParametro("@nuevo", idIdiomaNuevo));
+            acceso.Escribir("MIGRAR_USUARIOS_IDIOMA", parametros);
+
+            acceso.Cerrar();
+        }
     }
 }

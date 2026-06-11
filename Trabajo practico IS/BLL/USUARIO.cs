@@ -15,12 +15,23 @@ namespace BLL
         BLL.PERMISO gestorPermisos = new BLL.PERMISO();
         BLL.DIGITO_VERIFICADOR GestorDV = new BLL.DIGITO_VERIFICADOR();
         BLL.AUDITORIA Auditoria = new BLL.AUDITORIA();
+        BLL.HISTORIAL_USUARIO gestorHistorial = new BLL.HISTORIAL_USUARIO();
 
         public void Insertar(BE.USUARIO usuario)
         {
             usuario.DVH = GestorDV.CalcularDVH(usuario);
             mapper.Alta(usuario);
             ActualizarDvvUsuarios();
+            string responsable;
+            if (Servicios.SESION.GetInstancia().usuactual != null)
+            {
+                responsable = Servicios.SESION.GetInstancia().usuactual.Usuario;
+            }
+            else
+            {
+                responsable = "SISTEMA";
+            }
+            gestorHistorial.RegistrarCambio(usuario.Id, responsable, "ALTA");
         }
 
         public void Borrar(BE.USUARIO usuario)
@@ -34,6 +45,16 @@ namespace BLL
             usuario.DVH = GestorDV.CalcularDVH(usuario);
             mapper.Modificar(usuario);
             ActualizarDvvUsuarios();
+            string responsable;
+            if (Servicios.SESION.GetInstancia().usuactual != null)
+            {
+                responsable = Servicios.SESION.GetInstancia().usuactual.Usuario;
+            }
+            else
+            {
+                responsable = "SISTEMA";
+            }
+            gestorHistorial.RegistrarCambio(usuario.Id, responsable, "MODIFICACION");
         }
 
         public List<BE.USUARIO> Listar()
@@ -46,6 +67,17 @@ namespace BLL
 
             mapper.ActualizarEstadoBloqueado(usuario);
             ActualizarDvvUsuarios();
+            string responsable;
+
+            if (Servicios.SESION.GetInstancia().usuactual != null)
+            {
+                responsable = Servicios.SESION.GetInstancia().usuactual.Usuario;
+            }
+            else
+            {
+                responsable = "SISTEMA";
+            }
+            gestorHistorial.RegistrarCambio(usuario.Id, responsable, "DESBLOQUEO");
         }
         public void ActualizarIdiomaUsuario(BE.USUARIO usuario, int idIdioma)
         {
@@ -58,6 +90,17 @@ namespace BLL
 
             // 4. Sincronizamos el candado global de la tabla para que no tire error de consistencia
             ActualizarDvvUsuarios();
+            string responsable;
+
+            if (Servicios.SESION.GetInstancia().usuactual != null)
+            {
+                responsable = Servicios.SESION.GetInstancia().usuactual.Usuario;
+            }
+            else
+            {
+                responsable = "SISTEMA";
+            }
+            gestorHistorial.RegistrarCambio(usuario.Id, responsable, "CAMBIO_IDIOMA");
 
         }
 

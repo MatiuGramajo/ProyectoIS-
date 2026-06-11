@@ -87,6 +87,24 @@ namespace DAL
             }
             return diccionario;
         }
+        public void HabilitarIdioma(IDIOMA obj)
+        {
+            acceso.Abrir();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(acceso.CrearParametro("@id_idioma", obj.Id));
+            acceso.Escribir("HABILITAR_IDIOMA", parametros);
+            acceso.Cerrar();
+
+        }
+
+        public void BajaLogica(IDIOMA obj)
+        {
+            acceso.Abrir();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(acceso.CrearParametro("@id_idioma", obj.Id));
+            acceso.Escribir("BAJA_LOGICA_IDIOMA", parametros);
+            acceso.Cerrar();
+        }
 
         public override void Modificar(IDIOMA obj)
         {

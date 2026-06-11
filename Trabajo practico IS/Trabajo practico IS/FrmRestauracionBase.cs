@@ -33,6 +33,14 @@ namespace Trabajo_practico_IS
         }
         private void FrmRestauracionBase_Load(object sender, EventArgs e)
         {
+            Servicios.IDIOMAS.GetInstancia().Suscribir(this);
+            CBXidiomas.SelectedIndexChanged -= CBXidiomas_SelectedIndexChanged;
+            CBXidiomas.DataSource = GestorIdioma.Listar();
+            CBXidiomas.DisplayMember = "Nombre";
+            CBXidiomas.ValueMember = "Id";
+            CBXidiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
+            CBXidiomas.SelectedIndexChanged += CBXidiomas_SelectedIndexChanged;
+            ActualizarIdioma();
             OFDBackUp.Filter = "Archivos de Backup SQL (*.bak)|*.bak";
             OFDBackUp.Title = "Seleccionar Copia de Seguridad para Restaurar";
 
@@ -77,6 +85,13 @@ namespace Trabajo_practico_IS
         {
             var traducciones = Servicios.IDIOMAS.GetInstancia().Traducciones;
             TraducirControles(this.Controls, traducciones);
+            if (traducciones.TryGetValue($"{this.Name}_Titulo", out string textoTitulo)) this.Text = textoTitulo;
+            if (CBXidiomas.Items.Count > 0)
+            {
+                CBXidiomas.SelectedIndexChanged -= CBXidiomas_SelectedIndexChanged;
+                CBXidiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
+                CBXidiomas.SelectedIndexChanged += CBXidiomas_SelectedIndexChanged;
+            }
 
         }
 
@@ -104,6 +119,8 @@ namespace Trabajo_practico_IS
 
         private void FrmRestauracionBase_FormClosed(object sender, FormClosedEventArgs e)
         {
+            Servicios.IDIOMAS.GetInstancia().Desuscribir(this);
+
             if (_esEmergencia && !_reiniciando)
             {
                 Application.Exit();
@@ -192,6 +209,33 @@ namespace Trabajo_practico_IS
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void CBXidiomas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (CBXidiomas.SelectedValue != null && int.TryParse(CBXidiomas.SelectedValue.ToString(), out int idIdioma))
+                {
+                    BLL.IDIOMA gestorIdioma = new BLL.IDIOMA();
+                    var traducciones = gestorIdioma.ObtenerTraducciones(idIdioma);
+
+                    // Avisa a todos los formularios que cambien
+                    Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idIdioma, traducciones);
+
+                    // Guarda la preferencia en la base de datos para este usuario
+                    if (Servicios.SESION.GetInstancia().usuactual != null)
+                    {
+                        BLL.USUARIO gestorUsu = new BLL.USUARIO();
+                        gestorUsu.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual, idIdioma);
+                        Servicios.SESION.GetInstancia().usuactual.IdIdioma = idIdioma;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
             }
         }
     }

@@ -37,6 +37,8 @@
             this.BTNRecalcularDigito = new System.Windows.Forms.Button();
             this.BTNRestauracionVolverMenu = new System.Windows.Forms.Button();
             this.BTNExaminarBackUp = new System.Windows.Forms.Button();
+            this.CBXidiomas = new System.Windows.Forms.ComboBox();
+            this.LBLidiomas = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LBMensajeError
@@ -106,12 +108,32 @@
             this.BTNExaminarBackUp.UseVisualStyleBackColor = true;
             this.BTNExaminarBackUp.Click += new System.EventHandler(this.BTNExaminarBackUp_Click);
             // 
+            // CBXidiomas
+            // 
+            this.CBXidiomas.FormattingEnabled = true;
+            this.CBXidiomas.Location = new System.Drawing.Point(633, 38);
+            this.CBXidiomas.Name = "CBXidiomas";
+            this.CBXidiomas.Size = new System.Drawing.Size(121, 21);
+            this.CBXidiomas.TabIndex = 8;
+            this.CBXidiomas.SelectedIndexChanged += new System.EventHandler(this.CBXidiomas_SelectedIndexChanged);
+            // 
+            // LBLidiomas
+            // 
+            this.LBLidiomas.AutoSize = true;
+            this.LBLidiomas.Location = new System.Drawing.Point(579, 46);
+            this.LBLidiomas.Name = "LBLidiomas";
+            this.LBLidiomas.Size = new System.Drawing.Size(43, 13);
+            this.LBLidiomas.TabIndex = 9;
+            this.LBLidiomas.Text = "Idiomas";
+            // 
             // FrmRestauracionBase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(553, 321);
+            this.ClientSize = new System.Drawing.Size(772, 321);
+            this.Controls.Add(this.LBLidiomas);
+            this.Controls.Add(this.CBXidiomas);
             this.Controls.Add(this.BTNExaminarBackUp);
             this.Controls.Add(this.BTNRestauracionVolverMenu);
             this.Controls.Add(this.BTNRecalcularDigito);
@@ -139,5 +161,7 @@
         private System.Windows.Forms.Button BTNRecalcularDigito;
         private System.Windows.Forms.Button BTNRestauracionVolverMenu;
         private System.Windows.Forms.Button BTNExaminarBackUp;
+        private System.Windows.Forms.ComboBox CBXidiomas;
+        private System.Windows.Forms.Label LBLidiomas;
     }
 }

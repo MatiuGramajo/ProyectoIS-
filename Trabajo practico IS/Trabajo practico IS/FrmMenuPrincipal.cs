@@ -219,6 +219,14 @@ namespace Trabajo_practico_IS
             frmRestauracion.ShowDialog();
             this.Show();
         }
+
+        private void historialDeCambiosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmHistorial frmhistorial= new FrmHistorial();
+            frmhistorial.ShowDialog();
+            this.Show();
+        }
     }
 }
 

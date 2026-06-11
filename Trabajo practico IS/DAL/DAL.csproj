@@ -46,6 +46,7 @@
     <Compile Include="MP_BACKUP.cs" />
     <Compile Include="MP_BITACORA.cs" />
     <Compile Include="MP_DIGITO_VERIFICADOR.cs" />
+    <Compile Include="MP_HISTORIAL_USUARIO.cs" />
     <Compile Include="MP_IDIOMA.cs" />
     <Compile Include="MP_PERMISO.cs" />
     <Compile Include="MP_USUARIO.cs" />
