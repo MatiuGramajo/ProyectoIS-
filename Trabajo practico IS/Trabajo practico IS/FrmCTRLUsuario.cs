@@ -90,7 +90,7 @@ namespace Trabajo_practico_IS
             DGV_CtrlUsuUsuarios.Columns["Id"].Visible = false;
             DGV_CtrlUsuUsuarios.Columns["Contraseña"].Visible = false;
             DGV_CtrlUsuUsuarios.Columns["IntentosFallidos"].Visible = false;
-
+            DGV_CtrlUsuUsuarios.Columns["DVH"].Visible = false;
         }
 
         private void BTNCtrlUsuAlta_Click(object sender, EventArgs e)
@@ -208,7 +208,6 @@ namespace Trabajo_practico_IS
             if (result == DialogResult.Yes)
             {
                 this.Close();
-
             }
         }
 

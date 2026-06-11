@@ -137,7 +137,7 @@ namespace Trabajo_practico_IS
 
             TXTCtrlPermisoNombre.Text = "";
 
-            GestorBitacora.RegistrarEvento("Administracion", $"Se dio de alta el nuevo rol {nuevoRol}", 2);
+            GestorBitacora.RegistrarEvento("Administracion", $"Se dio de alta el nuevo rol {nuevoRol.Nombre}", 2);
             CargarTreeView();
             CargarListBox();
         }
@@ -162,6 +162,7 @@ namespace Trabajo_practico_IS
 
                 CargarTreeView();
                 CargarListBox();
+                GestorBitacora.RegistrarEvento("Administracion", $"Se asigno {Hijo.Nombre}, dentro del rol {Padre.Nombre}", 2);
             }
             catch(Exception ex)
             {
@@ -197,6 +198,7 @@ namespace Trabajo_practico_IS
 
                 CargarTreeView();
                 CargarListBox();
+                GestorBitacora.RegistrarEvento("Administracion", $"Se desasigno {Hijo.Nombre}, dentro del rol {Padre.Nombre}", 2);
             }
             catch (Exception ex)
             {
@@ -252,6 +254,11 @@ namespace Trabajo_practico_IS
 
                 CargarTreeView();
                 CargarListBox();
+                GestorBitacora.RegistrarEvento("Administracion", $"Se Se modifico el Rol/Permiso {componenteSeleccionado.Nombre}", 2);
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un Rol o Permiso para modificar");
             }
         }
 
@@ -277,6 +284,9 @@ namespace Trabajo_practico_IS
                         MessageBox.Show(ex.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+            }
+            {
+                MessageBox.Show("Debe seleccionar un Rol para borrar");
             }
         }
     }

@@ -140,5 +140,59 @@ namespace Trabajo_practico_IS
                 TXTRutaBackUp.Text = OFDBackUp.FileName;
             }
         }
+
+        private void BTNRestaurarBase_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TXTRutaBackUp.Text))
+            {
+                MessageBox.Show("Por favor, seleccione un archivo de copia de seguridad (.bak) utilizando el botón Examinar antes de continuar.");
+                return;
+            }
+
+            DialogResult confirmacion = MessageBox.Show("¿Está absolutamente seguro de que desea restaurar la base de datos?\n\n" +
+                                                        "Esta acción reemplazará toda la información actual por la contenida en el archivo de respaldo.",
+                                                        "Confirmar Restauración Crítica",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question);
+
+            if (confirmacion == DialogResult.Yes)
+            {
+                try
+                {
+                    Cursor = Cursors.WaitCursor;
+
+                    // 4. INVOCACIÓN A LA CAPA DE NEGOCIO (BLL)
+                    // Despacha la ruta absoluta hacia el Mapper de la DAL
+                    GestorRestauracion.RestaurarBackup(TXTRutaBackUp.Text);
+
+                    // 5. RESTABLECER ENTORNO VISUAL
+                    Cursor = Cursors.Default;
+
+                    MessageBox.Show("La base de datos ha sido restaurada con éxito.\n\n" +
+                                    "El sistema se reiniciará automáticamente para validar la integridad de los nuevos datos.",
+                                    "Restauración Exitosa",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+
+                    // 6. CONTROL DE TRANSICIÓN: Activamos la bandera protectora
+                    // Esto le avisa al evento FormClosed que el cierre es intencional y legítimo.
+                    _reiniciando = true;
+
+                    // 7. PURGA DE MEMORIA: Destruye el Pool de conexiones viejo de ADO.NET, 
+                    // limpia los Singletons y vuelve a lanzar el FrmLogIn totalmente limpio.
+                    Application.Restart();
+                }
+                catch (Exception ex)
+                {
+                    // En caso de que falle (ej: archivo .bak corrupto o sin permisos de lectura en el disco)
+                    // nos aseguramos de devolver el mouse a la normalidad y mostrar el mensaje técnico.
+                    Cursor = Cursors.Default;
+                    MessageBox.Show($"Ocurrió un error crítico durante el proceso de restauración:\n\n{ex.Message}",
+                                    "Falla de Sistema",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
+            }
+        }
     }
 }

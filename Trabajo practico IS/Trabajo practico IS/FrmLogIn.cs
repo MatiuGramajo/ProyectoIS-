@@ -188,14 +188,12 @@ namespace Trabajo_practico_IS
 
         private void CBXIdiomas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //MessageBox.Show("¡El evento se está ejecutando!");
             try
             {
                 idiomaCambiadoManualmente = true;
                 if (CBXIdiomas.SelectedValue != null && int.TryParse(CBXIdiomas.SelectedValue.ToString(), out int idIdiomaSeleccionado))
                 {
                     var traducciones = GestorIdioma.ObtenerTraducciones(idIdiomaSeleccionado);
-                    //MessageBox.Show($"Idioma ID: {idIdiomaSeleccionado}. Palabras encontradas en la BD: {traducciones.Count}");
                     Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idIdiomaSeleccionado, traducciones);
                 }
             }

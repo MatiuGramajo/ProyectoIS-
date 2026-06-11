@@ -33,7 +33,7 @@
             this.SFDBackUp = new System.Windows.Forms.SaveFileDialog();
             this.BTNHacerBackUp = new System.Windows.Forms.Button();
             this.TXTRutaBackUp = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BTNRestaurarBase = new System.Windows.Forms.Button();
             this.BTNRecalcularDigito = new System.Windows.Forms.Button();
             this.BTNRestauracionVolverMenu = new System.Windows.Forms.Button();
             this.BTNExaminarBackUp = new System.Windows.Forms.Button();
@@ -42,7 +42,7 @@
             // LBMensajeError
             // 
             this.LBMensajeError.AutoSize = true;
-            this.LBMensajeError.Location = new System.Drawing.Point(42, 36);
+            this.LBMensajeError.Location = new System.Drawing.Point(12, 25);
             this.LBMensajeError.Name = "LBMensajeError";
             this.LBMensajeError.Size = new System.Drawing.Size(35, 13);
             this.LBMensajeError.TabIndex = 1;
@@ -50,7 +50,7 @@
             // 
             // BTNHacerBackUp
             // 
-            this.BTNHacerBackUp.Location = new System.Drawing.Point(45, 157);
+            this.BTNHacerBackUp.Location = new System.Drawing.Point(12, 156);
             this.BTNHacerBackUp.Name = "BTNHacerBackUp";
             this.BTNHacerBackUp.Size = new System.Drawing.Size(94, 23);
             this.BTNHacerBackUp.TabIndex = 2;
@@ -60,24 +60,25 @@
             // 
             // TXTRutaBackUp
             // 
-            this.TXTRutaBackUp.Location = new System.Drawing.Point(45, 196);
+            this.TXTRutaBackUp.Location = new System.Drawing.Point(12, 195);
             this.TXTRutaBackUp.Name = "TXTRutaBackUp";
             this.TXTRutaBackUp.ReadOnly = true;
-            this.TXTRutaBackUp.Size = new System.Drawing.Size(259, 20);
+            this.TXTRutaBackUp.Size = new System.Drawing.Size(340, 20);
             this.TXTRutaBackUp.TabIndex = 3;
             // 
-            // button1
+            // BTNRestaurarBase
             // 
-            this.button1.Location = new System.Drawing.Point(399, 196);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(94, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Restaurar Base";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BTNRestaurarBase.Location = new System.Drawing.Point(439, 194);
+            this.BTNRestaurarBase.Name = "BTNRestaurarBase";
+            this.BTNRestaurarBase.Size = new System.Drawing.Size(94, 23);
+            this.BTNRestaurarBase.TabIndex = 4;
+            this.BTNRestaurarBase.Text = "Restaurar Base";
+            this.BTNRestaurarBase.UseVisualStyleBackColor = true;
+            this.BTNRestaurarBase.Click += new System.EventHandler(this.BTNRestaurarBase_Click);
             // 
             // BTNRecalcularDigito
             // 
-            this.BTNRecalcularDigito.Location = new System.Drawing.Point(45, 233);
+            this.BTNRecalcularDigito.Location = new System.Drawing.Point(12, 232);
             this.BTNRecalcularDigito.Name = "BTNRecalcularDigito";
             this.BTNRecalcularDigito.Size = new System.Drawing.Size(147, 23);
             this.BTNRecalcularDigito.TabIndex = 5;
@@ -87,7 +88,7 @@
             // 
             // BTNRestauracionVolverMenu
             // 
-            this.BTNRestauracionVolverMenu.Location = new System.Drawing.Point(693, 399);
+            this.BTNRestauracionVolverMenu.Location = new System.Drawing.Point(446, 288);
             this.BTNRestauracionVolverMenu.Name = "BTNRestauracionVolverMenu";
             this.BTNRestauracionVolverMenu.Size = new System.Drawing.Size(87, 23);
             this.BTNRestauracionVolverMenu.TabIndex = 6;
@@ -97,7 +98,7 @@
             // 
             // BTNExaminarBackUp
             // 
-            this.BTNExaminarBackUp.Location = new System.Drawing.Point(318, 196);
+            this.BTNExaminarBackUp.Location = new System.Drawing.Point(358, 194);
             this.BTNExaminarBackUp.Name = "BTNExaminarBackUp";
             this.BTNExaminarBackUp.Size = new System.Drawing.Size(75, 23);
             this.BTNExaminarBackUp.TabIndex = 7;
@@ -110,11 +111,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(553, 321);
             this.Controls.Add(this.BTNExaminarBackUp);
             this.Controls.Add(this.BTNRestauracionVolverMenu);
             this.Controls.Add(this.BTNRecalcularDigito);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BTNRestaurarBase);
             this.Controls.Add(this.TXTRutaBackUp);
             this.Controls.Add(this.BTNHacerBackUp);
             this.Controls.Add(this.LBMensajeError);
@@ -134,7 +135,7 @@
         private System.Windows.Forms.SaveFileDialog SFDBackUp;
         private System.Windows.Forms.Button BTNHacerBackUp;
         private System.Windows.Forms.TextBox TXTRutaBackUp;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BTNRestaurarBase;
         private System.Windows.Forms.Button BTNRecalcularDigito;
         private System.Windows.Forms.Button BTNRestauracionVolverMenu;
         private System.Windows.Forms.Button BTNExaminarBackUp;
