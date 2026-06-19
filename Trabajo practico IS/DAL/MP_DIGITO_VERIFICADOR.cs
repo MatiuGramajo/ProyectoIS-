@@ -37,7 +37,7 @@ namespace DAL
                 return dt.Rows[0]["DVV"].ToString();
             }
 
-            return string.Empty; // Retorna vacío si no hay DVV guardado
+            return string.Empty;
         }
     }
 }

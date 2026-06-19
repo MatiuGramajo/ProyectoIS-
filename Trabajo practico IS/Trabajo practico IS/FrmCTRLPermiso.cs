@@ -48,11 +48,8 @@ namespace Trabajo_practico_IS
                 {
                     BLL.IDIOMA gestorIdioma = new BLL.IDIOMA();
                     var traducciones = gestorIdioma.ObtenerTraducciones(idIdioma);
-
-                    // Avisa a todos los formularios que cambien
                     Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idIdioma, traducciones);
 
-                    // Guarda la preferencia en la base de datos para este usuario
                     if (Servicios.SESION.GetInstancia().usuactual != null)
                     {
                         BLL.USUARIO gestorUsu = new BLL.USUARIO();
@@ -71,42 +68,32 @@ namespace Trabajo_practico_IS
         private void CargarTreeView()
         {
             TV_RolesPermisos.Nodes.Clear();
-
-            // Pedimos las raíces a la BLL
             List<BE.COMPONENTE> raices = GestorPermisos.ObtenerArbolCompleto();
 
             foreach (var componente in raices)
     {
                 TreeNode nodoRaiz = new TreeNode(componente.Nombre);
-                nodoRaiz.Tag = componente; // Guardamos el objeto en el Tag
-
-                // Llamamos a la función recursiva para que busque los hijos, nietos, etc.
+                nodoRaiz.Tag = componente; 
                 AgregarNodosRecursivos(nodoRaiz, componente);
 
                 TV_RolesPermisos.Nodes.Add(nodoRaiz);
             }
-            TV_RolesPermisos.ExpandAll(); // Muestra el árbol desplegado
+            TV_RolesPermisos.ExpandAll();
         }
 
         private void AgregarNodosRecursivos(TreeNode nodoPadre, BE.COMPONENTE componentePadre)
         {
-            // Le preguntamos al componente cuántos hijos tiene (sin saber si es rama u hoja)
             int cantidad = componentePadre.GetCantidadHijos();
-
-            // Iteramos de forma clásica
             for (int i = 0; i < cantidad; i++)
             {
-                // Obtenemos el hijo por su índice
                 BE.COMPONENTE hijo = componentePadre.GetHijo(i);
 
                 if (hijo != null)
                 {
                     TreeNode nodoHijo = new TreeNode(hijo.Nombre);
                     nodoHijo.Tag = hijo;
-
                     nodoPadre.Nodes.Add(nodoHijo);
 
-                    // Recursividad
                     AgregarNodosRecursivos(nodoHijo, hijo);
                 }
             }
@@ -272,7 +259,6 @@ namespace Trabajo_practico_IS
                 {
                     try
                     {
-                        // Llamas a tu BLL
                         GestorPermisos.Baja(componenteSeleccionado);
                         MessageBox.Show("Rol eliminado.");
                         CargarTreeView();
@@ -280,7 +266,6 @@ namespace Trabajo_practico_IS
                     }
                     catch (Exception ex)
                     {
-                        // Aquí atrapará el RAISERROR de SQL si el rol está en uso por usuarios
                         MessageBox.Show(ex.Message, "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }

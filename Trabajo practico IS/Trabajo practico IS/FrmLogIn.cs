@@ -29,14 +29,8 @@ namespace Trabajo_practico_IS
             TraducirControles(this.Controls, traducciones);
             if (CBXIdiomas.Items.Count > 0)
             {
-                // Desenganchamos el evento temporalmente para que C# no intente ir a la BD 
-                // mientras movemos la aguja del ComboBox por código
                 CBXIdiomas.SelectedIndexChanged -= CBXIdiomas_SelectedIndexChanged;
-
-                // Obligamos al combo a seleccionar visualmente el idioma que esté activo en la RAM global
                 CBXIdiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
-
-                // Volvemos a enganchar el evento para que escuche los clics del usuario
                 CBXIdiomas.SelectedIndexChanged += CBXIdiomas_SelectedIndexChanged;
             }
 
@@ -46,14 +40,10 @@ namespace Trabajo_practico_IS
         {
             try
             {
-                // PASO 1: Validar que los campos no estén vacíos
                 if (string.IsNullOrWhiteSpace(TxtBoxUsuario.Text) || string.IsNullOrWhiteSpace(TxtBoxPassword.Text))
                     throw new Exception("Debe completar todos los campos");
 
-                // PASO 2: Validar credenciales en la base de datos (y cargar la Sesión)
                 GestorUsuario.LogIn(TxtBoxUsuario.Text, TxtBoxPassword.Text);
-
-                // PASO 3: Lógica de prioridad de idioma (Combo vs Base de Datos)
                 int idIdiomaFinalAAplicar = idiomaCambiadoManualmente ? Convert.ToInt32(CBXIdiomas.SelectedValue) : Servicios.SESION.GetInstancia().usuactual.IdIdioma;
 
                 if (idiomaCambiadoManualmente)
@@ -61,12 +51,9 @@ namespace Trabajo_practico_IS
                     GestorUsuario.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual, idIdiomaFinalAAplicar);
                     Servicios.SESION.GetInstancia().usuactual.IdIdioma = idIdiomaFinalAAplicar;
                 }
-
-                // PASO 4: Inyectar el idioma ganador en la memoria RAM
                 var traduccionesUsuario = GestorIdioma.ObtenerTraducciones(idIdiomaFinalAAplicar);
                 Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idIdiomaFinalAAplicar, traduccionesUsuario);
 
-                // PASO 5: Ocultar el Login y abrir el Menú Principal
                 this.DialogResult = DialogResult.OK;
                 this.Hide();
 
@@ -82,7 +69,6 @@ namespace Trabajo_practico_IS
             }
             catch (Exception ex)
             {
-                // Mostramos cualquier error (ej. Contraseña incorrecta)
                 MessageBox.Show(ex.Message);
             }
             finally
@@ -97,12 +83,10 @@ namespace Trabajo_practico_IS
             var usuActual = Servicios.SESION.GetInstancia().usuactual;
             bool puedeRestaurarBD = false;
 
-            // 1. Recorremos el Composite preguntando por la ACCIÓN ESPECÍFICA
             if (usuActual != null && usuActual.Permisos != null)
             {
                 foreach (var permiso in usuActual.Permisos)
                 {
-                    // Preguntamos por el permiso puntual, no importa en qué rol esté guardado
                     if (permiso.TienePermiso("RESTAURACION_BASE"))
                     {
                         puedeRestaurarBD = true;
@@ -116,7 +100,6 @@ namespace Trabajo_practico_IS
                       $"Registro Afectado: {ex.RegistroAfectado}\n" +
                       $"Detalle Técnico: {ex.DetalleTecnico}";
 
-            // 2. Tomamos la decisión en base a la acción
             if (puedeRestaurarBD)
             {
                 MessageBox.Show(msjError, "Consola de Emergencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -125,9 +108,6 @@ namespace Trabajo_practico_IS
 
                 FrmRestauracionBase frmEmergencia = new FrmRestauracionBase(msjError);
                 frmEmergencia.ShowDialog();
-
-                // B. Volvemos a hacer visible el formulario de Login
-                //this.Show();
             }
             else
             {
@@ -144,27 +124,19 @@ namespace Trabajo_practico_IS
         {
             try
             {
-                // 1. Reseteamos la bandera para el próximo usuario que intente ingresar
                 idiomaCambiadoManualmente = false;
-
-                // 2. Por estandarización de UX, devolvemos el Login a su idioma base (Español = ID 1)
                 int idEspañol = 1;
                 var traduccionesEspañol = GestorIdioma.ObtenerTraducciones(idEspañol);
-
-                // El Observer se encarga de disparar la actualización visual de este formulario
                 Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idEspañol, traduccionesEspañol);
             }
             catch (Exception)
             {
-                // Silenciador de seguridad por si el motor de BD llega a fallar o desconectarse al salir
-            }
 
-            // 3. Desenganchamos y re-enganchamos el evento para refrescar la lista de idiomas de forma limpia
+            }
             CBXIdiomas.SelectedIndexChanged -= CBXIdiomas_SelectedIndexChanged;
             CBXIdiomas.DataSource = GestorIdioma.Listar();
             CBXIdiomas.SelectedIndexChanged += CBXIdiomas_SelectedIndexChanged;
 
-            // 4. Volvemos a mostrar la pantalla de Login en el centro del escritorio, reluciente para el próximo ciclo
             this.Show();
         }
 

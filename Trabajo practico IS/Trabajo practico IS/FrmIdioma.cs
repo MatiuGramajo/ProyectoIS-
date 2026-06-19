@@ -32,7 +32,6 @@ namespace Trabajo_practico_IS
 
                 BLL.IDIOMA gestorIdioma = new BLL.IDIOMA();
 
-                // Ejecutamos la magia
                 gestorIdioma.CrearIdioma(nombre, sufijo);
 
                 MessageBox.Show("¡Idioma creado y autotraducido con éxito!");

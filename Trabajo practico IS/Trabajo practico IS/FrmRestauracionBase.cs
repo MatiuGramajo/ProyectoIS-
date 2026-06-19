@@ -63,10 +63,7 @@ namespace Trabajo_practico_IS
                 try
                 {
                     Cursor = Cursors.WaitCursor;
-
-                    // Llamada al método de la BLL que orquesta la actualización y el registro en Bitácora
                     GestorRestauracion.RecalcularTodosLosDigitos();
-
                     Cursor = Cursors.Default;
 
                     MessageBox.Show("Los dígitos verificadores han sido regenerados con éxito. La base de datos vuelve a ser consistente.\n\nEl sistema se cerrará para aplicar los cambios de seguridad.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -110,11 +107,11 @@ namespace Trabajo_practico_IS
         {
             if (_esEmergencia)
             {
-                Application.Exit(); // Cierra todo si el sistema está corrupto
+                Application.Exit();
             }
             else
             {
-                this.Close(); // Solo cierra esta ventana y vuelve al menú principal
+                this.Close();
             }
         }
 
@@ -178,12 +175,7 @@ namespace Trabajo_practico_IS
                 try
                 {
                     Cursor = Cursors.WaitCursor;
-
-                    // 4. INVOCACIÓN A LA CAPA DE NEGOCIO (BLL)
-                    // Despacha la ruta absoluta hacia el Mapper de la DAL
                     GestorRestauracion.RestaurarBackup(TXTRutaBackUp.Text);
-
-                    // 5. RESTABLECER ENTORNO VISUAL
                     Cursor = Cursors.Default;
 
                     MessageBox.Show("La base de datos ha sido restaurada con éxito.\n\n" +
@@ -191,19 +183,11 @@ namespace Trabajo_practico_IS
                                     "Restauración Exitosa",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
-
-                    // 6. CONTROL DE TRANSICIÓN: Activamos la bandera protectora
-                    // Esto le avisa al evento FormClosed que el cierre es intencional y legítimo.
                     _reiniciando = true;
-
-                    // 7. PURGA DE MEMORIA: Destruye el Pool de conexiones viejo de ADO.NET, 
-                    // limpia los Singletons y vuelve a lanzar el FrmLogIn totalmente limpio.
                     Application.Restart();
                 }
                 catch (Exception ex)
                 {
-                    // En caso de que falle (ej: archivo .bak corrupto o sin permisos de lectura en el disco)
-                    // nos aseguramos de devolver el mouse a la normalidad y mostrar el mensaje técnico.
                     Cursor = Cursors.Default;
                     MessageBox.Show($"Ocurrió un error crítico durante el proceso de restauración:\n\n{ex.Message}",
                                     "Falla de Sistema",
@@ -222,10 +206,8 @@ namespace Trabajo_practico_IS
                     BLL.IDIOMA gestorIdioma = new BLL.IDIOMA();
                     var traducciones = gestorIdioma.ObtenerTraducciones(idIdioma);
 
-                    // Avisa a todos los formularios que cambien
                     Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idIdioma, traducciones);
 
-                    // Guarda la preferencia en la base de datos para este usuario
                     if (Servicios.SESION.GetInstancia().usuactual != null)
                     {
                         BLL.USUARIO gestorUsu = new BLL.USUARIO();

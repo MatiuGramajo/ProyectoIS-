@@ -123,11 +123,10 @@ namespace DAL
             List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(acceso.CrearParametro("@idPer", idPer));
 
-            // Hacemos un count rápido directo a la tabla puente de usuarios
             int cantidad = acceso.LeerEscalar("VALIDAR_USO_ROL", parametros);
             acceso.Cerrar();
 
-            return cantidad > 0; // Si es mayor a 0, devuelve TRUE (está en uso)
+            return cantidad > 0;
         }
     }
 }

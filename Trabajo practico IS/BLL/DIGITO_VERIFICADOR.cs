@@ -30,12 +30,8 @@ namespace BLL
         {
             return MapperDV.ObtenerDVV(nombreTabla);
         }
-
-        // 1. EL NUEVO MÉTODO (Solo calcula y devuelve el Hash, no toca la BD)
-        // Este es el que usa tu clase AUDITORIA
         public string CalcularDVV(List<string> todosLosDvh)
         {
-            // Si la lista viene vacía, devolvemos el hash de una cadena vacía
             if (todosLosDvh == null || todosLosDvh.Count == 0)
             {
                 return ENCRIPTADOR.Hashear("");
@@ -51,14 +47,9 @@ namespace BLL
             return ENCRIPTADOR.Hashear(cadenaGlobal.ToString());
         }
 
-        // 2. EL MÉTODO DE GUARDADO (Reutiliza el método de arriba)
-        // Este es el que usas cuando das de Alta, Baja o Modificas un usuario
         public void RecalcularYGuardarDVV(string nombreTabla, List<string> todosLosDvh)
         {
-            // Reutilizamos la lógica matemática que armamos arriba
             string nuevoDvv = CalcularDVV(todosLosDvh);
-
-            // Guardamos en la base de datos
             MapperDV.ActualizarDVV(nombreTabla, nuevoDvv);
         }
     }

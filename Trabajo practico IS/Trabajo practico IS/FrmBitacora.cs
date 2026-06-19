@@ -209,11 +209,8 @@ namespace Trabajo_practico_IS
                 {
                     BLL.IDIOMA gestorIdioma = new BLL.IDIOMA();
                     var traducciones = gestorIdioma.ObtenerTraducciones(idIdioma);
-
-                    // Avisa a todos los formularios que cambien
                     Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idIdioma, traducciones);
 
-                    // Guarda la preferencia en la base de datos para este usuario
                     if (Servicios.SESION.GetInstancia().usuactual != null)
                     {
                         BLL.USUARIO gestorUsu = new BLL.USUARIO();
@@ -224,7 +221,7 @@ namespace Trabajo_practico_IS
             }
             catch (Exception ex)
             {
-                // Manejo de errores
+
             }
         }
     }

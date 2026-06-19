@@ -81,14 +81,11 @@ namespace BLL
         }
         public void ActualizarIdiomaUsuario(BE.USUARIO usuario, int idIdioma)
         {
-
             usuario.IdIdioma = idIdioma;
             usuario.DVH = GestorDV.CalcularDVH(usuario);
 
-            // 3. Impactamos el idioma y el nuevo DVH en la tabla de la base de datos
             mapper.ActualizarIdiomaUsuario(usuario);
 
-            // 4. Sincronizamos el candado global de la tabla para que no tire error de consistencia
             ActualizarDvvUsuarios();
             string responsable;
 
@@ -161,7 +158,7 @@ namespace BLL
                 usuariovalido.DVH = GestorDV.CalcularDVH(usuariovalido);
 
                 mapper.ActualizarIntentosFallidos(usuariovalido);
-                ActualizarDvvUsuarios(); // Sincronizamos el DVV vertical tras limpiar la fila
+                ActualizarDvvUsuarios();
             }
 
             gestorBitacora.RegistrarEvento("Seguridad", "Inicio de sesión exitoso", 1);
@@ -170,10 +167,7 @@ namespace BLL
 
         public void ActualizarDvvUsuarios()
         {
-            // Extraemos la lista de la BD
             List<string> todosDvh = mapper.ObtenerTodosLosDVH();
-
-            // Delegamos el recálculo
             GestorDV.RecalcularYGuardarDVV("USUARIO", todosDvh);
         }
 

@@ -53,19 +53,13 @@ namespace BE
             {
                 return true;
             }
-
-            // 2. Si no soy yo, delego la pregunta a todos mis hijos
-            // (Como estamos adentro de la clase, podemos usar nuestra lista privada _hijos sin problema)
             foreach (var hijo in _hijos)
             {
-                // ¡Acá está la recursividad polimórfica!
                 if (hijo.TienePermiso(nombrePermiso))
                 {
                     return true;
                 }
             }
-
-            // 3. Si revisé a todos mis hijos, nietos, etc., y ninguno lo tiene...
             return false;
         }
     }

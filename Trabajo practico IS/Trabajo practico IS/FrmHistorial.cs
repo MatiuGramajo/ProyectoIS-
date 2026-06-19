@@ -55,7 +55,7 @@ namespace Trabajo_practico_IS
             CBXIdiomas.ValueMember = "Id";
             CBXIdiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
             CBXIdiomas.SelectedIndexChanged += CBXIdiomas_SelectedIndexChanged;
-            ActualizarIdioma(); // Tu método de siempre
+            ActualizarIdioma(); 
         }
 
         private void CBXUsuarios_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,8 +92,6 @@ namespace Trabajo_practico_IS
                 {
                     GestorHistorialUsuario.RestaurarUsuario(versionSeleccionada.IdHistorial);
                     MessageBox.Show("Usuario restaurado al estado seleccionado con éxito.");
-
-                    // Recargamos la grilla para que se vea el nuevo registro "RESTAURACION"
                     CBXUsuarios_SelectedIndexChanged(null, null);
                 }
             }

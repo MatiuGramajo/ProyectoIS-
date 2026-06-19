@@ -49,11 +49,8 @@ namespace Trabajo_practico_IS
                 {
                     BLL.IDIOMA gestorIdioma = new BLL.IDIOMA();
                     var traducciones = gestorIdioma.ObtenerTraducciones(idIdioma);
-
-                    // Avisa a todos los formularios que cambien
                     Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idIdioma, traducciones);
 
-                    // Guarda la preferencia en la base de datos para este usuario
                     if (Servicios.SESION.GetInstancia().usuactual != null)
                     {
                         BLL.USUARIO gestorUsu = new BLL.USUARIO();
@@ -231,14 +228,9 @@ namespace Trabajo_practico_IS
 
                 Cb_CTRLUsuarioRol.SelectedIndex = -1;
 
-                // Verificamos si el usuario tiene algún permiso en su lista
                 if (usuario.Permisos != null && usuario.Permisos.Count > 0)
                 {
-                    // Como usas un ComboBox de selección única para el rol primario, 
-                    // extraemos el primer permiso que tiene asignado (índice 0)
                     BE.COMPONENTE permisoActual = usuario.Permisos[0];
-
-                    // Le decimos al ComboBox que busque y seleccione el ítem que coincida con ese ID
                     Cb_CTRLUsuarioRol.SelectedValue = permisoActual.Id;
                 }
             }
@@ -253,15 +245,12 @@ namespace Trabajo_practico_IS
 
         private void CargarComboBoxRoles()
         {
-            // 1. Traemos TODOS los permisos de la base de datos
             List<BE.COMPONENTE> todosLosPermisos = GestorPermisos.Listar();
 
-            // 2. Filtramos con LINQ para quedarnos SOLAMENTE con los roles (compuestos)
             List<BE.COMPONENTE> soloRoles = todosLosPermisos.Where(p => p.EsCompuesto).ToList();
 
-            // 3. Enlazamos la lista al ComboBox
             Cb_CTRLUsuarioRol.DataSource = soloRoles;
-            Cb_CTRLUsuarioRol.DisplayMember = "Nombre"; // Propiedad que lee el usuario
+            Cb_CTRLUsuarioRol.DisplayMember = "Nombre";
             Cb_CTRLUsuarioRol.ValueMember = "Id";
         }
 

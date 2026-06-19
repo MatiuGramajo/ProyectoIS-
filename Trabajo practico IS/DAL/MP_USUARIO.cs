@@ -34,7 +34,6 @@ namespace DAL
                     paramPermiso.Add(acceso.CrearParametro("@idUsuario", usuario.Id));
                     paramPermiso.Add(acceso.CrearParametro("@idPermiso", permiso.Id));
 
-                    // Aquí SÍ usamos 'Escribir' porque solo necesitamos que se inserte (ExecuteNonQuery)
                     acceso.Escribir("INSERTAR_USUARIO_PERMISO", paramPermiso);
                 }
             }
@@ -128,13 +127,10 @@ namespace DAL
             parametros.Add(acceso.CrearParametro("DVH", usuario.DVH));
             int res = acceso.Escribir("MODIFICAR_USUARIO", parametros);
 
-            // 2. ACTUALIZACIÓN DE PERMISOS (Borrar y Volver a Insertar)
-            // Borramos todas las relaciones viejas
             List<SqlParameter> paramBorrar = new List<SqlParameter>();
             paramBorrar.Add(acceso.CrearParametro("@idUsuario", usuario.Id));
-            acceso.Escribir("BORRAR_PERMISOS_USUARIO", paramBorrar); // Necesitas crear este SP simple
+            acceso.Escribir("BORRAR_PERMISOS_USUARIO", paramBorrar);
 
-            // Insertamos las nuevas relaciones
             foreach (var permiso in usuario.Permisos)
             {
                 List<SqlParameter> paramInsert = new List<SqlParameter>();
@@ -171,11 +167,8 @@ namespace DAL
             acceso.Abrir();
             List<SqlParameter> parametros = new List<SqlParameter>();
 
-            // 1. Datos para actualizar el idioma
             parametros.Add(acceso.CrearParametro("@id_usuario", usuario.Id));
             parametros.Add(acceso.CrearParametro("@id_idioma", usuario.IdIdioma));
-
-            // 2. NUEVO: Enviamos la nueva firma de seguridad recalculada
             parametros.Add(acceso.CrearParametro("@dvh", usuario.DVH));
 
             acceso.Escribir("ACTUALIZAR_IDIOMA_USUARIO", parametros);
@@ -185,7 +178,6 @@ namespace DAL
         public List<string> ObtenerTodosLosDVH()
         {
             acceso.Abrir();
-            // Ejecuta el SP que creamos antes: SELECT DVH FROM USUARIO ORDER BY ID ASC
             DataTable dt = acceso.Leer("OBTENER_TODOS_DVH_USUARIO");
             acceso.Cerrar();
 
