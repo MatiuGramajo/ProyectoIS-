@@ -106,6 +106,7 @@
             // 
             // DGVHistorial
             // 
+            this.DGVHistorial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVHistorial.Location = new System.Drawing.Point(36, 59);
             this.DGVHistorial.Name = "DGVHistorial";

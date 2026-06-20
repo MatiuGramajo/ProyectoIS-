@@ -112,7 +112,8 @@ namespace Trabajo_practico_IS
                 }
                 else
                 {
-                    MessageBox.Show("Debe completar todos los datos");
+                    throw new Exception("Debe completar todos los datos");
+                    //MessageBox.Show("Debe completar todos los datos");
                 }
             }
             catch (Exception ex)
@@ -130,54 +131,72 @@ namespace Trabajo_practico_IS
         }
         private void BTNCtrlUsuBaja_Click(object sender, EventArgs e)
         {
-            if (usuario != null)
+            try
             {
-                var result = MessageBox.Show($"Esta seguro que desea borrar a: {usuario.Usuario}?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (result == DialogResult.Yes)
+                if (usuario != null)
                 {
-                    GestorUsuarios.Borrar(usuario);
-                    GestorBitacora.RegistrarEvento("Administracion", $"Se dio de baja al usuario {usuario.Usuario}", 4);
-                    EnlazarUsuarios();
-                    LimpiarControles();
-                    usuario = null;
+                    var result = MessageBox.Show($"Esta seguro que desea borrar a: {usuario.Usuario}?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
+                    {
+                        GestorUsuarios.Borrar(usuario);
+                        GestorBitacora.RegistrarEvento("Administracion", $"Se dio de baja al usuario {usuario.Usuario}", 4);
+                        EnlazarUsuarios();
+                        LimpiarControles();
+                        usuario = null;
+                    }
+                }
+                else
+                {
+                    throw new Exception("Seleccione un usuario para borrar.");
+                    //MessageBox.Show("Seleccione un usuario para borrar.");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Seleccione un usuario para borrar.");
+                MessageBox.Show(ex.Message);
             }
+
 
         }
 
         private void BTNCtrlUsuModificar_Click(object sender, EventArgs e)
         {
-            if (usuario != null && !(string.IsNullOrEmpty(TXT_CtrlUsuUsuario.Text) || string.IsNullOrEmpty(TXT_CtrlUsuDNI.Text) || string.IsNullOrEmpty(TXT_CtrlUsuEmail.Text)))
+            try
             {
-                usuario.Usuario = TXT_CtrlUsuUsuario.Text;
-                if(!string.IsNullOrEmpty(TXT_CtrlUsuContraseña.Text))
+                if (usuario != null && !(string.IsNullOrEmpty(TXT_CtrlUsuUsuario.Text) || string.IsNullOrEmpty(TXT_CtrlUsuDNI.Text) || string.IsNullOrEmpty(TXT_CtrlUsuEmail.Text)))
                 {
-                    usuario.Contraseña = ENCRIPTADOR.Hashear(TXT_CtrlUsuContraseña.Text);
+                    usuario.Usuario = TXT_CtrlUsuUsuario.Text;
+                    if (!string.IsNullOrEmpty(TXT_CtrlUsuContraseña.Text))
+                    {
+                        usuario.Contraseña = ENCRIPTADOR.Hashear(TXT_CtrlUsuContraseña.Text);
+                    }
+                    usuario.Dni = int.Parse(TXT_CtrlUsuDNI.Text);
+                    usuario.Email = TXT_CtrlUsuEmail.Text;
+
+                    usuario.Permisos.Clear();
+
+                    if (Cb_CTRLUsuarioRol.SelectedItem != null)
+                    {
+                        BE.COMPONENTE rolSeleccionado = (BE.COMPONENTE)Cb_CTRLUsuarioRol.SelectedItem;
+                        usuario.Permisos.Add(rolSeleccionado);
+                    }
+
+                    GestorUsuarios.Modificar(usuario);
+                    EnlazarUsuarios();
+                    GestorBitacora.RegistrarEvento("Administracion", $"Se modificó al usuario: {usuario.Usuario}", 3);
+                    LimpiarControles();
                 }
-                usuario.Dni = int.Parse(TXT_CtrlUsuDNI.Text);
-                usuario.Email = TXT_CtrlUsuEmail.Text;
-
-                usuario.Permisos.Clear();
-
-                if (Cb_CTRLUsuarioRol.SelectedItem != null)
+                else
                 {
-                    BE.COMPONENTE rolSeleccionado = (BE.COMPONENTE)Cb_CTRLUsuarioRol.SelectedItem;
-                    usuario.Permisos.Add(rolSeleccionado);
+                    throw new Exception("Seleccione un campo para modificar.");
+                    //MessageBox.Show("Seleccione un campo para modificar.");
                 }
-
-                GestorUsuarios.Modificar(usuario);
-                EnlazarUsuarios();
-                GestorBitacora.RegistrarEvento("Administracion", $"Se modificó al usuario: {usuario.Usuario}", 3);
-                LimpiarControles();
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Seleccione un campo para modificar.");
+                MessageBox.Show(ex.Message);
             }
+
         }
 
         private void BTNCtrlUsuDesbloquear_Click(object sender, EventArgs e)
@@ -215,7 +234,7 @@ namespace Trabajo_practico_IS
             }
         }
 
-        private void DGV_CtrlUsuUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void DGV_CtrlUsuUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)  //VER ESTO. CUANDO SE MODIFICA UN USUARIO PERO HAY EXEPCION EL CAMPO CAMBIA IGUAL
         {
             if (e.RowIndex>=0)
             {

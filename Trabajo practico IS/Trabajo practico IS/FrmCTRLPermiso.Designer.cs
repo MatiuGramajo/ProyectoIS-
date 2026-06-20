@@ -42,9 +42,12 @@
             this.BTNCtrlPermisoBorrarRol = new System.Windows.Forms.Button();
             this.CBXidiomas = new System.Windows.Forms.ComboBox();
             this.LBLidiomas = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.BG_ListRolesPermisos.SuspendLayout();
             this.GB_TreeViewRoles.SuspendLayout();
             this.GB_NuevoRol.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TV_RolesPermisos
@@ -63,6 +66,7 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(199, 251);
             this.listBox1.TabIndex = 1;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // BTNCtrlPermisoCrearRol
             // 
@@ -92,7 +96,7 @@
             // 
             // BTNCtrlPermisoAsignar
             // 
-            this.BTNCtrlPermisoAsignar.Location = new System.Drawing.Point(245, 128);
+            this.BTNCtrlPermisoAsignar.Location = new System.Drawing.Point(499, 128);
             this.BTNCtrlPermisoAsignar.Name = "BTNCtrlPermisoAsignar";
             this.BTNCtrlPermisoAsignar.Size = new System.Drawing.Size(75, 23);
             this.BTNCtrlPermisoAsignar.TabIndex = 6;
@@ -102,7 +106,7 @@
             // 
             // BTNCtrlPermisoDesasignar
             // 
-            this.BTNCtrlPermisoDesasignar.Location = new System.Drawing.Point(245, 157);
+            this.BTNCtrlPermisoDesasignar.Location = new System.Drawing.Point(499, 157);
             this.BTNCtrlPermisoDesasignar.Name = "BTNCtrlPermisoDesasignar";
             this.BTNCtrlPermisoDesasignar.Size = new System.Drawing.Size(75, 23);
             this.BTNCtrlPermisoDesasignar.TabIndex = 7;
@@ -118,12 +122,12 @@
             this.BG_ListRolesPermisos.Size = new System.Drawing.Size(225, 288);
             this.BG_ListRolesPermisos.TabIndex = 8;
             this.BG_ListRolesPermisos.TabStop = false;
-            this.BG_ListRolesPermisos.Text = "Todos los roles y permisos";
+            this.BG_ListRolesPermisos.Text = "Todos los roles";
             // 
             // GB_TreeViewRoles
             // 
             this.GB_TreeViewRoles.Controls.Add(this.TV_RolesPermisos);
-            this.GB_TreeViewRoles.Location = new System.Drawing.Point(330, 12);
+            this.GB_TreeViewRoles.Location = new System.Drawing.Point(584, 12);
             this.GB_TreeViewRoles.Name = "GB_TreeViewRoles";
             this.GB_TreeViewRoles.Size = new System.Drawing.Size(219, 288);
             this.GB_TreeViewRoles.TabIndex = 9;
@@ -137,7 +141,7 @@
             this.GB_NuevoRol.Controls.Add(this.BTNCtrlPermisoBorrarRol);
             this.GB_NuevoRol.Controls.Add(this.BTNCtrlPermisoCrearRol);
             this.GB_NuevoRol.Controls.Add(this.LBLnombre);
-            this.GB_NuevoRol.Location = new System.Drawing.Point(12, 306);
+            this.GB_NuevoRol.Location = new System.Drawing.Point(832, 145);
             this.GB_NuevoRol.Name = "GB_NuevoRol";
             this.GB_NuevoRol.Size = new System.Drawing.Size(194, 155);
             this.GB_NuevoRol.TabIndex = 10;
@@ -167,7 +171,7 @@
             // CBXidiomas
             // 
             this.CBXidiomas.FormattingEnabled = true;
-            this.CBXidiomas.Location = new System.Drawing.Point(670, 34);
+            this.CBXidiomas.Location = new System.Drawing.Point(986, 12);
             this.CBXidiomas.Name = "CBXidiomas";
             this.CBXidiomas.Size = new System.Drawing.Size(121, 21);
             this.CBXidiomas.TabIndex = 11;
@@ -176,18 +180,38 @@
             // LBLidiomas
             // 
             this.LBLidiomas.AutoSize = true;
-            this.LBLidiomas.Location = new System.Drawing.Point(612, 42);
+            this.LBLidiomas.Location = new System.Drawing.Point(928, 20);
             this.LBLidiomas.Name = "LBLidiomas";
             this.LBLidiomas.Size = new System.Drawing.Size(43, 13);
             this.LBLidiomas.TabIndex = 12;
             this.LBLidiomas.Text = "Idiomas";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.listBox2);
+            this.groupBox1.Location = new System.Drawing.Point(262, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(225, 288);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Todos los permisos";
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(12, 22);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(199, 251);
+            this.listBox2.TabIndex = 1;
+            this.listBox2.SelectedIndexChanged += new System.EventHandler(this.listBox2_SelectedIndexChanged);
             // 
             // FrmCTRLPermiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(819, 473);
+            this.ClientSize = new System.Drawing.Size(1119, 315);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.LBLidiomas);
             this.Controls.Add(this.CBXidiomas);
             this.Controls.Add(this.GB_NuevoRol);
@@ -204,6 +228,7 @@
             this.GB_TreeViewRoles.ResumeLayout(false);
             this.GB_NuevoRol.ResumeLayout(false);
             this.GB_NuevoRol.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,5 +250,7 @@
         private System.Windows.Forms.Button BTNCtrlPermisoBorrarRol;
         private System.Windows.Forms.ComboBox CBXidiomas;
         private System.Windows.Forms.Label LBLidiomas;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }

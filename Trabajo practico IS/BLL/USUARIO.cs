@@ -19,6 +19,23 @@ namespace BLL
 
         public void Insertar(BE.USUARIO usuario)
         {
+            List<BE.USUARIO> todosLosUsuarios = mapper.Listar();
+
+            if (todosLosUsuarios.Any(u => u.Usuario.Equals(usuario.Usuario, StringComparison.OrdinalIgnoreCase)))
+            {
+                throw new Exception("El nombre de usuario ya se encuentra registrado en el sistema.");
+            }
+
+            if (todosLosUsuarios.Any(u => u.Dni == usuario.Dni))
+            {
+                throw new Exception("El DNI ingresado ya pertenece a un usuario registrado.");
+            }
+
+            if (todosLosUsuarios.Any(u => u.Email.Equals(usuario.Email, StringComparison.OrdinalIgnoreCase)))
+            {
+                throw new Exception("El correo electrónico ya se encuentra registrado.");
+            }
+
             usuario.DVH = GestorDV.CalcularDVH(usuario);
             mapper.Alta(usuario);
             ActualizarDvvUsuarios();
@@ -42,6 +59,22 @@ namespace BLL
 
         public void Modificar(BE.USUARIO usuario)
         {
+            List<BE.USUARIO> todosLosUsuarios = mapper.Listar();
+
+            if (todosLosUsuarios.Any(u => u.Id != usuario.Id && u.Usuario.Equals(usuario.Usuario, StringComparison.OrdinalIgnoreCase)))
+            {
+                throw new Exception("El nombre de usuario ya está siendo utilizado por otra cuenta.");
+            }
+
+            if (todosLosUsuarios.Any(u => u.Id != usuario.Id && u.Dni == usuario.Dni))
+            {
+                throw new Exception("El DNI ingresado ya pertenece a otro usuario en el sistema.");
+            }
+
+            if (todosLosUsuarios.Any(u => u.Id != usuario.Id && u.Email.Equals(usuario.Email, StringComparison.OrdinalIgnoreCase)))
+            {
+                throw new Exception("El correo electrónico ya está asignado a otro usuario.");
+            }
             usuario.DVH = GestorDV.CalcularDVH(usuario);
             mapper.Modificar(usuario);
             ActualizarDvvUsuarios();

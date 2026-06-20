@@ -156,6 +156,7 @@
             // 
             // DGV_CtrlUsuUsuarios
             // 
+            this.DGV_CtrlUsuUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_CtrlUsuUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_CtrlUsuUsuarios.Location = new System.Drawing.Point(34, 21);
             this.DGV_CtrlUsuUsuarios.Name = "DGV_CtrlUsuUsuarios";

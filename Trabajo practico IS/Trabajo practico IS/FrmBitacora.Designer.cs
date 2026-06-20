@@ -73,6 +73,7 @@
             // 
             // DGV_BITACORA
             // 
+            this.DGV_BITACORA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_BITACORA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGV_BITACORA.Location = new System.Drawing.Point(21, 33);
             this.DGV_BITACORA.Name = "DGV_BITACORA";

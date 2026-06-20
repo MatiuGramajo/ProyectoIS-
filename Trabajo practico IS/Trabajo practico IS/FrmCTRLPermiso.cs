@@ -102,8 +102,14 @@ namespace Trabajo_practico_IS
         private void CargarListBox()
         {
             listBox1.Items.Clear();
-            var permisos = GestorPermisos.Listar();
-            listBox1.Items.AddRange(permisos.ToArray());
+            listBox2.Items.Clear();
+
+            var TodosLospermisos = GestorPermisos.Listar();
+
+            var roles = TodosLospermisos.Where(x => x.EsCompuesto).ToArray();
+            var permisos = TodosLospermisos.Where(x => !x.EsCompuesto).ToArray();
+            listBox1.Items.AddRange(roles);
+            listBox2.Items.AddRange(permisos);
 
         }
 
@@ -133,9 +139,20 @@ namespace Trabajo_practico_IS
         {
             try
             {
-                if (listBox1.SelectedItem == null)
+                BE.COMPONENTE Hijo = null;
+
+                if (listBox1.SelectedItem != null)
                 {
-                    throw new Exception("Por favor, seleccionar un ROL o PERMISO del listbox.");
+                    Hijo = listBox1.SelectedItem as BE.COMPONENTE;
+                }
+                else if (listBox2.SelectedItem != null)
+                {
+                    Hijo = listBox2.SelectedItem as BE.COMPONENTE;
+                }
+
+                if (Hijo == null)
+                {
+                    throw new Exception("Por favor, seleccione un ROL o PERMISO de las listas.");
                 }
                 if (TV_RolesPermisos.SelectedNode == null)
                 {
@@ -143,7 +160,6 @@ namespace Trabajo_practico_IS
                 }
 
                 var Padre = TV_RolesPermisos.SelectedNode.Tag as BE.COMPONENTE;
-                var Hijo = listBox1.SelectedItem as BE.COMPONENTE;
 
                 GestorPermisos.GuardarRelacion(Padre, Hijo);
 
@@ -272,6 +288,22 @@ namespace Trabajo_practico_IS
             }
             {
                 MessageBox.Show("Debe seleccionar un Rol para borrar");
+            }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                listBox2.ClearSelected();
+            }
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox2.SelectedItem != null)
+            {
+                listBox1.ClearSelected();
             }
         }
     }
