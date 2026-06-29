@@ -30,6 +30,10 @@ namespace Trabajo_practico_IS
                 if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(sufijo))
                     throw new Exception("Debe completar el nombre y el sufijo.");
 
+                if (!sufijo.StartsWith("_"))
+                {
+                    sufijo = "_" + sufijo;
+                }
                 BLL.IDIOMA gestorIdioma = new BLL.IDIOMA();
 
                 gestorIdioma.CrearIdioma(nombre, sufijo);
@@ -97,6 +101,22 @@ namespace Trabajo_practico_IS
             CBXidiomas.SelectedIndexChanged += CBXidiomas_SelectedIndexChanged;
             ActualizarIdioma();
             dataGridView1.DataSource = GestorIdioma.ObtenerIdioma();
+            int idIdiomaActual = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
+            if (DGVtraducciones != null)
+            {
+                DGVtraducciones.DataSource = null;
+
+                DGVtraducciones.DataSource = GestorIdioma.ObtenerDetalleTraducciones(idIdiomaActual);
+                if (DGVtraducciones.Columns.Count > 0)
+                {
+                    DGVtraducciones.Columns["IdTraduccion"].HeaderText = "ID";
+                    DGVtraducciones.Columns["IdTraduccion"].Width = 50;
+                    DGVtraducciones.Columns["NombreFormulario"].HeaderText = "Formulario";
+                    DGVtraducciones.Columns["NombreControl"].HeaderText = "Control";
+                    DGVtraducciones.Columns["TextoTraducido"].HeaderText = "Traducción";
+                    DGVtraducciones.Columns["TextoTraducido"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                }
+            }
         }
 
         private void CBXidiomas_SelectedIndexChanged(object sender, EventArgs e)
@@ -114,11 +134,28 @@ namespace Trabajo_practico_IS
                         gestorUsu.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual, idIdioma);
                         Servicios.SESION.GetInstancia().usuactual.IdIdioma = idIdioma;
                     }
+                   
+                    if (DGVtraducciones != null)
+                    {
+                        DGVtraducciones.DataSource = null;
+                        DGVtraducciones.DataSource = gestorIdioma.ObtenerDetalleTraducciones(idIdioma);
+
+                        if (DGVtraducciones.Columns.Count > 0)
+                        {
+                            DGVtraducciones.Columns["IdTraduccion"].HeaderText = "ID";
+                            DGVtraducciones.Columns["IdTraduccion"].Width = 50; 
+                            DGVtraducciones.Columns["NombreFormulario"].HeaderText = "Formulario";
+                            DGVtraducciones.Columns["NombreControl"].HeaderText = "Control";
+                            DGVtraducciones.Columns["TextoTraducido"].HeaderText = "Traducción";
+                            DGVtraducciones.Columns["TextoTraducido"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        }
+                    }
                 }
+
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("Error al cargar el idioma o sus traducciones: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

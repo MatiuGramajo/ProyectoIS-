@@ -20,7 +20,10 @@ namespace BLL
 
             return idiomasDisponibles;
         }
-
+        public List<BE.TRADUCCION> ObtenerDetalleTraducciones(int idIdioma)
+        {
+            return mapper.ListarTraduccionesDetalle(idIdioma);
+        }
         public Dictionary<string, string> ObtenerTraducciones(int idIdioma)
         {
             return mapper.ObtenerTraducciones(idIdioma);

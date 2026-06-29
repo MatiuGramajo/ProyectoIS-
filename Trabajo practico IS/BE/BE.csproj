@@ -49,6 +49,7 @@
     <Compile Include="IObserver.cs" />
     <Compile Include="PERMISO_COMPUESTO.cs" />
     <Compile Include="PERMISO_SIMPLE.cs" />
+    <Compile Include="TRADUCCION.cs" />
     <Compile Include="USUARIO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

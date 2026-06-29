@@ -20,6 +20,27 @@ namespace DAL
         {
             throw new NotImplementedException();
         }
+
+        public List<BE.TRADUCCION>ListarTraduccionesDetalle(int idIdioma)
+        {
+            //log.Usuario = registro["USUARIO"].ToString();
+            acceso.Abrir();
+            List<SqlParameter>parametros = new List<SqlParameter>();
+            parametros.Add(acceso.CrearParametro("@id_idioma", idIdioma));
+            DataTable tabla = acceso.Leer("OBTENER_TRADUCCIONES", parametros);
+            acceso.Cerrar();
+            List<BE.TRADUCCION> lista = new List<BE.TRADUCCION>();
+            foreach(DataRow registro in tabla.Rows)
+            {
+                BE.TRADUCCION trad= new BE.TRADUCCION();
+                trad.IdTraduccion = int.Parse(registro["ID_TRADUCCION"].ToString());
+                trad.NombreFormulario = registro["NOMBRE_FORMULARIO"].ToString();
+                trad.NombreControl = registro["NOMBRE_CONTROL"].ToString();
+                trad.TextoTraducido = registro["TEXTO_TRADUCIDO"].ToString();
+                lista.Add(trad);
+            }
+            return lista;
+        }
         public List<BE.IDIOMA>ObtenerIdiomas()
         {
             acceso.Abrir();

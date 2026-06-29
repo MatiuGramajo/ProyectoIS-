@@ -110,7 +110,7 @@
             this.DGVHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DGVHistorial.Location = new System.Drawing.Point(36, 59);
             this.DGVHistorial.Name = "DGVHistorial";
-            this.DGVHistorial.Size = new System.Drawing.Size(590, 172);
+            this.DGVHistorial.Size = new System.Drawing.Size(873, 172);
             this.DGVHistorial.TabIndex = 8;
             // 
             // FrmHistorial

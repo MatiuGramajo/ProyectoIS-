@@ -82,22 +82,43 @@ namespace Trabajo_practico_IS
         {
             try
             {
-                if (DGVHistorial.CurrentRow == null) throw new Exception("Seleccione una versión para restaurar.");
+                //if (DGVHistorial.CurrentRow == null) throw new Exception("Seleccione una versión para restaurar.");
 
-                BE.HISTORIAL_USUARIO versionSeleccionada = (BE.HISTORIAL_USUARIO)DGVHistorial.CurrentRow.DataBoundItem;
+                //BE.HISTORIAL_USUARIO versionSeleccionada = (BE.HISTORIAL_USUARIO)DGVHistorial.CurrentRow.DataBoundItem;
 
-                var r = MessageBox.Show($"¿Desea restaurar al usuario tal como estaba el {versionSeleccionada.FechaCambio}?", "Restaurar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                //var r = MessageBox.Show($"¿Desea restaurar al usuario tal como estaba el {versionSeleccionada.FechaCambio}?", "Restaurar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
+                //if (r == DialogResult.Yes)
+                //{
+                //    GestorHistorialUsuario.RestaurarUsuario(versionSeleccionada.IdHistorial);
+                //    MessageBox.Show("Usuario restaurado al estado seleccionado con éxito.");
+                //    CBXUsuarios_SelectedIndexChanged(null, null);
+                //}
+                if (CBXUsuarios.SelectedValue == null || !int.TryParse(CBXUsuarios.SelectedValue.ToString(), out int idUsu))
+                {
+                    throw new Exception("Primero debe seleccionar un usuario para ver su historial.");
+                }
+                var historialCompleto = GestorHistorialUsuario.ObtenerHistorial(idUsu);
+                if (historialCompleto.Count <= 1)
+                {
+                    throw new Exception("Este usuario no tiene modificaciones previas. No hay un estado anterior para recomponer.");
+                }
+                BE.HISTORIAL_USUARIO estadoAnterior = historialCompleto[1];
+
+                var r = MessageBox.Show($"¿Desea recomponer TODOS los atributos del usuario al estado inmediatamente anterior (del día {estadoAnterior.FechaCambio})?", "Deshacer Último Cambio", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (r == DialogResult.Yes)
                 {
-                    GestorHistorialUsuario.RestaurarUsuario(versionSeleccionada.IdHistorial);
-                    MessageBox.Show("Usuario restaurado al estado seleccionado con éxito.");
+                    // Ejecutamos la restauración usando el ID del estado anterior, ignorando qué tocó en la grilla
+                    GestorHistorialUsuario.RestaurarUsuario(estadoAnterior.IdHistorial);
+                    MessageBox.Show("Se han recompuesto todos los atributos al estado anterior con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    // Recargamos la grilla para que se vea la nueva fila "RESTAURACION"
                     CBXUsuarios_SelectedIndexChanged(null, null);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

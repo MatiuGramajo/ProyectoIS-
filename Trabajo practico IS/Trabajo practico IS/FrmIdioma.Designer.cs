@@ -40,7 +40,9 @@
             this.LBLidiomas2 = new System.Windows.Forms.Label();
             this.CBXidiomas = new System.Windows.Forms.ComboBox();
             this.BTNhabilitar = new System.Windows.Forms.Button();
+            this.DGVtraducciones = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVtraducciones)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -54,9 +56,9 @@
             // 
             // BTNcrear
             // 
-            this.BTNcrear.Location = new System.Drawing.Point(109, 334);
+            this.BTNcrear.Location = new System.Drawing.Point(12, 299);
             this.BTNcrear.Name = "BTNcrear";
-            this.BTNcrear.Size = new System.Drawing.Size(155, 33);
+            this.BTNcrear.Size = new System.Drawing.Size(120, 33);
             this.BTNcrear.TabIndex = 2;
             this.BTNcrear.Text = "Crear";
             this.BTNcrear.UseVisualStyleBackColor = true;
@@ -64,9 +66,9 @@
             // 
             // BTNdeshabilitar
             // 
-            this.BTNdeshabilitar.Location = new System.Drawing.Point(12, 388);
+            this.BTNdeshabilitar.Location = new System.Drawing.Point(12, 338);
             this.BTNdeshabilitar.Name = "BTNdeshabilitar";
-            this.BTNdeshabilitar.Size = new System.Drawing.Size(155, 33);
+            this.BTNdeshabilitar.Size = new System.Drawing.Size(120, 33);
             this.BTNdeshabilitar.TabIndex = 4;
             this.BTNdeshabilitar.Text = "Deshabilitar";
             this.BTNdeshabilitar.UseVisualStyleBackColor = true;
@@ -74,7 +76,7 @@
             // 
             // BTNvolveralmenu
             // 
-            this.BTNvolveralmenu.Location = new System.Drawing.Point(423, 388);
+            this.BTNvolveralmenu.Location = new System.Drawing.Point(758, 395);
             this.BTNvolveralmenu.Name = "BTNvolveralmenu";
             this.BTNvolveralmenu.Size = new System.Drawing.Size(155, 33);
             this.BTNvolveralmenu.TabIndex = 5;
@@ -84,9 +86,9 @@
             // 
             // TXTnombre
             // 
-            this.TXTnombre.Location = new System.Drawing.Point(54, 214);
+            this.TXTnombre.Location = new System.Drawing.Point(12, 214);
             this.TXTnombre.Name = "TXTnombre";
-            this.TXTnombre.Size = new System.Drawing.Size(195, 20);
+            this.TXTnombre.Size = new System.Drawing.Size(108, 20);
             this.TXTnombre.TabIndex = 6;
             // 
             // LBLidiomas
@@ -101,7 +103,7 @@
             // LBLsufijo
             // 
             this.LBLsufijo.AutoSize = true;
-            this.LBLsufijo.Location = new System.Drawing.Point(54, 257);
+            this.LBLsufijo.Location = new System.Drawing.Point(19, 257);
             this.LBLsufijo.Name = "LBLsufijo";
             this.LBLsufijo.Size = new System.Drawing.Size(33, 13);
             this.LBLsufijo.TabIndex = 9;
@@ -109,15 +111,15 @@
             // 
             // TXTsufijo
             // 
-            this.TXTsufijo.Location = new System.Drawing.Point(54, 273);
+            this.TXTsufijo.Location = new System.Drawing.Point(12, 273);
             this.TXTsufijo.Name = "TXTsufijo";
-            this.TXTsufijo.Size = new System.Drawing.Size(195, 20);
+            this.TXTsufijo.Size = new System.Drawing.Size(108, 20);
             this.TXTsufijo.TabIndex = 10;
             // 
             // LBLnombre
             // 
             this.LBLnombre.AutoSize = true;
-            this.LBLnombre.Location = new System.Drawing.Point(54, 198);
+            this.LBLnombre.Location = new System.Drawing.Point(19, 198);
             this.LBLnombre.Name = "LBLnombre";
             this.LBLnombre.Size = new System.Drawing.Size(44, 13);
             this.LBLnombre.TabIndex = 11;
@@ -126,7 +128,7 @@
             // LBLidiomas2
             // 
             this.LBLidiomas2.AutoSize = true;
-            this.LBLidiomas2.Location = new System.Drawing.Point(408, 25);
+            this.LBLidiomas2.Location = new System.Drawing.Point(755, 25);
             this.LBLidiomas2.Name = "LBLidiomas2";
             this.LBLidiomas2.Size = new System.Drawing.Size(43, 13);
             this.LBLidiomas2.TabIndex = 12;
@@ -135,7 +137,7 @@
             // CBXidiomas
             // 
             this.CBXidiomas.FormattingEnabled = true;
-            this.CBXidiomas.Location = new System.Drawing.Point(478, 17);
+            this.CBXidiomas.Location = new System.Drawing.Point(804, 17);
             this.CBXidiomas.Name = "CBXidiomas";
             this.CBXidiomas.Size = new System.Drawing.Size(121, 21);
             this.CBXidiomas.TabIndex = 13;
@@ -143,20 +145,32 @@
             // 
             // BTNhabilitar
             // 
-            this.BTNhabilitar.Location = new System.Drawing.Point(206, 388);
+            this.BTNhabilitar.Location = new System.Drawing.Point(12, 377);
             this.BTNhabilitar.Name = "BTNhabilitar";
-            this.BTNhabilitar.Size = new System.Drawing.Size(155, 33);
+            this.BTNhabilitar.Size = new System.Drawing.Size(120, 33);
             this.BTNhabilitar.TabIndex = 14;
             this.BTNhabilitar.Text = "Habilitar";
             this.BTNhabilitar.UseVisualStyleBackColor = true;
             this.BTNhabilitar.Click += new System.EventHandler(this.BTNhabilitar_Click);
+            // 
+            // DGVtraducciones
+            // 
+            this.DGVtraducciones.AllowUserToAddRows = false;
+            this.DGVtraducciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGVtraducciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVtraducciones.Location = new System.Drawing.Point(356, 25);
+            this.DGVtraducciones.Name = "DGVtraducciones";
+            this.DGVtraducciones.ReadOnly = true;
+            this.DGVtraducciones.Size = new System.Drawing.Size(393, 259);
+            this.DGVtraducciones.TabIndex = 15;
             // 
             // FrmIdioma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(611, 450);
+            this.ClientSize = new System.Drawing.Size(937, 450);
+            this.Controls.Add(this.DGVtraducciones);
             this.Controls.Add(this.BTNhabilitar);
             this.Controls.Add(this.CBXidiomas);
             this.Controls.Add(this.LBLidiomas2);
@@ -175,6 +189,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmIdioma_FormClosing);
             this.Load += new System.EventHandler(this.FrmIdioma_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVtraducciones)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,5 +209,6 @@
         private System.Windows.Forms.Label LBLidiomas2;
         private System.Windows.Forms.ComboBox CBXidiomas;
         private System.Windows.Forms.Button BTNhabilitar;
+        private System.Windows.Forms.DataGridView DGVtraducciones;
     }
 }
