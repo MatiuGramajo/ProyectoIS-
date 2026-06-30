@@ -43,10 +43,19 @@ namespace Trabajo_practico_IS
         }
         private void FrmHistorial_Load(object sender, EventArgs e)
         {
-            CBXUsuarios.DataSource = gestorUsuario.Listar();
-            CBXUsuarios.DisplayMember = "Usuario";
-            CBXUsuarios.ValueMember = "Id";
-            CBXUsuarios.SelectedIndex = -1;
+            CBX_Entidad.SelectedIndexChanged -= CBX_Entidad_SelectedIndexChanged;
+
+            CBX_Entidad.Items.Clear();
+            CBX_Entidad.Items.Add("Usuarios");
+            CBX_Entidad.Items.Add("Productos");
+
+            CBX_Entidad.SelectedIndexChanged += CBX_Entidad_SelectedIndexChanged;
+            CBX_Entidad.SelectedIndex = 0;
+
+            //CBXUsuarios.DataSource = gestorUsuario.Listar();
+            //CBXUsuarios.DisplayMember = "Usuario";
+            //CBXUsuarios.ValueMember = "Id";
+            //CBXUsuarios.SelectedIndex = -1;
 
             Servicios.IDIOMAS.GetInstancia().Suscribir(this);
             CBXIdiomas.SelectedIndexChanged -= CBXIdiomas_SelectedIndexChanged;
@@ -60,22 +69,22 @@ namespace Trabajo_practico_IS
 
         private void CBXUsuarios_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CBXUsuarios.SelectedValue != null && int.TryParse(CBXUsuarios.SelectedValue.ToString(), out int idUsu))
-            {
-                DGVHistorial.DataSource = null;
-                DGVHistorial.DataSource = GestorHistorialUsuario.ObtenerHistorial(idUsu);
-            }
-            if (DGVHistorial.Columns.Count > 0)
-            {
-                DGVHistorial.Columns["Id"].Visible = false;           
-                DGVHistorial.Columns["IdHistorial"].Visible = false; 
-                DGVHistorial.Columns["Contraseña"].Visible = false;   
-                DGVHistorial.Columns["DVH"].Visible = false;
-                DGVHistorial.Columns["IntentosFallidos"].Visible = false; 
+            //if (CBXUsuarios.SelectedValue != null && int.TryParse(CBXUsuarios.SelectedValue.ToString(), out int idUsu))
+            //{
+            //    DGVHistorial.DataSource = null;
+            //    DGVHistorial.DataSource = GestorHistorialUsuario.ObtenerHistorial(idUsu);
+            //}
+            //if (DGVHistorial.Columns.Count > 0)
+            //{
+            //    DGVHistorial.Columns["Id"].Visible = false;           
+            //    DGVHistorial.Columns["IdHistorial"].Visible = false; 
+            //    DGVHistorial.Columns["Contraseña"].Visible = false;   
+            //    DGVHistorial.Columns["DVH"].Visible = false;
+            //    DGVHistorial.Columns["IntentosFallidos"].Visible = false; 
 
-                DGVHistorial.Columns["UsuarioAccion"].HeaderText = "Responsable";
-                DGVHistorial.Columns["TipoAccion"].HeaderText = "Acción Realizada";
-            }
+            //    DGVHistorial.Columns["UsuarioAccion"].HeaderText = "Responsable";
+            //    DGVHistorial.Columns["TipoAccion"].HeaderText = "Acción Realizada";
+            //}
         }
 
         private void BTNrestaurar_Click(object sender, EventArgs e)
@@ -161,6 +170,133 @@ namespace Trabajo_practico_IS
             {
                 this.Close();
 
+            }
+        }
+
+        private void CBX_Entidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CBX_Entidad.SelectedItem == null) return;
+
+            // Guardamos la cadena de texto de la opción elegida ("Usuarios" o "Productos")
+            string entidadSeleccionada = CBX_Entidad.SelectedItem.ToString();
+
+            // 1. Llamamos al método que descarga los datos en la grilla general
+            CargarGrillaGeneral(entidadSeleccionada);
+
+            // 2. Llamamos al método que actualiza en cascada el segundo combo de filtros
+            CargarComboFiltroEspecifico(entidadSeleccionada);
+        }
+
+        private void CargarComboFiltroEspecifico(string entidadSeleccionada)
+        {
+            // Desvinculamos el evento temporalmente para que no se dispare mientras cargamos
+            CBX_Filtro.SelectedIndexChanged -= CBX_Filtro_SelectedIndexChanged;
+            CBX_Filtro.DataSource = null;
+
+            if (entidadSeleccionada == "Usuarios")
+            {
+                BLL.USUARIO gestorUsu = new BLL.USUARIO();
+                CBX_Filtro.DataSource = gestorUsu.Listar();
+                CBX_Filtro.DisplayMember = "Usuario"; // O como se llame la propiedad de nombre
+                CBX_Filtro.ValueMember = "Id";
+            }
+            else if (entidadSeleccionada == "Productos")
+            {
+                BLL.PRODUCTO gestorProd = new BLL.PRODUCTO();
+                CBX_Filtro.DataSource = gestorProd.Listar();
+                CBX_Filtro.DisplayMember = "Nombre";
+                CBX_Filtro.ValueMember = "Id";
+            }
+
+            CBX_Filtro.SelectedIndex = -1; // Lo dejamos en blanco por defecto
+            CBX_Filtro.SelectedIndexChanged += CBX_Filtro_SelectedIndexChanged;
+        }
+
+        private void CargarGrillaGeneral(string entidad)
+        {
+            try
+            {
+                // Limpiamos por completo el DataSource para que el DataGridView regenere las columnas
+                DGVHistorial.DataSource = null;
+
+                if (entidad == "Usuarios")
+                {
+                    BLL.HISTORIAL_USUARIO gestorHistUsu = new BLL.HISTORIAL_USUARIO();
+                    List<BE.HISTORIAL_USUARIO> listaUsuarios = gestorHistUsu.Listar();
+
+                    DGVHistorial.DataSource = listaUsuarios;
+                }
+                else if (entidad == "Productos")
+                {
+                    BLL.HISTORIAL_PRODUCTO gestorHistProd = new BLL.HISTORIAL_PRODUCTO();
+                    List<BE.HISTORIAL_PRODUCTO> listaProductos = gestorHistProd.Listar();
+
+                    DGVHistorial.DataSource = listaProductos;
+                }
+
+                // --- Configuración e Integridad Visual de la Grilla ---
+                DGVHistorial.ReadOnly = true; // Súper importante en auditoría para que no se altere el log
+                DGVHistorial.SelectionMode = DataGridViewSelectionMode.FullRowSelect; // Selecciona la fila completa
+
+                // Ocultamos las claves primarias técnicas del historial que no le aportan valor al usuario
+                if (DGVHistorial.Columns["IdHistorial"] != null)
+                {
+                    DGVHistorial.Columns["IdHistorial"].Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ocurrió un error al cargar el historial de {entidad}: {ex.Message}",
+                                "Error de Arquitectura", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void CBX_Filtro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CBX_Filtro.SelectedItem == null || CBX_Entidad.SelectedItem == null) return;
+
+            try
+            {
+                string entidadActiva = CBX_Entidad.SelectedItem.ToString();
+                int idSeleccionado = (int)CBX_Filtro.SelectedValue;
+
+                if (entidadActiva == "Usuarios")
+                {
+                    BLL.HISTORIAL_USUARIO gestorHistUsu = new BLL.HISTORIAL_USUARIO();
+                    var historialCompleto = gestorHistUsu.Listar();
+
+                    // FILTRO LINQ: Traemos solo los historiales donde el Id coincide
+                    var historialFiltrado = historialCompleto.Where(h => h.Id == idSeleccionado).ToList();
+
+                    DGVHistorial.DataSource = null;
+                    DGVHistorial.DataSource = historialFiltrado;
+                }
+                else if (entidadActiva == "Productos")
+                {
+                    BLL.HISTORIAL_PRODUCTO gestorHistProd = new BLL.HISTORIAL_PRODUCTO();
+                    var historialCompleto = gestorHistProd.Listar();
+
+                    // FILTRO LINQ: Traemos solo los historiales de ese producto
+                    var historialFiltrado = historialCompleto.Where(h => h.IdProducto == idSeleccionado).ToList();
+
+                    DGVHistorial.DataSource = null;
+                    DGVHistorial.DataSource = historialFiltrado;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error al filtrar");
+            }
+        }
+
+        private void BTN_LimpiarFiltrosHist_Click(object sender, EventArgs e)
+        {
+            CBX_Filtro.SelectedIndex = -1;
+
+            // Volvemos a cargar la grilla completa
+            if (CBX_Entidad.SelectedItem != null)
+            {
+                CargarGrillaGeneral(CBX_Entidad.SelectedItem.ToString());
             }
         }
     }

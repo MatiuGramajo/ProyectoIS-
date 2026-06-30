@@ -36,6 +36,9 @@
             this.CBXUsuarios = new System.Windows.Forms.ComboBox();
             this.LBLhistorial = new System.Windows.Forms.Label();
             this.DGVHistorial = new System.Windows.Forms.DataGridView();
+            this.CBX_Filtro = new System.Windows.Forms.ComboBox();
+            this.CBX_Entidad = new System.Windows.Forms.ComboBox();
+            this.BTN_LimpiarFiltrosHist = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVHistorial)).BeginInit();
             this.SuspendLayout();
             // 
@@ -113,12 +116,44 @@
             this.DGVHistorial.Size = new System.Drawing.Size(873, 172);
             this.DGVHistorial.TabIndex = 8;
             // 
+            // CBX_Filtro
+            // 
+            this.CBX_Filtro.FormattingEnabled = true;
+            this.CBX_Filtro.Location = new System.Drawing.Point(188, 286);
+            this.CBX_Filtro.Name = "CBX_Filtro";
+            this.CBX_Filtro.Size = new System.Drawing.Size(121, 21);
+            this.CBX_Filtro.TabIndex = 16;
+            this.CBX_Filtro.SelectedIndexChanged += new System.EventHandler(this.CBX_Filtro_SelectedIndexChanged);
+            // 
+            // CBX_Entidad
+            // 
+            this.CBX_Entidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBX_Entidad.FormattingEnabled = true;
+            this.CBX_Entidad.Location = new System.Drawing.Point(113, 25);
+            this.CBX_Entidad.Name = "CBX_Entidad";
+            this.CBX_Entidad.Size = new System.Drawing.Size(121, 21);
+            this.CBX_Entidad.TabIndex = 17;
+            this.CBX_Entidad.SelectedIndexChanged += new System.EventHandler(this.CBX_Entidad_SelectedIndexChanged);
+            // 
+            // BTN_LimpiarFiltrosHist
+            // 
+            this.BTN_LimpiarFiltrosHist.Location = new System.Drawing.Point(337, 283);
+            this.BTN_LimpiarFiltrosHist.Name = "BTN_LimpiarFiltrosHist";
+            this.BTN_LimpiarFiltrosHist.Size = new System.Drawing.Size(75, 23);
+            this.BTN_LimpiarFiltrosHist.TabIndex = 18;
+            this.BTN_LimpiarFiltrosHist.Text = "Ver Todos";
+            this.BTN_LimpiarFiltrosHist.UseVisualStyleBackColor = true;
+            this.BTN_LimpiarFiltrosHist.Click += new System.EventHandler(this.BTN_LimpiarFiltrosHist_Click);
+            // 
             // FrmHistorial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(944, 450);
+            this.Controls.Add(this.BTN_LimpiarFiltrosHist);
+            this.Controls.Add(this.CBX_Entidad);
+            this.Controls.Add(this.CBX_Filtro);
             this.Controls.Add(this.LBLidiomas);
             this.Controls.Add(this.CBXIdiomas);
             this.Controls.Add(this.BTNvolveralmenu);
@@ -147,5 +182,8 @@
         private System.Windows.Forms.ComboBox CBXUsuarios;
         private System.Windows.Forms.Label LBLhistorial;
         private System.Windows.Forms.DataGridView DGVHistorial;
+        private System.Windows.Forms.ComboBox CBX_Filtro;
+        private System.Windows.Forms.ComboBox CBX_Entidad;
+        private System.Windows.Forms.Button BTN_LimpiarFiltrosHist;
     }
 }

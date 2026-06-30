@@ -21,6 +21,11 @@ namespace BLL
             return mapperHistorial.ListarHistorialPorUsuario(idUsuario);
         }
 
+        public List<BE.HISTORIAL_USUARIO> Listar()
+        {
+            return mapperHistorial.Listar();
+        }
+
         public void RestaurarUsuario(int idHistorial)
         {
             string responsable = Servicios.SESION.GetInstancia().usuactual.Usuario;
