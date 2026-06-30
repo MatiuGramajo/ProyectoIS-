@@ -113,7 +113,6 @@ namespace Trabajo_practico_IS
                 else
                 {
                     throw new Exception("Debe completar todos los datos");
-                    //MessageBox.Show("Debe completar todos los datos");
                 }
             }
             catch (Exception ex)
@@ -148,7 +147,6 @@ namespace Trabajo_practico_IS
                 else
                 {
                     throw new Exception("Seleccione un usuario para borrar.");
-                    //MessageBox.Show("Seleccione un usuario para borrar.");
                 }
             }
             catch (Exception ex)
@@ -180,6 +178,10 @@ namespace Trabajo_practico_IS
                         BE.COMPONENTE rolSeleccionado = (BE.COMPONENTE)Cb_CTRLUsuarioRol.SelectedItem;
                         usuario.Permisos.Add(rolSeleccionado);
                     }
+                    else
+                    {
+                        throw new Exception("El usuario debe tener al menos un rol asignado para poder operar en el sistema.");
+                    }
 
                     GestorUsuarios.Modificar(usuario);
                     EnlazarUsuarios();
@@ -189,12 +191,12 @@ namespace Trabajo_practico_IS
                 else
                 {
                     throw new Exception("Seleccione un campo para modificar.");
-                    //MessageBox.Show("Seleccione un campo para modificar.");
                 }
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                EnlazarUsuarios();
             }
 
         }
@@ -234,7 +236,7 @@ namespace Trabajo_practico_IS
             }
         }
 
-        private void DGV_CtrlUsuUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)  //VER ESTO. CUANDO SE MODIFICA UN USUARIO PERO HAY EXEPCION EL CAMPO CAMBIA IGUAL
+        private void DGV_CtrlUsuUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex>=0)
             {
@@ -246,6 +248,19 @@ namespace Trabajo_practico_IS
                 usuario.Permisos = GestorPermisos.ObtenerPermisosUsuario(usuario.Id);
 
                 Cb_CTRLUsuarioRol.SelectedIndex = -1;
+
+                if (usuario.Id == Servicios.SESION.GetInstancia().usuactual.Id)
+                {
+                    BTNCtrlUsuModificar.Enabled = false;
+                    BTNCtrlUsuBaja.Enabled = false;
+                    BTNCtrlUsuDesbloquear.Enabled = false;
+                }
+                else
+                {
+                    BTNCtrlUsuModificar.Enabled = true;
+                    BTNCtrlUsuBaja.Enabled = true;
+                    BTNCtrlUsuDesbloquear.Enabled = usuario.EstadoBloqueado;
+                }
 
                 if (usuario.Permisos != null && usuario.Permisos.Count > 0)
                 {

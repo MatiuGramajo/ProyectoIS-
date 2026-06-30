@@ -53,6 +53,10 @@ namespace BLL
 
         public void Borrar(BE.USUARIO usuario)
         {
+            if (usuario.Id == Servicios.SESION.GetInstancia().usuactual.Id)
+            {
+                throw new Exception("Operación Denegada: Por seguridad del sistema, no puede eliminar su propia cuenta mientras esté en uso.");
+            }
             mapper.Baja(usuario);
             ActualizarDvvUsuarios();
         }

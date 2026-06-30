@@ -81,6 +81,16 @@ namespace DAL
             return param;
         }
 
+        public SqlParameter CrearParametro(string nombre, decimal valor)
+        {
+            SqlParameter param = new SqlParameter();
+            param.DbType = System.Data.DbType.Decimal;
+            param.Value = valor;
+            param.ParameterName = nombre;
+
+            return param;
+        }
+
         public int Escribir(string query, List<SqlParameter> parametros = null)
         {
             SqlCommand cmd = CrearComando(query, parametros);

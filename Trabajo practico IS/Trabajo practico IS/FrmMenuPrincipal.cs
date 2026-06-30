@@ -222,6 +222,14 @@ namespace Trabajo_practico_IS
             frmhistorial.ShowDialog();
             this.Show();
         }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmProducto frmProducto = new FrmProducto();
+            frmProducto.ShowDialog();
+            this.Show();
+        }
     }
 }
 

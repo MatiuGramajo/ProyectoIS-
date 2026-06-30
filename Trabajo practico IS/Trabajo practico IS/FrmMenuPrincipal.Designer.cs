@@ -42,6 +42,7 @@
             this.LBLbienvenida = new System.Windows.Forms.Label();
             this.CBXidiomas = new System.Windows.Forms.ComboBox();
             this.LBLidioma = new System.Windows.Forms.Label();
+            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +74,8 @@
             this.controlDePermisosToolStripMenuItem,
             this.controlDeIdiomasToolStripMenuItem,
             this.restauracionDeBaseToolStripMenuItem,
-            this.historialDeCambiosToolStripMenuItem});
+            this.historialDeCambiosToolStripMenuItem,
+            this.productosToolStripMenuItem});
             this.AdministracionMenuItem.Name = "AdministracionMenuItem";
             this.AdministracionMenuItem.Size = new System.Drawing.Size(100, 20);
             this.AdministracionMenuItem.Text = "Administración";
@@ -159,6 +161,14 @@
             this.LBLidioma.TabIndex = 11;
             this.LBLidioma.Text = "Idiomas";
             // 
+            // productosToolStripMenuItem
+            // 
+            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.productosToolStripMenuItem.Tag = "ABM_PRODUCTOS";
+            this.productosToolStripMenuItem.Text = "Productos";
+            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
+            // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,6 +208,7 @@
         private System.Windows.Forms.ToolStripMenuItem controlDeIdiomasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restauracionDeBaseToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem historialDeCambiosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
     }
 }
 
