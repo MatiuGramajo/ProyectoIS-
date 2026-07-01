@@ -315,7 +315,6 @@ namespace Trabajo_practico_IS
             if (result == DialogResult.Yes)
             {
                 this.Close();
-
             }
         }
     }
