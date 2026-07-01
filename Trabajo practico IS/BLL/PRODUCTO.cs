@@ -11,6 +11,7 @@ namespace BLL
     {
         MP_PRODUCTO mapper = new MP_PRODUCTO();
         BLL.BITACORA GestorBitacora = new BLL.BITACORA();
+        BLL.HISTORIAL_PRODUCTO GestorHistorial = new BLL.HISTORIAL_PRODUCTO();
 
         public void Insertar(BE.PRODUCTO producto)
         {
@@ -28,15 +29,15 @@ namespace BLL
                 throw new Exception("Ya existe un producto con ese nombre.");
 
             mapper.Alta(producto);
-
+            GestorHistorial.RegistrarCambio(producto.Id, ObtenerResponsable(), "ALTA");
             GestorBitacora.RegistrarEvento("Inventario", $"Se dio de alta el producto {producto.Nombre}", 2);
         }
 
         public void Borrar(BE.PRODUCTO producto)
         {
+            GestorHistorial.RegistrarCambio(producto.Id, ObtenerResponsable(), "BAJA");
             mapper.Baja(producto);
             GestorBitacora.RegistrarEvento("Inventario", $"Se dio de baja el producto {producto.Nombre}", 2);
-
         }
 
         public void Modificar(BE.PRODUCTO producto)
@@ -66,6 +67,7 @@ namespace BLL
             }
 
             mapper.Modificar(producto);
+            GestorHistorial.RegistrarCambio(producto.Id, ObtenerResponsable(), "MODIFICACION");
             GestorBitacora.RegistrarEvento("Inventario", $"Se modificó el producto {producto.Nombre}", 2);
         }
 
@@ -74,5 +76,11 @@ namespace BLL
             return mapper.Listar();
         }
 
+        private string ObtenerResponsable()
+        {
+            return Servicios.SESION.GetInstancia().usuactual != null
+                ? Servicios.SESION.GetInstancia().usuactual.Usuario
+                : "SISTEMA";
+        }
     }
 }

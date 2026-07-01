@@ -54,7 +54,7 @@
             // 
             this.BTNHacerBackUp.Location = new System.Drawing.Point(12, 156);
             this.BTNHacerBackUp.Name = "BTNHacerBackUp";
-            this.BTNHacerBackUp.Size = new System.Drawing.Size(94, 23);
+            this.BTNHacerBackUp.Size = new System.Drawing.Size(124, 27);
             this.BTNHacerBackUp.TabIndex = 2;
             this.BTNHacerBackUp.Text = "Crear BackUp";
             this.BTNHacerBackUp.UseVisualStyleBackColor = true;
@@ -62,7 +62,7 @@
             // 
             // TXTRutaBackUp
             // 
-            this.TXTRutaBackUp.Location = new System.Drawing.Point(12, 195);
+            this.TXTRutaBackUp.Location = new System.Drawing.Point(12, 192);
             this.TXTRutaBackUp.Name = "TXTRutaBackUp";
             this.TXTRutaBackUp.ReadOnly = true;
             this.TXTRutaBackUp.Size = new System.Drawing.Size(340, 20);
@@ -70,9 +70,9 @@
             // 
             // BTNRestaurarBase
             // 
-            this.BTNRestaurarBase.Location = new System.Drawing.Point(439, 194);
+            this.BTNRestaurarBase.Location = new System.Drawing.Point(488, 189);
             this.BTNRestaurarBase.Name = "BTNRestaurarBase";
-            this.BTNRestaurarBase.Size = new System.Drawing.Size(94, 23);
+            this.BTNRestaurarBase.Size = new System.Drawing.Size(124, 27);
             this.BTNRestaurarBase.TabIndex = 4;
             this.BTNRestaurarBase.Text = "Restaurar Base";
             this.BTNRestaurarBase.UseVisualStyleBackColor = true;
@@ -80,9 +80,9 @@
             // 
             // BTNRecalcularDigito
             // 
-            this.BTNRecalcularDigito.Location = new System.Drawing.Point(12, 232);
+            this.BTNRecalcularDigito.Location = new System.Drawing.Point(12, 221);
             this.BTNRecalcularDigito.Name = "BTNRecalcularDigito";
-            this.BTNRecalcularDigito.Size = new System.Drawing.Size(147, 23);
+            this.BTNRecalcularDigito.Size = new System.Drawing.Size(147, 27);
             this.BTNRecalcularDigito.TabIndex = 5;
             this.BTNRecalcularDigito.Text = "Recalcular digito verificador";
             this.BTNRecalcularDigito.UseVisualStyleBackColor = true;
@@ -90,9 +90,9 @@
             // 
             // BTNRestauracionVolverMenu
             // 
-            this.BTNRestauracionVolverMenu.Location = new System.Drawing.Point(446, 288);
+            this.BTNRestauracionVolverMenu.Location = new System.Drawing.Point(639, 283);
             this.BTNRestauracionVolverMenu.Name = "BTNRestauracionVolverMenu";
-            this.BTNRestauracionVolverMenu.Size = new System.Drawing.Size(87, 23);
+            this.BTNRestauracionVolverMenu.Size = new System.Drawing.Size(124, 27);
             this.BTNRestauracionVolverMenu.TabIndex = 6;
             this.BTNRestauracionVolverMenu.Text = "Volver al menu";
             this.BTNRestauracionVolverMenu.UseVisualStyleBackColor = true;
@@ -100,9 +100,9 @@
             // 
             // BTNExaminarBackUp
             // 
-            this.BTNExaminarBackUp.Location = new System.Drawing.Point(358, 194);
+            this.BTNExaminarBackUp.Location = new System.Drawing.Point(358, 189);
             this.BTNExaminarBackUp.Name = "BTNExaminarBackUp";
-            this.BTNExaminarBackUp.Size = new System.Drawing.Size(75, 23);
+            this.BTNExaminarBackUp.Size = new System.Drawing.Size(124, 27);
             this.BTNExaminarBackUp.TabIndex = 7;
             this.BTNExaminarBackUp.Text = "Examinar";
             this.BTNExaminarBackUp.UseVisualStyleBackColor = true;
@@ -111,7 +111,7 @@
             // CBXidiomas
             // 
             this.CBXidiomas.FormattingEnabled = true;
-            this.CBXidiomas.Location = new System.Drawing.Point(633, 38);
+            this.CBXidiomas.Location = new System.Drawing.Point(642, 38);
             this.CBXidiomas.Name = "CBXidiomas";
             this.CBXidiomas.Size = new System.Drawing.Size(121, 21);
             this.CBXidiomas.TabIndex = 8;
@@ -120,7 +120,7 @@
             // LBLidiomas
             // 
             this.LBLidiomas.AutoSize = true;
-            this.LBLidiomas.Location = new System.Drawing.Point(579, 42);
+            this.LBLidiomas.Location = new System.Drawing.Point(642, 22);
             this.LBLidiomas.Name = "LBLidiomas";
             this.LBLidiomas.Size = new System.Drawing.Size(43, 13);
             this.LBLidiomas.TabIndex = 9;

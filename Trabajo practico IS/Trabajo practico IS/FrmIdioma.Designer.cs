@@ -33,7 +33,6 @@
             this.BTNdeshabilitar = new System.Windows.Forms.Button();
             this.BTNvolveralmenu = new System.Windows.Forms.Button();
             this.TXTnombre = new System.Windows.Forms.TextBox();
-            this.LBLidiomas = new System.Windows.Forms.Label();
             this.LBLsufijo = new System.Windows.Forms.Label();
             this.TXTsufijo = new System.Windows.Forms.TextBox();
             this.LBLnombre = new System.Windows.Forms.Label();
@@ -41,24 +40,30 @@
             this.CBXidiomas = new System.Windows.Forms.ComboBox();
             this.BTNhabilitar = new System.Windows.Forms.Button();
             this.DGVtraducciones = new System.Windows.Forms.DataGridView();
+            this.GB_NuevoIdioma = new System.Windows.Forms.GroupBox();
+            this.GB_Idiomas = new System.Windows.Forms.GroupBox();
+            this.GB_Traducciones = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVtraducciones)).BeginInit();
+            this.GB_NuevoIdioma.SuspendLayout();
+            this.GB_Idiomas.SuspendLayout();
+            this.GB_Traducciones.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 25);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 20);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(326, 150);
             this.dataGridView1.TabIndex = 0;
             // 
             // BTNcrear
             // 
-            this.BTNcrear.Location = new System.Drawing.Point(12, 299);
+            this.BTNcrear.Location = new System.Drawing.Point(9, 110);
             this.BTNcrear.Name = "BTNcrear";
-            this.BTNcrear.Size = new System.Drawing.Size(120, 33);
+            this.BTNcrear.Size = new System.Drawing.Size(124, 27);
             this.BTNcrear.TabIndex = 2;
             this.BTNcrear.Text = "Crear";
             this.BTNcrear.UseVisualStyleBackColor = true;
@@ -66,9 +71,9 @@
             // 
             // BTNdeshabilitar
             // 
-            this.BTNdeshabilitar.Location = new System.Drawing.Point(12, 338);
+            this.BTNdeshabilitar.Location = new System.Drawing.Point(21, 359);
             this.BTNdeshabilitar.Name = "BTNdeshabilitar";
-            this.BTNdeshabilitar.Size = new System.Drawing.Size(120, 33);
+            this.BTNdeshabilitar.Size = new System.Drawing.Size(124, 27);
             this.BTNdeshabilitar.TabIndex = 4;
             this.BTNdeshabilitar.Text = "Deshabilitar";
             this.BTNdeshabilitar.UseVisualStyleBackColor = true;
@@ -76,34 +81,25 @@
             // 
             // BTNvolveralmenu
             // 
-            this.BTNvolveralmenu.Location = new System.Drawing.Point(758, 395);
+            this.BTNvolveralmenu.Location = new System.Drawing.Point(804, 433);
             this.BTNvolveralmenu.Name = "BTNvolveralmenu";
-            this.BTNvolveralmenu.Size = new System.Drawing.Size(155, 33);
+            this.BTNvolveralmenu.Size = new System.Drawing.Size(124, 27);
             this.BTNvolveralmenu.TabIndex = 5;
-            this.BTNvolveralmenu.Text = "Volver al menu principal";
+            this.BTNvolveralmenu.Text = "Volver al menu";
             this.BTNvolveralmenu.UseVisualStyleBackColor = true;
             this.BTNvolveralmenu.Click += new System.EventHandler(this.BTNvolveralmenu_Click);
             // 
             // TXTnombre
             // 
-            this.TXTnombre.Location = new System.Drawing.Point(12, 214);
+            this.TXTnombre.Location = new System.Drawing.Point(9, 35);
             this.TXTnombre.Name = "TXTnombre";
-            this.TXTnombre.Size = new System.Drawing.Size(108, 20);
+            this.TXTnombre.Size = new System.Drawing.Size(124, 20);
             this.TXTnombre.TabIndex = 6;
-            // 
-            // LBLidiomas
-            // 
-            this.LBLidiomas.AutoSize = true;
-            this.LBLidiomas.Location = new System.Drawing.Point(9, 9);
-            this.LBLidiomas.Name = "LBLidiomas";
-            this.LBLidiomas.Size = new System.Drawing.Size(43, 13);
-            this.LBLidiomas.TabIndex = 7;
-            this.LBLidiomas.Text = "Idiomas";
             // 
             // LBLsufijo
             // 
             this.LBLsufijo.AutoSize = true;
-            this.LBLsufijo.Location = new System.Drawing.Point(19, 257);
+            this.LBLsufijo.Location = new System.Drawing.Point(9, 63);
             this.LBLsufijo.Name = "LBLsufijo";
             this.LBLsufijo.Size = new System.Drawing.Size(33, 13);
             this.LBLsufijo.TabIndex = 9;
@@ -111,15 +107,15 @@
             // 
             // TXTsufijo
             // 
-            this.TXTsufijo.Location = new System.Drawing.Point(12, 273);
+            this.TXTsufijo.Location = new System.Drawing.Point(9, 79);
             this.TXTsufijo.Name = "TXTsufijo";
-            this.TXTsufijo.Size = new System.Drawing.Size(108, 20);
+            this.TXTsufijo.Size = new System.Drawing.Size(124, 20);
             this.TXTsufijo.TabIndex = 10;
             // 
             // LBLnombre
             // 
             this.LBLnombre.AutoSize = true;
-            this.LBLnombre.Location = new System.Drawing.Point(19, 198);
+            this.LBLnombre.Location = new System.Drawing.Point(9, 19);
             this.LBLnombre.Name = "LBLnombre";
             this.LBLnombre.Size = new System.Drawing.Size(44, 13);
             this.LBLnombre.TabIndex = 11;
@@ -128,7 +124,7 @@
             // LBLidiomas2
             // 
             this.LBLidiomas2.AutoSize = true;
-            this.LBLidiomas2.Location = new System.Drawing.Point(755, 25);
+            this.LBLidiomas2.Location = new System.Drawing.Point(804, 9);
             this.LBLidiomas2.Name = "LBLidiomas2";
             this.LBLidiomas2.Size = new System.Drawing.Size(43, 13);
             this.LBLidiomas2.TabIndex = 12;
@@ -137,7 +133,7 @@
             // CBXidiomas
             // 
             this.CBXidiomas.FormattingEnabled = true;
-            this.CBXidiomas.Location = new System.Drawing.Point(804, 17);
+            this.CBXidiomas.Location = new System.Drawing.Point(804, 25);
             this.CBXidiomas.Name = "CBXidiomas";
             this.CBXidiomas.Size = new System.Drawing.Size(121, 21);
             this.CBXidiomas.TabIndex = 13;
@@ -145,9 +141,9 @@
             // 
             // BTNhabilitar
             // 
-            this.BTNhabilitar.Location = new System.Drawing.Point(12, 377);
+            this.BTNhabilitar.Location = new System.Drawing.Point(21, 392);
             this.BTNhabilitar.Name = "BTNhabilitar";
-            this.BTNhabilitar.Size = new System.Drawing.Size(120, 33);
+            this.BTNhabilitar.Size = new System.Drawing.Size(124, 27);
             this.BTNhabilitar.TabIndex = 14;
             this.BTNhabilitar.Text = "Habilitar";
             this.BTNhabilitar.UseVisualStyleBackColor = true;
@@ -158,31 +154,60 @@
             this.DGVtraducciones.AllowUserToAddRows = false;
             this.DGVtraducciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVtraducciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVtraducciones.Location = new System.Drawing.Point(356, 25);
+            this.DGVtraducciones.Location = new System.Drawing.Point(10, 21);
             this.DGVtraducciones.Name = "DGVtraducciones";
             this.DGVtraducciones.ReadOnly = true;
-            this.DGVtraducciones.Size = new System.Drawing.Size(393, 259);
+            this.DGVtraducciones.Size = new System.Drawing.Size(393, 413);
             this.DGVtraducciones.TabIndex = 15;
+            // 
+            // GB_NuevoIdioma
+            // 
+            this.GB_NuevoIdioma.Controls.Add(this.BTNcrear);
+            this.GB_NuevoIdioma.Controls.Add(this.TXTnombre);
+            this.GB_NuevoIdioma.Controls.Add(this.LBLsufijo);
+            this.GB_NuevoIdioma.Controls.Add(this.TXTsufijo);
+            this.GB_NuevoIdioma.Controls.Add(this.LBLnombre);
+            this.GB_NuevoIdioma.Location = new System.Drawing.Point(12, 208);
+            this.GB_NuevoIdioma.Name = "GB_NuevoIdioma";
+            this.GB_NuevoIdioma.Size = new System.Drawing.Size(146, 145);
+            this.GB_NuevoIdioma.TabIndex = 16;
+            this.GB_NuevoIdioma.TabStop = false;
+            this.GB_NuevoIdioma.Text = "Nuevo idioma";
+            // 
+            // GB_Idiomas
+            // 
+            this.GB_Idiomas.Controls.Add(this.dataGridView1);
+            this.GB_Idiomas.Location = new System.Drawing.Point(12, 12);
+            this.GB_Idiomas.Name = "GB_Idiomas";
+            this.GB_Idiomas.Size = new System.Drawing.Size(345, 181);
+            this.GB_Idiomas.TabIndex = 17;
+            this.GB_Idiomas.TabStop = false;
+            this.GB_Idiomas.Text = "Idiomas";
+            // 
+            // GB_Traducciones
+            // 
+            this.GB_Traducciones.Controls.Add(this.DGVtraducciones);
+            this.GB_Traducciones.Location = new System.Drawing.Point(371, 12);
+            this.GB_Traducciones.Name = "GB_Traducciones";
+            this.GB_Traducciones.Size = new System.Drawing.Size(415, 448);
+            this.GB_Traducciones.TabIndex = 18;
+            this.GB_Traducciones.TabStop = false;
+            this.GB_Traducciones.Text = "Traducciones";
             // 
             // FrmIdioma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(937, 450);
-            this.Controls.Add(this.DGVtraducciones);
+            this.ClientSize = new System.Drawing.Size(941, 466);
             this.Controls.Add(this.BTNhabilitar);
             this.Controls.Add(this.CBXidiomas);
             this.Controls.Add(this.LBLidiomas2);
-            this.Controls.Add(this.LBLnombre);
-            this.Controls.Add(this.TXTsufijo);
-            this.Controls.Add(this.LBLsufijo);
-            this.Controls.Add(this.LBLidiomas);
-            this.Controls.Add(this.TXTnombre);
             this.Controls.Add(this.BTNvolveralmenu);
             this.Controls.Add(this.BTNdeshabilitar);
-            this.Controls.Add(this.BTNcrear);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.GB_NuevoIdioma);
+            this.Controls.Add(this.GB_Idiomas);
+            this.Controls.Add(this.GB_Traducciones);
             this.Name = "FrmIdioma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmIdioma";
@@ -190,6 +215,10 @@
             this.Load += new System.EventHandler(this.FrmIdioma_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DGVtraducciones)).EndInit();
+            this.GB_NuevoIdioma.ResumeLayout(false);
+            this.GB_NuevoIdioma.PerformLayout();
+            this.GB_Idiomas.ResumeLayout(false);
+            this.GB_Traducciones.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,7 +231,6 @@
         private System.Windows.Forms.Button BTNdeshabilitar;
         private System.Windows.Forms.Button BTNvolveralmenu;
         private System.Windows.Forms.TextBox TXTnombre;
-        private System.Windows.Forms.Label LBLidiomas;
         private System.Windows.Forms.Label LBLsufijo;
         private System.Windows.Forms.TextBox TXTsufijo;
         private System.Windows.Forms.Label LBLnombre;
@@ -210,5 +238,8 @@
         private System.Windows.Forms.ComboBox CBXidiomas;
         private System.Windows.Forms.Button BTNhabilitar;
         private System.Windows.Forms.DataGridView DGVtraducciones;
+        private System.Windows.Forms.GroupBox GB_NuevoIdioma;
+        private System.Windows.Forms.GroupBox GB_Idiomas;
+        private System.Windows.Forms.GroupBox GB_Traducciones;
     }
 }

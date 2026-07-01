@@ -306,5 +306,17 @@ namespace Trabajo_practico_IS
                 listBox1.ClearSelected();
             }
         }
+
+        private void BTNvolveralmenu_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("¿Desea volver al menu principal?", "Atención",
+           MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+
+            }
+        }
     }
 }

@@ -37,20 +37,20 @@
             this.controlDeIdiomasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restauracionDeBaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historialDeCambiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BitacoraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.LBLbienvenida = new System.Windows.Forms.Label();
             this.CBXidiomas = new System.Windows.Forms.ComboBox();
             this.LBLidioma = new System.Windows.Forms.Label();
-            this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnCerrarSesion
             // 
-            this.BtnCerrarSesion.Location = new System.Drawing.Point(539, 373);
+            this.BtnCerrarSesion.Location = new System.Drawing.Point(517, 392);
             this.BtnCerrarSesion.Name = "BtnCerrarSesion";
-            this.BtnCerrarSesion.Size = new System.Drawing.Size(80, 23);
+            this.BtnCerrarSesion.Size = new System.Drawing.Size(124, 27);
             this.BtnCerrarSesion.TabIndex = 0;
             this.BtnCerrarSesion.Text = "Cerrar Sesion";
             this.BtnCerrarSesion.UseVisualStyleBackColor = true;
@@ -120,6 +120,14 @@
             this.historialDeCambiosToolStripMenuItem.Text = "Historial de cambios";
             this.historialDeCambiosToolStripMenuItem.Click += new System.EventHandler(this.historialDeCambiosToolStripMenuItem_Click);
             // 
+            // productosToolStripMenuItem
+            // 
+            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.productosToolStripMenuItem.Tag = "ABM_PRODUCTOS";
+            this.productosToolStripMenuItem.Text = "Productos";
+            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
+            // 
             // BitacoraToolStripMenuItem
             // 
             this.BitacoraToolStripMenuItem.Name = "BitacoraToolStripMenuItem";
@@ -136,17 +144,17 @@
             // LBLbienvenida
             // 
             this.LBLbienvenida.AutoSize = true;
-            this.LBLbienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLbienvenida.Location = new System.Drawing.Point(12, 38);
+            this.LBLbienvenida.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLbienvenida.Location = new System.Drawing.Point(3, 36);
             this.LBLbienvenida.Name = "LBLbienvenida";
-            this.LBLbienvenida.Size = new System.Drawing.Size(148, 31);
+            this.LBLbienvenida.Size = new System.Drawing.Size(217, 46);
             this.LBLbienvenida.TabIndex = 9;
             this.LBLbienvenida.Text = "Bienvenido";
             // 
             // CBXidiomas
             // 
             this.CBXidiomas.FormattingEnabled = true;
-            this.CBXidiomas.Location = new System.Drawing.Point(520, 48);
+            this.CBXidiomas.Location = new System.Drawing.Point(520, 52);
             this.CBXidiomas.Name = "CBXidiomas";
             this.CBXidiomas.Size = new System.Drawing.Size(121, 21);
             this.CBXidiomas.TabIndex = 10;
@@ -155,19 +163,11 @@
             // LBLidioma
             // 
             this.LBLidioma.AutoSize = true;
-            this.LBLidioma.Location = new System.Drawing.Point(460, 52);
+            this.LBLidioma.Location = new System.Drawing.Point(517, 36);
             this.LBLidioma.Name = "LBLidioma";
             this.LBLidioma.Size = new System.Drawing.Size(43, 13);
             this.LBLidioma.TabIndex = 11;
             this.LBLidioma.Text = "Idiomas";
-            // 
-            // productosToolStripMenuItem
-            // 
-            this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.productosToolStripMenuItem.Tag = "ABM_PRODUCTOS";
-            this.productosToolStripMenuItem.Text = "Productos";
-            this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // FrmMenuPrincipal
             // 

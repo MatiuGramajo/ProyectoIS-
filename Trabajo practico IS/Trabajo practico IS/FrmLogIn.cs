@@ -191,5 +191,10 @@ namespace Trabajo_practico_IS
                 }
             }
         }
+
+        private void LBLidiomas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

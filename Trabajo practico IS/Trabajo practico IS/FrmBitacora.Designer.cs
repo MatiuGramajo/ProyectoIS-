@@ -53,9 +53,9 @@
             // 
             // BTN_CargarBitacora
             // 
-            this.BTN_CargarBitacora.Location = new System.Drawing.Point(315, 181);
+            this.BTN_CargarBitacora.Location = new System.Drawing.Point(306, 147);
             this.BTN_CargarBitacora.Name = "BTN_CargarBitacora";
-            this.BTN_CargarBitacora.Size = new System.Drawing.Size(111, 35);
+            this.BTN_CargarBitacora.Size = new System.Drawing.Size(124, 27);
             this.BTN_CargarBitacora.TabIndex = 5;
             this.BTN_CargarBitacora.Text = "Filtrar";
             this.BTN_CargarBitacora.UseVisualStyleBackColor = true;
@@ -66,7 +66,7 @@
             this.GB_Bitacora.Controls.Add(this.DGV_BITACORA);
             this.GB_Bitacora.Location = new System.Drawing.Point(12, 12);
             this.GB_Bitacora.Name = "GB_Bitacora";
-            this.GB_Bitacora.Size = new System.Drawing.Size(832, 282);
+            this.GB_Bitacora.Size = new System.Drawing.Size(796, 260);
             this.GB_Bitacora.TabIndex = 4;
             this.GB_Bitacora.TabStop = false;
             this.GB_Bitacora.Text = "Bitacora";
@@ -75,21 +75,21 @@
             // 
             this.DGV_BITACORA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_BITACORA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_BITACORA.Location = new System.Drawing.Point(21, 33);
+            this.DGV_BITACORA.Location = new System.Drawing.Point(10, 24);
             this.DGV_BITACORA.Name = "DGV_BITACORA";
             this.DGV_BITACORA.Size = new System.Drawing.Size(775, 223);
             this.DGV_BITACORA.TabIndex = 1;
             // 
             // DTPBitacoraDesde
             // 
-            this.DTPBitacoraDesde.Location = new System.Drawing.Point(232, 82);
+            this.DTPBitacoraDesde.Location = new System.Drawing.Point(232, 65);
             this.DTPBitacoraDesde.Name = "DTPBitacoraDesde";
             this.DTPBitacoraDesde.Size = new System.Drawing.Size(215, 20);
             this.DTPBitacoraDesde.TabIndex = 6;
             // 
             // DTPBitacoraHasta
             // 
-            this.DTPBitacoraHasta.Location = new System.Drawing.Point(464, 82);
+            this.DTPBitacoraHasta.Location = new System.Drawing.Point(464, 65);
             this.DTPBitacoraHasta.Name = "DTPBitacoraHasta";
             this.DTPBitacoraHasta.Size = new System.Drawing.Size(215, 20);
             this.DTPBitacoraHasta.TabIndex = 7;
@@ -97,7 +97,7 @@
             // CBXBitacoraUsuario
             // 
             this.CBXBitacoraUsuario.FormattingEnabled = true;
-            this.CBXBitacoraUsuario.Location = new System.Drawing.Point(87, 41);
+            this.CBXBitacoraUsuario.Location = new System.Drawing.Point(87, 24);
             this.CBXBitacoraUsuario.Name = "CBXBitacoraUsuario";
             this.CBXBitacoraUsuario.Size = new System.Drawing.Size(121, 21);
             this.CBXBitacoraUsuario.TabIndex = 8;
@@ -116,9 +116,9 @@
             this.GBfiltros.Controls.Add(this.CBXBitacoraModulo);
             this.GBfiltros.Controls.Add(this.CBXBitacoraCriticidad);
             this.GBfiltros.Controls.Add(this.CBXBitacoraUsuario);
-            this.GBfiltros.Location = new System.Drawing.Point(12, 300);
+            this.GBfiltros.Location = new System.Drawing.Point(12, 282);
             this.GBfiltros.Name = "GBfiltros";
-            this.GBfiltros.Size = new System.Drawing.Size(699, 247);
+            this.GBfiltros.Size = new System.Drawing.Size(699, 194);
             this.GBfiltros.TabIndex = 9;
             this.GBfiltros.TabStop = false;
             this.GBfiltros.Text = "Filtros";
@@ -126,7 +126,7 @@
             // CKXincluirfechas
             // 
             this.CKXincluirfechas.AutoSize = true;
-            this.CKXincluirfechas.Location = new System.Drawing.Point(367, 40);
+            this.CKXincluirfechas.Location = new System.Drawing.Point(367, 23);
             this.CKXincluirfechas.Name = "CKXincluirfechas";
             this.CKXincluirfechas.Size = new System.Drawing.Size(92, 17);
             this.CKXincluirfechas.TabIndex = 16;
@@ -137,7 +137,7 @@
             // LBLfechafinal
             // 
             this.LBLfechafinal.AutoSize = true;
-            this.LBLfechafinal.Location = new System.Drawing.Point(461, 66);
+            this.LBLfechafinal.Location = new System.Drawing.Point(464, 49);
             this.LBLfechafinal.Name = "LBLfechafinal";
             this.LBLfechafinal.Size = new System.Drawing.Size(62, 13);
             this.LBLfechafinal.TabIndex = 15;
@@ -146,7 +146,7 @@
             // LBLfechainicial
             // 
             this.LBLfechainicial.AutoSize = true;
-            this.LBLfechainicial.Location = new System.Drawing.Point(229, 66);
+            this.LBLfechainicial.Location = new System.Drawing.Point(232, 49);
             this.LBLfechainicial.Name = "LBLfechainicial";
             this.LBLfechainicial.Size = new System.Drawing.Size(67, 13);
             this.LBLfechainicial.TabIndex = 14;
@@ -155,7 +155,7 @@
             // LBLcriticidad
             // 
             this.LBLcriticidad.AutoSize = true;
-            this.LBLcriticidad.Location = new System.Drawing.Point(33, 129);
+            this.LBLcriticidad.Location = new System.Drawing.Point(33, 112);
             this.LBLcriticidad.Name = "LBLcriticidad";
             this.LBLcriticidad.Size = new System.Drawing.Size(50, 13);
             this.LBLcriticidad.TabIndex = 13;
@@ -164,7 +164,7 @@
             // LBLmodulo
             // 
             this.LBLmodulo.AutoSize = true;
-            this.LBLmodulo.Location = new System.Drawing.Point(33, 89);
+            this.LBLmodulo.Location = new System.Drawing.Point(41, 70);
             this.LBLmodulo.Name = "LBLmodulo";
             this.LBLmodulo.Size = new System.Drawing.Size(42, 13);
             this.LBLmodulo.TabIndex = 12;
@@ -173,7 +173,7 @@
             // LBLusuario
             // 
             this.LBLusuario.AutoSize = true;
-            this.LBLusuario.Location = new System.Drawing.Point(33, 44);
+            this.LBLusuario.Location = new System.Drawing.Point(40, 28);
             this.LBLusuario.Name = "LBLusuario";
             this.LBLusuario.Size = new System.Drawing.Size(43, 13);
             this.LBLusuario.TabIndex = 11;
@@ -182,7 +182,7 @@
             // CBXBitacoraModulo
             // 
             this.CBXBitacoraModulo.FormattingEnabled = true;
-            this.CBXBitacoraModulo.Location = new System.Drawing.Point(87, 86);
+            this.CBXBitacoraModulo.Location = new System.Drawing.Point(87, 66);
             this.CBXBitacoraModulo.Name = "CBXBitacoraModulo";
             this.CBXBitacoraModulo.Size = new System.Drawing.Size(121, 21);
             this.CBXBitacoraModulo.TabIndex = 10;
@@ -190,18 +190,18 @@
             // CBXBitacoraCriticidad
             // 
             this.CBXBitacoraCriticidad.FormattingEnabled = true;
-            this.CBXBitacoraCriticidad.Location = new System.Drawing.Point(87, 126);
+            this.CBXBitacoraCriticidad.Location = new System.Drawing.Point(87, 108);
             this.CBXBitacoraCriticidad.Name = "CBXBitacoraCriticidad";
             this.CBXBitacoraCriticidad.Size = new System.Drawing.Size(121, 21);
             this.CBXBitacoraCriticidad.TabIndex = 9;
             // 
             // BTN_BitacoraVolverAlMenu
             // 
-            this.BTN_BitacoraVolverAlMenu.Location = new System.Drawing.Point(806, 506);
+            this.BTN_BitacoraVolverAlMenu.Location = new System.Drawing.Point(929, 449);
             this.BTN_BitacoraVolverAlMenu.Name = "BTN_BitacoraVolverAlMenu";
-            this.BTN_BitacoraVolverAlMenu.Size = new System.Drawing.Size(129, 41);
+            this.BTN_BitacoraVolverAlMenu.Size = new System.Drawing.Size(124, 27);
             this.BTN_BitacoraVolverAlMenu.TabIndex = 10;
-            this.BTN_BitacoraVolverAlMenu.Text = "Volver al Menu Principal";
+            this.BTN_BitacoraVolverAlMenu.Text = "Volver al menu ";
             this.BTN_BitacoraVolverAlMenu.UseVisualStyleBackColor = true;
             this.BTN_BitacoraVolverAlMenu.Click += new System.EventHandler(this.BTN_BitacoraVolverAlMenu_Click);
             // 
@@ -217,18 +217,18 @@
             // LBLidiomas
             // 
             this.LBLidiomas.AutoSize = true;
-            this.LBLidiomas.Location = new System.Drawing.Point(879, 16);
+            this.LBLidiomas.Location = new System.Drawing.Point(871, 16);
             this.LBLidiomas.Name = "LBLidiomas";
-            this.LBLidiomas.Size = new System.Drawing.Size(43, 13);
+            this.LBLidiomas.Size = new System.Drawing.Size(55, 13);
             this.LBLidiomas.TabIndex = 12;
-            this.LBLidiomas.Text = "Idiomas";
+            this.LBLidiomas.Text = "Language";
             // 
             // FrmBitacora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1065, 568);
+            this.ClientSize = new System.Drawing.Size(1065, 490);
             this.Controls.Add(this.LBLidiomas);
             this.Controls.Add(this.CBXidiomas);
             this.Controls.Add(this.BTN_BitacoraVolverAlMenu);

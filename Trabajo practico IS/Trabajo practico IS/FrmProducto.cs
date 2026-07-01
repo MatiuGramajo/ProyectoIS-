@@ -65,7 +65,7 @@ namespace Trabajo_practico_IS
             {
                 if (productoSeleccionado != null)
                 {
-                    var result = MessageBox.Show($"Esta seguro que desea borrar a: {productoSeleccionado.Nombre}?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    var result = MessageBox.Show($"Esta seguro que desea borrar: {productoSeleccionado.Nombre}?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result == DialogResult.Yes)
                     {
                         GestorProductos.Borrar(productoSeleccionado);

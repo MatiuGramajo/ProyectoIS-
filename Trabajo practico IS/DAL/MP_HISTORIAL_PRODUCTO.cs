@@ -13,14 +13,14 @@ namespace DAL
     {
         DAL.ACCESO acceso = new DAL.ACCESO();
 
-        public void RegistrarEnHistorial(int idProducto, string responsable, string tipoMovimiento)
+        public void RegistrarEnHistorial(int idProducto, string responsable, string tipoAccion)
         {
             acceso.Abrir();
             List<SqlParameter> parametros = new List<SqlParameter>();
 
             parametros.Add(acceso.CrearParametro("@id_producto", idProducto));
-            parametros.Add(acceso.CrearParametro("@usuario_responsable", responsable));
-            parametros.Add(acceso.CrearParametro("@tipo_movimiento", tipoMovimiento));
+            parametros.Add(acceso.CrearParametro("@usuario_accion", responsable));
+            parametros.Add(acceso.CrearParametro("@tipo_accion", tipoAccion));
 
             acceso.Escribir("INSERTAR_HISTORIAL_PRODUCTO", parametros);
             acceso.Cerrar();
@@ -58,10 +58,8 @@ namespace DAL
         {
             acceso.Abrir();
             List<SqlParameter> parametros = new List<SqlParameter>();
-
             parametros.Add(acceso.CrearParametro("@id_historial", idHistorial));
             parametros.Add(acceso.CrearParametro("@usuario_accion", usuarioResponsable));
-
             acceso.Escribir("RESTAURAR_PRODUCTO_DESDE_HISTORIAL", parametros);
             acceso.Cerrar();
         }

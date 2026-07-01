@@ -73,7 +73,7 @@
             // LBLpassword
             // 
             this.LBLpassword.AutoSize = true;
-            this.LBLpassword.Location = new System.Drawing.Point(83, 118);
+            this.LBLpassword.Location = new System.Drawing.Point(79, 118);
             this.LBLpassword.Name = "LBLpassword";
             this.LBLpassword.Size = new System.Drawing.Size(61, 13);
             this.LBLpassword.TabIndex = 5;
@@ -82,7 +82,7 @@
             // CBXIdiomas
             // 
             this.CBXIdiomas.FormattingEnabled = true;
-            this.CBXIdiomas.Location = new System.Drawing.Point(244, 12);
+            this.CBXIdiomas.Location = new System.Drawing.Point(201, 28);
             this.CBXIdiomas.Name = "CBXIdiomas";
             this.CBXIdiomas.Size = new System.Drawing.Size(121, 21);
             this.CBXIdiomas.TabIndex = 6;
@@ -91,18 +91,19 @@
             // LBLidiomas
             // 
             this.LBLidiomas.AutoSize = true;
-            this.LBLidiomas.Location = new System.Drawing.Point(183, 16);
+            this.LBLidiomas.Location = new System.Drawing.Point(201, 12);
             this.LBLidiomas.Name = "LBLidiomas";
             this.LBLidiomas.Size = new System.Drawing.Size(38, 13);
             this.LBLidiomas.TabIndex = 7;
             this.LBLidiomas.Text = "Idioma";
+            this.LBLidiomas.Click += new System.EventHandler(this.LBLidiomas_Click);
             // 
             // FrmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(388, 274);
+            this.ClientSize = new System.Drawing.Size(334, 245);
             this.Controls.Add(this.LBLidiomas);
             this.Controls.Add(this.CBXIdiomas);
             this.Controls.Add(this.LBLpassword);

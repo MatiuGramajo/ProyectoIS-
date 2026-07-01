@@ -16,11 +16,6 @@ namespace BLL
             mapperHistorial.RegistrarEnHistorial(idUsuario, usuarioResponsable, tipoAccion);
         }
 
-        public List<BE.HISTORIAL_USUARIO> ObtenerHistorial(int idUsuario)
-        {
-            return mapperHistorial.ListarHistorialPorUsuario(idUsuario);
-        }
-
         public List<BE.HISTORIAL_USUARIO> Listar()
         {
             return mapperHistorial.Listar();

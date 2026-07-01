@@ -47,41 +47,45 @@
             this.Cb_CTRLUsuarioRol = new System.Windows.Forms.ComboBox();
             this.CBXidiomas = new System.Windows.Forms.ComboBox();
             this.LBLidiomas = new System.Windows.Forms.Label();
+            this.GB_Usuarios = new System.Windows.Forms.GroupBox();
+            this.GB_Datos = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_CtrlUsuUsuarios)).BeginInit();
+            this.GB_Usuarios.SuspendLayout();
+            this.GB_Datos.SuspendLayout();
             this.SuspendLayout();
             // 
             // TXT_CtrlUsuUsuario
             // 
-            this.TXT_CtrlUsuUsuario.Location = new System.Drawing.Point(92, 242);
+            this.TXT_CtrlUsuUsuario.Location = new System.Drawing.Point(10, 39);
             this.TXT_CtrlUsuUsuario.Name = "TXT_CtrlUsuUsuario";
-            this.TXT_CtrlUsuUsuario.Size = new System.Drawing.Size(165, 20);
+            this.TXT_CtrlUsuUsuario.Size = new System.Drawing.Size(227, 20);
             this.TXT_CtrlUsuUsuario.TabIndex = 0;
             // 
             // TXT_CtrlUsuContraseña
             // 
-            this.TXT_CtrlUsuContraseña.Location = new System.Drawing.Point(92, 284);
+            this.TXT_CtrlUsuContraseña.Location = new System.Drawing.Point(10, 84);
             this.TXT_CtrlUsuContraseña.Name = "TXT_CtrlUsuContraseña";
-            this.TXT_CtrlUsuContraseña.Size = new System.Drawing.Size(165, 20);
+            this.TXT_CtrlUsuContraseña.Size = new System.Drawing.Size(227, 20);
             this.TXT_CtrlUsuContraseña.TabIndex = 1;
             // 
             // TXT_CtrlUsuDNI
             // 
-            this.TXT_CtrlUsuDNI.Location = new System.Drawing.Point(92, 326);
+            this.TXT_CtrlUsuDNI.Location = new System.Drawing.Point(10, 129);
             this.TXT_CtrlUsuDNI.Name = "TXT_CtrlUsuDNI";
-            this.TXT_CtrlUsuDNI.Size = new System.Drawing.Size(165, 20);
+            this.TXT_CtrlUsuDNI.Size = new System.Drawing.Size(227, 20);
             this.TXT_CtrlUsuDNI.TabIndex = 2;
             // 
             // TXT_CtrlUsuEmail
             // 
-            this.TXT_CtrlUsuEmail.Location = new System.Drawing.Point(92, 368);
+            this.TXT_CtrlUsuEmail.Location = new System.Drawing.Point(10, 174);
             this.TXT_CtrlUsuEmail.Name = "TXT_CtrlUsuEmail";
-            this.TXT_CtrlUsuEmail.Size = new System.Drawing.Size(165, 20);
+            this.TXT_CtrlUsuEmail.Size = new System.Drawing.Size(227, 20);
             this.TXT_CtrlUsuEmail.TabIndex = 3;
             // 
             // LBLusuario
             // 
             this.LBLusuario.AutoSize = true;
-            this.LBLusuario.Location = new System.Drawing.Point(43, 246);
+            this.LBLusuario.Location = new System.Drawing.Point(7, 23);
             this.LBLusuario.Name = "LBLusuario";
             this.LBLusuario.Size = new System.Drawing.Size(43, 13);
             this.LBLusuario.TabIndex = 5;
@@ -90,7 +94,7 @@
             // LBLcontraseña
             // 
             this.LBLcontraseña.AutoSize = true;
-            this.LBLcontraseña.Location = new System.Drawing.Point(25, 288);
+            this.LBLcontraseña.Location = new System.Drawing.Point(7, 68);
             this.LBLcontraseña.Name = "LBLcontraseña";
             this.LBLcontraseña.Size = new System.Drawing.Size(61, 13);
             this.LBLcontraseña.TabIndex = 6;
@@ -99,7 +103,7 @@
             // LBLdni
             // 
             this.LBLdni.AutoSize = true;
-            this.LBLdni.Location = new System.Drawing.Point(60, 330);
+            this.LBLdni.Location = new System.Drawing.Point(7, 113);
             this.LBLdni.Name = "LBLdni";
             this.LBLdni.Size = new System.Drawing.Size(26, 13);
             this.LBLdni.TabIndex = 7;
@@ -108,7 +112,7 @@
             // LBLemail
             // 
             this.LBLemail.AutoSize = true;
-            this.LBLemail.Location = new System.Drawing.Point(54, 372);
+            this.LBLemail.Location = new System.Drawing.Point(7, 158);
             this.LBLemail.Name = "LBLemail";
             this.LBLemail.Size = new System.Drawing.Size(32, 13);
             this.LBLemail.TabIndex = 8;
@@ -116,9 +120,9 @@
             // 
             // BTNCtrlUsuAlta
             // 
-            this.BTNCtrlUsuAlta.Location = new System.Drawing.Point(468, 242);
+            this.BTNCtrlUsuAlta.Location = new System.Drawing.Point(279, 287);
             this.BTNCtrlUsuAlta.Name = "BTNCtrlUsuAlta";
-            this.BTNCtrlUsuAlta.Size = new System.Drawing.Size(104, 30);
+            this.BTNCtrlUsuAlta.Size = new System.Drawing.Size(124, 27);
             this.BTNCtrlUsuAlta.TabIndex = 10;
             this.BTNCtrlUsuAlta.Text = "Alta";
             this.BTNCtrlUsuAlta.UseVisualStyleBackColor = true;
@@ -126,9 +130,9 @@
             // 
             // BTNCtrlUsuBaja
             // 
-            this.BTNCtrlUsuBaja.Location = new System.Drawing.Point(594, 242);
+            this.BTNCtrlUsuBaja.Location = new System.Drawing.Point(414, 287);
             this.BTNCtrlUsuBaja.Name = "BTNCtrlUsuBaja";
-            this.BTNCtrlUsuBaja.Size = new System.Drawing.Size(104, 30);
+            this.BTNCtrlUsuBaja.Size = new System.Drawing.Size(124, 27);
             this.BTNCtrlUsuBaja.TabIndex = 11;
             this.BTNCtrlUsuBaja.Text = "Baja";
             this.BTNCtrlUsuBaja.UseVisualStyleBackColor = true;
@@ -136,9 +140,9 @@
             // 
             // BTNCtrlUsuModificar
             // 
-            this.BTNCtrlUsuModificar.Location = new System.Drawing.Point(717, 242);
+            this.BTNCtrlUsuModificar.Location = new System.Drawing.Point(549, 287);
             this.BTNCtrlUsuModificar.Name = "BTNCtrlUsuModificar";
-            this.BTNCtrlUsuModificar.Size = new System.Drawing.Size(104, 30);
+            this.BTNCtrlUsuModificar.Size = new System.Drawing.Size(124, 27);
             this.BTNCtrlUsuModificar.TabIndex = 12;
             this.BTNCtrlUsuModificar.Text = "Modificar";
             this.BTNCtrlUsuModificar.UseVisualStyleBackColor = true;
@@ -146,9 +150,9 @@
             // 
             // BTNCtrlUsuVolverMenu
             // 
-            this.BTNCtrlUsuVolverMenu.Location = new System.Drawing.Point(716, 464);
+            this.BTNCtrlUsuVolverMenu.Location = new System.Drawing.Point(929, 506);
             this.BTNCtrlUsuVolverMenu.Name = "BTNCtrlUsuVolverMenu";
-            this.BTNCtrlUsuVolverMenu.Size = new System.Drawing.Size(105, 31);
+            this.BTNCtrlUsuVolverMenu.Size = new System.Drawing.Size(124, 27);
             this.BTNCtrlUsuVolverMenu.TabIndex = 13;
             this.BTNCtrlUsuVolverMenu.Text = "Volver al Menu";
             this.BTNCtrlUsuVolverMenu.UseVisualStyleBackColor = true;
@@ -158,17 +162,17 @@
             // 
             this.DGV_CtrlUsuUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_CtrlUsuUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_CtrlUsuUsuarios.Location = new System.Drawing.Point(34, 21);
+            this.DGV_CtrlUsuUsuarios.Location = new System.Drawing.Point(10, 24);
             this.DGV_CtrlUsuUsuarios.Name = "DGV_CtrlUsuUsuarios";
-            this.DGV_CtrlUsuUsuarios.Size = new System.Drawing.Size(787, 200);
+            this.DGV_CtrlUsuUsuarios.Size = new System.Drawing.Size(775, 223);
             this.DGV_CtrlUsuUsuarios.TabIndex = 14;
             this.DGV_CtrlUsuUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_CtrlUsuUsuarios_CellClick);
             // 
             // BTNCtrlUsuDesbloquear
             // 
-            this.BTNCtrlUsuDesbloquear.Location = new System.Drawing.Point(468, 314);
+            this.BTNCtrlUsuDesbloquear.Location = new System.Drawing.Point(684, 287);
             this.BTNCtrlUsuDesbloquear.Name = "BTNCtrlUsuDesbloquear";
-            this.BTNCtrlUsuDesbloquear.Size = new System.Drawing.Size(104, 30);
+            this.BTNCtrlUsuDesbloquear.Size = new System.Drawing.Size(124, 27);
             this.BTNCtrlUsuDesbloquear.TabIndex = 17;
             this.BTNCtrlUsuDesbloquear.Text = "Desbloquear";
             this.BTNCtrlUsuDesbloquear.UseVisualStyleBackColor = true;
@@ -177,7 +181,7 @@
             // CKXmostrarbloqueados
             // 
             this.CKXmostrarbloqueados.AutoSize = true;
-            this.CKXmostrarbloqueados.Location = new System.Drawing.Point(305, 245);
+            this.CKXmostrarbloqueados.Location = new System.Drawing.Point(283, 338);
             this.CKXmostrarbloqueados.Name = "CKXmostrarbloqueados";
             this.CKXmostrarbloqueados.Size = new System.Drawing.Size(120, 17);
             this.CKXmostrarbloqueados.TabIndex = 18;
@@ -188,7 +192,7 @@
             // LBLrol
             // 
             this.LBLrol.AutoSize = true;
-            this.LBLrol.Location = new System.Drawing.Point(57, 407);
+            this.LBLrol.Location = new System.Drawing.Point(7, 203);
             this.LBLrol.Name = "LBLrol";
             this.LBLrol.Size = new System.Drawing.Size(23, 13);
             this.LBLrol.TabIndex = 19;
@@ -197,15 +201,16 @@
             // Cb_CTRLUsuarioRol
             // 
             this.Cb_CTRLUsuarioRol.FormattingEnabled = true;
-            this.Cb_CTRLUsuarioRol.Location = new System.Drawing.Point(92, 407);
+            this.Cb_CTRLUsuarioRol.Location = new System.Drawing.Point(10, 219);
             this.Cb_CTRLUsuarioRol.Name = "Cb_CTRLUsuarioRol";
-            this.Cb_CTRLUsuarioRol.Size = new System.Drawing.Size(165, 21);
+            this.Cb_CTRLUsuarioRol.Size = new System.Drawing.Size(227, 21);
             this.Cb_CTRLUsuarioRol.TabIndex = 20;
             // 
             // CBXidiomas
             // 
+            this.CBXidiomas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBXidiomas.FormattingEnabled = true;
-            this.CBXidiomas.Location = new System.Drawing.Point(920, 21);
+            this.CBXidiomas.Location = new System.Drawing.Point(937, 27);
             this.CBXidiomas.Name = "CBXidiomas";
             this.CBXidiomas.Size = new System.Drawing.Size(116, 21);
             this.CBXidiomas.TabIndex = 21;
@@ -214,43 +219,66 @@
             // LBLidiomas
             // 
             this.LBLidiomas.AutoSize = true;
-            this.LBLidiomas.Location = new System.Drawing.Point(860, 29);
+            this.LBLidiomas.Location = new System.Drawing.Point(937, 11);
             this.LBLidiomas.Name = "LBLidiomas";
-            this.LBLidiomas.Size = new System.Drawing.Size(43, 13);
+            this.LBLidiomas.Size = new System.Drawing.Size(55, 13);
             this.LBLidiomas.TabIndex = 22;
-            this.LBLidiomas.Text = "Idiomas";
+            this.LBLidiomas.Text = "Language";
+            // 
+            // GB_Usuarios
+            // 
+            this.GB_Usuarios.Controls.Add(this.DGV_CtrlUsuUsuarios);
+            this.GB_Usuarios.Location = new System.Drawing.Point(12, 12);
+            this.GB_Usuarios.Name = "GB_Usuarios";
+            this.GB_Usuarios.Size = new System.Drawing.Size(796, 260);
+            this.GB_Usuarios.TabIndex = 23;
+            this.GB_Usuarios.TabStop = false;
+            this.GB_Usuarios.Text = "Usuarios";
+            // 
+            // GB_Datos
+            // 
+            this.GB_Datos.Controls.Add(this.Cb_CTRLUsuarioRol);
+            this.GB_Datos.Controls.Add(this.TXT_CtrlUsuUsuario);
+            this.GB_Datos.Controls.Add(this.TXT_CtrlUsuContraseña);
+            this.GB_Datos.Controls.Add(this.TXT_CtrlUsuDNI);
+            this.GB_Datos.Controls.Add(this.LBLrol);
+            this.GB_Datos.Controls.Add(this.TXT_CtrlUsuEmail);
+            this.GB_Datos.Controls.Add(this.LBLusuario);
+            this.GB_Datos.Controls.Add(this.LBLcontraseña);
+            this.GB_Datos.Controls.Add(this.LBLdni);
+            this.GB_Datos.Controls.Add(this.LBLemail);
+            this.GB_Datos.Location = new System.Drawing.Point(12, 278);
+            this.GB_Datos.Name = "GB_Datos";
+            this.GB_Datos.Size = new System.Drawing.Size(257, 255);
+            this.GB_Datos.TabIndex = 24;
+            this.GB_Datos.TabStop = false;
+            this.GB_Datos.Text = "Datos de usuario";
             // 
             // FrmCTRLUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1039, 517);
+            this.ClientSize = new System.Drawing.Size(1065, 541);
+            this.Controls.Add(this.GB_Usuarios);
             this.Controls.Add(this.LBLidiomas);
             this.Controls.Add(this.CBXidiomas);
-            this.Controls.Add(this.Cb_CTRLUsuarioRol);
-            this.Controls.Add(this.LBLrol);
             this.Controls.Add(this.CKXmostrarbloqueados);
             this.Controls.Add(this.BTNCtrlUsuDesbloquear);
-            this.Controls.Add(this.DGV_CtrlUsuUsuarios);
             this.Controls.Add(this.BTNCtrlUsuVolverMenu);
             this.Controls.Add(this.BTNCtrlUsuModificar);
             this.Controls.Add(this.BTNCtrlUsuBaja);
             this.Controls.Add(this.BTNCtrlUsuAlta);
-            this.Controls.Add(this.LBLemail);
-            this.Controls.Add(this.LBLdni);
-            this.Controls.Add(this.LBLcontraseña);
-            this.Controls.Add(this.LBLusuario);
-            this.Controls.Add(this.TXT_CtrlUsuEmail);
-            this.Controls.Add(this.TXT_CtrlUsuDNI);
-            this.Controls.Add(this.TXT_CtrlUsuContraseña);
-            this.Controls.Add(this.TXT_CtrlUsuUsuario);
+            this.Controls.Add(this.GB_Datos);
             this.Name = "FrmCTRLUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCTRLUsuario";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmCTRLUsuario_FormClosed);
             this.Load += new System.EventHandler(this.FrmCTRLUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_CtrlUsuUsuarios)).EndInit();
+            this.GB_Usuarios.ResumeLayout(false);
+            this.GB_Datos.ResumeLayout(false);
+            this.GB_Datos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,5 +305,7 @@
         private System.Windows.Forms.ComboBox Cb_CTRLUsuarioRol;
         private System.Windows.Forms.ComboBox CBXidiomas;
         private System.Windows.Forms.Label LBLidiomas;
+        private System.Windows.Forms.GroupBox GB_Usuarios;
+        private System.Windows.Forms.GroupBox GB_Datos;
     }
 }

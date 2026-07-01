@@ -49,15 +49,15 @@
             this.DGV_Productos.Location = new System.Drawing.Point(12, 23);
             this.DGV_Productos.Name = "DGV_Productos";
             this.DGV_Productos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Productos.Size = new System.Drawing.Size(582, 218);
+            this.DGV_Productos.Size = new System.Drawing.Size(624, 218);
             this.DGV_Productos.TabIndex = 0;
             this.DGV_Productos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Productos_CellClick);
             // 
             // BTN_ProductoAlta
             // 
-            this.BTN_ProductoAlta.Location = new System.Drawing.Point(34, 279);
+            this.BTN_ProductoAlta.Location = new System.Drawing.Point(12, 259);
             this.BTN_ProductoAlta.Name = "BTN_ProductoAlta";
-            this.BTN_ProductoAlta.Size = new System.Drawing.Size(75, 23);
+            this.BTN_ProductoAlta.Size = new System.Drawing.Size(124, 27);
             this.BTN_ProductoAlta.TabIndex = 1;
             this.BTN_ProductoAlta.Text = "Alta";
             this.BTN_ProductoAlta.UseVisualStyleBackColor = true;
@@ -65,9 +65,9 @@
             // 
             // BTN_ProductoBaja
             // 
-            this.BTN_ProductoBaja.Location = new System.Drawing.Point(130, 279);
+            this.BTN_ProductoBaja.Location = new System.Drawing.Point(142, 259);
             this.BTN_ProductoBaja.Name = "BTN_ProductoBaja";
-            this.BTN_ProductoBaja.Size = new System.Drawing.Size(75, 23);
+            this.BTN_ProductoBaja.Size = new System.Drawing.Size(124, 27);
             this.BTN_ProductoBaja.TabIndex = 2;
             this.BTN_ProductoBaja.Text = "Baja";
             this.BTN_ProductoBaja.UseVisualStyleBackColor = true;
@@ -75,9 +75,9 @@
             // 
             // BTN_ProductoModificar
             // 
-            this.BTN_ProductoModificar.Location = new System.Drawing.Point(222, 279);
+            this.BTN_ProductoModificar.Location = new System.Drawing.Point(272, 259);
             this.BTN_ProductoModificar.Name = "BTN_ProductoModificar";
-            this.BTN_ProductoModificar.Size = new System.Drawing.Size(75, 23);
+            this.BTN_ProductoModificar.Size = new System.Drawing.Size(124, 27);
             this.BTN_ProductoModificar.TabIndex = 3;
             this.BTN_ProductoModificar.Text = "Modificar";
             this.BTN_ProductoModificar.UseVisualStyleBackColor = true;
@@ -85,15 +85,15 @@
             // 
             // TXT_ProductoNombre
             // 
-            this.TXT_ProductoNombre.Location = new System.Drawing.Point(364, 279);
+            this.TXT_ProductoNombre.Location = new System.Drawing.Point(415, 263);
             this.TXT_ProductoNombre.Name = "TXT_ProductoNombre";
-            this.TXT_ProductoNombre.Size = new System.Drawing.Size(100, 20);
+            this.TXT_ProductoNombre.Size = new System.Drawing.Size(221, 20);
             this.TXT_ProductoNombre.TabIndex = 4;
             // 
             // NUD_PrecioProd
             // 
             this.NUD_PrecioProd.DecimalPlaces = 2;
-            this.NUD_PrecioProd.Location = new System.Drawing.Point(364, 322);
+            this.NUD_PrecioProd.Location = new System.Drawing.Point(415, 289);
             this.NUD_PrecioProd.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -105,7 +105,7 @@
             // 
             // NUD_StockProd
             // 
-            this.NUD_StockProd.Location = new System.Drawing.Point(364, 364);
+            this.NUD_StockProd.Location = new System.Drawing.Point(415, 315);
             this.NUD_StockProd.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -118,7 +118,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(787, 23);
+            this.comboBox1.Location = new System.Drawing.Point(787, 31);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 7;
@@ -126,7 +126,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(720, 31);
+            this.label1.Location = new System.Drawing.Point(787, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 8;
