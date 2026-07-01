@@ -35,27 +35,35 @@
             this.TXT_ProductoNombre = new System.Windows.Forms.TextBox();
             this.NUD_PrecioProd = new System.Windows.Forms.NumericUpDown();
             this.NUD_StockProd = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.CBXIdiomas = new System.Windows.Forms.ComboBox();
+            this.LBLidiomas = new System.Windows.Forms.Label();
+            this.GB_Producto = new System.Windows.Forms.GroupBox();
+            this.LBLNombreProducto = new System.Windows.Forms.Label();
+            this.LBLPrecioProducto = new System.Windows.Forms.Label();
+            this.LBLStockProducto = new System.Windows.Forms.Label();
+            this.GB_Productos = new System.Windows.Forms.GroupBox();
+            this.BTNvolveralmenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Productos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_PrecioProd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_StockProd)).BeginInit();
+            this.GB_Producto.SuspendLayout();
+            this.GB_Productos.SuspendLayout();
             this.SuspendLayout();
             // 
             // DGV_Productos
             // 
             this.DGV_Productos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGV_Productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGV_Productos.Location = new System.Drawing.Point(12, 23);
+            this.DGV_Productos.Location = new System.Drawing.Point(10, 24);
             this.DGV_Productos.Name = "DGV_Productos";
             this.DGV_Productos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGV_Productos.Size = new System.Drawing.Size(624, 218);
+            this.DGV_Productos.Size = new System.Drawing.Size(639, 218);
             this.DGV_Productos.TabIndex = 0;
             this.DGV_Productos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGV_Productos_CellClick);
             // 
             // BTN_ProductoAlta
             // 
-            this.BTN_ProductoAlta.Location = new System.Drawing.Point(12, 259);
+            this.BTN_ProductoAlta.Location = new System.Drawing.Point(290, 284);
             this.BTN_ProductoAlta.Name = "BTN_ProductoAlta";
             this.BTN_ProductoAlta.Size = new System.Drawing.Size(124, 27);
             this.BTN_ProductoAlta.TabIndex = 1;
@@ -65,7 +73,7 @@
             // 
             // BTN_ProductoBaja
             // 
-            this.BTN_ProductoBaja.Location = new System.Drawing.Point(142, 259);
+            this.BTN_ProductoBaja.Location = new System.Drawing.Point(420, 284);
             this.BTN_ProductoBaja.Name = "BTN_ProductoBaja";
             this.BTN_ProductoBaja.Size = new System.Drawing.Size(124, 27);
             this.BTN_ProductoBaja.TabIndex = 2;
@@ -75,7 +83,7 @@
             // 
             // BTN_ProductoModificar
             // 
-            this.BTN_ProductoModificar.Location = new System.Drawing.Point(272, 259);
+            this.BTN_ProductoModificar.Location = new System.Drawing.Point(550, 284);
             this.BTN_ProductoModificar.Name = "BTN_ProductoModificar";
             this.BTN_ProductoModificar.Size = new System.Drawing.Size(124, 27);
             this.BTN_ProductoModificar.TabIndex = 3;
@@ -85,7 +93,7 @@
             // 
             // TXT_ProductoNombre
             // 
-            this.TXT_ProductoNombre.Location = new System.Drawing.Point(415, 263);
+            this.TXT_ProductoNombre.Location = new System.Drawing.Point(9, 38);
             this.TXT_ProductoNombre.Name = "TXT_ProductoNombre";
             this.TXT_ProductoNombre.Size = new System.Drawing.Size(221, 20);
             this.TXT_ProductoNombre.TabIndex = 4;
@@ -93,7 +101,7 @@
             // NUD_PrecioProd
             // 
             this.NUD_PrecioProd.DecimalPlaces = 2;
-            this.NUD_PrecioProd.Location = new System.Drawing.Point(415, 289);
+            this.NUD_PrecioProd.Location = new System.Drawing.Point(9, 79);
             this.NUD_PrecioProd.Maximum = new decimal(new int[] {
             1000000,
             0,
@@ -105,7 +113,7 @@
             // 
             // NUD_StockProd
             // 
-            this.NUD_StockProd.Location = new System.Drawing.Point(415, 315);
+            this.NUD_StockProd.Location = new System.Drawing.Point(9, 120);
             this.NUD_StockProd.Maximum = new decimal(new int[] {
             9999,
             0,
@@ -115,46 +123,113 @@
             this.NUD_StockProd.Size = new System.Drawing.Size(100, 20);
             this.NUD_StockProd.TabIndex = 6;
             // 
-            // comboBox1
+            // CBXIdiomas
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(787, 31);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 7;
+            this.CBXIdiomas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBXIdiomas.FormattingEnabled = true;
+            this.CBXIdiomas.Location = new System.Drawing.Point(718, 35);
+            this.CBXIdiomas.Name = "CBXIdiomas";
+            this.CBXIdiomas.Size = new System.Drawing.Size(121, 21);
+            this.CBXIdiomas.TabIndex = 7;
+            this.CBXIdiomas.SelectedIndexChanged += new System.EventHandler(this.CBXIdiomas_SelectedIndexChanged);
             // 
-            // label1
+            // LBLidiomas
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(787, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "label1";
+            this.LBLidiomas.AutoSize = true;
+            this.LBLidiomas.Location = new System.Drawing.Point(718, 19);
+            this.LBLidiomas.Name = "LBLidiomas";
+            this.LBLidiomas.Size = new System.Drawing.Size(35, 13);
+            this.LBLidiomas.TabIndex = 8;
+            this.LBLidiomas.Text = "label1";
+            // 
+            // GB_Producto
+            // 
+            this.GB_Producto.Controls.Add(this.LBLStockProducto);
+            this.GB_Producto.Controls.Add(this.LBLNombreProducto);
+            this.GB_Producto.Controls.Add(this.LBLPrecioProducto);
+            this.GB_Producto.Controls.Add(this.TXT_ProductoNombre);
+            this.GB_Producto.Controls.Add(this.NUD_PrecioProd);
+            this.GB_Producto.Controls.Add(this.NUD_StockProd);
+            this.GB_Producto.Location = new System.Drawing.Point(13, 284);
+            this.GB_Producto.Name = "GB_Producto";
+            this.GB_Producto.Size = new System.Drawing.Size(252, 153);
+            this.GB_Producto.TabIndex = 9;
+            this.GB_Producto.TabStop = false;
+            this.GB_Producto.Text = "Datos del producto";
+            // 
+            // LBLNombreProducto
+            // 
+            this.LBLNombreProducto.AutoSize = true;
+            this.LBLNombreProducto.Location = new System.Drawing.Point(9, 22);
+            this.LBLNombreProducto.Name = "LBLNombreProducto";
+            this.LBLNombreProducto.Size = new System.Drawing.Size(44, 13);
+            this.LBLNombreProducto.TabIndex = 10;
+            this.LBLNombreProducto.Text = "Nombre";
+            // 
+            // LBLPrecioProducto
+            // 
+            this.LBLPrecioProducto.AutoSize = true;
+            this.LBLPrecioProducto.Location = new System.Drawing.Point(9, 63);
+            this.LBLPrecioProducto.Name = "LBLPrecioProducto";
+            this.LBLPrecioProducto.Size = new System.Drawing.Size(37, 13);
+            this.LBLPrecioProducto.TabIndex = 11;
+            this.LBLPrecioProducto.Text = "Precio";
+            // 
+            // LBLStockProducto
+            // 
+            this.LBLStockProducto.AutoSize = true;
+            this.LBLStockProducto.Location = new System.Drawing.Point(9, 104);
+            this.LBLStockProducto.Name = "LBLStockProducto";
+            this.LBLStockProducto.Size = new System.Drawing.Size(35, 13);
+            this.LBLStockProducto.TabIndex = 12;
+            this.LBLStockProducto.Text = "Stock";
+            // 
+            // GB_Productos
+            // 
+            this.GB_Productos.Controls.Add(this.DGV_Productos);
+            this.GB_Productos.Location = new System.Drawing.Point(13, 11);
+            this.GB_Productos.Name = "GB_Productos";
+            this.GB_Productos.Size = new System.Drawing.Size(661, 254);
+            this.GB_Productos.TabIndex = 10;
+            this.GB_Productos.TabStop = false;
+            this.GB_Productos.Text = "Productos";
+            // 
+            // BTNvolveralmenu
+            // 
+            this.BTNvolveralmenu.Location = new System.Drawing.Point(715, 410);
+            this.BTNvolveralmenu.Name = "BTNvolveralmenu";
+            this.BTNvolveralmenu.Size = new System.Drawing.Size(124, 27);
+            this.BTNvolveralmenu.TabIndex = 11;
+            this.BTNvolveralmenu.Text = "Volver al menu";
+            this.BTNvolveralmenu.UseVisualStyleBackColor = true;
+            this.BTNvolveralmenu.Click += new System.EventHandler(this.BTNvolveralmenu_Click);
             // 
             // FrmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(920, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.NUD_StockProd);
-            this.Controls.Add(this.NUD_PrecioProd);
-            this.Controls.Add(this.TXT_ProductoNombre);
+            this.ClientSize = new System.Drawing.Size(851, 446);
+            this.Controls.Add(this.BTNvolveralmenu);
+            this.Controls.Add(this.GB_Producto);
+            this.Controls.Add(this.LBLidiomas);
+            this.Controls.Add(this.CBXIdiomas);
             this.Controls.Add(this.BTN_ProductoModificar);
             this.Controls.Add(this.BTN_ProductoBaja);
             this.Controls.Add(this.BTN_ProductoAlta);
-            this.Controls.Add(this.DGV_Productos);
+            this.Controls.Add(this.GB_Productos);
             this.Name = "FrmProducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "";
             this.Text = "FrmProducto";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmProducto_FormClosing);
             this.Load += new System.EventHandler(this.FrmProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Productos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_PrecioProd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_StockProd)).EndInit();
+            this.GB_Producto.ResumeLayout(false);
+            this.GB_Producto.PerformLayout();
+            this.GB_Productos.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,7 +244,13 @@
         private System.Windows.Forms.TextBox TXT_ProductoNombre;
         private System.Windows.Forms.NumericUpDown NUD_PrecioProd;
         private System.Windows.Forms.NumericUpDown NUD_StockProd;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox CBXIdiomas;
+        private System.Windows.Forms.Label LBLidiomas;
+        private System.Windows.Forms.GroupBox GB_Producto;
+        private System.Windows.Forms.Label LBLStockProducto;
+        private System.Windows.Forms.Label LBLNombreProducto;
+        private System.Windows.Forms.Label LBLPrecioProducto;
+        private System.Windows.Forms.GroupBox GB_Productos;
+        private System.Windows.Forms.Button BTNvolveralmenu;
     }
 }

@@ -133,7 +133,6 @@ namespace Trabajo_practico_IS
                 {
                     Cursor = Cursors.WaitCursor;
 
-                    // Llama a la BLL pasándole la ruta absoluta elegida por el usuario
                     GestorRestauracion.CrearBackup(SFDBackUp.FileName);
 
                     Cursor = Cursors.Default;

@@ -16,12 +16,21 @@ namespace Trabajo_practico_IS
         BLL.IDIOMA GestorIdioma = new BLL.IDIOMA();
         BLL.BITACORA GestorBitacora = new BLL.BITACORA();
         BE.PRODUCTO productoSeleccionado = null;
+        BLL.IDIOMA gestorIdioma = new BLL.IDIOMA();
         public FrmProducto()
         {
             InitializeComponent();
         }
         private void FrmProducto_Load(object sender, EventArgs e)
         {
+            Servicios.IDIOMAS.GetInstancia().Suscribir(this);
+            CBXIdiomas.SelectedIndexChanged -= CBXIdiomas_SelectedIndexChanged;
+            CBXIdiomas.DataSource = gestorIdioma.Listar();
+            CBXIdiomas.DisplayMember = "Nombre";
+            CBXIdiomas.ValueMember = "Id";
+            CBXIdiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
+            CBXIdiomas.SelectedIndexChanged += CBXIdiomas_SelectedIndexChanged;
+            ActualizarIdioma();
             EnlazarProductos();
         }
 
@@ -127,7 +136,66 @@ namespace Trabajo_practico_IS
 
         public void ActualizarIdioma()
         {
-            throw new NotImplementedException();
+            var traducciones = Servicios.IDIOMAS.GetInstancia().Traducciones;
+            TraducirControles(this.Controls, traducciones);
+            if (traducciones.TryGetValue($"{this.Name}_Titulo", out string textoTitulo)) this.Text = textoTitulo;
+            if (CBXIdiomas.Items.Count > 0)
+            {
+                CBXIdiomas.SelectedIndexChanged -= CBXIdiomas_SelectedIndexChanged;
+                CBXIdiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
+                CBXIdiomas.SelectedIndexChanged += CBXIdiomas_SelectedIndexChanged;
+            }
+        }
+
+        public void TraducirControles(Control.ControlCollection controles, Dictionary<string, string> traducciones)
+        {
+            foreach (Control control in controles)
+            {
+                string clave = $"{this.Name}_{control.Name}";
+                if (traducciones.TryGetValue(clave, out string textoTraducido)) control.Text = textoTraducido;
+                if (control.HasChildren) TraducirControles(control.Controls, traducciones);
+            }
+        }
+
+        private void CBXIdiomas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (CBXIdiomas.SelectedValue != null && int.TryParse(CBXIdiomas.SelectedValue.ToString(), out int idIdioma))
+                {
+                    BLL.IDIOMA gestorIdioma = new BLL.IDIOMA();
+                    var traducciones = gestorIdioma.ObtenerTraducciones(idIdioma);
+                    Servicios.IDIOMAS.GetInstancia().CambiarIdioma(idIdioma, traducciones);
+
+                    if (Servicios.SESION.GetInstancia().usuactual != null)
+                    {
+                        BLL.USUARIO gestorUsu = new BLL.USUARIO();
+                        gestorUsu.ActualizarIdiomaUsuario(Servicios.SESION.GetInstancia().usuactual, idIdioma);
+                        Servicios.SESION.GetInstancia().usuactual.IdIdioma = idIdioma;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void BTNvolveralmenu_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("¿Desea volver al menu principal?", "Atención",
+             MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+
+            }
+        }
+
+        private void FrmProducto_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Servicios.IDIOMAS.GetInstancia().Desuscribir(this);
         }
     }
 }

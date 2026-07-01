@@ -54,6 +54,7 @@
             // 
             // CBXIdiomas
             // 
+            this.CBXIdiomas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBXIdiomas.FormattingEnabled = true;
             this.CBXIdiomas.Location = new System.Drawing.Point(957, 25);
             this.CBXIdiomas.Name = "CBXIdiomas";

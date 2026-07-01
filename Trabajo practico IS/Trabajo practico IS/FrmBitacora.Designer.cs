@@ -197,7 +197,7 @@
             // 
             // BTN_BitacoraVolverAlMenu
             // 
-            this.BTN_BitacoraVolverAlMenu.Location = new System.Drawing.Point(929, 449);
+            this.BTN_BitacoraVolverAlMenu.Location = new System.Drawing.Point(885, 449);
             this.BTN_BitacoraVolverAlMenu.Name = "BTN_BitacoraVolverAlMenu";
             this.BTN_BitacoraVolverAlMenu.Size = new System.Drawing.Size(124, 27);
             this.BTN_BitacoraVolverAlMenu.TabIndex = 10;
@@ -207,8 +207,9 @@
             // 
             // CBXidiomas
             // 
+            this.CBXidiomas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBXidiomas.FormattingEnabled = true;
-            this.CBXidiomas.Location = new System.Drawing.Point(932, 12);
+            this.CBXidiomas.Location = new System.Drawing.Point(888, 28);
             this.CBXidiomas.Name = "CBXidiomas";
             this.CBXidiomas.Size = new System.Drawing.Size(121, 21);
             this.CBXidiomas.TabIndex = 11;
@@ -217,7 +218,7 @@
             // LBLidiomas
             // 
             this.LBLidiomas.AutoSize = true;
-            this.LBLidiomas.Location = new System.Drawing.Point(871, 16);
+            this.LBLidiomas.Location = new System.Drawing.Point(888, 12);
             this.LBLidiomas.Name = "LBLidiomas";
             this.LBLidiomas.Size = new System.Drawing.Size(55, 13);
             this.LBLidiomas.TabIndex = 12;
@@ -228,7 +229,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1065, 490);
+            this.ClientSize = new System.Drawing.Size(1018, 490);
             this.Controls.Add(this.LBLidiomas);
             this.Controls.Add(this.CBXidiomas);
             this.Controls.Add(this.BTN_BitacoraVolverAlMenu);

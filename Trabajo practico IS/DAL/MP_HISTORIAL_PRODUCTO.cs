@@ -38,7 +38,6 @@ namespace DAL
             {
                 BE.HISTORIAL_PRODUCTO historial = new BE.HISTORIAL_PRODUCTO();
 
-                // 1. Mapeamos los datos propios de la auditoría
                 historial.IdHistorial = int.Parse(fila["Id_Historial"].ToString());
                 historial.UsuarioAccion = fila["Usuario_Accion"].ToString();
                 historial.FechaCambio = DateTime.Parse(fila["Fecha_Cambio"].ToString());
