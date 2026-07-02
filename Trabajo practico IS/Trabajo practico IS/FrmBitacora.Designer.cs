@@ -96,6 +96,7 @@
             // 
             // CBXBitacoraUsuario
             // 
+            this.CBXBitacoraUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBXBitacoraUsuario.FormattingEnabled = true;
             this.CBXBitacoraUsuario.Location = new System.Drawing.Point(87, 24);
             this.CBXBitacoraUsuario.Name = "CBXBitacoraUsuario";
@@ -181,6 +182,7 @@
             // 
             // CBXBitacoraModulo
             // 
+            this.CBXBitacoraModulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBXBitacoraModulo.FormattingEnabled = true;
             this.CBXBitacoraModulo.Location = new System.Drawing.Point(87, 66);
             this.CBXBitacoraModulo.Name = "CBXBitacoraModulo";
@@ -189,6 +191,7 @@
             // 
             // CBXBitacoraCriticidad
             // 
+            this.CBXBitacoraCriticidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBXBitacoraCriticidad.FormattingEnabled = true;
             this.CBXBitacoraCriticidad.Location = new System.Drawing.Point(87, 108);
             this.CBXBitacoraCriticidad.Name = "CBXBitacoraCriticidad";

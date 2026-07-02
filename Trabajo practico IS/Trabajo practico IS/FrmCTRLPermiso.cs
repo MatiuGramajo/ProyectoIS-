@@ -261,7 +261,7 @@ namespace Trabajo_practico_IS
             }
             else
             {
-                MessageBox.Show("Debe seleccionar un Rol o Permiso para modificar");
+                MessageBox.Show("Debe seleccionar un Rol");
             }
         }
 
@@ -286,6 +286,7 @@ namespace Trabajo_practico_IS
                     }
                 }
             }
+            else
             {
                 MessageBox.Show("Debe seleccionar un Rol para borrar");
             }

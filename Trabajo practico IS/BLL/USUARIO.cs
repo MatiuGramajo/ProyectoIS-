@@ -36,8 +36,14 @@ namespace BLL
                 throw new Exception("El correo electrónico ya se encuentra registrado.");
             }
 
-            usuario.DVH = GestorDV.CalcularDVH(usuario);
+            usuario.DVH = "TEMP";
+            usuario.IdIdioma = 1;
+            usuario.EstadoBloqueado = false;
+            usuario.IntentosFallidos = 0;
+
             mapper.Alta(usuario);
+            usuario.DVH = GestorDV.CalcularDVH(usuario);
+            mapper.ActualizarSoloDVH(usuario.Id, usuario.DVH);
             ActualizarDvvUsuarios();
             string responsable;
             if (Servicios.SESION.GetInstancia().usuactual != null)

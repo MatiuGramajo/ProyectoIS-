@@ -24,7 +24,12 @@ namespace DAL
 
             parametros.Add(acceso.CrearParametro("@dvh", usuario.DVH));
 
-            usuario.Id = acceso.LeerEscalar("INSERTAR_USUARIO", parametros);
+            object resultado = acceso.LeerEscalar("INSERTAR_USUARIO", parametros);
+
+            if (resultado != null)
+            {
+                usuario.Id = Convert.ToInt32(resultado);
+            }
 
             if (usuario.Permisos != null && usuario.Permisos.Count > 0)
             {

@@ -200,6 +200,7 @@
             // 
             // Cb_CTRLUsuarioRol
             // 
+            this.Cb_CTRLUsuarioRol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Cb_CTRLUsuarioRol.FormattingEnabled = true;
             this.Cb_CTRLUsuarioRol.Location = new System.Drawing.Point(10, 219);
             this.Cb_CTRLUsuarioRol.Name = "Cb_CTRLUsuarioRol";

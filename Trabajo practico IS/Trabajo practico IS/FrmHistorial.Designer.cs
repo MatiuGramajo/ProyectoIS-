@@ -94,6 +94,7 @@
             // 
             // CBX_Filtro
             // 
+            this.CBX_Filtro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBX_Filtro.FormattingEnabled = true;
             this.CBX_Filtro.Location = new System.Drawing.Point(6, 25);
             this.CBX_Filtro.Name = "CBX_Filtro";
