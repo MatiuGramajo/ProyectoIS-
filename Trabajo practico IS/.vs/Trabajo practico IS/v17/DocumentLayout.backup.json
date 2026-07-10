@@ -3,8 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\mp_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\bll\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|solutionrelative:bll\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|c:\\users\\usuario\\desktop\\proyectois\\proyectois-\\trabajo practico is\\dal\\mp_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mp_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\bll\\restauracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|solutionrelative:bll\\restauracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\bll\\digito_verificador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|solutionrelative:bll\\digito_verificador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\mp_digito_verificador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mp_digito_verificador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\historial_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\historial_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\iobservable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\iobservable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmctrlpermiso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -63,20 +103,8 @@
       "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmhistorial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmbitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmbitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\bll\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|solutionrelative:bll\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\traduccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -115,20 +143,8 @@
       "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mp_historial_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\mp_digito_verificador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mp_digito_verificador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\mp_bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mp_bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\dal\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BFDD0171-D0D0-47A2-8A81-6D313876A593}|DAL\\DAL.csproj|solutionrelative:dal\\mapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|c:\\users\\usuario\\desktop\\proyectois\\proyectois-\\trabajo practico is\\bll\\restauracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|solutionrelative:bll\\restauracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\bll\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -147,10 +163,6 @@
       "RelativeMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|solutionrelative:bll\\historial_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\bll\\digito_verificador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|solutionrelative:bll\\digito_verificador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\bll\\bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{51B8901E-3BB8-4181-A9F2-1E91A4EBA7BA}|BLL\\BLL.csproj|solutionrelative:bll\\bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -167,24 +179,12 @@
       "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\iobserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\iobservable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\iobservable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\historial_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\historial_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\historial_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\historial_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\be\\bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5F763691-160D-4551-B313-B637AE077DEE}|BE\\BE.csproj|solutionrelative:be\\bitacora.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AD8818F-5276-4D5F-B67F-6AA2A4E43C6D}|Trabajo practico IS\\GUI.csproj|solutionrelative:trabajo practico is\\frmctrlusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{60E06DBC-C563-402D-9C36-F066A6F42B05}|Servicios\\SERVICIOS.csproj|C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\servicios\\excepciones\\integridaddatosexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -226,11 +226,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 26,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "FrmProducto.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmProducto.cs",
               "RelativeDocumentMoniker": "Trabajo practico IS\\FrmProducto.cs",
@@ -238,12 +238,11 @@
               "RelativeToolTip": "Trabajo practico IS\\FrmProducto.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-30T00:31:11.616Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "FrmProducto.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmProducto.cs",
               "RelativeDocumentMoniker": "Trabajo practico IS\\FrmProducto.cs",
@@ -252,12 +251,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAMUAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-30T03:15:11.68Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 1,
               "Title": "FrmCTRLUsuario.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLUsuario.cs",
               "RelativeDocumentMoniker": "Trabajo practico IS\\FrmCTRLUsuario.cs",
@@ -270,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "MP_PRODUCTO.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_PRODUCTO.cs",
               "RelativeDocumentMoniker": "DAL\\MP_PRODUCTO.cs",
@@ -279,18 +277,17 @@
               "ViewState": "AgIAACwAAAAAAAAAAAAwwBcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-30T00:22:13.445Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MP_USUARIO.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_USUARIO.cs",
               "RelativeDocumentMoniker": "DAL\\MP_USUARIO.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_USUARIO.cs",
               "RelativeToolTip": "DAL\\MP_USUARIO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAlwLEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-24T17:36:37.151Z",
               "IsPinned": true,
@@ -298,13 +295,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 9,
               "Title": "MAPPER.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MAPPER.cs",
               "RelativeDocumentMoniker": "DAL\\MAPPER.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MAPPER.cs",
               "RelativeToolTip": "DAL\\MAPPER.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wBEAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAIAAAAAAAAAAAApwBEAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-24T18:10:11.923Z",
               "IsPinned": true,
@@ -312,7 +309,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 21,
               "Title": "FrmMenuPrincipal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmMenuPrincipal.cs",
               "RelativeDocumentMoniker": "Trabajo practico IS\\FrmMenuPrincipal.cs",
@@ -320,8 +317,7 @@
               "RelativeToolTip": "Trabajo practico IS\\FrmMenuPrincipal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-23T22:43:23.923Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -334,12 +330,11 @@
               "ViewState": "AgIAAIkAAAAAAAAAAAArwJoAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-23T22:42:58.348Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "PRODUCTO.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\PRODUCTO.cs",
               "RelativeDocumentMoniker": "BLL\\PRODUCTO.cs",
@@ -348,18 +343,17 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-30T00:21:58.02Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 2,
               "Title": "USUARIO.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\USUARIO.cs",
               "RelativeDocumentMoniker": "BLL\\USUARIO.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\USUARIO.cs",
               "RelativeToolTip": "BLL\\USUARIO.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAqwC8AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAADwv5AAAABVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-23T23:28:05.295Z",
               "IsPinned": true,
@@ -367,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 24,
               "Title": "FrmHistorial.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmHistorial.cs",
               "RelativeDocumentMoniker": "Trabajo practico IS\\FrmHistorial.cs",
@@ -375,8 +369,7 @@
               "RelativeToolTip": "Trabajo practico IS\\FrmHistorial.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-11T07:10:39.396Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -389,12 +382,11 @@
               "ViewState": "AgIAABsAAAAAAAAAAAAowDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-11T07:11:35.736Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "HISTORIAL_PRODUCTO.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\HISTORIAL_PRODUCTO.cs",
               "RelativeDocumentMoniker": "BLL\\HISTORIAL_PRODUCTO.cs",
@@ -403,12 +395,11 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-30T09:07:20.958Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "HISTORIAL_USUARIO.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\HISTORIAL_USUARIO.cs",
               "RelativeDocumentMoniker": "BLL\\HISTORIAL_USUARIO.cs",
@@ -417,12 +408,11 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAhwAsAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-11T06:49:16.872Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "MP_HISTORIAL_USUARIO.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_HISTORIAL_USUARIO.cs",
               "RelativeDocumentMoniker": "DAL\\MP_HISTORIAL_USUARIO.cs",
@@ -431,12 +421,11 @@
               "ViewState": "AgIAACMAAAAAAAAAAAAwwD4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-11T06:50:01.753Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 34,
               "Title": "MP_HISTORIAL_PRODUCTO.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_HISTORIAL_PRODUCTO.cs",
               "RelativeDocumentMoniker": "DAL\\MP_HISTORIAL_PRODUCTO.cs",
@@ -445,12 +434,11 @@
               "ViewState": "AgIAACoAAAAAAAAAAAAowCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-30T09:00:38.905Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "FrmCTRLPermiso.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLPermiso.cs",
               "RelativeDocumentMoniker": "Trabajo practico IS\\FrmCTRLPermiso.cs",
@@ -459,12 +447,11 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-04T06:16:34Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 18,
               "Title": "FrmCTRLPermiso.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLPermiso.cs",
               "RelativeDocumentMoniker": "Trabajo practico IS\\FrmCTRLPermiso.cs",
@@ -472,8 +459,7 @@
               "RelativeToolTip": "Trabajo practico IS\\FrmCTRLPermiso.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-04T06:16:08.276Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -481,111 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "TRADUCCION.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\TRADUCCION.cs",
-              "RelativeDocumentMoniker": "BE\\TRADUCCION.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\TRADUCCION.cs",
-              "RelativeToolTip": "BE\\TRADUCCION.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-29T17:13:00.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "SESION.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\SESION.cs",
-              "RelativeDocumentMoniker": "Servicios\\SESION.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\SESION.cs",
-              "RelativeToolTip": "Servicios\\SESION.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T23:07:25.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "IDIOMAS.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\IDIOMAS.cs",
-              "RelativeDocumentMoniker": "Servicios\\IDIOMAS.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\IDIOMAS.cs",
-              "RelativeToolTip": "Servicios\\IDIOMAS.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAASwCAAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-05T19:36:00.001Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ENCRIPTADOR.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\ENCRIPTADOR.cs",
-              "RelativeDocumentMoniker": "Servicios\\ENCRIPTADOR.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\ENCRIPTADOR.cs",
-              "RelativeToolTip": "Servicios\\ENCRIPTADOR.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T17:36:30.643Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MP_PERMISO.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_PERMISO.cs",
-              "RelativeDocumentMoniker": "DAL\\MP_PERMISO.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_PERMISO.cs",
-              "RelativeToolTip": "DAL\\MP_PERMISO.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAArwE4AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T02:15:05.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PERMISO.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\PERMISO.cs",
-              "RelativeDocumentMoniker": "BLL\\PERMISO.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\PERMISO.cs",
-              "RelativeToolTip": "BLL\\PERMISO.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAArwG0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-04T02:23:33.792Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ACCESO.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\ACCESO.cs",
-              "RelativeDocumentMoniker": "DAL\\ACCESO.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\ACCESO.cs",
-              "RelativeToolTip": "DAL\\ACCESO.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAjwBkAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T02:22:29.075Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PERMISO_COMPUESTO.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PERMISO_COMPUESTO.cs",
-              "RelativeDocumentMoniker": "BE\\PERMISO_COMPUESTO.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PERMISO_COMPUESTO.cs",
-              "RelativeToolTip": "BE\\PERMISO_COMPUESTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T18:32:23.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 17,
               "Title": "PERMISO_SIMPLE.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PERMISO_SIMPLE.cs",
               "RelativeDocumentMoniker": "BE\\PERMISO_SIMPLE.cs",
@@ -593,229 +475,37 @@
               "RelativeToolTip": "BE\\PERMISO_SIMPLE.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAowCAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T18:32:08.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-28T18:32:08.841Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "COMPONENTE.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\COMPONENTE.cs",
-              "RelativeDocumentMoniker": "BE\\COMPONENTE.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\COMPONENTE.cs",
-              "RelativeToolTip": "BE\\COMPONENTE.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAwwCUAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T18:31:38.652Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FrmRestauracionBase.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmRestauracionBase.cs",
-              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmRestauracionBase.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmRestauracionBase.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Trabajo practico IS\\FrmRestauracionBase.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T05:16:54.7Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FrmLogIn.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmLogIn.cs",
-              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmLogIn.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmLogIn.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Trabajo practico IS\\FrmLogIn.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T22:47:38.181Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FrmIdioma.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmIdioma.cs",
-              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmIdioma.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmIdioma.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Trabajo practico IS\\FrmIdioma.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-09T18:55:03.672Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "FrmBitacora.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmBitacora.cs",
-              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmBitacora.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmBitacora.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Trabajo practico IS\\FrmBitacora.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T22:45:03.835Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "USUARIO.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\USUARIO.cs",
-              "RelativeDocumentMoniker": "BE\\USUARIO.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\USUARIO.cs",
-              "RelativeToolTip": "BE\\USUARIO.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAA2wFgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T17:35:45.009Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "MP_IDIOMA.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_IDIOMA.cs",
-              "RelativeDocumentMoniker": "DAL\\MP_IDIOMA.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_IDIOMA.cs",
-              "RelativeToolTip": "DAL\\MP_IDIOMA.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-06T03:00:18.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "MP_DIGITO_VERIFICADOR.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_DIGITO_VERIFICADOR.cs",
-              "RelativeDocumentMoniker": "DAL\\MP_DIGITO_VERIFICADOR.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_DIGITO_VERIFICADOR.cs",
-              "RelativeToolTip": "DAL\\MP_DIGITO_VERIFICADOR.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-09T20:36:59.118Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "MP_BITACORA.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_BITACORA.cs",
-              "RelativeDocumentMoniker": "DAL\\MP_BITACORA.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_BITACORA.cs",
-              "RelativeToolTip": "DAL\\MP_BITACORA.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAmwBYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T03:25:02.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "RESTAURACION.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\RESTAURACION.cs",
-              "RelativeDocumentMoniker": "BLL\\RESTAURACION.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\RESTAURACION.cs",
-              "RelativeToolTip": "BLL\\RESTAURACION.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAuwCcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T05:34:40.828Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "IDIOMA.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\IDIOMA.cs",
-              "RelativeDocumentMoniker": "BLL\\IDIOMA.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\IDIOMA.cs",
-              "RelativeToolTip": "BLL\\IDIOMA.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-06T03:31:56.109Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "DIGITO_VERIFICADOR.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\DIGITO_VERIFICADOR.cs",
-              "RelativeDocumentMoniker": "BLL\\DIGITO_VERIFICADOR.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\DIGITO_VERIFICADOR.cs",
-              "RelativeToolTip": "BLL\\DIGITO_VERIFICADOR.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADMAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-09T20:29:44.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "BITACORA.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\BITACORA.cs",
-              "RelativeDocumentMoniker": "BLL\\BITACORA.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\BITACORA.cs",
-              "RelativeToolTip": "BLL\\BITACORA.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T04:24:51.036Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "AUDITORIA.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\AUDITORIA.cs",
-              "RelativeDocumentMoniker": "BLL\\AUDITORIA.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\AUDITORIA.cs",
-              "RelativeToolTip": "BLL\\AUDITORIA.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-09T21:01:48.21Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "PRODUCTO.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PRODUCTO.cs",
-              "RelativeDocumentMoniker": "BE\\PRODUCTO.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PRODUCTO.cs",
-              "RelativeToolTip": "BE\\PRODUCTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T00:21:32.748Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "IObserver.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IObserver.cs",
-              "RelativeDocumentMoniker": "BE\\IObserver.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IObserver.cs",
-              "RelativeToolTip": "BE\\IObserver.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T18:48:15.526Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 10,
               "Title": "IObservable.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IObservable.cs",
               "RelativeDocumentMoniker": "BE\\IObservable.cs",
               "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IObservable.cs",
               "RelativeToolTip": "BE\\IObservable.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-28T19:24:51.245Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 8,
+              "Title": "USUARIO.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\USUARIO.cs",
+              "RelativeDocumentMoniker": "BE\\USUARIO.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\USUARIO.cs",
+              "RelativeToolTip": "BE\\USUARIO.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAkwGkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T17:35:45.009Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "HISTORIAL_USUARIO.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\HISTORIAL_USUARIO.cs",
               "RelativeDocumentMoniker": "BE\\HISTORIAL_USUARIO.cs",
@@ -828,7 +518,296 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MP_DIGITO_VERIFICADOR.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_DIGITO_VERIFICADOR.cs",
+              "RelativeDocumentMoniker": "DAL\\MP_DIGITO_VERIFICADOR.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_DIGITO_VERIFICADOR.cs",
+              "RelativeToolTip": "DAL\\MP_DIGITO_VERIFICADOR.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T20:36:59.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DIGITO_VERIFICADOR.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\DIGITO_VERIFICADOR.cs",
+              "RelativeDocumentMoniker": "BLL\\DIGITO_VERIFICADOR.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\DIGITO_VERIFICADOR.cs",
+              "RelativeToolTip": "BLL\\DIGITO_VERIFICADOR.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T20:29:44.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RESTAURACION.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\RESTAURACION.cs",
+              "RelativeDocumentMoniker": "BLL\\RESTAURACION.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\RESTAURACION.cs",
+              "RelativeToolTip": "BLL\\RESTAURACION.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAIwCQAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T05:34:40.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmCTRLUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLUsuario.cs",
+              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmCTRLUsuario.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLUsuario.cs",
+              "RelativeToolTip": "Trabajo practico IS\\FrmCTRLUsuario.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAnwIQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T17:52:41.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PERMISO_COMPUESTO.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PERMISO_COMPUESTO.cs",
+              "RelativeDocumentMoniker": "BE\\PERMISO_COMPUESTO.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PERMISO_COMPUESTO.cs",
+              "RelativeToolTip": "BE\\PERMISO_COMPUESTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T18:32:23.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ACCESO.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\ACCESO.cs",
+              "RelativeDocumentMoniker": "DAL\\ACCESO.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\ACCESO.cs",
+              "RelativeToolTip": "DAL\\ACCESO.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAjwBkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T02:22:29.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PERMISO.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\PERMISO.cs",
+              "RelativeDocumentMoniker": "BLL\\PERMISO.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\PERMISO.cs",
+              "RelativeToolTip": "BLL\\PERMISO.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAArwG0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T02:23:33.792Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MP_PERMISO.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_PERMISO.cs",
+              "RelativeDocumentMoniker": "DAL\\MP_PERMISO.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_PERMISO.cs",
+              "RelativeToolTip": "DAL\\MP_PERMISO.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAArwE4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-04T02:15:05.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ENCRIPTADOR.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\ENCRIPTADOR.cs",
+              "RelativeDocumentMoniker": "Servicios\\ENCRIPTADOR.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\ENCRIPTADOR.cs",
+              "RelativeToolTip": "Servicios\\ENCRIPTADOR.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T17:36:30.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IDIOMAS.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\IDIOMAS.cs",
+              "RelativeDocumentMoniker": "Servicios\\IDIOMAS.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\IDIOMAS.cs",
+              "RelativeToolTip": "Servicios\\IDIOMAS.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAASwCAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T19:36:00.001Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "SESION.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\SESION.cs",
+              "RelativeDocumentMoniker": "Servicios\\SESION.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Servicios\\SESION.cs",
+              "RelativeToolTip": "Servicios\\SESION.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T23:07:25.629Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "TRADUCCION.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\TRADUCCION.cs",
+              "RelativeDocumentMoniker": "BE\\TRADUCCION.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\TRADUCCION.cs",
+              "RelativeToolTip": "BE\\TRADUCCION.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T17:13:00.605Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "COMPONENTE.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\COMPONENTE.cs",
+              "RelativeDocumentMoniker": "BE\\COMPONENTE.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\COMPONENTE.cs",
+              "RelativeToolTip": "BE\\COMPONENTE.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwCUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T18:31:38.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FrmRestauracionBase.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmRestauracionBase.cs",
+              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmRestauracionBase.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmRestauracionBase.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Trabajo practico IS\\FrmRestauracionBase.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T05:16:54.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "FrmLogIn.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmLogIn.cs",
+              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmLogIn.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmLogIn.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Trabajo practico IS\\FrmLogIn.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T22:47:38.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "FrmIdioma.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmIdioma.cs",
+              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmIdioma.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmIdioma.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Trabajo practico IS\\FrmIdioma.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T18:55:03.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FrmBitacora.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmBitacora.cs",
+              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmBitacora.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmBitacora.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Trabajo practico IS\\FrmBitacora.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-23T22:45:03.835Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "MP_IDIOMA.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_IDIOMA.cs",
+              "RelativeDocumentMoniker": "DAL\\MP_IDIOMA.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_IDIOMA.cs",
+              "RelativeToolTip": "DAL\\MP_IDIOMA.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T03:00:18.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "MP_BITACORA.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_BITACORA.cs",
+              "RelativeDocumentMoniker": "DAL\\MP_BITACORA.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\DAL\\MP_BITACORA.cs",
+              "RelativeToolTip": "DAL\\MP_BITACORA.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAmwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-30T03:25:02.704Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "IDIOMA.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\IDIOMA.cs",
+              "RelativeDocumentMoniker": "BLL\\IDIOMA.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\IDIOMA.cs",
+              "RelativeToolTip": "BLL\\IDIOMA.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-06T03:31:56.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "BITACORA.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\BITACORA.cs",
+              "RelativeDocumentMoniker": "BLL\\BITACORA.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\BITACORA.cs",
+              "RelativeToolTip": "BLL\\BITACORA.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T04:24:51.036Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "AUDITORIA.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\AUDITORIA.cs",
+              "RelativeDocumentMoniker": "BLL\\AUDITORIA.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BLL\\AUDITORIA.cs",
+              "RelativeToolTip": "BLL\\AUDITORIA.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-09T21:01:48.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "PRODUCTO.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PRODUCTO.cs",
+              "RelativeDocumentMoniker": "BE\\PRODUCTO.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\PRODUCTO.cs",
+              "RelativeToolTip": "BE\\PRODUCTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-30T00:21:32.748Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 43,
+              "Title": "IObserver.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IObserver.cs",
+              "RelativeDocumentMoniker": "BE\\IObserver.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\IObserver.cs",
+              "RelativeToolTip": "BE\\IObserver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-28T18:48:15.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
               "Title": "HISTORIAL_PRODUCTO.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\HISTORIAL_PRODUCTO.cs",
               "RelativeDocumentMoniker": "BE\\HISTORIAL_PRODUCTO.cs",
@@ -836,12 +815,11 @@
               "RelativeToolTip": "BE\\HISTORIAL_PRODUCTO.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAYwEAAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-30T08:47:06.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-30T08:47:06.627Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "BITACORA.cs",
               "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\BE\\BITACORA.cs",
               "RelativeDocumentMoniker": "BE\\BITACORA.cs",
@@ -849,21 +827,7 @@
               "RelativeToolTip": "BE\\BITACORA.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-01T14:26:23.359Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "FrmCTRLUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLUsuario.cs",
-              "RelativeDocumentMoniker": "Trabajo practico IS\\FrmCTRLUsuario.cs",
-              "ToolTip": "C:\\Users\\Usuario\\Desktop\\ProyectoIS\\ProyectoIS-\\Trabajo practico IS\\Trabajo practico IS\\FrmCTRLUsuario.cs",
-              "RelativeToolTip": "Trabajo practico IS\\FrmCTRLUsuario.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAewGsAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-24T17:52:41.581Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-01T14:26:23.359Z"
             },
             {
               "$type": "Document",
@@ -875,8 +839,7 @@
               "RelativeToolTip": "Servicios\\Excepciones\\IntegridadDatosException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-09T21:13:47.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-09T21:13:47.893Z"
             },
             {
               "$type": "Document",
@@ -913,8 +876,7 @@
               "RelativeToolTip": "Trabajo practico IS\\FrmLogIn.cs",
               "ViewState": "AgIAAGkAAAAAAAAAAADgv4AAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T22:48:04.161Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-23T22:48:04.161Z"
             },
             {
               "$type": "Document",
@@ -926,8 +888,7 @@
               "RelativeToolTip": "Trabajo practico IS\\FrmRestauracionBase.cs",
               "ViewState": "AgIAAGUAAAAAAAAAAAAMwHcAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-10T08:33:51.606Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-10T08:33:51.606Z"
             },
             {
               "$type": "Document",
@@ -939,8 +900,7 @@
               "RelativeToolTip": "Trabajo practico IS\\FrmIdioma.cs",
               "ViewState": "AgIAAIsAAAAAAAAAAAAvwKQAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-09T18:56:03.08Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-09T18:56:03.08Z"
             }
           ]
         }

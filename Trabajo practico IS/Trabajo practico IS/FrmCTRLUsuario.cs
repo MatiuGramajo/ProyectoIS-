@@ -68,26 +68,26 @@ namespace Trabajo_practico_IS
 
         public void EnlazarUsuarios()
         {
-            List<BE.USUARIO> ListaCompleta = GestorUsuarios.Listar();
-            List<BE.USUARIO> ListaDesbloqueados;
+            var ListaUsuarios = GestorUsuarios.Listar().AsEnumerable();
+
             if (CKXmostrarbloqueados.Checked==false)
             {
-                ListaDesbloqueados=(from d in ListaCompleta
-                                    where d.EstadoBloqueado==false
-                                    select d).ToList();
+                ListaUsuarios = ListaUsuarios.Where(u => u.EstadoBloqueado == false);
             }
-            else
+            
+            if (CKXmostrarInactivos.Checked == false)
             {
-                ListaDesbloqueados = ListaCompleta;
+                ListaUsuarios = ListaUsuarios.Where(u => u.Activo == true);
             }
 
             DGV_CtrlUsuUsuarios.DataSource = null;
-            DGV_CtrlUsuUsuarios.DataSource = ListaDesbloqueados;
+            DGV_CtrlUsuUsuarios.DataSource = ListaUsuarios.ToList();
             DGV_CtrlUsuUsuarios.ReadOnly = true;
             DGV_CtrlUsuUsuarios.Columns["Id"].Visible = false;
             DGV_CtrlUsuUsuarios.Columns["Contraseña"].Visible = false;
             DGV_CtrlUsuUsuarios.Columns["IntentosFallidos"].Visible = false;
             DGV_CtrlUsuUsuarios.Columns["DVH"].Visible = false;
+            DGV_CtrlUsuUsuarios.Columns["Activo"].Visible = false;
         }
 
         private void BTNCtrlUsuAlta_Click(object sender, EventArgs e)
@@ -134,14 +134,31 @@ namespace Trabajo_practico_IS
             {
                 if (usuario != null)
                 {
-                    var result = MessageBox.Show($"Esta seguro que desea borrar a: {usuario.Usuario}?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (result == DialogResult.Yes)
+                    // LÓGICA DE REACTIVACIÓN
+                    if (usuario.Activo == false)
                     {
-                        GestorUsuarios.Borrar(usuario);
-                        GestorBitacora.RegistrarEvento("Administracion", $"Se dio de baja al usuario {usuario.Usuario}", 4);
-                        EnlazarUsuarios();
-                        LimpiarControles();
-                        usuario = null;
+                        var result = MessageBox.Show($"¿Desea reactivar a: {usuario.Usuario}?", "Confirmar Reactivación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            GestorUsuarios.Reactivar(usuario); // Este es el método que creamos en tu BLL
+                            GestorBitacora.RegistrarEvento("Administracion", $"Se reactivó al usuario {usuario.Usuario}", 3);
+                            EnlazarUsuarios();
+                            LimpiarControles();
+                            usuario = null;
+                        }
+                    }
+                    // LÓGICA DE BAJA ORIGINAL
+                    else
+                    {
+                        var result = MessageBox.Show($"¿Esta seguro que desea dar de baja a: {usuario.Usuario}?", "Confirmar Baja", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (result == DialogResult.Yes)
+                        {
+                            GestorUsuarios.Borrar(usuario);
+                            GestorBitacora.RegistrarEvento("Administracion", $"Se dio de baja al usuario {usuario.Usuario}", 4);
+                            EnlazarUsuarios();
+                            LimpiarControles();
+                            usuario = null;
+                        }
                     }
                 }
                 else
@@ -315,6 +332,11 @@ namespace Trabajo_practico_IS
             Servicios.IDIOMAS.GetInstancia().Desuscribir(this);
         }
 
-
+        private void CKXmostrarInactivos_CheckedChanged(object sender, EventArgs e)
+        {
+            EnlazarUsuarios();
+            LimpiarControles();
+            usuario = null;
+        }
     }
 }

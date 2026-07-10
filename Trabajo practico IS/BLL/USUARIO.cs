@@ -63,8 +63,21 @@ namespace BLL
             {
                 throw new Exception("Operación Denegada: Por seguridad del sistema, no puede eliminar su propia cuenta mientras esté en uso.");
             }
+            usuario.Activo = false;
+            usuario.DVH = GestorDV.CalcularDVH(usuario);
+            mapper.ActualizarSoloDVH(usuario.Id, usuario.DVH);
             mapper.Baja(usuario);
             ActualizarDvvUsuarios();
+            string responsable;
+            if (Servicios.SESION.GetInstancia().usuactual != null)
+            {
+                responsable = Servicios.SESION.GetInstancia().usuactual.Usuario;
+            }
+            else
+            {
+                responsable = "SISTEMA";
+            }
+            gestorHistorial.RegistrarCambio(usuario.Id, responsable, "BAJA_LOGICA");
         }
 
         public void Modificar(BE.USUARIO usuario)
@@ -104,6 +117,34 @@ namespace BLL
         {
             return mapper.Listar();
         }
+
+        public void Reactivar(BE.USUARIO usuario)
+        {
+            // 1. Traemos la lista maestra
+            List<BE.USUARIO> todosLosUsuarios = mapper.Listar();
+
+            // Validamos que NO exista OTRO usuario (Id distinto), que esté ACTIVO, y tenga el MISMO nombre
+            if (todosLosUsuarios.Any(u => u.Id != usuario.Id && u.Activo == true && u.Usuario.Equals(usuario.Usuario, StringComparison.OrdinalIgnoreCase)))
+            {
+                throw new Exception("Operación Denegada: Ya existe un usuario activo con este mismo nombre en el sistema.");
+            }
+
+            // 2. Cambiamos el estado en memoria
+            usuario.Activo = true;
+
+            // 3. Recalculamos el DVH con el nuevo estado 'true'
+            usuario.DVH = GestorDV.CalcularDVH(usuario);
+
+            // 4. Ejecutamos la reactivación física y de integridad
+            mapper.Reactivar(usuario); // Asegurate de que tu mapper llame al SP "UPDATE USUARIO SET ACTIVO = 1 WHERE ID = @id"
+            mapper.ActualizarSoloDVH(usuario.Id, usuario.DVH);
+            ActualizarDvvUsuarios();
+
+            // 5. Auditoría
+            string responsable = Servicios.SESION.GetInstancia().usuactual != null ? Servicios.SESION.GetInstancia().usuactual.Usuario : "SISTEMA";
+            gestorHistorial.RegistrarCambio(usuario.Id, responsable, "REACTIVACION");
+        }
+
         public void DesbloquearUsuario(BE.USUARIO usuario)
         {
             usuario.DVH = GestorDV.CalcularDVH(usuario);

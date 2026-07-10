@@ -80,7 +80,7 @@ namespace DAL
                 usuarioEncontrado.Dni = int.Parse(row["DNI"].ToString());
                 usuarioEncontrado.Email = row["EMAIL"].ToString();
                 usuarioEncontrado.IdIdioma = row["id_idioma"] != DBNull.Value ? Convert.ToInt32(row["id_idioma"]) : 1;
-
+                usuarioEncontrado.Activo = Convert.ToBoolean(row["ACTIVO"]);
 
                 return usuarioEncontrado;
             }
@@ -163,10 +163,21 @@ namespace DAL
                 usu.Email= registro["EMAIL"].ToString();
                 usu.IdIdioma = int.Parse(registro["ID_IDIOMA"].ToString());
                 usu.DVH = registro["DVH"].ToString();
+                usu.Activo = Convert.ToBoolean(registro["ACTIVO"]);
                 usuarios.Add(usu);
             }
             return usuarios;
         }
+
+        public void Reactivar(BE.USUARIO usuario)
+        {
+            acceso.Abrir();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(acceso.CrearParametro("@id", usuario.Id));
+            acceso.Escribir("REACTIVAR_USUARIO", parametros);
+            acceso.Cerrar();
+        }
+
         public void ActualizarIdiomaUsuario(BE.USUARIO usuario)
         {
             acceso.Abrir();

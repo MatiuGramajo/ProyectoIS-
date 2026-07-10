@@ -83,6 +83,15 @@ namespace BE
 			set { dvh = value; }
 		}
 
+
+		private bool activo;
+
+		public bool Activo
+		{
+			get { return activo; }
+			set { activo = value; }
+		}
+
 		public bool TienePermiso(string nombrePermiso)
         {
             foreach (var comp in permisos)
@@ -95,9 +104,12 @@ namespace BE
             return false;
         }
 
+        public USUARIO()
+        {
+            this.Activo = true;
+        }
 
 
-
-	}
+    }
 
 }

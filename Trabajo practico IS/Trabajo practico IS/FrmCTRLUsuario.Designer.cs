@@ -49,6 +49,7 @@
             this.LBLidiomas = new System.Windows.Forms.Label();
             this.GB_Usuarios = new System.Windows.Forms.GroupBox();
             this.GB_Datos = new System.Windows.Forms.GroupBox();
+            this.CKXmostrarInactivos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_CtrlUsuUsuarios)).BeginInit();
             this.GB_Usuarios.SuspendLayout();
             this.GB_Datos.SuspendLayout();
@@ -255,12 +256,24 @@
             this.GB_Datos.TabStop = false;
             this.GB_Datos.Text = "Datos de usuario";
             // 
+            // CKXmostrarInactivos
+            // 
+            this.CKXmostrarInactivos.AutoSize = true;
+            this.CKXmostrarInactivos.Location = new System.Drawing.Point(414, 338);
+            this.CKXmostrarInactivos.Name = "CKXmostrarInactivos";
+            this.CKXmostrarInactivos.Size = new System.Drawing.Size(107, 17);
+            this.CKXmostrarInactivos.TabIndex = 25;
+            this.CKXmostrarInactivos.Text = "Mostrar Inactivos";
+            this.CKXmostrarInactivos.UseVisualStyleBackColor = true;
+            this.CKXmostrarInactivos.CheckedChanged += new System.EventHandler(this.CKXmostrarInactivos_CheckedChanged);
+            // 
             // FrmCTRLUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1065, 541);
+            this.Controls.Add(this.CKXmostrarInactivos);
             this.Controls.Add(this.GB_Usuarios);
             this.Controls.Add(this.LBLidiomas);
             this.Controls.Add(this.CBXidiomas);
@@ -308,5 +321,6 @@
         private System.Windows.Forms.Label LBLidiomas;
         private System.Windows.Forms.GroupBox GB_Usuarios;
         private System.Windows.Forms.GroupBox GB_Datos;
+        private System.Windows.Forms.CheckBox CKXmostrarInactivos;
     }
 }

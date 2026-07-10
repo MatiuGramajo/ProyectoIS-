@@ -21,7 +21,8 @@ namespace BLL
                                     $"{usuario.IntentosFallidos}" +
                                     $"{usuario.Dni}" +
                                     $"{usuario.Email}" +
-                                    $"{usuario.IdIdioma}";
+                                    $"{usuario.IdIdioma}" +
+                                    $"{usuario.Activo}";
 
             return ENCRIPTADOR.Hashear(cadenaAHashear);
         }
