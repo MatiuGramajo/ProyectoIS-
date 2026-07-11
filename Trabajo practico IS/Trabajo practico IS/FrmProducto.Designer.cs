@@ -38,11 +38,13 @@
             this.CBXIdiomas = new System.Windows.Forms.ComboBox();
             this.LBLidiomas = new System.Windows.Forms.Label();
             this.GB_Producto = new System.Windows.Forms.GroupBox();
+            this.LBLStockProducto = new System.Windows.Forms.Label();
             this.LBLNombreProducto = new System.Windows.Forms.Label();
             this.LBLPrecioProducto = new System.Windows.Forms.Label();
-            this.LBLStockProducto = new System.Windows.Forms.Label();
             this.GB_Productos = new System.Windows.Forms.GroupBox();
             this.BTNvolveralmenu = new System.Windows.Forms.Button();
+            this.BTN_ProductoReactivar = new System.Windows.Forms.Button();
+            this.CKXmostrarInactivos = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_Productos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_PrecioProd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_StockProd)).BeginInit();
@@ -157,6 +159,15 @@
             this.GB_Producto.TabStop = false;
             this.GB_Producto.Text = "Datos del producto";
             // 
+            // LBLStockProducto
+            // 
+            this.LBLStockProducto.AutoSize = true;
+            this.LBLStockProducto.Location = new System.Drawing.Point(9, 104);
+            this.LBLStockProducto.Name = "LBLStockProducto";
+            this.LBLStockProducto.Size = new System.Drawing.Size(35, 13);
+            this.LBLStockProducto.TabIndex = 12;
+            this.LBLStockProducto.Text = "Stock";
+            // 
             // LBLNombreProducto
             // 
             this.LBLNombreProducto.AutoSize = true;
@@ -174,15 +185,6 @@
             this.LBLPrecioProducto.Size = new System.Drawing.Size(37, 13);
             this.LBLPrecioProducto.TabIndex = 11;
             this.LBLPrecioProducto.Text = "Precio";
-            // 
-            // LBLStockProducto
-            // 
-            this.LBLStockProducto.AutoSize = true;
-            this.LBLStockProducto.Location = new System.Drawing.Point(9, 104);
-            this.LBLStockProducto.Name = "LBLStockProducto";
-            this.LBLStockProducto.Size = new System.Drawing.Size(35, 13);
-            this.LBLStockProducto.TabIndex = 12;
-            this.LBLStockProducto.Text = "Stock";
             // 
             // GB_Productos
             // 
@@ -204,12 +206,35 @@
             this.BTNvolveralmenu.UseVisualStyleBackColor = true;
             this.BTNvolveralmenu.Click += new System.EventHandler(this.BTNvolveralmenu_Click);
             // 
+            // BTN_ProductoReactivar
+            // 
+            this.BTN_ProductoReactivar.Location = new System.Drawing.Point(420, 322);
+            this.BTN_ProductoReactivar.Name = "BTN_ProductoReactivar";
+            this.BTN_ProductoReactivar.Size = new System.Drawing.Size(124, 27);
+            this.BTN_ProductoReactivar.TabIndex = 12;
+            this.BTN_ProductoReactivar.Text = "Reactivar";
+            this.BTN_ProductoReactivar.UseVisualStyleBackColor = true;
+            this.BTN_ProductoReactivar.Click += new System.EventHandler(this.BTN_ProductoReactivar_Click);
+            // 
+            // CKXmostrarInactivos
+            // 
+            this.CKXmostrarInactivos.AutoSize = true;
+            this.CKXmostrarInactivos.Location = new System.Drawing.Point(290, 331);
+            this.CKXmostrarInactivos.Name = "CKXmostrarInactivos";
+            this.CKXmostrarInactivos.Size = new System.Drawing.Size(107, 17);
+            this.CKXmostrarInactivos.TabIndex = 13;
+            this.CKXmostrarInactivos.Text = "Mostrar Inactivos";
+            this.CKXmostrarInactivos.UseVisualStyleBackColor = true;
+            this.CKXmostrarInactivos.CheckedChanged += new System.EventHandler(this.CKXmostrarInactivos_CheckedChanged);
+            // 
             // FrmProducto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(851, 446);
+            this.Controls.Add(this.CKXmostrarInactivos);
+            this.Controls.Add(this.BTN_ProductoReactivar);
             this.Controls.Add(this.BTNvolveralmenu);
             this.Controls.Add(this.GB_Producto);
             this.Controls.Add(this.LBLidiomas);
@@ -252,5 +277,7 @@
         private System.Windows.Forms.Label LBLPrecioProducto;
         private System.Windows.Forms.GroupBox GB_Productos;
         private System.Windows.Forms.Button BTNvolveralmenu;
+        private System.Windows.Forms.Button BTN_ProductoReactivar;
+        private System.Windows.Forms.CheckBox CKXmostrarInactivos;
     }
 }

@@ -48,6 +48,9 @@ namespace BE
 			set { activo = value; }
 		}
 
-
-	}
+        public PRODUCTO()
+        {
+            this.Activo = true;
+        }
+    }
 }

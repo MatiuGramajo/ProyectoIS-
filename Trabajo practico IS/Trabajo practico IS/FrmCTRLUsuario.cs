@@ -393,7 +393,6 @@ namespace Trabajo_practico_IS
         {
             try
             {
-                // Solo procedemos si hay un usuario seleccionado y está INACTIVO
                 if (usuario != null && usuario.Activo == false)
                 {
                     var result = MessageBox.Show($"¿Desea reactivar a: {usuario.Usuario}?", "Confirmar Reactivación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -404,7 +403,7 @@ namespace Trabajo_practico_IS
                         EnlazarUsuarios();
                         LimpiarControles();
                         usuario = null;
-                        //ActualizarEstadoBotones(); // Refrescamos los botones
+                        ActualizarEstadoBotones();
                     }
                 }
                 else

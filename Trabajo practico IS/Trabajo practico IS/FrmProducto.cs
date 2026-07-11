@@ -32,14 +32,26 @@ namespace Trabajo_practico_IS
             CBXIdiomas.SelectedIndexChanged += CBXIdiomas_SelectedIndexChanged;
             ActualizarIdioma();
             EnlazarProductos();
+            ActualizarEstadoBotones();
         }
 
         public void EnlazarProductos()
         {
-            List<BE.PRODUCTO> ListaProductos = GestorProductos.Listar();
+            // Traemos todo el catálogo una sola vez
+            var productos = GestorProductos.Listar().AsEnumerable();
+
+            // Filtramos si el CheckBox NO está tildado
+            if (CKXmostrarInactivos.Checked == false)
+            {
+                productos = productos.Where(p => p.Activo == true);
+            }
+
             DGV_Productos.DataSource = null;
-            DGV_Productos.DataSource = ListaProductos;
-            DGV_Productos.Columns["Id"].Visible = false;
+            DGV_Productos.DataSource = productos.ToList();
+            DGV_Productos.ReadOnly = true;
+
+            if (DGV_Productos.Columns["Id"] != null) DGV_Productos.Columns["Id"].Visible = false;
+            if (DGV_Productos.Columns["Activo"] != null) DGV_Productos.Columns["Activo"].Visible = false;
 
         }
         public void LimpiarControles()
@@ -47,6 +59,9 @@ namespace Trabajo_practico_IS
             TXT_ProductoNombre.Text = "";
             NUD_PrecioProd.Value = 0;
             NUD_StockProd.Value = 0;
+            productoSeleccionado = null;
+
+            ActualizarEstadoBotones();
         }
         private void BTN_ProductoAlta_Click(object sender, EventArgs e)
         {
@@ -56,6 +71,29 @@ namespace Trabajo_practico_IS
                 nuevoProducto.Nombre = TXT_ProductoNombre.Text;
                 nuevoProducto.Precio = NUD_PrecioProd.Value;
                 nuevoProducto.Stock = (int)NUD_StockProd.Value;
+
+                BE.PRODUCTO inactivoDuplicado = GestorProductos.ObtenerInactivoDuplicado(nuevoProducto);
+
+                if (inactivoDuplicado != null)
+                {
+                    var result = MessageBox.Show("El nombre ingresado pertenece a un producto que fue dado de baja.\n\n¿Desea reactivarlo para conservar su historial en el sistema en lugar de crear uno nuevo?",
+                                                 "Producto Inactivo Detectado",
+                                                 MessageBoxButtons.YesNo,
+                                                 MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        GestorProductos.Reactivar(inactivoDuplicado);
+                        MessageBox.Show("El producto ha sido reactivado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        EnlazarProductos();
+                        LimpiarControles();
+                        return;
+                    }
+                    else
+                    {
+                        return;
+                    }
+                }
 
                 GestorProductos.Insertar(nuevoProducto);
 
@@ -81,6 +119,7 @@ namespace Trabajo_practico_IS
                         EnlazarProductos();
                         LimpiarControles();
                         productoSeleccionado = null;
+                        ActualizarEstadoBotones();
                     }
                 }
                 else
@@ -123,14 +162,39 @@ namespace Trabajo_practico_IS
             }
         }
 
+        private void BTN_ProductoReactivar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (productoSeleccionado != null && productoSeleccionado.Activo == false)
+                {
+                    var result = MessageBox.Show($"¿Desea reactivar el producto: {productoSeleccionado.Nombre}?", "Confirmar Reactivación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        GestorProductos.Reactivar(productoSeleccionado);
+                        EnlazarProductos();
+                        LimpiarControles();
+                        productoSeleccionado = null;
+                        ActualizarEstadoBotones();
+                    }
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message, "Error al Reactivar", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
         private void DGV_Productos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
                 productoSeleccionado = DGV_Productos.Rows[e.RowIndex].DataBoundItem as BE.PRODUCTO;
-                TXT_ProductoNombre.Text = productoSeleccionado.Nombre;
-                NUD_PrecioProd.Value = productoSeleccionado.Precio;
-                NUD_StockProd.Value = productoSeleccionado.Stock;
+                if (productoSeleccionado != null)
+                {
+                    TXT_ProductoNombre.Text = productoSeleccionado.Nombre;
+                    NUD_PrecioProd.Value = productoSeleccionado.Precio;
+                    NUD_StockProd.Value = productoSeleccionado.Stock;
+
+                    ActualizarEstadoBotones();
+                }
+
             }
         }
 
@@ -197,5 +261,40 @@ namespace Trabajo_practico_IS
         {
             Servicios.IDIOMAS.GetInstancia().Desuscribir(this);
         }
+
+        private void CKXmostrarInactivos_CheckedChanged(object sender, EventArgs e)
+        {
+            EnlazarProductos();
+            LimpiarControles();
+            productoSeleccionado = null;
+        }
+
+        private void ActualizarEstadoBotones()
+        {
+            if (productoSeleccionado == null)
+            {
+                BTN_ProductoModificar.Enabled = false;
+                BTN_ProductoBaja.Enabled = false;
+                BTN_ProductoReactivar.Enabled = false;
+                return;
+            }
+
+            // Si el producto está dado de BAJA LÓGICA
+            if (productoSeleccionado.Activo == false)
+            {
+                BTN_ProductoReactivar.Enabled = true;
+                BTN_ProductoBaja.Enabled = false;
+                BTN_ProductoModificar.Enabled = false;
+            }
+            // Si el producto está ACTIVO
+            else
+            {
+                BTN_ProductoReactivar.Enabled = false;
+                BTN_ProductoBaja.Enabled = true;
+                BTN_ProductoModificar.Enabled = true;
+            }
+        }
+
+
     }
 }

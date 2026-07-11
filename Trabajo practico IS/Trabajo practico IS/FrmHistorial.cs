@@ -17,6 +17,7 @@ namespace Trabajo_practico_IS
         public FrmHistorial()
         {
             InitializeComponent();
+            DGVHistorial.SelectionChanged += DGVHistorial_SelectionChanged;
         }
 
         public void ActualizarIdioma()
@@ -58,7 +59,8 @@ namespace Trabajo_practico_IS
             CBXIdiomas.ValueMember = "Id";
             CBXIdiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
             CBXIdiomas.SelectedIndexChanged += CBXIdiomas_SelectedIndexChanged;
-            ActualizarIdioma(); 
+            ActualizarIdioma();
+            ActualizarEstadoBotonRestaurar();
         }
 
         private void BTNrestaurar_Click(object sender, EventArgs e)
@@ -76,6 +78,22 @@ namespace Trabajo_practico_IS
                 if (entidadSeleccionada == "Usuarios")
                 {
                     BE.HISTORIAL_USUARIO versionSeleccionada = (BE.HISTORIAL_USUARIO)DGVHistorial.CurrentRow.DataBoundItem;
+
+                    if (versionSeleccionada.Activo == false)
+                    {
+                        MessageBox.Show("No se puede restaurar una versión donde el usuario estaba dado de baja.", "Versión Invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    BLL.USUARIO gestorUsu = new BLL.USUARIO();
+                    BE.USUARIO usuarioActual = gestorUsu.Listar().FirstOrDefault(u => u.Id == versionSeleccionada.Id);
+
+                    if (usuarioActual != null && usuarioActual.Activo == false)
+                    {
+                        MessageBox.Show("Operación denegada.\n\nNo se puede restaurar información de un registro que se encuentra dado de baja (Inactivo).", "Registro Inactivo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        return; 
+                    }
+
                     var r = MessageBox.Show(
                         $"¿Está seguro de que desea restaurar los datos de este usuario al estado exacto del día {versionSeleccionada.FechaCambio}?",
                         "Confirmar Restauración de Usuario",
@@ -95,6 +113,22 @@ namespace Trabajo_practico_IS
                 else if (entidadSeleccionada == "Productos")
                 {
                     BE.HISTORIAL_PRODUCTO versionSeleccionada = (BE.HISTORIAL_PRODUCTO)DGVHistorial.CurrentRow.DataBoundItem;
+
+                    if (versionSeleccionada.Activo == false)
+                    {
+                        MessageBox.Show("No se puede restaurar una versión donde el producto estaba dado de baja.", "Versión Invalida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    BLL.PRODUCTO gestorProd = new BLL.PRODUCTO();
+                    BE.PRODUCTO productoActual = gestorProd.Listar().FirstOrDefault(p => p.Id == versionSeleccionada.IdProducto);
+
+                    if (productoActual != null && productoActual.Activo == false)
+                    {
+                        MessageBox.Show("Operación denegada.\n\nNo se puede restaurar información de un producto que se encuentra dado de baja (Inactivo).", "Registro Inactivo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        return;
+                    }
+
                     var r = MessageBox.Show(
                         $"¿Está seguro de que desea restaurar los datos de este producto al estado exacto del día {versionSeleccionada.FechaCambio}?",
                         "Confirmar Restauración de Producto",
@@ -216,6 +250,7 @@ namespace Trabajo_practico_IS
                 DGVHistorial.ReadOnly = true;
                 DGVHistorial.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 AplicarFormatoGrilla(entidad);
+                ActualizarEstadoBotonRestaurar();
             }
             catch (Exception ex)
             {
@@ -254,6 +289,7 @@ namespace Trabajo_practico_IS
                     DGVHistorial.DataSource = historialFiltrado;
                 }
                 AplicarFormatoGrilla(entidadActiva);
+                ActualizarEstadoBotonRestaurar();
             }
             catch (Exception ex)
             {
@@ -271,6 +307,46 @@ namespace Trabajo_practico_IS
             }
         }
 
+        private void ActualizarEstadoBotonRestaurar()
+        {
+            // 1. Si no hay nada seleccionado, apagamos el botón por seguridad
+            if (DGVHistorial.CurrentRow == null || DGVHistorial.CurrentRow.DataBoundItem == null || CBX_Entidad.SelectedItem == null)
+            {
+                BTNrestaurar.Enabled = false;
+                return;
+            }
+
+            string entidadSeleccionada = CBX_Entidad.SelectedItem.ToString();
+
+            if (entidadSeleccionada == "Usuarios")
+            {
+                if (DGVHistorial.CurrentRow.DataBoundItem is BE.HISTORIAL_USUARIO version)
+                {
+                    BLL.USUARIO gestorUsu = new BLL.USUARIO();
+                    BE.USUARIO usuActual = gestorUsu.Listar().FirstOrDefault(u => u.Id == version.Id);
+
+                    BTNrestaurar.Enabled = (usuActual != null && usuActual.Activo == true);
+                }
+                else
+                {
+                    BTNrestaurar.Enabled = false;
+                }
+            }
+            else if (entidadSeleccionada == "Productos")
+            {
+                if (DGVHistorial.CurrentRow.DataBoundItem is BE.HISTORIAL_PRODUCTO version)
+                {
+                    BLL.PRODUCTO gestorProd = new BLL.PRODUCTO();
+                    BE.PRODUCTO prodActual = gestorProd.Listar().FirstOrDefault(p => p.Id == version.IdProducto);
+
+                    BTNrestaurar.Enabled = (prodActual != null && prodActual.Activo == true);
+                }
+                else
+                {
+                    BTNrestaurar.Enabled = false;
+                }
+            }
+        }
         private void AplicarFormatoGrilla(string entidadSeleccionada)
         {
             if (DGVHistorial.Columns.Count == 0) return;
@@ -297,6 +373,11 @@ namespace Trabajo_practico_IS
                 if (DGVHistorial.Columns["FechaCambio"] != null) DGVHistorial.Columns["FechaCambio"].HeaderText = "Fecha de Cambio";
                 if (DGVHistorial.Columns["Precio"] != null) DGVHistorial.Columns["Precio"].DefaultCellStyle.Format = "C2";
             }
+        }
+
+        private void DGVHistorial_SelectionChanged(object sender, EventArgs e)
+        {
+            ActualizarEstadoBotonRestaurar();
         }
     }
 }

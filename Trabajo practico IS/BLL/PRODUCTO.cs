@@ -82,13 +82,13 @@ namespace BLL
             List<BE.PRODUCTO> todosLosProductos = mapper.Listar();
 
             // Validamos que NO exista OTRO producto (Id diferente) que esté ACTIVO y se llame igual
-            bool conflictoExistente = todosLosProductos.Any(p =>
+            bool productoExistente = todosLosProductos.Any(p =>
                 p.Id != producto.Id &&
                 p.Activo == true &&
                 p.Nombre.Equals(producto.Nombre, StringComparison.OrdinalIgnoreCase)
             );
 
-            if (conflictoExistente)
+            if (productoExistente)
             {
                 throw new Exception("Operación Denegada: Ya existe un producto activo en el catálogo con este mismo nombre.");
             }
@@ -98,6 +98,7 @@ namespace BLL
             mapper.Reactivar(producto); // Llama al SP "REACTIVAR_PRODUCTO"
 
             // Registramos en Bitácora
+            GestorHistorial.RegistrarCambio(producto.Id, ObtenerResponsable(), "REACTIVACION");
             GestorBitacora.RegistrarEvento("Inventario", $"Se reactivó el producto: {producto.Nombre}", 3);
         }
 

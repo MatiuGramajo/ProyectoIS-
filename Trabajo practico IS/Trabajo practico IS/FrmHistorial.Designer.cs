@@ -91,6 +91,7 @@
             this.DGVHistorial.Name = "DGVHistorial";
             this.DGVHistorial.Size = new System.Drawing.Size(873, 300);
             this.DGVHistorial.TabIndex = 8;
+            this.DGVHistorial.SelectionChanged += new System.EventHandler(this.DGVHistorial_SelectionChanged);
             // 
             // CBX_Filtro
             // 
