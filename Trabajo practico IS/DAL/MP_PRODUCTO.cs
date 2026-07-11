@@ -11,7 +11,7 @@ namespace DAL
 {
     public class MP_PRODUCTO : MAPPER<BE.PRODUCTO>
     {
-        public override void Alta(PRODUCTO producto)
+        public override void Alta(BE.PRODUCTO producto)
         {
             acceso.Abrir();
             List<SqlParameter> parametros = new List<SqlParameter>();
@@ -23,7 +23,7 @@ namespace DAL
 
         }
 
-        public override void Baja(PRODUCTO producto)
+        public override void Baja(BE.PRODUCTO producto)
         {
             acceso.Abrir();
             List<SqlParameter> parametros = new List<SqlParameter>();
@@ -32,7 +32,7 @@ namespace DAL
             acceso.Cerrar();
         }
 
-        public override List<PRODUCTO> Listar()
+        public override List<BE.PRODUCTO> Listar()
         {
             acceso.Abrir();
             DataTable tabla = acceso.Leer("LISTAR_PRODUCTOS");
@@ -46,13 +46,14 @@ namespace DAL
                 prod.Nombre = registro["NOMBRE"].ToString();
                 prod.Precio = decimal.Parse(registro["PRECIO"].ToString());
                 prod.Stock = int.Parse(registro["STOCK"].ToString());
+                prod.Activo = Convert.ToBoolean(registro["ACTIVO"]);
 
                 productos.Add(prod);
             }
             return productos;
         }
 
-        public override void Modificar(PRODUCTO producto)
+        public override void Modificar(BE.PRODUCTO producto)
         {
             acceso.Abrir();
             List<SqlParameter> parametros = new List<SqlParameter>();
@@ -63,9 +64,20 @@ namespace DAL
             int res = acceso.Escribir("MODIFICAR_PRODUCTO", parametros);
         }
 
-        public override bool Verificar(PRODUCTO producto)
+        public void Reactivar(BE.PRODUCTO producto)
+        {
+            acceso.Abrir();
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(acceso.CrearParametro("@id", producto.Id));
+            acceso.Escribir("REACTIVAR_PRODUCTO", parametros);
+            acceso.Cerrar();
+        }
+
+        public override bool Verificar(BE.PRODUCTO producto)
         {
             throw new NotImplementedException();
         }
+
+
     }
 }

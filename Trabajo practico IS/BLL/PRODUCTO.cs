@@ -25,7 +25,7 @@ namespace BLL
                 throw new Exception("El stock no puede ser negativo.");
 
             var todos = mapper.Listar();
-            if (todos.Any(p => p.Nombre.Equals(producto.Nombre, StringComparison.OrdinalIgnoreCase)))
+            if (todos.Any(p => p.Nombre.Equals(producto.Nombre, StringComparison.OrdinalIgnoreCase) && p.Activo == true ))
                 throw new Exception("Ya existe un producto con ese nombre.");
 
             mapper.Alta(producto);
@@ -36,6 +36,7 @@ namespace BLL
         public void Borrar(BE.PRODUCTO producto)
         {
             GestorHistorial.RegistrarCambio(producto.Id, ObtenerResponsable(), "BAJA");
+            producto.Activo = false;
             mapper.Baja(producto);
             GestorBitacora.RegistrarEvento("Inventario", $"Se dio de baja el producto {producto.Nombre}", 2);
         }
@@ -59,7 +60,7 @@ namespace BLL
 
             List<BE.PRODUCTO> todosLosProductos = mapper.Listar();
 
-            bool nombreRepetido = todosLosProductos.Any(p => p.Id != producto.Id && p.Nombre.Equals(producto.Nombre, StringComparison.OrdinalIgnoreCase));
+            bool nombreRepetido = todosLosProductos.Any(p => p.Id != producto.Id && p.Nombre.Equals(producto.Nombre, StringComparison.OrdinalIgnoreCase) && p.Activo == true);
 
             if (nombreRepetido)
             {
@@ -74,6 +75,40 @@ namespace BLL
         public List<BE.PRODUCTO> Listar()
         {
             return mapper.Listar();
+        }
+
+        public void Reactivar(BE.PRODUCTO producto)
+        {
+            List<BE.PRODUCTO> todosLosProductos = mapper.Listar();
+
+            // Validamos que NO exista OTRO producto (Id diferente) que esté ACTIVO y se llame igual
+            bool conflictoExistente = todosLosProductos.Any(p =>
+                p.Id != producto.Id &&
+                p.Activo == true &&
+                p.Nombre.Equals(producto.Nombre, StringComparison.OrdinalIgnoreCase)
+            );
+
+            if (conflictoExistente)
+            {
+                throw new Exception("Operación Denegada: Ya existe un producto activo en el catálogo con este mismo nombre.");
+            }
+
+            // Cambiamos el estado en memoria y enviamos la actualización a la base de datos
+            producto.Activo = true;
+            mapper.Reactivar(producto); // Llama al SP "REACTIVAR_PRODUCTO"
+
+            // Registramos en Bitácora
+            GestorBitacora.RegistrarEvento("Inventario", $"Se reactivó el producto: {producto.Nombre}", 3);
+        }
+
+        public BE.PRODUCTO ObtenerInactivoDuplicado(BE.PRODUCTO producto)
+        {
+            List<BE.PRODUCTO> todosLosProductos = mapper.Listar();
+
+            return todosLosProductos.FirstOrDefault(p =>
+                p.Activo == false &&
+                p.Nombre.Equals(producto.Nombre, StringComparison.OrdinalIgnoreCase)
+            );
         }
 
         private string ObtenerResponsable()

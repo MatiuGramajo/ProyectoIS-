@@ -40,5 +40,14 @@ namespace BE
 			set { stock = value; }
 		}
 
+		private bool activo;
+
+		public bool Activo
+		{
+			get { return activo; }
+			set { activo = value; }
+		}
+
+
 	}
 }

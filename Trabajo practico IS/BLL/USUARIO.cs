@@ -120,29 +120,40 @@ namespace BLL
 
         public void Reactivar(BE.USUARIO usuario)
         {
-            // 1. Traemos la lista maestra
             List<BE.USUARIO> todosLosUsuarios = mapper.Listar();
 
-            // Validamos que NO exista OTRO usuario (Id distinto), que esté ACTIVO, y tenga el MISMO nombre
-            if (todosLosUsuarios.Any(u => u.Id != usuario.Id && u.Activo == true && u.Usuario.Equals(usuario.Usuario, StringComparison.OrdinalIgnoreCase)))
+            bool inactivoExistente = todosLosUsuarios.Any(u =>
+                    u.Id != usuario.Id &&
+                    u.Activo == true &&
+                    (u.Usuario.Equals(usuario.Usuario, StringComparison.OrdinalIgnoreCase) ||
+                     u.Dni == usuario.Dni ||
+                     u.Email.Equals(usuario.Email, StringComparison.OrdinalIgnoreCase))
+                );
+
+            if (inactivoExistente)
             {
-                throw new Exception("Operación Denegada: Ya existe un usuario activo con este mismo nombre en el sistema.");
+                throw new Exception("Operación Denegada: Ya existe una cuenta registrada y activa en el sistema con el mismo Nombre de Usuario, DNI o Email.");
             }
 
-            // 2. Cambiamos el estado en memoria
             usuario.Activo = true;
-
-            // 3. Recalculamos el DVH con el nuevo estado 'true'
             usuario.DVH = GestorDV.CalcularDVH(usuario);
-
-            // 4. Ejecutamos la reactivación física y de integridad
-            mapper.Reactivar(usuario); // Asegurate de que tu mapper llame al SP "UPDATE USUARIO SET ACTIVO = 1 WHERE ID = @id"
+            mapper.Reactivar(usuario);
             mapper.ActualizarSoloDVH(usuario.Id, usuario.DVH);
             ActualizarDvvUsuarios();
 
-            // 5. Auditoría
             string responsable = Servicios.SESION.GetInstancia().usuactual != null ? Servicios.SESION.GetInstancia().usuactual.Usuario : "SISTEMA";
             gestorHistorial.RegistrarCambio(usuario.Id, responsable, "REACTIVACION");
+        }
+
+        public BE.USUARIO ObtenerInactivoDuplicado(BE.USUARIO usuario)
+        {
+            List<BE.USUARIO> todosLosUsuarios = mapper.Listar();
+            return todosLosUsuarios.FirstOrDefault(u =>
+                    u.Activo == false &&
+                    (u.Dni == usuario.Dni ||
+                     u.Usuario.Equals(usuario.Usuario, StringComparison.OrdinalIgnoreCase) ||
+                     u.Email.Equals(usuario.Email, StringComparison.OrdinalIgnoreCase))
+                );
         }
 
         public void DesbloquearUsuario(BE.USUARIO usuario)
@@ -201,7 +212,11 @@ namespace BLL
                 gestorBitacora.RegistrarEvento("Seguridad", "Intento de acceso de cuenta bloqueada: ", 4, nombreUsuario);
                 throw new Exception("El usuario se encuentra bloqueado. Contacte al administrador.");
             }
-
+            if (usuariovalido.Activo == false)  //VER ESTO, CAPAZ NO DEBERIA AVISAR QUE EL USUARIO ESTA INACTIVO
+            {
+                gestorBitacora.RegistrarEvento("Seguridad", "Intento de acceso de cuenta inactiva: ", 4, nombreUsuario);
+                throw new Exception("Esta cuenta ha sido dada de baja del sistema. Contacte al administrador.");
+            }
 
             if (usuariovalido.Contraseña != hashingresado)
             {

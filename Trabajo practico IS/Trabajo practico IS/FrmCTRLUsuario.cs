@@ -39,6 +39,8 @@ namespace Trabajo_practico_IS
             EnlazarUsuarios();
             CargarComboBoxRoles();
             Cb_CTRLUsuarioRol.SelectedIndex = -1;
+
+            ActualizarEstadoBotones();
         }
 
         private void CBXidiomas_SelectedIndexChanged(object sender, EventArgs e)
@@ -105,6 +107,31 @@ namespace Trabajo_practico_IS
                     usuario.Email = TXT_CtrlUsuEmail.Text;
                     usuario.Permisos.Add(rolSeleccionado);
 
+                    BE.USUARIO inactivoDuplicado = GestorUsuarios.ObtenerInactivoDuplicado(usuario);
+
+                    if (inactivoDuplicado != null)
+                    {
+                        var result = MessageBox.Show("El DNI o Nombre ingresado pertenece a una cuenta inactiva.\n\n¿Desea reactivar la cuenta original?",
+                                                     "Usuario Inactivo Detectado",
+                                                     MessageBoxButtons.YesNo,
+                                                     MessageBoxIcon.Question);
+
+                        if (result == DialogResult.Yes)
+                        {
+                            GestorUsuarios.Reactivar(inactivoDuplicado);
+                            GestorBitacora.RegistrarEvento("Administracion", $"Se reactivó al usuario {inactivoDuplicado.Usuario}", 3);
+                            MessageBox.Show("La cuenta original ha sido reactivada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            EnlazarUsuarios();
+                            LimpiarControles();
+                            return;
+                        }
+                        else
+                        {
+                            return;
+                        }
+                    }
+
                     GestorUsuarios.Insertar(usuario);
                     GestorBitacora.RegistrarEvento("Administracion", $"Se dio de alta al usuario {usuario.Usuario}", 2);
                     EnlazarUsuarios();
@@ -127,38 +154,26 @@ namespace Trabajo_practico_IS
             TXT_CtrlUsuContraseña.Text = "";
             TXT_CtrlUsuDNI.Text = "";
             TXT_CtrlUsuEmail.Text = "";
+            Cb_CTRLUsuarioRol.SelectedIndex = -1;
+            usuario = null;
+
+            ActualizarEstadoBotones();
         }
         private void BTNCtrlUsuBaja_Click(object sender, EventArgs e)
         {
             try
             {
-                if (usuario != null)
+                if (usuario != null && usuario.Activo == true)
                 {
-                    // LÓGICA DE REACTIVACIÓN
-                    if (usuario.Activo == false)
+                    var result = MessageBox.Show($"¿Esta seguro que desea dar de baja a: {usuario.Usuario}?", "Confirmar Baja", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result == DialogResult.Yes)
                     {
-                        var result = MessageBox.Show($"¿Desea reactivar a: {usuario.Usuario}?", "Confirmar Reactivación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (result == DialogResult.Yes)
-                        {
-                            GestorUsuarios.Reactivar(usuario); // Este es el método que creamos en tu BLL
-                            GestorBitacora.RegistrarEvento("Administracion", $"Se reactivó al usuario {usuario.Usuario}", 3);
-                            EnlazarUsuarios();
-                            LimpiarControles();
-                            usuario = null;
-                        }
-                    }
-                    // LÓGICA DE BAJA ORIGINAL
-                    else
-                    {
-                        var result = MessageBox.Show($"¿Esta seguro que desea dar de baja a: {usuario.Usuario}?", "Confirmar Baja", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                        if (result == DialogResult.Yes)
-                        {
-                            GestorUsuarios.Borrar(usuario);
-                            GestorBitacora.RegistrarEvento("Administracion", $"Se dio de baja al usuario {usuario.Usuario}", 4);
-                            EnlazarUsuarios();
-                            LimpiarControles();
-                            usuario = null;
-                        }
+                        GestorUsuarios.Borrar(usuario);
+                        GestorBitacora.RegistrarEvento("Administracion", $"Se dio de baja al usuario {usuario.Usuario}", 4);
+                        EnlazarUsuarios();
+                        LimpiarControles();
+                        usuario = null;
+                        ActualizarEstadoBotones();
                     }
                 }
                 else
@@ -257,32 +272,67 @@ namespace Trabajo_practico_IS
         {
             if (e.RowIndex>=0)
             {
-                usuario=DGV_CtrlUsuUsuarios.Rows[e.RowIndex].DataBoundItem as BE.USUARIO;
+                // 1. Capturamos el usuario
+                usuario = DGV_CtrlUsuUsuarios.Rows[e.RowIndex].DataBoundItem as BE.USUARIO;
+
+                // 2. Llenamos los TextBox
                 TXT_CtrlUsuUsuario.Text = usuario.Usuario;
                 TXT_CtrlUsuContraseña.Text = "";
                 TXT_CtrlUsuDNI.Text = usuario.Dni.ToString();
                 TXT_CtrlUsuEmail.Text = usuario.Email;
+
+                // 3. Manejamos los permisos y el ComboBox
                 usuario.Permisos = GestorPermisos.ObtenerPermisosUsuario(usuario.Id);
-
                 Cb_CTRLUsuarioRol.SelectedIndex = -1;
-
-                if (usuario.Id == Servicios.SESION.GetInstancia().usuactual.Id)
-                {
-                    BTNCtrlUsuModificar.Enabled = false;
-                    BTNCtrlUsuBaja.Enabled = false;
-                    BTNCtrlUsuDesbloquear.Enabled = false;
-                }
-                else
-                {
-                    BTNCtrlUsuModificar.Enabled = true;
-                    BTNCtrlUsuBaja.Enabled = true;
-                    BTNCtrlUsuDesbloquear.Enabled = usuario.EstadoBloqueado;
-                }
 
                 if (usuario.Permisos != null && usuario.Permisos.Count > 0)
                 {
                     BE.COMPONENTE permisoActual = usuario.Permisos[0];
                     Cb_CTRLUsuarioRol.SelectedValue = permisoActual.Id;
+                }
+
+                // 4. MAGIA: Llamamos al método centralizador para que acomode los botones
+                ActualizarEstadoBotones();
+            }
+        }
+
+        private void ActualizarEstadoBotones()
+        {
+            // 1. Si no hay ningún usuario seleccionado (ej. al limpiar controles)
+            if (usuario == null)
+            {
+                BTNCtrlUsuModificar.Enabled = false;
+                BTNCtrlUsuBaja.Enabled = false;
+                BTNCtrlUsuReactivar.Enabled = false;
+                BTNCtrlUsuDesbloquear.Enabled = false;
+                return; // Cortamos la ejecución aquí
+            }
+
+            // 2. Si el usuario seleccionado soy YO MISMO
+            if (usuario.Id == Servicios.SESION.GetInstancia().usuactual.Id)
+            {
+                BTNCtrlUsuModificar.Enabled = false;
+                BTNCtrlUsuBaja.Enabled = false;
+                BTNCtrlUsuReactivar.Enabled = false;
+                BTNCtrlUsuDesbloquear.Enabled = false;
+            }
+            else
+            {
+                // 3. Si es un usuario dado de BAJA LÓGICA (Inactivo)
+                if (usuario.Activo == false)
+                {
+                    BTNCtrlUsuModificar.Enabled = false;
+                    BTNCtrlUsuBaja.Enabled = false;
+                    BTNCtrlUsuReactivar.Enabled = true;     // Solo permitimos Reactivar
+                    BTNCtrlUsuDesbloquear.Enabled = false;
+                }
+                // 4. Si es un usuario ACTIVO normal
+                else
+                {
+                    BTNCtrlUsuModificar.Enabled = true;
+                    BTNCtrlUsuBaja.Enabled = true;
+                    BTNCtrlUsuReactivar.Enabled = false;    // Apagamos el reactivar
+                    BTNCtrlUsuDesbloquear.Enabled = usuario.EstadoBloqueado; // Depende de si está bloqueado o no
                 }
             }
         }
@@ -337,6 +387,35 @@ namespace Trabajo_practico_IS
             EnlazarUsuarios();
             LimpiarControles();
             usuario = null;
+        }
+
+        private void BTNCtrlUsuReactivar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Solo procedemos si hay un usuario seleccionado y está INACTIVO
+                if (usuario != null && usuario.Activo == false)
+                {
+                    var result = MessageBox.Show($"¿Desea reactivar a: {usuario.Usuario}?", "Confirmar Reactivación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        GestorUsuarios.Reactivar(usuario);
+                        GestorBitacora.RegistrarEvento("Administracion", $"Se reactivó al usuario {usuario.Usuario}", 3);
+                        EnlazarUsuarios();
+                        LimpiarControles();
+                        usuario = null;
+                        //ActualizarEstadoBotones(); // Refrescamos los botones
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Seleccione un usuario inactivo para reactivar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error al Reactivar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

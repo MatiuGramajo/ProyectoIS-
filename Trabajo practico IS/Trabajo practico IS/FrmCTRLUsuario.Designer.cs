@@ -50,6 +50,7 @@
             this.GB_Usuarios = new System.Windows.Forms.GroupBox();
             this.GB_Datos = new System.Windows.Forms.GroupBox();
             this.CKXmostrarInactivos = new System.Windows.Forms.CheckBox();
+            this.BTNCtrlUsuReactivar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGV_CtrlUsuUsuarios)).BeginInit();
             this.GB_Usuarios.SuspendLayout();
             this.GB_Datos.SuspendLayout();
@@ -171,7 +172,7 @@
             // 
             // BTNCtrlUsuDesbloquear
             // 
-            this.BTNCtrlUsuDesbloquear.Location = new System.Drawing.Point(684, 287);
+            this.BTNCtrlUsuDesbloquear.Location = new System.Drawing.Point(549, 332);
             this.BTNCtrlUsuDesbloquear.Name = "BTNCtrlUsuDesbloquear";
             this.BTNCtrlUsuDesbloquear.Size = new System.Drawing.Size(124, 27);
             this.BTNCtrlUsuDesbloquear.TabIndex = 17;
@@ -267,12 +268,23 @@
             this.CKXmostrarInactivos.UseVisualStyleBackColor = true;
             this.CKXmostrarInactivos.CheckedChanged += new System.EventHandler(this.CKXmostrarInactivos_CheckedChanged);
             // 
+            // BTNCtrlUsuReactivar
+            // 
+            this.BTNCtrlUsuReactivar.Location = new System.Drawing.Point(679, 287);
+            this.BTNCtrlUsuReactivar.Name = "BTNCtrlUsuReactivar";
+            this.BTNCtrlUsuReactivar.Size = new System.Drawing.Size(124, 27);
+            this.BTNCtrlUsuReactivar.TabIndex = 26;
+            this.BTNCtrlUsuReactivar.Text = "Reactivar";
+            this.BTNCtrlUsuReactivar.UseVisualStyleBackColor = true;
+            this.BTNCtrlUsuReactivar.Click += new System.EventHandler(this.BTNCtrlUsuReactivar_Click);
+            // 
             // FrmCTRLUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1065, 541);
+            this.Controls.Add(this.BTNCtrlUsuReactivar);
             this.Controls.Add(this.CKXmostrarInactivos);
             this.Controls.Add(this.GB_Usuarios);
             this.Controls.Add(this.LBLidiomas);
@@ -322,5 +334,6 @@
         private System.Windows.Forms.GroupBox GB_Usuarios;
         private System.Windows.Forms.GroupBox GB_Datos;
         private System.Windows.Forms.CheckBox CKXmostrarInactivos;
+        private System.Windows.Forms.Button BTNCtrlUsuReactivar;
     }
 }
