@@ -128,8 +128,7 @@ namespace Trabajo_practico_IS
                 CBXidiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
                 CBXidiomas.SelectedIndexChanged += CBXidiomas_SelectedIndexChanged;
             }
-
-        }
+            }
         public void TraducirControles(Control.ControlCollection controles, Dictionary<string, string> traducciones)
         {
             foreach (Control control in controles)
@@ -229,6 +228,11 @@ namespace Trabajo_practico_IS
             FrmProducto frmProducto = new FrmProducto();
             frmProducto.ShowDialog();
             this.Show();
+        }
+
+        private void FrmMenuPrincipal_Activated(object sender, EventArgs e)
+        {
+            ActualizarIdioma();
         }
     }
 }

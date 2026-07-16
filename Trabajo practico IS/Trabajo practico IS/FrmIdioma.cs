@@ -44,6 +44,7 @@ namespace Trabajo_practico_IS
 
                 CBXidiomas.SelectedIndexChanged -= CBXidiomas_SelectedIndexChanged;
                 CBXidiomas.DataSource = GestorIdioma.Listar();
+                CBXidiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
                 CBXidiomas.SelectedIndexChanged += CBXidiomas_SelectedIndexChanged;
                 TXTnombre.Text = "";
                 TXTsufijo.Text = "";
@@ -78,6 +79,8 @@ namespace Trabajo_practico_IS
                 CBXidiomas.SelectedValue = Servicios.IDIOMAS.GetInstancia().IdIdiomaActual;
                 CBXidiomas.SelectedIndexChanged += CBXidiomas_SelectedIndexChanged;
             }
+           
+
         }
         public void TraducirControles(Control.ControlCollection controles, Dictionary<string, string> traducciones)
         {
