@@ -37,10 +37,8 @@ namespace Trabajo_practico_IS
 
         public void EnlazarProductos()
         {
-            // Traemos todo el catálogo una sola vez
             var productos = GestorProductos.Listar().AsEnumerable();
 
-            // Filtramos si el CheckBox NO está tildado
             if (CKXmostrarInactivos.Checked == false)
             {
                 productos = productos.Where(p => p.Activo == true);
@@ -279,14 +277,13 @@ namespace Trabajo_practico_IS
                 return;
             }
 
-            // Si el producto está dado de BAJA LÓGICA
             if (productoSeleccionado.Activo == false)
             {
                 BTN_ProductoReactivar.Enabled = true;
                 BTN_ProductoBaja.Enabled = false;
                 BTN_ProductoModificar.Enabled = false;
             }
-            // Si el producto está ACTIVO
+
             else
             {
                 BTN_ProductoReactivar.Enabled = false;
@@ -295,6 +292,9 @@ namespace Trabajo_practico_IS
             }
         }
 
+        private void DGV_Productos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }

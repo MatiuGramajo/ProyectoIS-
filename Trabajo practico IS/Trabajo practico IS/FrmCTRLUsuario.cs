@@ -272,16 +272,13 @@ namespace Trabajo_practico_IS
         {
             if (e.RowIndex>=0)
             {
-                // 1. Capturamos el usuario
                 usuario = DGV_CtrlUsuUsuarios.Rows[e.RowIndex].DataBoundItem as BE.USUARIO;
 
-                // 2. Llenamos los TextBox
                 TXT_CtrlUsuUsuario.Text = usuario.Usuario;
                 TXT_CtrlUsuContraseña.Text = "";
                 TXT_CtrlUsuDNI.Text = usuario.Dni.ToString();
                 TXT_CtrlUsuEmail.Text = usuario.Email;
 
-                // 3. Manejamos los permisos y el ComboBox
                 usuario.Permisos = GestorPermisos.ObtenerPermisosUsuario(usuario.Id);
                 Cb_CTRLUsuarioRol.SelectedIndex = -1;
 
@@ -291,24 +288,22 @@ namespace Trabajo_practico_IS
                     Cb_CTRLUsuarioRol.SelectedValue = permisoActual.Id;
                 }
 
-                // 4. MAGIA: Llamamos al método centralizador para que acomode los botones
                 ActualizarEstadoBotones();
             }
         }
 
         private void ActualizarEstadoBotones()
         {
-            // 1. Si no hay ningún usuario seleccionado (ej. al limpiar controles)
+
             if (usuario == null)
             {
                 BTNCtrlUsuModificar.Enabled = false;
                 BTNCtrlUsuBaja.Enabled = false;
                 BTNCtrlUsuReactivar.Enabled = false;
                 BTNCtrlUsuDesbloquear.Enabled = false;
-                return; // Cortamos la ejecución aquí
+                return;
             }
 
-            // 2. Si el usuario seleccionado soy YO MISMO
             if (usuario.Id == Servicios.SESION.GetInstancia().usuactual.Id)
             {
                 BTNCtrlUsuModificar.Enabled = false;
@@ -318,21 +313,21 @@ namespace Trabajo_practico_IS
             }
             else
             {
-                // 3. Si es un usuario dado de BAJA LÓGICA (Inactivo)
+
                 if (usuario.Activo == false)
                 {
                     BTNCtrlUsuModificar.Enabled = false;
                     BTNCtrlUsuBaja.Enabled = false;
-                    BTNCtrlUsuReactivar.Enabled = true;     // Solo permitimos Reactivar
+                    BTNCtrlUsuReactivar.Enabled = true;
                     BTNCtrlUsuDesbloquear.Enabled = false;
                 }
-                // 4. Si es un usuario ACTIVO normal
+
                 else
                 {
                     BTNCtrlUsuModificar.Enabled = true;
                     BTNCtrlUsuBaja.Enabled = true;
-                    BTNCtrlUsuReactivar.Enabled = false;    // Apagamos el reactivar
-                    BTNCtrlUsuDesbloquear.Enabled = usuario.EstadoBloqueado; // Depende de si está bloqueado o no
+                    BTNCtrlUsuReactivar.Enabled = false;
+                    BTNCtrlUsuDesbloquear.Enabled = usuario.EstadoBloqueado;
                 }
             }
         }

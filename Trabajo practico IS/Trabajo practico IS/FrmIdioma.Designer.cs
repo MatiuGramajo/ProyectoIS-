@@ -54,79 +54,97 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(9, 20);
+            this.dataGridView1.Location = new System.Drawing.Point(10, 25);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(326, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(380, 185);
             this.dataGridView1.TabIndex = 0;
             // 
             // BTNcrear
             // 
-            this.BTNcrear.Location = new System.Drawing.Point(9, 110);
+            this.BTNcrear.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BTNcrear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BTNcrear.Location = new System.Drawing.Point(10, 135);
+            this.BTNcrear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTNcrear.Name = "BTNcrear";
-            this.BTNcrear.Size = new System.Drawing.Size(124, 27);
+            this.BTNcrear.Size = new System.Drawing.Size(145, 33);
             this.BTNcrear.TabIndex = 2;
             this.BTNcrear.Text = "Crear";
-            this.BTNcrear.UseVisualStyleBackColor = true;
+            this.BTNcrear.UseVisualStyleBackColor = false;
             this.BTNcrear.Click += new System.EventHandler(this.button1_Click);
             // 
             // BTNdeshabilitar
             // 
-            this.BTNdeshabilitar.Location = new System.Drawing.Point(21, 359);
+            this.BTNdeshabilitar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BTNdeshabilitar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNdeshabilitar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BTNdeshabilitar.Location = new System.Drawing.Point(24, 442);
+            this.BTNdeshabilitar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTNdeshabilitar.Name = "BTNdeshabilitar";
-            this.BTNdeshabilitar.Size = new System.Drawing.Size(124, 27);
+            this.BTNdeshabilitar.Size = new System.Drawing.Size(145, 33);
             this.BTNdeshabilitar.TabIndex = 4;
             this.BTNdeshabilitar.Text = "Deshabilitar";
-            this.BTNdeshabilitar.UseVisualStyleBackColor = true;
+            this.BTNdeshabilitar.UseVisualStyleBackColor = false;
             this.BTNdeshabilitar.Click += new System.EventHandler(this.BTNdeshabilitar_Click);
             // 
             // BTNvolveralmenu
             // 
-            this.BTNvolveralmenu.Location = new System.Drawing.Point(804, 433);
+            this.BTNvolveralmenu.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BTNvolveralmenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNvolveralmenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BTNvolveralmenu.Location = new System.Drawing.Point(938, 533);
+            this.BTNvolveralmenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTNvolveralmenu.Name = "BTNvolveralmenu";
-            this.BTNvolveralmenu.Size = new System.Drawing.Size(124, 27);
+            this.BTNvolveralmenu.Size = new System.Drawing.Size(145, 33);
             this.BTNvolveralmenu.TabIndex = 5;
             this.BTNvolveralmenu.Text = "Volver al menu";
-            this.BTNvolveralmenu.UseVisualStyleBackColor = true;
+            this.BTNvolveralmenu.UseVisualStyleBackColor = false;
             this.BTNvolveralmenu.Click += new System.EventHandler(this.BTNvolveralmenu_Click);
             // 
             // TXTnombre
             // 
-            this.TXTnombre.Location = new System.Drawing.Point(9, 35);
+            this.TXTnombre.Location = new System.Drawing.Point(10, 43);
+            this.TXTnombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TXTnombre.Name = "TXTnombre";
-            this.TXTnombre.Size = new System.Drawing.Size(124, 20);
+            this.TXTnombre.Size = new System.Drawing.Size(144, 23);
             this.TXTnombre.TabIndex = 6;
             // 
             // LBLsufijo
             // 
             this.LBLsufijo.AutoSize = true;
-            this.LBLsufijo.Location = new System.Drawing.Point(9, 63);
+            this.LBLsufijo.Location = new System.Drawing.Point(10, 78);
+            this.LBLsufijo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBLsufijo.Name = "LBLsufijo";
-            this.LBLsufijo.Size = new System.Drawing.Size(33, 13);
+            this.LBLsufijo.Size = new System.Drawing.Size(41, 17);
             this.LBLsufijo.TabIndex = 9;
             this.LBLsufijo.Text = "Sufijo";
             // 
             // TXTsufijo
             // 
-            this.TXTsufijo.Location = new System.Drawing.Point(9, 79);
+            this.TXTsufijo.Location = new System.Drawing.Point(10, 97);
+            this.TXTsufijo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TXTsufijo.Name = "TXTsufijo";
-            this.TXTsufijo.Size = new System.Drawing.Size(124, 20);
+            this.TXTsufijo.Size = new System.Drawing.Size(144, 23);
             this.TXTsufijo.TabIndex = 10;
             // 
             // LBLnombre
             // 
             this.LBLnombre.AutoSize = true;
-            this.LBLnombre.Location = new System.Drawing.Point(9, 19);
+            this.LBLnombre.Location = new System.Drawing.Point(10, 23);
+            this.LBLnombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBLnombre.Name = "LBLnombre";
-            this.LBLnombre.Size = new System.Drawing.Size(44, 13);
+            this.LBLnombre.Size = new System.Drawing.Size(61, 17);
             this.LBLnombre.TabIndex = 11;
             this.LBLnombre.Text = "Nombre";
             // 
             // LBLidiomas2
             // 
             this.LBLidiomas2.AutoSize = true;
-            this.LBLidiomas2.Location = new System.Drawing.Point(804, 9);
+            this.LBLidiomas2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLidiomas2.Location = new System.Drawing.Point(938, 11);
+            this.LBLidiomas2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBLidiomas2.Name = "LBLidiomas2";
-            this.LBLidiomas2.Size = new System.Drawing.Size(43, 13);
+            this.LBLidiomas2.Size = new System.Drawing.Size(59, 17);
             this.LBLidiomas2.TabIndex = 12;
             this.LBLidiomas2.Text = "Idiomas";
             // 
@@ -134,20 +152,25 @@
             // 
             this.CBXidiomas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBXidiomas.FormattingEnabled = true;
-            this.CBXidiomas.Location = new System.Drawing.Point(804, 25);
+            this.CBXidiomas.Location = new System.Drawing.Point(938, 31);
+            this.CBXidiomas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CBXidiomas.Name = "CBXidiomas";
-            this.CBXidiomas.Size = new System.Drawing.Size(121, 21);
+            this.CBXidiomas.Size = new System.Drawing.Size(140, 24);
             this.CBXidiomas.TabIndex = 13;
             this.CBXidiomas.SelectedIndexChanged += new System.EventHandler(this.CBXidiomas_SelectedIndexChanged);
             // 
             // BTNhabilitar
             // 
-            this.BTNhabilitar.Location = new System.Drawing.Point(21, 392);
+            this.BTNhabilitar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BTNhabilitar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNhabilitar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BTNhabilitar.Location = new System.Drawing.Point(24, 482);
+            this.BTNhabilitar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTNhabilitar.Name = "BTNhabilitar";
-            this.BTNhabilitar.Size = new System.Drawing.Size(124, 27);
+            this.BTNhabilitar.Size = new System.Drawing.Size(145, 33);
             this.BTNhabilitar.TabIndex = 14;
             this.BTNhabilitar.Text = "Habilitar";
-            this.BTNhabilitar.UseVisualStyleBackColor = true;
+            this.BTNhabilitar.UseVisualStyleBackColor = false;
             this.BTNhabilitar.Click += new System.EventHandler(this.BTNhabilitar_Click);
             // 
             // DGVtraducciones
@@ -155,10 +178,11 @@
             this.DGVtraducciones.AllowUserToAddRows = false;
             this.DGVtraducciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVtraducciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVtraducciones.Location = new System.Drawing.Point(10, 21);
+            this.DGVtraducciones.Location = new System.Drawing.Point(12, 26);
+            this.DGVtraducciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DGVtraducciones.Name = "DGVtraducciones";
             this.DGVtraducciones.ReadOnly = true;
-            this.DGVtraducciones.Size = new System.Drawing.Size(393, 413);
+            this.DGVtraducciones.Size = new System.Drawing.Size(458, 508);
             this.DGVtraducciones.TabIndex = 15;
             // 
             // GB_NuevoIdioma
@@ -168,9 +192,12 @@
             this.GB_NuevoIdioma.Controls.Add(this.LBLsufijo);
             this.GB_NuevoIdioma.Controls.Add(this.TXTsufijo);
             this.GB_NuevoIdioma.Controls.Add(this.LBLnombre);
-            this.GB_NuevoIdioma.Location = new System.Drawing.Point(12, 208);
+            this.GB_NuevoIdioma.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GB_NuevoIdioma.Location = new System.Drawing.Point(14, 256);
+            this.GB_NuevoIdioma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GB_NuevoIdioma.Name = "GB_NuevoIdioma";
-            this.GB_NuevoIdioma.Size = new System.Drawing.Size(146, 145);
+            this.GB_NuevoIdioma.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GB_NuevoIdioma.Size = new System.Drawing.Size(170, 178);
             this.GB_NuevoIdioma.TabIndex = 16;
             this.GB_NuevoIdioma.TabStop = false;
             this.GB_NuevoIdioma.Text = "Nuevo idioma";
@@ -178,9 +205,12 @@
             // GB_Idiomas
             // 
             this.GB_Idiomas.Controls.Add(this.dataGridView1);
-            this.GB_Idiomas.Location = new System.Drawing.Point(12, 12);
+            this.GB_Idiomas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GB_Idiomas.Location = new System.Drawing.Point(14, 15);
+            this.GB_Idiomas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GB_Idiomas.Name = "GB_Idiomas";
-            this.GB_Idiomas.Size = new System.Drawing.Size(345, 181);
+            this.GB_Idiomas.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GB_Idiomas.Size = new System.Drawing.Size(402, 223);
             this.GB_Idiomas.TabIndex = 17;
             this.GB_Idiomas.TabStop = false;
             this.GB_Idiomas.Text = "Idiomas";
@@ -188,19 +218,22 @@
             // GB_Traducciones
             // 
             this.GB_Traducciones.Controls.Add(this.DGVtraducciones);
-            this.GB_Traducciones.Location = new System.Drawing.Point(371, 12);
+            this.GB_Traducciones.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GB_Traducciones.Location = new System.Drawing.Point(433, 15);
+            this.GB_Traducciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GB_Traducciones.Name = "GB_Traducciones";
-            this.GB_Traducciones.Size = new System.Drawing.Size(415, 448);
+            this.GB_Traducciones.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GB_Traducciones.Size = new System.Drawing.Size(484, 551);
             this.GB_Traducciones.TabIndex = 18;
             this.GB_Traducciones.TabStop = false;
             this.GB_Traducciones.Text = "Traducciones";
             // 
             // FrmIdioma
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(941, 466);
+            this.ClientSize = new System.Drawing.Size(1098, 574);
             this.Controls.Add(this.BTNhabilitar);
             this.Controls.Add(this.CBXidiomas);
             this.Controls.Add(this.LBLidiomas2);
@@ -209,6 +242,8 @@
             this.Controls.Add(this.GB_NuevoIdioma);
             this.Controls.Add(this.GB_Idiomas);
             this.Controls.Add(this.GB_Traducciones);
+            this.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmIdioma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmIdioma";

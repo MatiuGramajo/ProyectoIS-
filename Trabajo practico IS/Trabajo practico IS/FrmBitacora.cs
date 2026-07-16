@@ -74,6 +74,7 @@ namespace Trabajo_practico_IS
             }
             DGV_BITACORA.DataSource = null;
             DGV_BITACORA.DataSource = ListaFiltrada;
+            DGV_BITACORA.Columns["Id"].Visible = false;
         }
         public void EnlazarBitacoraTotal()
         {
@@ -104,6 +105,7 @@ namespace Trabajo_practico_IS
             }
             DGV_BITACORA.DataSource = null;
             DGV_BITACORA.DataSource = ListaTotalFiltrada;
+            DGV_BITACORA.Columns["Id"].Visible = false;
 
         }
        

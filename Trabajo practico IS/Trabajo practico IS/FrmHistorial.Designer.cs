@@ -46,50 +46,63 @@
             // LBLidiomas
             // 
             this.LBLidiomas.AutoSize = true;
-            this.LBLidiomas.Location = new System.Drawing.Point(957, 9);
+            this.LBLidiomas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLidiomas.Location = new System.Drawing.Point(1082, 11);
+            this.LBLidiomas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LBLidiomas.Name = "LBLidiomas";
-            this.LBLidiomas.Size = new System.Drawing.Size(43, 13);
+            this.LBLidiomas.Size = new System.Drawing.Size(59, 17);
             this.LBLidiomas.TabIndex = 15;
             this.LBLidiomas.Text = "Idiomas";
             // 
             // CBXIdiomas
             // 
             this.CBXIdiomas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBXIdiomas.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CBXIdiomas.FormattingEnabled = true;
-            this.CBXIdiomas.Location = new System.Drawing.Point(957, 25);
+            this.CBXIdiomas.Location = new System.Drawing.Point(1082, 31);
+            this.CBXIdiomas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CBXIdiomas.Name = "CBXIdiomas";
-            this.CBXIdiomas.Size = new System.Drawing.Size(121, 21);
+            this.CBXIdiomas.Size = new System.Drawing.Size(140, 25);
             this.CBXIdiomas.TabIndex = 14;
             this.CBXIdiomas.SelectedIndexChanged += new System.EventHandler(this.CBXIdiomas_SelectedIndexChanged);
             // 
             // BTNvolveralmenu
             // 
-            this.BTNvolveralmenu.Location = new System.Drawing.Point(954, 416);
+            this.BTNvolveralmenu.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BTNvolveralmenu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNvolveralmenu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BTNvolveralmenu.Location = new System.Drawing.Point(1079, 512);
+            this.BTNvolveralmenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTNvolveralmenu.Name = "BTNvolveralmenu";
-            this.BTNvolveralmenu.Size = new System.Drawing.Size(124, 27);
+            this.BTNvolveralmenu.Size = new System.Drawing.Size(145, 33);
             this.BTNvolveralmenu.TabIndex = 13;
             this.BTNvolveralmenu.Text = "Volver al menu ";
-            this.BTNvolveralmenu.UseVisualStyleBackColor = true;
+            this.BTNvolveralmenu.UseVisualStyleBackColor = false;
             this.BTNvolveralmenu.Click += new System.EventHandler(this.BTNvolveralmenu_Click);
             // 
             // BTNrestaurar
             // 
-            this.BTNrestaurar.Location = new System.Drawing.Point(290, 405);
+            this.BTNrestaurar.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BTNrestaurar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNrestaurar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BTNrestaurar.Location = new System.Drawing.Point(387, 498);
+            this.BTNrestaurar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTNrestaurar.Name = "BTNrestaurar";
-            this.BTNrestaurar.Size = new System.Drawing.Size(124, 27);
+            this.BTNrestaurar.Size = new System.Drawing.Size(145, 33);
             this.BTNrestaurar.TabIndex = 12;
             this.BTNrestaurar.Text = "Restaurar";
-            this.BTNrestaurar.UseVisualStyleBackColor = true;
+            this.BTNrestaurar.UseVisualStyleBackColor = false;
             this.BTNrestaurar.Click += new System.EventHandler(this.BTNrestaurar_Click);
             // 
             // DGVHistorial
             // 
             this.DGVHistorial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVHistorial.Location = new System.Drawing.Point(9, 52);
+            this.DGVHistorial.Location = new System.Drawing.Point(10, 64);
+            this.DGVHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DGVHistorial.MultiSelect = false;
             this.DGVHistorial.Name = "DGVHistorial";
-            this.DGVHistorial.Size = new System.Drawing.Size(873, 300);
+            this.DGVHistorial.Size = new System.Drawing.Size(1018, 369);
             this.DGVHistorial.TabIndex = 8;
             this.DGVHistorial.SelectionChanged += new System.EventHandler(this.DGVHistorial_SelectionChanged);
             // 
@@ -97,9 +110,10 @@
             // 
             this.CBX_Filtro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBX_Filtro.FormattingEnabled = true;
-            this.CBX_Filtro.Location = new System.Drawing.Point(6, 25);
+            this.CBX_Filtro.Location = new System.Drawing.Point(7, 31);
+            this.CBX_Filtro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CBX_Filtro.Name = "CBX_Filtro";
-            this.CBX_Filtro.Size = new System.Drawing.Size(121, 21);
+            this.CBX_Filtro.Size = new System.Drawing.Size(187, 25);
             this.CBX_Filtro.TabIndex = 16;
             this.CBX_Filtro.SelectedIndexChanged += new System.EventHandler(this.CBX_Filtro_SelectedIndexChanged);
             // 
@@ -107,29 +121,37 @@
             // 
             this.CBX_Entidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBX_Entidad.FormattingEnabled = true;
-            this.CBX_Entidad.Location = new System.Drawing.Point(9, 21);
+            this.CBX_Entidad.Location = new System.Drawing.Point(10, 26);
+            this.CBX_Entidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CBX_Entidad.Name = "CBX_Entidad";
-            this.CBX_Entidad.Size = new System.Drawing.Size(121, 21);
+            this.CBX_Entidad.Size = new System.Drawing.Size(140, 25);
             this.CBX_Entidad.TabIndex = 17;
             this.CBX_Entidad.SelectedIndexChanged += new System.EventHandler(this.CBX_Entidad_SelectedIndexChanged);
             // 
             // BTN_LimpiarFiltrosHist
             // 
-            this.BTN_LimpiarFiltrosHist.Location = new System.Drawing.Point(132, 21);
+            this.BTN_LimpiarFiltrosHist.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.BTN_LimpiarFiltrosHist.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_LimpiarFiltrosHist.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BTN_LimpiarFiltrosHist.Location = new System.Drawing.Point(202, 26);
+            this.BTN_LimpiarFiltrosHist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BTN_LimpiarFiltrosHist.Name = "BTN_LimpiarFiltrosHist";
-            this.BTN_LimpiarFiltrosHist.Size = new System.Drawing.Size(124, 27);
+            this.BTN_LimpiarFiltrosHist.Size = new System.Drawing.Size(145, 33);
             this.BTN_LimpiarFiltrosHist.TabIndex = 18;
             this.BTN_LimpiarFiltrosHist.Text = "Ver Todo";
-            this.BTN_LimpiarFiltrosHist.UseVisualStyleBackColor = true;
+            this.BTN_LimpiarFiltrosHist.UseVisualStyleBackColor = false;
             this.BTN_LimpiarFiltrosHist.Click += new System.EventHandler(this.BTN_LimpiarFiltrosHist_Click);
             // 
             // GB_Historial
             // 
             this.GB_Historial.Controls.Add(this.DGVHistorial);
             this.GB_Historial.Controls.Add(this.CBX_Entidad);
-            this.GB_Historial.Location = new System.Drawing.Point(15, 12);
+            this.GB_Historial.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GB_Historial.Location = new System.Drawing.Point(18, 15);
+            this.GB_Historial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GB_Historial.Name = "GB_Historial";
-            this.GB_Historial.Size = new System.Drawing.Size(891, 366);
+            this.GB_Historial.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GB_Historial.Size = new System.Drawing.Size(1040, 450);
             this.GB_Historial.TabIndex = 19;
             this.GB_Historial.TabStop = false;
             this.GB_Historial.Text = "Historial de cambios";
@@ -138,25 +160,30 @@
             // 
             this.GB_FiltrarHistorial.Controls.Add(this.BTN_LimpiarFiltrosHist);
             this.GB_FiltrarHistorial.Controls.Add(this.CBX_Filtro);
-            this.GB_FiltrarHistorial.Location = new System.Drawing.Point(15, 384);
+            this.GB_FiltrarHistorial.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GB_FiltrarHistorial.Location = new System.Drawing.Point(18, 473);
+            this.GB_FiltrarHistorial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.GB_FiltrarHistorial.Name = "GB_FiltrarHistorial";
-            this.GB_FiltrarHistorial.Size = new System.Drawing.Size(262, 59);
+            this.GB_FiltrarHistorial.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GB_FiltrarHistorial.Size = new System.Drawing.Size(361, 73);
             this.GB_FiltrarHistorial.TabIndex = 20;
             this.GB_FiltrarHistorial.TabStop = false;
             this.GB_FiltrarHistorial.Text = "Filtrar";
             // 
             // FrmHistorial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1085, 453);
+            this.ClientSize = new System.Drawing.Size(1231, 558);
             this.Controls.Add(this.GB_FiltrarHistorial);
             this.Controls.Add(this.LBLidiomas);
             this.Controls.Add(this.CBXIdiomas);
             this.Controls.Add(this.BTNvolveralmenu);
             this.Controls.Add(this.BTNrestaurar);
             this.Controls.Add(this.GB_Historial);
+            this.Font = new System.Drawing.Font("Century Gothic", 8.25F);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmHistorial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmHistorial";
